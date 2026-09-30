@@ -1,6 +1,7 @@
 /* Pili.PH — Philippine officials directory.
  * Static app: reads JSON produced by /scraper into app/data/.
  * No data is invented here; every field shown comes from a scraped source.
+ * Interface text lives in i18n.js (Tagalog / English).
  */
 (() => {
   "use strict";
@@ -8,41 +9,59 @@
   const ELECTION_DAY = new Date("2028-05-08T07:00:00+08:00"); // 2nd Monday of May 2028
   const PAGE = 60;
   const STORE_KEY = "pili.ballot.v1";
+  const LANG_KEY = "pili.lang";
 
-  const LEVELS = {
-    senate: "Senador",
-    house: "Kinatawan",
-    governor: "Gobernador",
-    vice_governor: "Bise Gobernador",
-    board_member: "Bokal",
-    mayor: "Alkalde",
-    vice_mayor: "Bise Alkalde",
-    councilor: "Konsehal",
-    punong_barangay: "Punong Barangay",
-    kagawad: "Kagawad",
-    sk_chair: "SK Chair",
-    sk_kagawad: "SK Kagawad",
-    barangay_secretary: "Kalihim ng Barangay",
-    barangay_treasurer: "Ingat-yaman ng Barangay",
-    other: "Iba pa",
+  // ---------------------------------------------------------------- i18n
+  const DICT = window.PILI_I18N;
+  let lang = (() => {
+    try {
+      const saved = localStorage.getItem(LANG_KEY);
+      if (saved && DICT[saved]) return saved;
+    } catch {}
+    return /^en\b/i.test(navigator.language || "") ? "en" : "tl";
+  })();
+  const t = (k, vars = {}) => {
+    const s = DICT[lang][k] ?? DICT.tl[k] ?? k;
+    return s.replace(/\{(\w+)\}/g, (_, v) => (v in vars ? vars[v] : `{${v}}`));
   };
+
+  function applyStatic() {
+    document.documentElement.lang = lang === "en" ? "en" : "fil";
+    document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => el.setAttribute("aria-label", t(el.dataset.i18nAria)));
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => (el.placeholder = t(el.dataset.i18nPlaceholder)));
+    document.querySelectorAll("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $("#lang").textContent = lang === "en" ? "TL" : "EN"; // shows the language you can switch to
+  }
+
+  function setLang(next) {
+    if (!DICT[next] || next === lang) return;
+    lang = next;
+    try { localStorage.setItem(LANG_KEY, lang); } catch {}
+    applyStatic();
+    render();
+  }
+
+  const LEVEL_KEYS = ["senate", "house", "governor", "vice_governor", "board_member", "mayor", "vice_mayor", "councilor",
+    "punong_barangay", "kagawad", "sk_chair", "sk_kagawad", "barangay_secretary", "barangay_treasurer", "other"];
   const FILTERS = [
-    ["all", "Lahat", () => true],
-    ["senate", "Senado", (o) => o.level === "senate"],
-    ["house", "Kamara", (o) => o.level === "house"],
-    ["gov", "Gobernador", (o) => o.level === "governor" || o.level === "vice_governor"],
-    ["mayor", "Alkalde", (o) => o.level === "mayor" || o.level === "vice_mayor"],
-    ["council", "Konsehal", (o) => o.level === "councilor" || o.level === "board_member"],
-    ["brgy", "Barangay", (o) => o.dataset === "barangay"],
+    ["all", () => true],
+    ["senate", (o) => o.level === "senate"],
+    ["house", (o) => o.level === "house"],
+    ["gov", (o) => o.level === "governor" || o.level === "vice_governor"],
+    ["mayor", (o) => o.level === "mayor" || o.level === "vice_mayor"],
+    ["council", (o) => o.level === "councilor" || o.level === "board_member"],
+    ["brgy", (o) => o.dataset === "barangay"],
   ];
   const BALLOT_SLOTS = [
-    { key: "president", label: "Pangulo", max: 1 },
-    { key: "vp", label: "Bise Pangulo", max: 1 },
-    { key: "senate", label: "Senado", max: 12, hint: (o) => o.level === "senate" },
-    { key: "rep", label: "Kinatawan ng Distrito / Party-list", max: 1, hint: (o) => o.level === "house" },
-    { key: "mayor", label: "Alkalde", max: 1, hint: (o) => o.level === "mayor" },
-    { key: "local", label: "Iba pang lokal na opisyal", max: 10 },
+    { key: "president", max: 1 },
+    { key: "vp", max: 1 },
+    { key: "senate", max: 12, hint: (o) => o.level === "senate" },
+    { key: "rep", max: 1, hint: (o) => o.level === "house" },
+    { key: "mayor", max: 1, hint: (o) => o.level === "mayor" },
+    { key: "local", max: 10 },
   ];
+  const slotLabel = (s) => t(`slot_${s.key}`);
 
   // ------------------------------------------------------------------ state
   const state = {
@@ -67,18 +86,19 @@
   const safeUrl = (u) => (/^https?:\/\//i.test(u || "") ? u : "");
   const norm = (s) => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const key = (o) => `${o.dataset}/${o.id}`;
-  const fmtDate = (iso) => (iso ? new Date(iso).toLocaleDateString("fil-PH", { year: "numeric", month: "long", day: "numeric" }) : "—");
+  const fmtDate = (iso) => (iso ? new Date(iso).toLocaleDateString(t("locale"), { year: "numeric", month: "long", day: "numeric" }) : "—");
   const fmtNum = (n) => Number(n || 0).toLocaleString("en-PH");
   const initials = (name) => name.split(/\s+/).filter((w) => /^[A-Za-zÀ-ÿÑñ]/.test(w)).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
   const place = (o, withDistrict = true) => [o.barangay && `Brgy. ${o.barangay}`, o.lgu, withDistrict && o.district, o.province, o.region].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ");
-  const levelLabel = (o) => o.position || LEVELS[o.level] || o.level;
+  // Positions come from the sources as published; the level name is only a fallback.
+  const levelLabel = (o) => o.position || (LEVEL_KEYS.includes(o.level) ? t(`lvl_${o.level}`) : o.level);
   // Where data comes from: government (.gov.ph) sites are "official"; other
   // public publishers (Wikipedia, civic open data) are "public"; privately
   // run sources would be "private".
   const typeOf = (x) => x?.source_type
     || (/\.gov\.ph(\/|$)/i.test((() => { try { return new URL(x?.source_url || "").hostname + "/"; } catch { return ""; } })()) ? "official" : "public");
-  const TYPE_LABEL = { official: "Opisyal · gobyerno", public: "Pampubliko · hindi gobyerno", "official+public": "Opisyal + pampubliko", private: "Pribado" };
-  const typeBadge = (t, extra = "") => `<span class="badge src-${String(t).replace("+", "-")}">${t === "official" ? "✓ " : ""}${TYPE_LABEL[t] || t}${extra}</span>`;
+  const typeLabel = (tp) => t(`type_${tp}`);
+  const typeBadge = (tp, extra = "") => `<span class="badge src-${String(tp).replace("+", "-")}">${tp === "official" ? "✓ " : ""}${typeLabel(tp)}${extra}</span>`;
 
   function avatar(o, cls = "") {
     const img = safeUrl(o.photo);
@@ -97,11 +117,11 @@
   }
 
   function toast(msg) {
-    const t = $("#toast");
-    t.textContent = msg;
-    t.hidden = false;
+    const el = $("#toast");
+    el.textContent = msg;
+    el.hidden = false;
     clearTimeout(toast._t);
-    toast._t = setTimeout(() => (t.hidden = true), 2400);
+    toast._t = setTimeout(() => (el.hidden = true), 2400);
   }
 
   async function getJSON(path) {
@@ -175,8 +195,8 @@
 
   function noData() {
     return `<div class="empty"><span class="ei">🗂️</span>
-      <b>Wala pang datos.</b><br>Kinokolekta pa ang listahan ng mga opisyal mula sa opisyal na mga website ng gobyerno. Subukan muli mamaya.
-      <p class="meta">Mga pinagkukunan: Senado, Kamara, PSA, DILG — tingnan ang <a href="#/ako">Datos</a>.</p></div>`;
+      <b>${t("no_data_title")}</b><br>${t("no_data_body")}
+      <p class="meta">${t("no_data_sources")} <a href="#/ako">${t("tab_ako")}</a>.</p></div>`;
   }
 
   // --------------------------------------------------------------- views
@@ -184,30 +204,30 @@
     const f = FILTERS.find((x) => x[0] === state.filter) || FILTERS[0];
     const q = norm(state.q).trim();
     const terms = q.split(/\s+/).filter(Boolean);
-    let list = state.officials.filter(f[2]).filter((o) => terms.every((t) => o._s.includes(t)));
+    const list = state.officials.filter(f[1]).filter((o) => terms.every((w) => o._s.includes(w)));
     const brgyNote = state.filter === "brgy";
 
     view.innerHTML = `
-      <input class="search" id="q" type="search" placeholder="Hanapin ang opisyal, posisyon, lugar…" value="${esc(state.q)}" aria-label="Hanapin">
-      <div class="chips" role="toolbar" aria-label="Filter">${FILTERS.map(([k, label]) => `<button class="chip" data-f="${k}" aria-pressed="${k === state.filter}">${label}</button>`).join("")}</div>
+      <input class="search" id="q" type="search" placeholder="${esc(t("search_ph"))}" value="${esc(state.q)}" aria-label="${esc(t("search_label"))}">
+      <div class="chips" role="toolbar" aria-label="Filter">${FILTERS.map(([k]) => `<button class="chip" data-f="${k}" aria-pressed="${k === state.filter}">${t(`f_${k}`)}</button>`).join("")}</div>
       <div class="quick">
-        <a href="#/ihambing"><span class="qi">⚖️</span><b>Ihambing</b><small>Compare</small></a>
-        <a href="#/pili"><span class="qi">🗳️</span><b>2028 List</b><small>Pili Ko</small></a>
-        <a href="#/ako"><span class="qi">📊</span><b>Stats</b><small>Datos</small></a>
+        <a href="#/ihambing"><span class="qi">⚖️</span><b>${t("quick_compare")}</b><small>${t("quick_compare_sub")}</small></a>
+        <a href="#/pili"><span class="qi">🗳️</span><b>${t("quick_list")}</b><small>${t("quick_list_sub")}</small></a>
+        <a href="#/ako"><span class="qi">📊</span><b>${t("quick_stats")}</b><small>${t("quick_stats_sub")}</small></a>
       </div>
       <div id="results"></div>`;
 
     const results = $("#results");
     if (state.loading) {
-      results.innerHTML = `<div class="section-label">Naglo-load…</div>` + '<div class="skeleton"></div>'.repeat(6);
+      results.innerHTML = `<div class="section-label">${t("loading")}</div>` + '<div class="skeleton"></div>'.repeat(6);
     } else if (!hasData()) {
       results.innerHTML = noData();
     } else if (brgyNote) {
-      results.innerHTML = `<div class="empty"><span class="ei">🏘️</span>May ${fmtNum(state.brgyIndex?.count)} barangay officials sa directory.<br>Piliin ang lugar sa <a href="#/hanap">Hanapin</a> para makita sila.</div>`;
+      results.innerHTML = `<div class="empty"><span class="ei">🏘️</span>${t("brgy_note", { n: fmtNum(state.brgyIndex?.count) })}<br>${t("brgy_note2", { link: `<a href="#/hanap">${t("tab_hanap")}</a>` })}</div>`;
     } else {
-      results.innerHTML = `<div class="section-label">${esc(f[1])} · ${fmtNum(list.length)} opisyal</div>
-        <div class="list">${list.slice(0, state.shown).map((o) => row(o)).join("") || `<div class="empty">Walang tugma sa “${esc(state.q)}”.</div>`}</div>
-        ${list.length > state.shown ? `<button class="btn more" id="more">Ipakita pa (${fmtNum(list.length - state.shown)})</button>` : ""}`;
+      results.innerHTML = `<div class="section-label">${esc(t(`f_${f[0]}`))} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
+        <div class="list">${list.slice(0, state.shown).map((o) => row(o)).join("") || `<div class="empty">${t("no_match", { q: esc(state.q) })}</div>`}</div>
+        ${list.length > state.shown ? `<button class="btn more" id="more">${t("show_more", { n: fmtNum(list.length - state.shown) })}</button>` : ""}`;
     }
 
     const input = $("#q");
@@ -255,13 +275,13 @@
     const list = anyFilter ? [...state.officials.filter((o) => o.level !== "senate" && match(o)), ...brgyRecs.filter(match)] : [];
 
     view.innerHTML = `
-      <div class="section-label">Hanapin ayon sa lugar</div>
-      <select class="select" data-k="region" aria-label="Rehiyon">${opt(regions, hanap.region, "Lahat ng rehiyon")}</select>
-      <select class="select" data-k="province" aria-label="Probinsya">${opt(provinces, hanap.province, "Lahat ng probinsya")}</select>
-      <select class="select" data-k="lgu" aria-label="Lungsod / Bayan" ${lgus.size ? "" : "disabled"}>${opt(lgus, hanap.lgu, "Lahat ng lungsod / bayan")}</select>
-      <select class="select" data-k="barangay" aria-label="Barangay" ${brgys.size ? "" : "disabled"}>${opt(brgys, hanap.barangay, hanap.province ? "Lahat ng barangay" : "Pumili muna ng probinsya para sa barangay")}</select>
-      ${anyFilter ? `<div class="section-label">${fmtNum(list.length)} opisyal</div><div class="list">${list.slice(0, 400).map((o) => row(o)).join("") || '<div class="empty">Walang opisyal na nakatala para sa lugar na ito.</div>'}</div>${list.length > 400 ? `<p class="meta">Ipinapakita ang unang 400. Paliitin ang lugar para makita ang iba.</p>` : ""}`
-        : `<div class="empty"><span class="ei">📍</span>Pumili ng rehiyon o probinsya para makita ang mga kinatawan, alkalde, at barangay officials doon.<br><br>Para sa mga senador (nationwide), gamitin ang <a href="#/">Opisyal</a> tab.</div>`}`;
+      <div class="section-label">${t("by_place")}</div>
+      <select class="select" data-k="region" aria-label="${esc(t("region"))}">${opt(regions, hanap.region, t("all_regions"))}</select>
+      <select class="select" data-k="province" aria-label="${esc(t("province"))}">${opt(provinces, hanap.province, t("all_provinces"))}</select>
+      <select class="select" data-k="lgu" aria-label="${esc(t("lgu"))}" ${lgus.size ? "" : "disabled"}>${opt(lgus, hanap.lgu, t("all_lgus"))}</select>
+      <select class="select" data-k="barangay" aria-label="${esc(t("barangay"))}" ${brgys.size ? "" : "disabled"}>${opt(brgys, hanap.barangay, hanap.province ? t("all_brgys") : t("pick_province_first"))}</select>
+      ${anyFilter ? `<div class="section-label">${t("n_officials", { n: fmtNum(list.length) })}</div><div class="list">${list.slice(0, 400).map((o) => row(o)).join("") || `<div class="empty">${t("none_here")}</div>`}</div>${list.length > 400 ? `<p class="meta">${t("first_400")}</p>` : ""}`
+        : `<div class="empty"><span class="ei">📍</span>${t("hanap_hint")}<br><br>${t("hanap_senators", { link: `<a href="#/">${t("tab_home")}</a>` })}</div>`}`;
 
     view.querySelectorAll("select[data-k]").forEach((s) => s.addEventListener("change", () => {
       const k = s.dataset.k;
@@ -276,27 +296,28 @@
     view.innerHTML = '<div class="skeleton" style="height:180px"></div>';
     const o = await findOfficial(dataset, id);
     if (!o) {
-      view.innerHTML = `<div class="empty"><span class="ei">🤷</span>Hindi nahanap ang opisyal na ito.<br><a href="#/">Bumalik sa listahan</a></div>`;
+      view.innerHTML = `<div class="empty"><span class="ei">🤷</span>${t("not_found")}<br><a href="#/">${t("back_to_list")}</a></div>`;
       return;
     }
     setTitle(o.name);
     const rows = [
-      ["Posisyon", levelLabel(o)],
-      ["Partido", o.party],
-      ["Distrito", o.district],
-      ["Barangay", o.barangay],
-      ["Lungsod / Bayan", o.lgu],
-      ["Probinsya", o.province],
-      ["Rehiyon", o.region],
-      ["Contact", o.contact],
+      [t("position"), levelLabel(o)],
+      [t("party"), o.party],
+      [t("district"), o.district],
+      [t("barangay"), o.barangay],
+      [t("lgu"), o.lgu],
+      [t("province"), o.province],
+      [t("region"), o.region],
+      [t("contact"), o.contact],
     ];
     const d = o.details || {};
-    if (d.address) rows.push(["Opisina", d.address]);
-    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on"]);
+    if (d.address) rows.push([t("office"), d.address]);
+    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on", "published_via"]);
     const extra = Object.entries(d).filter(([k, v]) => v && !skip.has(k) && !/^line\d|href|photo|image|img|^id$|_id$|slug/.test(k) && !rows.some(([, rv]) => rv === v));
     const pretty = (k) => k.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
     const cv = safeUrl(d.resume);
     const inBallot = Object.values(getBallot()).some((arr) => arr.includes(key(o)));
+    const nAch = cleanAch(o.achievements).length;
 
     view.innerHTML = `
       <div class="profile-head">
@@ -305,27 +326,27 @@
         <p>${esc(levelLabel(o))}</p>
         <div class="badges">
           ${o.party ? `<span class="badge">${esc(o.party)}</span>` : ""}
-          ${typeBadge(typeOf(o), /saved copy/i.test(o.source) ? " · kopya" : "")}
+          ${typeBadge(typeOf(o), /saved copy/i.test(o.source) ? t("type_copy") : "")}
         </div>
       </div>
       <div class="btn-row">
-        <button class="btn" id="cmp">⚖️ Ihambing</button>
-        <button class="btn primary" id="pick">${inBallot ? "✓ Nasa Pili Ko" : "＋ Pili Ko 2028"}</button>
+        <button class="btn" id="cmp">${t("compare_btn")}</button>
+        <button class="btn primary" id="pick">${inBallot ? t("in_ballot") : t("add_ballot")}</button>
       </div>
-      <div class="section-label">Impormasyon</div>
+      <div class="section-label">${t("info")}</div>
       <table class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}
         ${extra.slice(0, 20).map(([k, v]) => `<tr><th>${esc(pretty(k))}</th><td>${esc(v)}</td></tr>`).join("")}</table>
-      ${cleanAch(o.achievements).length ? `<div class="section-label">Mga Nagawa at Parangal (${cleanAch(o.achievements).length})</div>${groupAchievements(o.achievements).map(([label, items]) => `<div class="ach-group">${esc(label)} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
-      ${(o.bills || []).length ? `<div class="section-label">Mga Panukalang Batas (${fmtNum(o.bills_count || o.bills.length)})</div>
+      ${nAch ? `<div class="section-label">${t("achievements_n", { n: nAch })}</div>${groupAchievements(o.achievements).map(([g, items]) => `<div class="ach-group">${esc(t(g))} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
+      ${(o.bills || []).length ? `<div class="section-label">${t("bills_n", { n: fmtNum(o.bills_count || o.bills.length) })}</div>
         ${billsNote()}
-        <details class="bills-more"${o.bills.length <= 10 ? " open" : ""}><summary>Tingnan ang ${fmtNum(o.bills.length)} panukala</summary>
-        <ul class="bills">${o.bills.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.coauthored ? `<span class="meta"> · co-author</span>` : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · inihain ${esc(b.date)}</span>` : ""}</li>`).join("")}</ul></details>` : ""}
-      ${d.biography ? `<div class="section-label">Talambuhay</div><p class="bio">${esc(d.biography)}</p>` : ""}
-      ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">📄 Opisyal na CV (PDF) ↗</a></p>` : ""}
+        <details class="bills-more"${o.bills.length <= 10 ? " open" : ""}><summary>${t("see_bills", { n: fmtNum(o.bills.length) })}</summary>
+        <ul class="bills">${o.bills.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.coauthored ? `<span class="meta"> · ${t("coauthor")}</span>` : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · ${t("filed", { d: esc(b.date) })}</span>` : ""}</li>`).join("")}</ul></details>` : ""}
+      ${d.biography ? `<div class="section-label">${t("biography")}</div><p class="bio">${esc(d.biography)}</p>` : ""}
+      ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">${t("official_cv")}</a></p>` : ""}
       <div class="notice">
-        Pinagkunan: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a> (${TYPE_LABEL[typeOf(o)]})
-        ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">${/wikipedia\.org/.test(o.profile_url) ? "Wikipedia article" : "Opisyal na profile"} ↗</a>` : ""}
-        <br>Huling na-update: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · Kinopya noong ${fmtDate(d.copied_on)}` : ""}
+        ${t("source")}: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a> (${typeLabel(typeOf(o))})
+        ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">${/wikipedia\.org/.test(o.profile_url) ? t("wikipedia_article") : t("official_profile")} ↗</a>` : ""}
+        <br>${t("last_updated")}: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · ${t("copied_on", { d: fmtDate(d.copied_on) })}` : ""}
       </div>`;
 
     $("#cmp").addEventListener("click", () => {
@@ -336,7 +357,7 @@
     });
     $("#pick").addEventListener("click", () => {
       const slot = BALLOT_SLOTS.find((s) => s.hint?.(o)) || BALLOT_SLOTS[BALLOT_SLOTS.length - 1];
-      if (addToBallot(slot.key, o)) toast(`Idinagdag sa ${slot.label}`);
+      if (addToBallot(slot.key, o)) toast(t("added_to", { slot: slotLabel(slot) }));
       viewProfile(dataset, id);
     });
   }
@@ -344,9 +365,8 @@
   function billsNote() {
     const b = state.billsSource;
     if (!b) return "";
-    return `<p class="notice" style="margin:0 0 8px">${typeBadge(b.source_type || "public")}
-      Pinagkunan: <a href="${esc(safeUrl(b.url))}" target="_blank" rel="noopener">${esc(b.name)}</a>, isinalin mula sa opisyal na Senate Legislative Information System.
-      Datos hanggang ${fmtDate(b.as_of)}, kaya maaaring luma na ang status. Bawat panukala ay naka-link sa opisyal na pahina ng Senado.</p>`;
+    const src = `<a href="${esc(safeUrl(b.url))}" target="_blank" rel="noopener">${esc(b.name)}</a>`;
+    return `<p class="notice" style="margin:0 0 8px">${typeBadge(b.source_type || "public")} ${t("bills_note", { src, d: fmtDate(b.as_of) })}</p>`;
   }
 
   function datasetDate(ds, file) {
@@ -366,21 +386,22 @@
   }
 
   // Achievements from official bios mix laws, awards, probes and past posts;
-  // group them so profiles and comparisons stay like-for-like.
+  // group them so profiles and comparisons stay like-for-like. Groups are
+  // i18n keys.
   const ACH_GROUPS = [
-    ["Batas na inakda", /\b(republic act|r\.?a\.? ?\d|act of \d{4}|\blaw\b|laws\b|authored|co-?author|sponsor|filed|\bbill\b|bills\b)/i],
-    ["Parangal", /\b(award|awardee|honoree|honou?r|best|outstanding|fellow|commended|finalist|medal|recogni|toym|hall of fame|honoris|most inspiring|10 outstanding)/i],
-    ["Imbestigasyon", /\b(investigat|hearing|irregularit|alleged|scam|probe|expos|anomal)/i],
-    ["Mga naging posisyon", /\b(chair|member|leader|vice|deputy|spokesperson|officer|columnist|anchor|producer|newscaster|writer|disc jockey|publisher|president|secretary|director|head|mayor|governor|councilor|representative)/i],
+    ["ach_laws", /\b(republic act|r\.?a\.? ?\d|act of \d{4}|\blaw\b|laws\b|authored|co-?author|sponsor|filed|\bbill\b|bills\b)/i],
+    ["ach_awards", /\b(award|awardee|honoree|honou?r|best|outstanding|fellow|commended|finalist|medal|recogni|toym|hall of fame|honoris|most inspiring|10 outstanding)/i],
+    ["ach_probes", /\b(investigat|hearing|irregularit|alleged|scam|probe|expos|anomal)/i],
+    ["ach_posts", /\b(chair|member|leader|vice|deputy|spokesperson|officer|columnist|anchor|producer|newscaster|writer|disc jockey|publisher|president|secretary|director|head|mayor|governor|councilor|representative)/i],
   ];
   const cleanAch = (list) => (list || [])
     .map((x) => String(x).replace(/\s*<?\s*b?r\s*\/>\s*/gi, " ").replace(/^[\s\-–*•]+/, "").trim())
     .filter((x) => x && !/:\s*$/.test(x));
   function groupAchievements(list) {
-    const groups = new Map([...ACH_GROUPS.map(([l]) => [l, []]), ["Iba pa", []]]);
+    const groups = new Map([...ACH_GROUPS.map(([g]) => [g, []]), ["ach_other", []]]);
     for (const item of cleanAch(list)) {
       const hit = ACH_GROUPS.find(([, rx]) => rx.test(item));
-      groups.get(hit ? hit[0] : "Iba pa").push(item);
+      groups.get(hit ? hit[0] : "ach_other").push(item);
     }
     return [...groups].filter(([, items]) => items.length);
   }
@@ -391,31 +412,30 @@
   const billsOf = (o) => (o.bills || []).map((b) => [b.number, b.title].filter(Boolean).join(" · "));
 
   function compareLists(a, b) {
-    const achGroup = (label) => (o) => (groupAchievements(o.achievements).find(([l]) => l === label) || [, []])[1];
-    const groupLabels = [...ACH_GROUPS.map(([l]) => l), "Iba pa"];
+    const achGroup = (g) => (o) => (groupAchievements(o.achievements).find(([k]) => k === g) || [, []])[1];
+    const groupKeys = [...ACH_GROUPS.map(([g]) => g), "ach_other"];
     const anyAch = achievementsOf(a).length || achievementsOf(b).length;
     const sections = [
-      { label: "Mga Nagawa at Parangal · kabuuan", of: achievementsOf, always: true, countOnly: anyAch,
-        none: "Walang nakatalang nagawa o parangal sa opisyal na talambuhay" },
-      ...groupLabels.map((l) => ({ label: `Nagawa · ${l}`, of: achGroup(l), none: "Wala" })),
-      { label: "Dating Karanasan", of: priorRolesOf, none: "Walang nakatala" },
-      { label: "Mga Panukalang Batas", of: billsOf, none: "Walang nakatala" },
+      { label: t("cmp_ach_total"), of: achievementsOf, always: true, countOnly: anyAch, none: t("cmp_no_ach") },
+      ...groupKeys.map((g) => ({ label: t("cmp_ach_group", { g: t(g) }), of: achGroup(g), none: t("none") })),
+      { label: t("cmp_prior"), of: priorRolesOf, none: t("none_recorded") },
+      { label: t("cmp_bills"), of: billsOf, none: t("none_recorded"), bills: true },
     ];
     const hasBills = billsOf(a).length || billsOf(b).length;
-    return sections.map(({ label, of, always, none, countOnly }) => {
+    return sections.map(({ label, of, always, none, countOnly, bills }) => {
       const la = of(a), lb = of(b);
       if (!la.length && !lb.length && !always) return "";
-      const norm = (x) => x.toLowerCase().replace(/\s+/g, " ").trim();
-      const inA = new Set(la.map(norm)), inB = new Set(lb.map(norm));
+      const nrm = (x) => x.toLowerCase().replace(/\s+/g, " ").trim();
+      const inA = new Set(la.map(nrm)), inB = new Set(lb.map(nrm));
       const col = (list, other) => list.length
-        ? `<ul class="cmp-list">${list.slice(0, 30).map((x) => `<li class="${other.has(norm(x)) ? "same" : ""}">${esc(x)}</li>`).join("")}</ul>${list.length > 30 ? `<p class="meta">+${list.length - 30} pa</p>` : ""}`
+        ? `<ul class="cmp-list">${list.slice(0, 30).map((x) => `<li class="${other.has(nrm(x)) ? "same" : ""}">${esc(x)}</li>`).join("")}</ul>${list.length > 30 ? `<p class="meta">${t("n_more", { n: list.length - 30 })}</p>` : ""}`
         : `<p class="meta cmp-none">${none}</p>`;
       const count = (list) => `<span class="cmp-count">${list.length}</span>`;
       return `<div class="cmp-row cmp-lists">
-        <div class="lbl">${label}</div>
-        ${label === "Mga Panukalang Batas" && hasBills ? billsNote() : ""}
+        <div class="lbl">${esc(label)}</div>
+        ${bills && hasBills ? billsNote() : ""}
         <div class="vals"><div>${count(la)}</div><div>${count(lb)}</div></div>
-        ${countOnly ? "" : `<details class="cmp-more"${la.length + lb.length <= 6 ? " open" : ""}><summary>Tingnan ang listahan</summary><div class="vals lists"><div>${col(la, inB)}</div><div>${col(lb, inA)}</div></div></details>`}
+        ${countOnly ? "" : `<details class="cmp-more"${la.length + lb.length <= 6 ? " open" : ""}><summary>${t("see_list")}</summary><div class="vals lists"><div>${col(la, inB)}</div><div>${col(lb, inA)}</div></div></details>`}
       </div>`;
     }).join("");
   }
@@ -424,16 +444,16 @@
     if (!state.loading && !hasData()) { view.innerHTML = noData(); return; }
     const [a, b] = state.compare;
     const slot = (o, i) => o
-      ? `<button class="slot" data-slot="${i}">${avatar(o)}<b>${esc(o.name)}</b><small>${esc(levelLabel(o))}</small><small>Palitan</small></button>`
-      : `<button class="slot" data-slot="${i}"><span class="avatar">＋</span><b>Pumili</b><small>ng opisyal</small></button>`;
+      ? `<button class="slot" data-slot="${i}">${avatar(o)}<b>${esc(o.name)}</b><small>${esc(levelLabel(o))}</small><small>${t("change")}</small></button>`
+      : `<button class="slot" data-slot="${i}"><span class="avatar">＋</span><b>${t("pick")}</b><small>${t("an_official")}</small></button>`;
     let table = "";
     if (a && b) {
       const fields = [
-        ["Posisyon", levelLabel], ["Partido", (o) => o.party], ["Distrito", (o) => o.district],
-        ["Lugar", (o) => place(o, false)], ["Pinagkunan", (o) => `${o.source} (${TYPE_LABEL[typeOf(o)]})`],
+        [t("position"), levelLabel], [t("party"), (o) => o.party], [t("district"), (o) => o.district],
+        [t("place"), (o) => place(o, false)], [t("source"), (o) => `${o.source} (${typeLabel(typeOf(o))})`],
       ];
-      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on|prior_experience/.test(k));
-      shared.slice(0, 12).forEach((k) => fields.push([k.replace(/_/g, " "), (o) => o.details[k]]));
+      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on|published_via|prior_experience/.test(k));
+      shared.slice(0, 12).forEach((k) => fields.push([k === "address" ? t("office") : k.replace(/_/g, " "), (o) => o.details[k]]));
       table = fields.map(([lab, fn]) => {
         const va = fn(a) || "—", vb = fn(b) || "—";
         const same = va !== "—" && va === vb;
@@ -442,13 +462,13 @@
       table += compareLists(a, b);
     }
     view.innerHTML = `
-      <div class="section-label">Ihambing</div>
-      <p class="meta" style="margin-top:-4px">Ihambing ang dalawang opisyal nang magkatabi.</p>
+      <div class="section-label">${t("cmp_title")}</div>
+      <p class="meta" style="margin-top:-4px">${t("cmp_lead")}</p>
       <div class="compare">${slot(a, 0)}<span class="vs">vs</span>${slot(b, 1)}</div>
-      ${table || '<div class="empty">Pumili ng dalawang opisyal para ihambing.</div>'}
-      ${a || b ? '<button class="btn block" id="clear-cmp">I-reset</button>' : ""}`;
+      ${table || `<div class="empty">${t("pick_two")}</div>`}
+      ${a || b ? `<button class="btn block" id="clear-cmp">${t("reset")}</button>` : ""}`;
     view.querySelectorAll("[data-slot]").forEach((btn) => btn.addEventListener("click", async () => {
-      const o = await pickOfficial("Pumili ng opisyal na ihahambing");
+      const o = await pickOfficial(t("pick_to_compare"));
       if (!o) return;
       state.compare[+btn.dataset.slot] = o;
       saveCompare();
@@ -462,14 +482,14 @@
     try { return JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); } catch { return {}; }
   }
   function setBallot(b) {
-    try { localStorage.setItem(STORE_KEY, JSON.stringify(b)); } catch { toast("Hindi ma-save sa device na ito"); }
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(b)); } catch { toast(t("save_failed")); }
   }
   function addToBallot(slotKey, o) {
     const b = getBallot();
     const slot = BALLOT_SLOTS.find((s) => s.key === slotKey);
     const arr = b[slotKey] || [];
-    if (arr.includes(key(o))) { toast("Nasa listahan na"); return false; }
-    if (arr.length >= slot.max) { toast(`Puno na ang ${slot.label} (${slot.max})`); return false; }
+    if (arr.includes(key(o))) { toast(t("already_listed")); return false; }
+    if (arr.length >= slot.max) { toast(t("slot_full", { slot: slotLabel(slot), n: slot.max })); return false; }
     b[slotKey] = [...arr, key(o)];
     setBallot(b);
     return true;
@@ -484,28 +504,29 @@
       if (!state.byKey.has(k)) await findOfficial(ds, rest.join("/"));
     }
     const lines = [];
+    const eday = ELECTION_DAY.toLocaleDateString(t("locale"), { month: "long", day: "numeric", year: "numeric", timeZone: "Asia/Manila" });
     view.innerHTML = `
-      <div class="section-label">Pili Ko 2028</div>
+      <div class="section-label">${t("title_pili")}</div>
       <div class="countdown">
-        <small>Halalan 2028 · ${ELECTION_DAY.toLocaleDateString("fil-PH", { month: "long", day: "numeric", year: "numeric", timeZone: "Asia/Manila" })}</small>
-        <div class="big">${fmtNum(days)} araw</div>
-        <small>na natitira · ★ Gamitin ang iyong boto nang matalino</small>
+        <small>${t("election", { d: eday })}</small>
+        <div class="big">${t("days", { n: fmtNum(days) })}</div>
+        <small>${t("days_left")}</small>
       </div>
       ${BALLOT_SLOTS.map((s) => {
-        const picks = (b[s.key] || []).map((k) => state.byKey.get(k) || { name: "(hindi na makita)", position: "", _k: k });
-        picks.forEach((o) => lines.push(`${s.label}: ${o.name}`));
+        const picks = (b[s.key] || []).map((k) => state.byKey.get(k) || { name: t("not_found_short"), position: "", _k: k });
+        picks.forEach((o) => lines.push(`${slotLabel(s)}: ${o.name}`));
         return `<div class="card">
-          <div class="slot-head"><b>${s.label}</b><span class="meta">${picks.length} / ${s.max}</span></div>
-          ${picks.map((o, i) => `<div class="pick-row">${o.id ? avatar(o) : ""}<div class="who"><b>${esc(o.name)}</b><span>${esc(levelLabel(o))}</span></div><button class="x" data-rm="${s.key}:${i}" aria-label="Alisin">✕</button></div>`).join("")}
-          ${picks.length < s.max ? `<button class="add" data-add="${s.key}">＋ Dagdag</button>` : ""}
+          <div class="slot-head"><b>${slotLabel(s)}</b><span class="meta">${picks.length} / ${s.max}</span></div>
+          ${picks.map((o, i) => `<div class="pick-row">${o.id ? avatar(o) : ""}<div class="who"><b>${esc(o.name)}</b><span>${esc(levelLabel(o))}</span></div><button class="x" data-rm="${s.key}:${i}" aria-label="${esc(t("remove"))}">✕</button></div>`).join("")}
+          ${picks.length < s.max ? `<button class="add" data-add="${s.key}">${t("add")}</button>` : ""}
         </div>`;
       }).join("")}
-      <div class="btn-row"><button class="btn" id="share">Ibahagi</button><button class="btn" id="reset">I-clear</button></div>
-      <p class="notice">Ang listahang ito ay naka-save lamang sa device mo — hindi ito ipinapadala kahit saan. Opisyal na listahan ng mga kandidato para sa 2028 ay ilalabas ng COMELEC pagkatapos ng filing ng COC.</p>`;
+      <div class="btn-row"><button class="btn" id="share">${t("share")}</button><button class="btn" id="reset">${t("clear")}</button></div>
+      <p class="notice">${t("ballot_note")}</p>`;
 
     view.querySelectorAll("[data-add]").forEach((btn) => btn.addEventListener("click", async () => {
       const s = BALLOT_SLOTS.find((x) => x.key === btn.dataset.add);
-      const o = await pickOfficial(`Idagdag sa ${s.label}`, s.hint);
+      const o = await pickOfficial(t("add_to", { slot: slotLabel(s) }), s.hint);
       if (o && addToBallot(s.key, o)) viewPili();
     }));
     view.querySelectorAll("[data-rm]").forEach((btn) => btn.addEventListener("click", () => {
@@ -516,13 +537,13 @@
       viewPili();
     }));
     $("#share").addEventListener("click", async () => {
-      const text = `Pili Ko 2028 🇵🇭\n${lines.join("\n") || "(wala pa)"}\n— via Pili.PH`;
+      const text = `${t("share_title")} 🇵🇭\n${lines.join("\n") || t("none_yet")}\n${t("share_via")}`;
       try {
-        if (navigator.share) await navigator.share({ title: "Pili Ko 2028", text });
-        else { await navigator.clipboard.writeText(text); toast("Nakopya sa clipboard"); }
+        if (navigator.share) await navigator.share({ title: t("share_title"), text });
+        else { await navigator.clipboard.writeText(text); toast(t("copied")); }
       } catch {}
     });
-    $("#reset").addEventListener("click", () => { if (confirm("Burahin ang buong listahan?")) { setBallot({}); viewPili(); } });
+    $("#reset").addEventListener("click", () => { if (confirm(t("confirm_clear"))) { setBallot({}); viewPili(); } });
   }
 
   // Stats + sources
@@ -532,35 +553,36 @@
     state.officials.forEach((o) => (counts[o.level] = (counts[o.level] || 0) + 1));
     const partyBars = (level, title) => {
       const m = {};
-      state.officials.filter((o) => o.level === level).forEach((o) => { const p = o.party || "Hindi nakatala"; m[p] = (m[p] || 0) + 1; });
+      state.officials.filter((o) => o.level === level).forEach((o) => { const p = o.party || t("not_recorded"); m[p] = (m[p] || 0) + 1; });
       const entries = Object.entries(m).sort((a, b) => b[1] - a[1]).slice(0, 12);
       if (!entries.length) return "";
       const max = entries[0][1];
       return `<div class="section-label">${title}</div><div class="card">${entries.map(([p, n]) => `<div class="bar"><span class="lab" title="${esc(p)}">${esc(p)}</span><span class="track"><span class="fill" style="width:${(n / max) * 100}%;display:block"></span></span><span class="n">${n}</span></div>`).join("")}</div>`;
     };
+    const lguCount = ["mayor", "vice_mayor", "councilor", "governor", "vice_governor", "board_member"].reduce((s, k) => s + (counts[k] || 0), 0);
     view.innerHTML = `
-      <div class="section-label">Mga Bilang</div>
+      <div class="section-label">${t("counts")}</div>
       <div class="stats">
-        <div class="stat"><b>${fmtNum(counts.senate)}</b><span>Senador</span></div>
-        <div class="stat"><b>${fmtNum(counts.house)}</b><span>Kinatawan sa Kamara</span></div>
-        <div class="stat"><b>${fmtNum((counts.mayor || 0) + (counts.vice_mayor || 0) + (counts.councilor || 0) + (counts.governor || 0))}</b><span>Opisyal ng LGU</span></div>
-        <div class="stat"><b>${fmtNum(state.brgyIndex?.count)}</b><span>Opisyal ng Barangay</span></div>
+        <div class="stat"><b>${fmtNum(counts.senate)}</b><span>${t("st_senators")}</span></div>
+        <div class="stat"><b>${fmtNum(counts.house)}</b><span>${t("st_house")}</span></div>
+        <div class="stat"><b>${fmtNum(lguCount)}</b><span>${t("st_lgu")}</span></div>
+        <div class="stat"><b>${fmtNum(state.brgyIndex?.count)}</b><span>${t("st_brgy")}</span></div>
       </div>
-      ${partyBars("senate", "Senado ayon sa partido")}
-      ${partyBars("house", "Kamara ayon sa partido")}
-      <div class="section-label">Mga pinagkukunan ng datos</div>
+      ${partyBars("senate", t("senate_by_party"))}
+      ${partyBars("house", t("house_by_party"))}
+      <div class="section-label">${t("data_sources")}</div>
       <div class="card"><table class="kv">
-        ${ds.map((d) => `<tr><th><a href="${esc(safeUrl(d.source_url))}" target="_blank" rel="noopener">${esc(d.source)}</a><br>${typeBadge(typeOf(d))}</th><td>${fmtNum(d.count)} ${d.key === "bills" ? "panukala" : "tala"}<br><span class="meta">${d.key === "bills" && d.as_of ? "Datos hanggang " + fmtDate(d.as_of) : d.scraped_at ? "Na-update " + fmtDate(d.scraped_at) : "Hinihintay pa"}</span></td></tr>`).join("") || "<tr><td>Wala pang datos.</td></tr>"}
+        ${ds.map((d) => `<tr><th><a href="${esc(safeUrl(d.source_url))}" target="_blank" rel="noopener">${esc(d.source)}</a><br>${typeBadge(typeOf(d))}</th><td>${d.key === "bills" ? t("n_bills", { n: fmtNum(d.count) }) : t("n_records", { n: fmtNum(d.count) })}<br><span class="meta">${d.key === "bills" && d.as_of ? t("data_as_of", { d: fmtDate(d.as_of) }) : d.scraped_at ? t("updated", { d: fmtDate(d.scraped_at) }) : t("pending")}</span></td></tr>`).join("") || `<tr><td>${t("no_data_short")}</td></tr>`}
       </table></div>
       <div class="card legend">
-        <p>${typeBadge("official")} Mula mismo sa website ng ahensya ng gobyerno (.gov.ph), o kopya nito.</p>
-        <p>${typeBadge("public")} Pampublikong pinagkunan na hindi gobyerno, gaya ng Wikipedia o civic open-data. Hindi opisyal; suriin sa opisyal na pinagkunan.</p>
-        <p style="margin-bottom:0">${typeBadge("private")} Pribadong pinagkunan. Wala pang ginagamit.</p>
+        <p>${typeBadge("official")} ${t("legend_official")}</p>
+        <p>${typeBadge("public")} ${t("legend_public")}</p>
+        <p style="margin-bottom:0">${typeBadge("private")} ${t("legend_private")}</p>
       </div>
-      <div class="section-label">Tungkol sa Pili.PH</div>
+      <div class="section-label">${t("about")}</div>
       <div class="card">
-        <p style="margin-top:0">Ang Pili.PH ay isang independiyenteng directory ng mga halal na opisyal ng Pilipinas. Lahat ng impormasyon ay kinokopya nang awtomatiko mula sa opisyal na mga website ng Senado, Kamara, PSA, at DILG, at regular na ina-update.</p>
-        <p class="meta" style="margin-bottom:0">Hindi kaanib ng anumang ahensya ng gobyerno, partido, o kandidato. May mali? Tingnan ang opisyal na pinagkunan na naka-link sa bawat profile.</p>
+        <p style="margin-top:0">${t("about_body")}</p>
+        <p class="meta" style="margin-bottom:0">${t("about_note")}</p>
       </div>`;
   }
 
@@ -574,9 +596,9 @@
       const draw = () => {
         const terms = norm(input.value).split(/\s+/).filter(Boolean);
         const pool = [...state.officials, ...[...state.brgyFiles.values()].flat()];
-        let items = pool.filter((o) => terms.every((t) => o._s.includes(t)));
+        let items = pool.filter((o) => terms.every((w) => o._s.includes(w)));
         if (!terms.length && hint) items = items.filter(hint);
-        list.innerHTML = items.slice(0, 80).map((o) => `<li>${row(o).replace('<a class="row" href=', '<a class="row" data-k="' + esc(key(o)) + '" href=')}</li>`).join("") || '<li class="empty">Walang tugma.</li>';
+        list.innerHTML = items.slice(0, 80).map((o) => `<li>${row(o).replace('<a class="row" href=', '<a class="row" data-k="' + esc(key(o)) + '" href=')}</li>`).join("") || `<li class="empty">${t("no_match_short")}</li>`;
       };
       list.onclick = (e) => {
         const a = e.target.closest("[data-k]");
@@ -593,10 +615,32 @@
     });
   }
 
+  // ------------------------------------------------------------ cover
+  // Shown when someone opens the app at its start page; links straight to a
+  // profile or tab skip it. Once entered, it stays hidden for the session.
+  const COVER_KEY = "pili.entered";
+  function showCoverIfNeeded() {
+    let entered = false;
+    try { entered = sessionStorage.getItem(COVER_KEY) === "1"; } catch {}
+    const atStart = !location.hash || location.hash === "#" || location.hash === "#/";
+    if (entered || !atStart) return;
+    const cover = $("#cover");
+    cover.hidden = false;
+    document.body.classList.add("covered");
+    $("#enter").focus();
+  }
+  function enterApp() {
+    try { sessionStorage.setItem(COVER_KEY, "1"); } catch {}
+    const cover = $("#cover");
+    cover.classList.add("leaving");
+    document.body.classList.remove("covered");
+    setTimeout(() => { cover.hidden = true; cover.classList.remove("leaving"); $("#view").focus(); }, 250);
+  }
+
   // ------------------------------------------------------------ router
   function setTitle(sub) {
-    $("#topbar-sub").textContent = sub || "Philippines Officials Directory";
-    document.title = sub ? `${sub} · Pili.PH` : "Pili.PH — Philippine Officials Directory";
+    $("#topbar-sub").textContent = sub || t("tagline");
+    document.title = sub ? `${sub} · Pili.PH` : t("app_title");
   }
 
   function render() {
@@ -605,7 +649,8 @@
     document.querySelectorAll(".tabbar a").forEach((a) => a.classList.toggle("active", a.dataset.tab === tab));
     document.querySelectorAll(".tabbar a").forEach((a) => (a.dataset.tab === tab ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
     $("#back").hidden = parts[0] !== "o";
-    setTitle({ hanap: "Hanapin", ihambing: "Ihambing", pili: "Pili Ko 2028", ako: "Datos at Stats" }[tab]);
+    const titles = { hanap: "title_hanap", ihambing: "title_ihambing", pili: "title_pili", ako: "title_ako" };
+    setTitle(titles[tab] ? t(titles[tab]) : "");
     switch (parts[0]) {
       case "o": return viewProfile(parts[1], parts.slice(2).join("/"));
       case "hanap": return viewHanap();
@@ -617,7 +662,12 @@
   }
 
   $("#back").addEventListener("click", () => (history.length > 1 ? history.back() : (location.hash = "#/")));
+  $("#lang").addEventListener("click", () => setLang(lang === "en" ? "tl" : "en"));
+  document.querySelectorAll("[data-lang]").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
+  $("#enter").addEventListener("click", enterApp);
   window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
+  applyStatic();
+  showCoverIfNeeded();
   render();
   load();
 
