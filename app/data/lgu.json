@@ -1,7 +1,7 @@
 {
  "dataset": "lgu",
  "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
- "scraped_at": "2026-09-30T11:55:52+00:00",
+ "scraped_at": "2026-09-30T13:13:29+00:00",
  "count": 160,
  "method": "wikipedia",
  "records": [
@@ -27,7 +27,8 @@
     "prior_experience": "Businessman; Governor of Abra",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-agusan-del-norte-angelica-amante",
@@ -51,7 +52,8 @@
     "prior_experience": "Nurse; Governor of Agusan del Norte; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-agusan-del-sur-santiago-cane-jr",
@@ -75,7 +77,8 @@
     "prior_experience": "Vice Governor of Agusan del Sur",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-aklan-jose-enrique-miraflores",
@@ -99,7 +102,8 @@
     "prior_experience": "Mayor of Ibajay",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-albay-noel-rosal",
@@ -123,7 +127,8 @@
     "prior_experience": "Engineer; Governor of Albay; Mayor of Legazpi; City Administrator of Legazpi",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-antique-paolo-javier",
@@ -147,7 +152,8 @@
     "prior_experience": "Businessman; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-apayao-elias-bulut-jr",
@@ -171,7 +177,8 @@
     "prior_experience": "House of Representatives; Governor of Apayao; Mayor of Calanasan",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-aurora-isidro-galban",
@@ -195,7 +202,8 @@
     "prior_experience": "Civil engineer, professor, entrepreneur; Vice Governor of Aurora; Aurora Provincial Board",
     "assumed_office": "September 22, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-basilan-mujiv-hataman",
@@ -219,7 +227,8 @@
     "prior_experience": "Indigenous people's rights advocate; House of Representatives; Governor of the Autonomous Region in Muslim Mindanao",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-bataan-joet-garcia",
@@ -243,7 +252,8 @@
     "prior_experience": "House of Representatives; Mayor of Balanga",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-batanes-jun-aguto",
@@ -267,7 +277,8 @@
     "prior_experience": "National Bureau of Investigation Cybercrime Division chief",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-batangas-vilma-santos",
@@ -291,7 +302,8 @@
     "prior_experience": "Actress; House of Representatives; Governor of Batangas; Mayor of Lipa",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-benguet-melchor-diclas",
@@ -315,7 +327,8 @@
     "prior_experience": "Physician; Mayor of Buguias; Vice Mayor of Buguias",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-biliran-rogelio-espina",
@@ -339,7 +352,8 @@
     "prior_experience": "Businessman; Governor of Biliran; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-bohol-aris-aumentado",
@@ -363,7 +377,8 @@
     "prior_experience": "Businessman; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-bukidnon-rogelio-neil-roque",
@@ -387,7 +402,8 @@
     "prior_experience": "Businessman; House of Representatives; Valencia City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-bulacan-daniel-fernando",
@@ -411,7 +427,8 @@
     "prior_experience": "Actor; Vice Governor of Bulacan; Bulacan Provincial Board",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-cagayan-edgar-aglipay",
@@ -435,7 +452,8 @@
     "prior_experience": "Businessman; Philippine Retirement Authority Chairman; Chief of the Philippine National Police",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-camarines-norte-ricarte-padilla",
@@ -459,7 +477,8 @@
     "prior_experience": "Mayor of Jose Panganiban",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-camarines-sur-luis-raymund-villafuerte",
@@ -483,7 +502,8 @@
     "prior_experience": "Businessman; House of Representatives; Governor of Camarines Sur",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-camiguin-xavier-jesus-romualdo",
@@ -507,7 +527,8 @@
     "prior_experience": "Lawyer; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-capiz-fredenil-castro",
@@ -531,7 +552,8 @@
     "prior_experience": "Farmer, businessman; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-catanduanes-patrick-azanza",
@@ -555,7 +577,8 @@
     "prior_experience": "Educator; Catanduanes State University President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-cavite-abeng-remulla",
@@ -579,7 +602,8 @@
     "prior_experience": "Cavite Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-cebu-pamela-baricuatro",
@@ -603,7 +627,8 @@
     "prior_experience": "Philanthropist; LBP Resources and Development Corporation national board director",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-cotabato-emmylou-mendoza",
@@ -627,7 +652,8 @@
     "prior_experience": "Vice Governor of Cotabato; Governor of Cotabato; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-davao-de-oro-raul-mabanglo",
@@ -651,7 +677,8 @@
     "prior_experience": "Engineer; Davao del Norte Association of Barangay Captains President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-davao-del-norte-edwin-jubahib",
@@ -675,7 +702,8 @@
     "prior_experience": "Businessman",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-davao-del-sur-yvonne-rona-cagas",
@@ -698,7 +726,8 @@
     "born": "March 13, 1990",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-davao-occidental-franklin-bautista",
@@ -722,7 +751,8 @@
     "prior_experience": "Lawyer; Vice Governor of Davao Occidental; House of Representatives; Mayor of Malita",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-davao-oriental-nelson-dayanghirang",
@@ -746,7 +776,8 @@
     "prior_experience": "House of Representatives; Governor of Davao Oriental",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-dinagat-islands-nilo-demerey-jr",
@@ -770,7 +801,8 @@
     "prior_experience": "Vice Governor of Dinagat Islands; Dinagat Islands Provincial Board",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-eastern-samar-rv-evardone",
@@ -794,7 +826,8 @@
     "prior_experience": "Economist; Eastern Samar Philippine Councilors League President; Sulat Municipal Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-guimaras-lucille-nava",
@@ -818,7 +851,8 @@
     "prior_experience": "Physician; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-ifugao-jerry-dalipog",
@@ -842,7 +876,8 @@
     "prior_experience": "Civil engineer; Mayor of Banaue",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-ilocos-norte-cecilia-marcos",
@@ -866,7 +901,8 @@
     "prior_experience": "Vice Governor of Ilocos Norte",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-ilocos-sur-jerry-singson",
@@ -890,7 +926,8 @@
     "prior_experience": "Businessman; Vice Governor of Ilocos Sur; Ilocos Sur Provincial Board; Vice Mayor of Vigan",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-iloilo-arthur-defensor-jr",
@@ -914,7 +951,8 @@
     "prior_experience": "Lawyer; House of Representatives; Iloilo Provincial Board",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-isabela-rodolfo-albano-iii",
@@ -938,7 +976,8 @@
     "prior_experience": "House of Representatives; Vice Governor of Isabela",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-kalinga-james-edduba",
@@ -962,7 +1001,8 @@
     "prior_experience": "Vice Governor of Kalinga; Mayor of Pasil",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-la-union-mario-eduardo-ortega",
@@ -986,7 +1026,8 @@
     "prior_experience": "Vice Governor of La Union",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-laguna-sol-aragones",
@@ -1010,7 +1051,8 @@
     "prior_experience": "Journalist, businesswoman; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-lanao-del-norte-mohamad-khalid-dimaporo",
@@ -1034,7 +1076,8 @@
     "prior_experience": "Economist; House of Representatives; Governor of Lanao del Norte",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-lanao-del-sur-mamintal-adiong-jr",
@@ -1058,7 +1101,8 @@
     "prior_experience": "Civil engineer; Vice Governor of Lanao del Sur; Governor of Lanao del Sur; Provincial Administrator of Lanao del Sur; Lanao del Sur Provincial Board",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-leyte-jericho-petilla",
@@ -1082,7 +1126,8 @@
     "prior_experience": "Secretary of Energy; Governor of Leyte",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-maguindanao-del-norte-tucao-mastura",
@@ -1106,7 +1151,8 @@
     "prior_experience": "Mayor of Sultan Kudarat; Member of the Bangsamoro Transition Authority Parliament; Governor of Shariff Kabunsuan",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-maguindanao-del-sur-ali-midtimbang",
@@ -1130,7 +1176,8 @@
     "prior_experience": "Farmer; Mayor of Talayan",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-marinduque-mel-go",
@@ -1154,7 +1201,8 @@
     "prior_experience": "Businessman; Marinduque Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-masbate-richard-kho",
@@ -1178,7 +1226,8 @@
     "prior_experience": "Lawyer; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-misamis-occidental-henry-oaminal",
@@ -1202,7 +1251,8 @@
     "prior_experience": "Businessman; House of Representatives; Vice Governor of Misamis Occidental; Misamis Occidental Provincial Board",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-misamis-oriental-juliette-uy",
@@ -1226,7 +1276,8 @@
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-mountain-province-bonifacio-lacwasan",
@@ -1250,7 +1301,8 @@
     "prior_experience": "Vice Governor of Mountain Province",
     "assumed_office": "March 31, 2016",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-negros-occidental-bong-lacson",
@@ -1274,7 +1326,8 @@
     "prior_experience": "Sugar planter; Vice Governor of Negros Occidental; Mayor of San Carlos",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-negros-oriental-chaco-sagarbarria",
@@ -1298,7 +1351,8 @@
     "prior_experience": "Vice Governor of Negros Oriental; Negros Oriental Provincial Board; Dumaguete City Council",
     "assumed_office": "May 31, 2023",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-northern-samar-harris-ongchuan",
@@ -1322,7 +1376,8 @@
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-nueva-ecija-aurelio-umali",
@@ -1346,7 +1401,8 @@
     "prior_experience": "Lawyer; Governor of Nueva Ecija; House of Representatives; National Telecommunications Commission Deputy Commissioner",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-nueva-vizcaya-jose-gambito",
@@ -1370,7 +1426,8 @@
     "prior_experience": "Lawyer; Vice Governor of Nueva Vizcaya",
     "assumed_office": "May 5, 2023",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-occidental-mindoro-eduardo-gadiano",
@@ -1394,7 +1451,8 @@
     "prior_experience": "Mayor of Sablayan; Vice Mayor of Sablayan",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-oriental-mindoro-humerlito-dolor",
@@ -1418,7 +1476,8 @@
     "prior_experience": "Vice Governor of Oriental Mindoro; Oriental Mindoro Provincial Board",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-palawan-amy-alvarez",
@@ -1442,7 +1501,8 @@
     "prior_experience": "Mayor of San Vicente",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-pangasinan-ramon-guico-iii",
@@ -1466,7 +1526,8 @@
     "prior_experience": "Pilot; House of Representatives; Mayor of Binalonan; Vice Mayor of Binalonan",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-pampanga-lilia-pineda",
@@ -1490,7 +1551,8 @@
     "prior_experience": "Businesswoman; Vice Governor of Pampanga; Governor of Pampanga; Pampanga Provincial Board; Mayor of Lubao",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-quezon-angelina-tan",
@@ -1514,7 +1576,8 @@
     "prior_experience": "Physician; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-quirino-julius-caesar-vaquilar",
@@ -1538,7 +1601,8 @@
     "prior_experience": "Registered nurse, pastor; Vice Governor of Quirino; Quirino Provincial Board",
     "assumed_office": "September 15, 2026",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-rizal-nina-ynares",
@@ -1562,7 +1626,8 @@
     "prior_experience": "Government Service Insurance System board member",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-romblon-trina-firmalo-fabic",
@@ -1586,7 +1651,8 @@
     "prior_experience": "Environmental planner; Mayor of Odiongan",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-samar-sharee-ann-tan",
@@ -1610,7 +1676,8 @@
     "prior_experience": "Pharmacist; House of Representatives; Governor of Samar",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-sarangani-rogelio-pacquiao",
@@ -1634,7 +1701,8 @@
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-siquijor-jake-vincent-villa",
@@ -1658,7 +1726,8 @@
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-sorsogon-jose-edwin-hamor",
@@ -1682,7 +1751,8 @@
     "prior_experience": "Businessman; Mayor of Casiguran",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-south-cotabato-reynaldo-tamayo-jr",
@@ -1706,7 +1776,8 @@
     "prior_experience": "Mayor of Tupi",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-southern-leyte-damian-mercado",
@@ -1730,7 +1801,8 @@
     "prior_experience": "House of Representatives; Governor of Southern Leyte; Mayor of Maasin",
     "assumed_office": "October 31, 2018",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-sultan-kudarat-pax-ali-mangudadatu",
@@ -1754,7 +1826,8 @@
     "prior_experience": "Mayor of Datu Abdullah Sangki",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-sulu-abdusakur-tan-ii",
@@ -1778,7 +1851,8 @@
     "prior_experience": "Vice Governor of Sulu; Governor of Sulu",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-surigao-del-norte-robert-lyndon-barbers",
@@ -1802,7 +1876,8 @@
     "prior_experience": "Governor of Surigao del Norte",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-surigao-del-sur-johnny-pimentel",
@@ -1826,7 +1901,8 @@
     "prior_experience": "Businessman; House of Representatives; Governor of Surigao del Sur; Provincial Administrator of Surigao del Sur; Vice Governor of Surigao del Sur",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-tarlac-christian-yap",
@@ -1850,7 +1926,8 @@
     "prior_experience": "House of Representatives; Mayor of Victoria",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-tawi-tawi-yshmael-sali",
@@ -1874,7 +1951,8 @@
     "prior_experience": "Mayor of Languyan",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-zambales-jun-ebdane",
@@ -1898,7 +1976,8 @@
     "prior_experience": "Engineer; Governor of Zambales; Secretary of Public Works and Highways; Secretary of National Defense; Chief of the Philippine National Police",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-zamboanga-del-norte-darel-uy",
@@ -1922,7 +2001,8 @@
     "prior_experience": "Mayor of Dipolog",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-zamboanga-del-sur-divina-grace-yu",
@@ -1946,7 +2026,8 @@
     "prior_experience": "House of Representatives; Vice Mayor of Pagadian",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "governor-zamboanga-sibugay-dulce-ann-hofer",
@@ -1970,7 +2051,8 @@
     "prior_experience": "Educator; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-angeles-city-carmelo-lazatin-ii",
@@ -1994,7 +2076,8 @@
     "prior_experience": "Businessman; House of Representatives; Angeles City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-bacolod-greg-gasataya",
@@ -2018,7 +2101,8 @@
     "prior_experience": "Journalist; House of Representatives; Vice Mayor of Bacolod; Bacolod City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-baguio-benjamin-magalong",
@@ -2042,7 +2126,8 @@
     "prior_experience": "Retired police officer; Deputy Chief for Operations of the Philippine National Police",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-butuan-lawrence-fortun",
@@ -2066,7 +2151,8 @@
     "prior_experience": "Lawyer; Vice Mayor of Butuan; House of Representatives; Butuan City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-cagayan-de-oro-rolando-uy",
@@ -2090,7 +2176,8 @@
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-caloocan-along-malapitan",
@@ -2114,7 +2201,8 @@
     "prior_experience": "House of Representatives; Caloocan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-cebu-city-nestor-archival",
@@ -2138,7 +2226,8 @@
     "prior_experience": "Electrical engineer, businessman, environmentalist; Cebu City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-cotabato-city-bruce-matabalao",
@@ -2162,7 +2251,8 @@
     "prior_experience": "Radio personality; Cotabato City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-dagupan-belen-fernandez",
@@ -2186,7 +2276,8 @@
     "prior_experience": "Businesswoman; Vice Mayor of Dagupan; Dagupan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-davao-city-sebastian-duterte",
@@ -2210,7 +2301,8 @@
     "prior_experience": "Businessman; Vice Mayor of Davao City; Mayor of Davao City",
     "assumed_office": "January 23, 2026",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-general-santos-lorelie-pacquiao",
@@ -2234,7 +2326,8 @@
     "prior_experience": "General Santos Association of Barangay Captains President",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-iligan-frederick-siao",
@@ -2258,7 +2351,8 @@
     "prior_experience": "Businessman; House of Representatives; Iligan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-iloilo-city-raisa-trenas",
@@ -2282,7 +2376,8 @@
     "prior_experience": "Businesswoman",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-lapu-lapu-city-cynthia-chan",
@@ -2306,7 +2401,8 @@
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-las-pinas-april-aguilar",
@@ -2330,7 +2426,8 @@
     "prior_experience": "Vice Mayor of Las Piñas",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-lucena-mark-alcala",
@@ -2354,7 +2451,8 @@
     "prior_experience": "City government staff",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-makati-nancy-binay",
@@ -2378,7 +2476,8 @@
     "prior_experience": "Senate",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-malabon-jeannie-sandoval",
@@ -2402,7 +2501,8 @@
     "prior_experience": "Vice Mayor of Malabon",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-mandaluyong-carmelita-abalos",
@@ -2426,7 +2526,8 @@
     "prior_experience": "Vice Mayor of Mandaluyong; Mayor of Mandaluyong",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-mandaue-jonkie-ouano",
@@ -2450,7 +2551,8 @@
     "prior_experience": "Businessman; Cebu Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-manila-isko-moreno",
@@ -2474,7 +2576,8 @@
     "prior_experience": "Actor; Mayor of Manila; Department of Social Welfare and Development Undersecretary; Vice Mayor of Manila; Manila City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-marikina-maan-teodoro",
@@ -2498,7 +2601,8 @@
     "prior_experience": "Teacher; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-muntinlupa-ruffy-biazon",
@@ -2522,7 +2626,8 @@
     "prior_experience": "House of Representatives; Bureau of Customs Commissioner; Director of the Videogram Regulatory Board",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-naga-leni-robredo",
@@ -2546,7 +2651,8 @@
     "prior_experience": "Lawyer; Vice President of the Philippines; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-navotas-john-rey-tiangco",
@@ -2570,7 +2676,8 @@
     "prior_experience": "House of Representatives; Mayor of Navotas",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-olongapo-rolen-paulino-jr",
@@ -2594,7 +2701,8 @@
     "prior_experience": "Lawyer",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-ormoc-lucy-torres-gomez",
@@ -2618,7 +2726,8 @@
     "prior_experience": "Actress; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-paranaque-edwin-olivarez",
@@ -2642,7 +2751,8 @@
     "prior_experience": "Businessman; House of Representatives; Mayor of Parañaque; Vice Governor of Laguna; Laguna Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-pasay-emi-rubiano",
@@ -2666,7 +2776,8 @@
     "prior_experience": "Businesswoman; House of Representatives; Pasay City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-pasig-vico-sotto",
@@ -2690,7 +2801,8 @@
     "prior_experience": "Pasig City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-pateros-gerald-german",
@@ -2714,7 +2826,8 @@
     "prior_experience": "Municipal Administrator of Pateros; Vice Mayor of Pateros; Pateros Municipal Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-puerto-princesa-lucilo-bayron",
@@ -2738,7 +2851,8 @@
     "prior_experience": "Vice Mayor of Puerto Princesa",
     "assumed_office": "June 22, 2017",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-quezon-city-joy-belmonte",
@@ -2762,7 +2876,8 @@
     "prior_experience": "Entrepreneur, archeologist; Vice Mayor of Quezon City",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-san-juan-francis-zamora",
@@ -2786,7 +2901,8 @@
     "prior_experience": "Basketball player; Vice Mayor of San Juan; San Juan City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-santiago-alyssa-sheena-dy",
@@ -2810,7 +2926,8 @@
     "prior_experience": "Lawyer, accountant; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-tacloban-alfred-romualdez",
@@ -2834,7 +2951,8 @@
     "prior_experience": "Businessman; Mayor of Tacloban; House of Representatives",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-taguig-lani-cayetano",
@@ -2858,7 +2976,8 @@
     "prior_experience": "House of Representatives; Mayor of Taguig",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-valenzuela-wes-gatchalian",
@@ -2882,7 +3001,8 @@
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "mayor-zamboanga-city-khymer-olaso",
@@ -2906,7 +3026,8 @@
     "prior_experience": "Master mariner; House of Representatives; Zamboanga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-angeles-city-amos-rivera",
@@ -2930,7 +3051,8 @@
     "prior_experience": "Businessman; Angeles City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-bacolod-kalaw-puentevella",
@@ -2954,7 +3076,8 @@
     "prior_experience": "Businessman; Bacolod City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-baguio-faustino-olowan",
@@ -2978,7 +3101,8 @@
     "prior_experience": "Lawyer; Baguio City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-butuan-rey-desiata",
@@ -3002,7 +3126,8 @@
     "prior_experience": "Butuan City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-cagayan-de-oro-jocelyn-rodriguez",
@@ -3026,7 +3151,8 @@
     "prior_experience": "Nurse; Barangay chairperson",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-caloocan-karina-teh",
@@ -3050,7 +3176,8 @@
     "prior_experience": "Researcher; Caloocan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-cebu-city-tomas-osmena",
@@ -3074,7 +3201,8 @@
     "prior_experience": "Agriculturist; Mayor of Cebu City; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-cotabato-city-johair-madag",
@@ -3098,7 +3226,8 @@
     "prior_experience": "Barangay chairperson",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-dagupan-dean-bryan-kua",
@@ -3122,7 +3251,8 @@
     "prior_experience": "Dagupan Association of Barangay Captains President",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-davao-city-rigo-duterte",
@@ -3146,7 +3276,8 @@
     "prior_experience": "Businessman; Davao City Council",
     "assumed_office": "January 23, 2026",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-general-santos-ed-yumang",
@@ -3170,7 +3301,8 @@
     "prior_experience": "Lawyer; General Santos City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-iligan-wekwek-uy",
@@ -3194,7 +3326,8 @@
     "prior_experience": "Businessman",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-iloilo-city-love-baronda",
@@ -3218,7 +3351,8 @@
     "prior_experience": "Iloilo City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-lapu-lapu-city-celsi-sitoy",
@@ -3242,7 +3376,8 @@
     "prior_experience": "Physician; Mayor of Cordova",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-las-pinas-imelda-aguilar",
@@ -3266,7 +3401,8 @@
     "prior_experience": "Mayor of Las Piñas",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-lucena-roderick-alcala",
@@ -3290,7 +3426,8 @@
     "prior_experience": "Mayor of Lucena; Vice Mayor of Lucena; Lucena City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-makati-kid-pena",
@@ -3314,7 +3451,8 @@
     "prior_experience": "House of Representatives; Mayor of Makati; Vice Mayor of Makati; Makati Association of Barangay Captains President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-malabon-edward-nolasco",
@@ -3338,7 +3476,8 @@
     "prior_experience": "Malabon City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-mandaluyong-anthony-suva",
@@ -3362,7 +3501,8 @@
     "prior_experience": "Businessman; Mandaluyong City Council; Vice Mayor of Mandaluyong",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-mandaue-glenn-bercede",
@@ -3386,7 +3526,8 @@
     "prior_experience": "Mayor of Mandaue; Vice Mayor of Mandaue; Cebu Provincial Board; Mandaue City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-manila-chi-atienza",
@@ -3410,7 +3551,8 @@
     "prior_experience": "Journalist",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-marikina-del-de-guzman",
@@ -3434,7 +3576,8 @@
     "prior_experience": "Mayor of Marikina; House of Representatives; Vice Mayor of Marikina; Marikina Municipal Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-muntinlupa-phanie-teves",
@@ -3458,7 +3601,8 @@
     "prior_experience": "Businesswoman; Municipal Administrator of Naujan , Oriental Mindoro; Muntinlupa City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-naga-gabriel-bordado",
@@ -3482,7 +3626,8 @@
     "prior_experience": "Writer; House of Representatives; Vice Mayor of Naga; Naga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-navotas-tito-sanchez",
@@ -3506,7 +3651,8 @@
     "prior_experience": "Navotas City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-olongapo-kaye-ann-legaspi",
@@ -3530,7 +3676,8 @@
     "prior_experience": "Olongapo City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-ormoc-carmelo-locsin-jr",
@@ -3554,7 +3701,8 @@
     "prior_experience": "Businessman; Vice Mayor of Ormoc",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-paranaque-benjo-bernabe",
@@ -3578,7 +3726,8 @@
     "prior_experience": "Businessman; Parañaque City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-pasay-mark-calixto",
@@ -3602,7 +3751,8 @@
     "prior_experience": "Pasay City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-pasig-robert-jaworski-jr",
@@ -3626,7 +3776,8 @@
     "prior_experience": "Businessman, basketball player; House of Representatives; San Juan Municipal Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-pateros-carlo-santos",
@@ -3650,7 +3801,8 @@
     "prior_experience": "Businessman, engineer",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-puerto-princesa-jimbo-maristela",
@@ -3674,7 +3826,8 @@
     "prior_experience": "Lawyer; Puerto Princesa City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-quezon-city-gian-sotto",
@@ -3698,7 +3851,8 @@
     "prior_experience": "Actor, entrepreneur; Quezon City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-san-juan-angelo-agcaoili",
@@ -3722,7 +3876,8 @@
     "prior_experience": "Lawyer; San Juan City Council",
     "assumed_office": "June 26, 2023",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-santiago-jamayne-tan",
@@ -3746,7 +3901,8 @@
     "prior_experience": "Businesswoman",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-tacloban-raymund-romualdez",
@@ -3770,7 +3926,8 @@
     "prior_experience": "Businessman; Tacloban Association of Barangay Captains President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-taguig-arvin-ian-alit",
@@ -3794,7 +3951,8 @@
     "prior_experience": "Taguig City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-valenzuela-marlon-alejandrino",
@@ -3818,7 +3976,8 @@
     "prior_experience": "Businessman; Valenzuela City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   },
   {
    "id": "vice-mayor-zamboanga-city-beng-climaco",
@@ -3842,7 +4001,8 @@
     "prior_experience": "Teacher; Mayor of Zamboanga City; House of Representatives; Vice Mayor of Zamboanga City; Zamboanga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
-   }
+   },
+   "source_type": "public"
   }
  ]
 }
