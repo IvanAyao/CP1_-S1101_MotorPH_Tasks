@@ -76,10 +76,25 @@ badge in the app and never replace official records: the live scrape or a
 saved copy always wins.
 
 Senators' achievements come from the bulleted lines of their official
-Senate bios. Bills per legislator are not included yet: the Senate's bills
-pages are behind Cloudflare and the legacy LIS (web.senate.gov.ph) is
-offline. The profile page shows bills automatically once a source provides
-them (`record["bills"]`).
+Senate bios.
+
+### Senate bills (public, non-government)
+
+The Senate's bills pages are behind Cloudflare and the legacy LIS is offline,
+so bills per senator come from [BetterGov Open Congress
+Data](https://github.com/bettergovph/open-congress-data) (`scraper/bills.py`),
+a public dataset transcribed from the Senate Legislative Information System.
+Bills are matched to senators by the Senate LIS author code. The app labels
+them "Pampubliko · hindi gobyerno", shows the dataset's "as of" date (status
+values may be stale), and links every bill to its official Senate page.
+
+### Source labels
+
+Every record, dataset and bill list carries a `source_type`:
+`official` (a .gov.ph site, or a saved copy of one), `public` (a public but
+non-government publisher such as Wikipedia or BetterGov), or `private`
+(privately run; none used). The app shows these as badges and explains them
+on the Datos page.
 
 ## Running locally
 

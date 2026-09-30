@@ -12,8 +12,9 @@ import json
 import time
 import traceback
 
-from common import DATA_DIR, Browser, log, now_iso, write_dataset
+from common import DATA_DIR, Browser, log, now_iso, source_type, write_dataset
 import barangay
+import bills
 import house
 import lgu
 import senate
@@ -33,10 +34,15 @@ def build_manifest() -> None:
         path = DATA_DIR / file
         meta = {"key": key, "file": file, "source": label, "source_url": url,
                 "count": 0, "scraped_at": None}
+        meta["source_type"] = source_type(url)
         if path.exists():
             doc = json.loads(path.read_text())
             meta.update(count=doc.get("count", 0), scraped_at=doc.get("scraped_at"))
             method = doc.get("method", "")
+            if method == "wikipedia":
+                meta["source_type"] = "public"
+            elif method == "official+wikipedia":
+                meta["source_type"] = "official+public"
             if method == "wikipedia":
                 meta.update(source="Wikipedia (unofficial)", source_url=doc.get("source_url", url))
             elif method == "official+wikipedia":
@@ -44,6 +50,12 @@ def build_manifest() -> None:
             elif method == "saved-copy":
                 meta["source"] = f"{label} (saved copy, {doc.get('copied_on', '')})"
         entries.append(meta)
+        bills_src = doc.get("bills_source") if key == "senate" and path.exists() else None
+        if bills_src:
+            entries.append({"key": "bills", "file": file, "source": f"Senate bills · {bills_src['name']}",
+                            "source_url": bills_src["url"], "source_type": bills_src.get("source_type", "public"),
+                            "count": bills_src.get("bill_count", 0), "scraped_at": bills_src.get("imported_at"),
+                            "as_of": bills_src.get("as_of")})
     (DATA_DIR / "manifest.json").write_text(json.dumps(
         {"generated_at": now_iso(), "datasets": entries}, indent=1, ensure_ascii=False))
     log("manifest rebuilt")
@@ -76,6 +88,14 @@ def main() -> None:
                 log(f"{key} FAILED: {err}")
                 traceback.print_exc()
                 failures.append(key)
+        # Senate bills per senator (public BetterGov dataset, labelled as such).
+        if "senate" in wanted:
+            try:
+                bills.run()
+            except (Exception, SystemExit) as err:  # noqa: BLE001
+                log(f"bills FAILED: {err}")
+                traceback.print_exc()
+                failures.append("bills")
         # Where official sites block us, fill gaps from Wikipedia (labelled
         # unofficial). Official records are never replaced.
         fallback = [k for k, want in (("house", "house"), ("governors", "lgu"), ("mayors", "lgu")) if want in wanted]

@@ -72,6 +72,13 @@
   const initials = (name) => name.split(/\s+/).filter((w) => /^[A-Za-zÀ-ÿÑñ]/.test(w)).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
   const place = (o, withDistrict = true) => [o.barangay && `Brgy. ${o.barangay}`, o.lgu, withDistrict && o.district, o.province, o.region].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ");
   const levelLabel = (o) => o.position || LEVELS[o.level] || o.level;
+  // Where data comes from: government (.gov.ph) sites are "official"; other
+  // public publishers (Wikipedia, civic open data) are "public"; privately
+  // run sources would be "private".
+  const typeOf = (x) => x?.source_type
+    || (/\.gov\.ph(\/|$)/i.test((() => { try { return new URL(x?.source_url || "").hostname + "/"; } catch { return ""; } })()) ? "official" : "public");
+  const TYPE_LABEL = { official: "Opisyal · gobyerno", public: "Pampubliko · hindi gobyerno", "official+public": "Opisyal + pampubliko", private: "Pribado" };
+  const typeBadge = (t, extra = "") => `<span class="badge src-${String(t).replace("+", "-")}">${t === "official" ? "✓ " : ""}${TYPE_LABEL[t] || t}${extra}</span>`;
 
   function avatar(o, cls = "") {
     const img = safeUrl(o.photo);
@@ -124,6 +131,7 @@
         const doc = await getJSON(ds[k].file);
         addRecords(doc.records, k);
         if (k === "lgu") state.lgus = doc.lgus || [];
+        if (k === "senate") state.billsSource = doc.bills_source || null;
       } catch (e) {
         console.warn(e);
       }
@@ -297,7 +305,7 @@
         <p>${esc(levelLabel(o))}</p>
         <div class="badges">
           ${o.party ? `<span class="badge">${esc(o.party)}</span>` : ""}
-          ${/wikipedia/i.test(o.source) ? '<span class="badge warn">Wikipedia · hindi opisyal</span>' : /saved copy/i.test(o.source) ? '<span class="badge ok">✓ Kopya ng opisyal na datos</span>' : '<span class="badge ok">✓ Opisyal na datos</span>'}
+          ${typeBadge(typeOf(o), /saved copy/i.test(o.source) ? " · kopya" : "")}
         </div>
       </div>
       <div class="btn-row">
@@ -308,11 +316,14 @@
       <table class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}
         ${extra.slice(0, 20).map(([k, v]) => `<tr><th>${esc(pretty(k))}</th><td>${esc(v)}</td></tr>`).join("")}</table>
       ${cleanAch(o.achievements).length ? `<div class="section-label">Mga Nagawa at Parangal (${cleanAch(o.achievements).length})</div>${groupAchievements(o.achievements).map(([label, items]) => `<div class="ach-group">${esc(label)} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
-      ${(o.bills || []).length ? `<div class="section-label">Mga Panukalang Batas (${fmtNum(o.bills.length)})</div><ul class="bills">${o.bills.slice(0, 50).map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · ${esc(b.date)}</span>` : ""}</li>`).join("")}</ul>${o.bills.length > 50 ? `<p class="meta">Ipinapakita ang unang 50.</p>` : ""}` : ""}
+      ${(o.bills || []).length ? `<div class="section-label">Mga Panukalang Batas (${fmtNum(o.bills_count || o.bills.length)})</div>
+        ${billsNote()}
+        <details class="bills-more"${o.bills.length <= 10 ? " open" : ""}><summary>Tingnan ang ${fmtNum(o.bills.length)} panukala</summary>
+        <ul class="bills">${o.bills.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.coauthored ? `<span class="meta"> · co-author</span>` : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · inihain ${esc(b.date)}</span>` : ""}</li>`).join("")}</ul></details>` : ""}
       ${d.biography ? `<div class="section-label">Talambuhay</div><p class="bio">${esc(d.biography)}</p>` : ""}
       ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">📄 Opisyal na CV (PDF) ↗</a></p>` : ""}
       <div class="notice">
-        Pinagkunan: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a>
+        Pinagkunan: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a> (${TYPE_LABEL[typeOf(o)]})
         ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">${/wikipedia\.org/.test(o.profile_url) ? "Wikipedia article" : "Opisyal na profile"} ↗</a>` : ""}
         <br>Huling na-update: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · Kinopya noong ${fmtDate(d.copied_on)}` : ""}
       </div>`;
@@ -328,6 +339,14 @@
       if (addToBallot(slot.key, o)) toast(`Idinagdag sa ${slot.label}`);
       viewProfile(dataset, id);
     });
+  }
+
+  function billsNote() {
+    const b = state.billsSource;
+    if (!b) return "";
+    return `<p class="notice" style="margin:0 0 8px">${typeBadge(b.source_type || "public")}
+      Pinagkunan: <a href="${esc(safeUrl(b.url))}" target="_blank" rel="noopener">${esc(b.name)}</a>, isinalin mula sa opisyal na Senate Legislative Information System.
+      Datos hanggang ${fmtDate(b.as_of)}, kaya maaaring luma na ang status. Bawat panukala ay naka-link sa opisyal na pahina ng Senado.</p>`;
   }
 
   function datasetDate(ds, file) {
@@ -382,6 +401,7 @@
       { label: "Dating Karanasan", of: priorRolesOf, none: "Walang nakatala" },
       { label: "Mga Panukalang Batas", of: billsOf, none: "Walang nakatala" },
     ];
+    const hasBills = billsOf(a).length || billsOf(b).length;
     return sections.map(({ label, of, always, none, countOnly }) => {
       const la = of(a), lb = of(b);
       if (!la.length && !lb.length && !always) return "";
@@ -393,6 +413,7 @@
       const count = (list) => `<span class="cmp-count">${list.length}</span>`;
       return `<div class="cmp-row cmp-lists">
         <div class="lbl">${label}</div>
+        ${label === "Mga Panukalang Batas" && hasBills ? billsNote() : ""}
         <div class="vals"><div>${count(la)}</div><div>${count(lb)}</div></div>
         ${countOnly ? "" : `<details class="cmp-more"${la.length + lb.length <= 6 ? " open" : ""}><summary>Tingnan ang listahan</summary><div class="vals lists"><div>${col(la, inB)}</div><div>${col(lb, inA)}</div></div></details>`}
       </div>`;
@@ -409,7 +430,7 @@
     if (a && b) {
       const fields = [
         ["Posisyon", levelLabel], ["Partido", (o) => o.party], ["Distrito", (o) => o.district],
-        ["Lugar", (o) => place(o, false)], ["Pinagkunan", (o) => o.source],
+        ["Lugar", (o) => place(o, false)], ["Pinagkunan", (o) => `${o.source} (${TYPE_LABEL[typeOf(o)]})`],
       ];
       const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on|prior_experience/.test(k));
       shared.slice(0, 12).forEach((k) => fields.push([k.replace(/_/g, " "), (o) => o.details[k]]));
@@ -529,8 +550,13 @@
       ${partyBars("house", "Kamara ayon sa partido")}
       <div class="section-label">Mga pinagkukunan ng datos</div>
       <div class="card"><table class="kv">
-        ${ds.map((d) => `<tr><th><a href="${esc(safeUrl(d.source_url))}" target="_blank" rel="noopener">${esc(d.source)}</a></th><td>${fmtNum(d.count)} tala<br><span class="meta">${d.scraped_at ? "Na-update " + fmtDate(d.scraped_at) : "Hinihintay pa"}</span></td></tr>`).join("") || "<tr><td>Wala pang datos.</td></tr>"}
+        ${ds.map((d) => `<tr><th><a href="${esc(safeUrl(d.source_url))}" target="_blank" rel="noopener">${esc(d.source)}</a><br>${typeBadge(typeOf(d))}</th><td>${fmtNum(d.count)} ${d.key === "bills" ? "panukala" : "tala"}<br><span class="meta">${d.key === "bills" && d.as_of ? "Datos hanggang " + fmtDate(d.as_of) : d.scraped_at ? "Na-update " + fmtDate(d.scraped_at) : "Hinihintay pa"}</span></td></tr>`).join("") || "<tr><td>Wala pang datos.</td></tr>"}
       </table></div>
+      <div class="card legend">
+        <p>${typeBadge("official")} Mula mismo sa website ng ahensya ng gobyerno (.gov.ph), o kopya nito.</p>
+        <p>${typeBadge("public")} Pampublikong pinagkunan na hindi gobyerno, gaya ng Wikipedia o civic open-data. Hindi opisyal; suriin sa opisyal na pinagkunan.</p>
+        <p style="margin-bottom:0">${typeBadge("private")} Pribadong pinagkunan. Wala pang ginagamit.</p>
+      </div>
       <div class="section-label">Tungkol sa Pili.PH</div>
       <div class="card">
         <p style="margin-top:0">Ang Pili.PH ay isang independiyenteng directory ng mga halal na opisyal ng Pilipinas. Lahat ng impormasyon ay kinokopya nang awtomatiko mula sa opisyal na mga website ng Senado, Kamara, PSA, at DILG, at regular na ina-update.</p>
