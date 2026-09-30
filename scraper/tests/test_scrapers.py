@@ -388,6 +388,7 @@ def test_dilg_directory_parse(isolated_output):
     ws.append(["", "", "", "SB MEMBERS", "LIM", "ROSA", "", ""])
     ws.append(["", "HUC", "CAGAYAN DE ORO CITY", "CITY MAYOR", "UY", "ROLANDO", "A", ""])
     ws.append(["", "", "", "SP MEMBERS (D1)", "DAHINO", "DESIREE", "", ""])
+    ws.append(["", "", "", "", "ABADAY", "ROGER", "G", ""])
     ws.append(["", "BUKIDNON", "", "SP MEMBERS", "ALBARECE", "MARIO", "B", "JR."])
     buf = _io.BytesIO()
     wb.save(buf)
@@ -402,6 +403,7 @@ def test_dilg_directory_parse(isolated_output):
         ("Rosa Lim", "councilor", "Bohol", "Panglao"),
         ("Rolando A. Uy", "mayor", "", "Cagayan de Oro City"),
         ("Desiree Dahino", "councilor", "", "Cagayan de Oro City"),
+        ("Roger G. Abaday", "councilor", "", "Cagayan de Oro City"),
         ("Mario B. Albarece Jr.", "board_member", "Bukidnon", ""),
     }
     assert all(r["source_type"] == "official" for r in recs)
