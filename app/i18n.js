@@ -1,0 +1,178 @@
+/* Pili.PH interface text in Tagalog (tl) and English (en).
+ * Only the app's own labels are translated. Official data (names,
+ * positions, sources, bill titles) is shown exactly as published.
+ * Placeholders like {n} are filled in by t(key, {n: ...}).
+ */
+window.PILI_I18N = {
+  tl: {
+    locale: "fil-PH",
+    app_title: "Pili.PH — Direktoryo ng mga Opisyal ng Pilipinas",
+    tagline: "Direktoryo ng mga Opisyal ng Pilipinas",
+    cover_lead: "Kilalanin, ihambing, at piliin ang mga opisyal ng Pilipinas — mula Senado hanggang barangay.",
+    cover_lang: "Wika",
+    cover_enter: "Pumasok",
+    cover_note: "Datos mula sa opisyal at pampublikong pinagkunan. Bawat tala ay may label kung saan ito galing.",
+    lang_toggle: "Change language to English",
+
+    tab_home: "Opisyal", tab_hanap: "Hanapin", tab_ihambing: "Ihambing", tab_pili: "Pili Ko", tab_ako: "Datos",
+    nav_label: "Pangunahing navigation", back: "Bumalik",
+    title_hanap: "Hanapin", title_ihambing: "Ihambing", title_pili: "Pili Ko 2028", title_ako: "Datos at Stats",
+
+    lvl_senate: "Senador", lvl_house: "Kinatawan", lvl_governor: "Gobernador", lvl_vice_governor: "Bise Gobernador",
+    lvl_board_member: "Bokal", lvl_mayor: "Alkalde", lvl_vice_mayor: "Bise Alkalde", lvl_councilor: "Konsehal",
+    lvl_punong_barangay: "Punong Barangay", lvl_kagawad: "Kagawad", lvl_sk_chair: "SK Chair", lvl_sk_kagawad: "SK Kagawad",
+    lvl_barangay_secretary: "Kalihim ng Barangay", lvl_barangay_treasurer: "Ingat-yaman ng Barangay", lvl_other: "Iba pa",
+
+    f_all: "Lahat", f_senate: "Senado", f_house: "Kamara", f_gov: "Gobernador", f_mayor: "Alkalde",
+    f_council: "Konsehal", f_brgy: "Barangay",
+
+    slot_president: "Pangulo", slot_vp: "Bise Pangulo", slot_senate: "Senado",
+    slot_rep: "Kinatawan ng Distrito / Party-list", slot_mayor: "Alkalde", slot_local: "Iba pang lokal na opisyal",
+
+    type_official: "Opisyal · gobyerno", type_public: "Pampubliko · hindi gobyerno",
+    "type_official+public": "Opisyal + pampubliko", type_private: "Pribado", type_copy: " · kopya",
+
+    no_data_title: "Wala pang datos.",
+    no_data_body: "Kinokolekta pa ang listahan ng mga opisyal mula sa opisyal na mga website ng gobyerno. Subukan muli mamaya.",
+    no_data_sources: "Mga pinagkukunan: Senado, Kamara, PSA, DILG — tingnan ang",
+
+    search_ph: "Hanapin ang opisyal, posisyon, lugar…", search_label: "Hanapin",
+    quick_compare: "Ihambing", quick_compare_sub: "Compare", quick_list: "Listahan 2028", quick_list_sub: "Pili Ko",
+    quick_stats: "Stats", quick_stats_sub: "Datos",
+    loading: "Naglo-load…", n_officials: "{n} opisyal",
+    brgy_note: "May {n} barangay officials sa directory.", brgy_note2: "Piliin ang lugar sa {link} para makita sila.",
+    no_match: "Walang tugma sa “{q}”.", no_match_short: "Walang tugma.", show_more: "Ipakita pa ({n})",
+
+    by_place: "Hanapin ayon sa lugar", region: "Rehiyon", province: "Probinsya", lgu: "Lungsod / Bayan", barangay: "Barangay",
+    all_regions: "Lahat ng rehiyon", all_provinces: "Lahat ng probinsya", all_lgus: "Lahat ng lungsod / bayan",
+    all_brgys: "Lahat ng barangay", pick_province_first: "Pumili muna ng probinsya para sa barangay",
+    none_here: "Walang opisyal na nakatala para sa lugar na ito.",
+    first_400: "Ipinapakita ang unang 400. Paliitin ang lugar para makita ang iba.",
+    hanap_hint: "Pumili ng rehiyon o probinsya para makita ang mga kinatawan, alkalde, at barangay officials doon.",
+    hanap_senators: "Para sa mga senador (nationwide), gamitin ang {link} tab.",
+
+    not_found: "Hindi nahanap ang opisyal na ito.", back_to_list: "Bumalik sa listahan",
+    position: "Posisyon", party: "Partido", district: "Distrito", contact: "Contact", office: "Opisina",
+    info: "Impormasyon", compare_btn: "⚖️ Ihambing", in_ballot: "✓ Nasa Pili Ko", add_ballot: "＋ Pili Ko 2028",
+    achievements_n: "Mga Nagawa at Parangal ({n})", bills_n: "Mga Panukalang Batas ({n})",
+    see_bills: "Tingnan ang {n} panukala", coauthor: "co-author", filed: "inihain {d}",
+    biography: "Talambuhay", official_cv: "📄 Opisyal na CV (PDF) ↗",
+    source: "Pinagkunan", wikipedia_article: "Wikipedia article", official_profile: "Opisyal na profile",
+    last_updated: "Huling na-update", copied_on: "Kinopya noong {d}", added_to: "Idinagdag sa {slot}",
+    bills_note: "Pinagkunan: {src}, isinalin mula sa opisyal na Senate Legislative Information System. Datos hanggang {d}, kaya maaaring luma na ang status. Bawat panukala ay naka-link sa opisyal na pahina ng Senado.",
+
+    ach_laws: "Batas na inakda", ach_awards: "Parangal", ach_probes: "Imbestigasyon", ach_posts: "Mga naging posisyon", ach_other: "Iba pa",
+    cmp_ach_total: "Mga Nagawa at Parangal · kabuuan", cmp_ach_group: "Nagawa · {g}", cmp_prior: "Dating Karanasan",
+    cmp_bills: "Mga Panukalang Batas", cmp_no_ach: "Walang nakatalang nagawa o parangal sa opisyal na talambuhay",
+    none: "Wala", none_recorded: "Walang nakatala", see_list: "Tingnan ang listahan", n_more: "+{n} pa",
+    cmp_title: "Ihambing", cmp_lead: "Ihambing ang dalawang opisyal nang magkatabi.", change: "Palitan",
+    pick: "Pumili", an_official: "ng opisyal", place: "Lugar", pick_two: "Pumili ng dalawang opisyal para ihambing.",
+    reset: "I-reset", pick_to_compare: "Pumili ng opisyal na ihahambing",
+
+    save_failed: "Hindi ma-save sa device na ito", already_listed: "Nasa listahan na", slot_full: "Puno na ang {slot} ({n})",
+    election: "Halalan 2028 · {d}", days: "{n} araw", days_left: "na natitira · ★ Gamitin ang iyong boto nang matalino",
+    not_found_short: "(hindi na makita)", remove: "Alisin", add: "＋ Dagdag", share: "Ibahagi", clear: "I-clear",
+    ballot_note: "Ang listahang ito ay naka-save lamang sa device mo — hindi ito ipinapadala kahit saan. Ang opisyal na listahan ng mga kandidato para sa 2028 ay ilalabas ng COMELEC pagkatapos ng filing ng COC.",
+    add_to: "Idagdag sa {slot}", none_yet: "(wala pa)", copied: "Nakopya sa clipboard", confirm_clear: "Burahin ang buong listahan?",
+
+    counts: "Mga Bilang", st_senators: "Senador", st_house: "Kinatawan sa Kamara", st_lgu: "Opisyal ng LGU", st_brgy: "Opisyal ng Barangay",
+    senate_by_party: "Senado ayon sa partido", house_by_party: "Kamara ayon sa partido", not_recorded: "Hindi nakatala",
+    data_sources: "Mga pinagkukunan ng datos", n_bills: "{n} panukala", n_records: "{n} tala", data_as_of: "Datos hanggang {d}",
+    updated: "Na-update {d}", pending: "Hinihintay pa", no_data_short: "Wala pang datos.",
+    legend_official: "Mula mismo sa website ng ahensya ng gobyerno (.gov.ph), o kopya nito.",
+    legend_public: "Pampublikong pinagkunan na hindi gobyerno, gaya ng Wikipedia o civic open-data. Hindi opisyal; suriin sa opisyal na pinagkunan.",
+    legend_private: "Pribadong pinagkunan. Wala pang ginagamit.",
+    about: "Tungkol sa Pili.PH",
+    about_body: "Ang Pili.PH ay isang independiyenteng direktoryo ng mga halal na opisyal ng Pilipinas. Kinokolekta nang awtomatiko ang impormasyon mula sa opisyal at pampublikong pinagkunan, at may label ang bawat tala kung saan ito galing.",
+    about_note: "Hindi kaanib ng anumang ahensya ng gobyerno, partido, o kandidato. May mali? Tingnan ang pinagkunan na naka-link sa bawat profile.",
+
+    picker_title: "Pumili ng opisyal", picker_ph: "Hanapin ang pangalan…", close: "Isara",
+    share_title: "Pili Ko 2028", share_via: "— via Pili.PH",
+  },
+
+  en: {
+    locale: "en-PH",
+    app_title: "Pili.PH — Philippine Officials Directory",
+    tagline: "Philippine Officials Directory",
+    cover_lead: "Know, compare and shortlist the Philippines' elected officials — from the Senate to the barangay.",
+    cover_lang: "Language",
+    cover_enter: "Enter",
+    cover_note: "Data from official and public sources. Every record is labelled with where it came from.",
+    lang_toggle: "Palitan ang wika sa Tagalog",
+
+    tab_home: "Officials", tab_hanap: "Browse", tab_ihambing: "Compare", tab_pili: "My Picks", tab_ako: "Data",
+    nav_label: "Main navigation", back: "Back",
+    title_hanap: "Browse", title_ihambing: "Compare", title_pili: "My Picks 2028", title_ako: "Data & Stats",
+
+    lvl_senate: "Senator", lvl_house: "Representative", lvl_governor: "Governor", lvl_vice_governor: "Vice Governor",
+    lvl_board_member: "Board Member", lvl_mayor: "Mayor", lvl_vice_mayor: "Vice Mayor", lvl_councilor: "Councilor",
+    lvl_punong_barangay: "Barangay Captain", lvl_kagawad: "Barangay Councilor", lvl_sk_chair: "SK Chair", lvl_sk_kagawad: "SK Councilor",
+    lvl_barangay_secretary: "Barangay Secretary", lvl_barangay_treasurer: "Barangay Treasurer", lvl_other: "Other",
+
+    f_all: "All", f_senate: "Senate", f_house: "House", f_gov: "Governors", f_mayor: "Mayors",
+    f_council: "Councilors", f_brgy: "Barangay",
+
+    slot_president: "President", slot_vp: "Vice President", slot_senate: "Senate",
+    slot_rep: "District / Party-list Representative", slot_mayor: "Mayor", slot_local: "Other local officials",
+
+    type_official: "Official · government", type_public: "Public · non-government",
+    "type_official+public": "Official + public", type_private: "Private", type_copy: " · copy",
+
+    no_data_title: "No data yet.",
+    no_data_body: "We're still collecting officials from the government's official websites. Please try again later.",
+    no_data_sources: "Sources: Senate, House, PSA, DILG — see",
+
+    search_ph: "Search officials, positions, places…", search_label: "Search",
+    quick_compare: "Compare", quick_compare_sub: "Side by side", quick_list: "2028 List", quick_list_sub: "My Picks",
+    quick_stats: "Stats", quick_stats_sub: "Data",
+    loading: "Loading…", n_officials: "{n} officials",
+    brgy_note: "The directory has {n} barangay officials.", brgy_note2: "Choose a place in {link} to see them.",
+    no_match: "No matches for “{q}”.", no_match_short: "No matches.", show_more: "Show more ({n})",
+
+    by_place: "Browse by place", region: "Region", province: "Province", lgu: "City / Municipality", barangay: "Barangay",
+    all_regions: "All regions", all_provinces: "All provinces", all_lgus: "All cities / municipalities",
+    all_brgys: "All barangays", pick_province_first: "Choose a province first to see barangays",
+    none_here: "No officials recorded for this place.",
+    first_400: "Showing the first 400. Narrow the place to see the rest.",
+    hanap_hint: "Choose a region or province to see its representatives, mayors and barangay officials.",
+    hanap_senators: "For senators (nationwide), use the {link} tab.",
+
+    not_found: "We couldn't find this official.", back_to_list: "Back to the list",
+    position: "Position", party: "Party", district: "District", contact: "Contact", office: "Office",
+    info: "Information", compare_btn: "⚖️ Compare", in_ballot: "✓ In My Picks", add_ballot: "＋ My Picks 2028",
+    achievements_n: "Achievements & Awards ({n})", bills_n: "Bills Filed ({n})",
+    see_bills: "See {n} bills", coauthor: "co-author", filed: "filed {d}",
+    biography: "Biography", official_cv: "📄 Official CV (PDF) ↗",
+    source: "Source", wikipedia_article: "Wikipedia article", official_profile: "Official profile",
+    last_updated: "Last updated", copied_on: "Copied on {d}", added_to: "Added to {slot}",
+    bills_note: "Source: {src}, transcribed from the official Senate Legislative Information System. Data as of {d}, so statuses may be out of date. Every bill links to its official Senate page.",
+
+    ach_laws: "Laws authored", ach_awards: "Awards", ach_probes: "Investigations", ach_posts: "Positions held", ach_other: "Other",
+    cmp_ach_total: "Achievements & Awards · total", cmp_ach_group: "Achievements · {g}", cmp_prior: "Prior experience",
+    cmp_bills: "Bills filed", cmp_no_ach: "No achievements or awards listed in the official biography",
+    none: "None", none_recorded: "None recorded", see_list: "See the list", n_more: "+{n} more",
+    cmp_title: "Compare", cmp_lead: "Compare two officials side by side.", change: "Change",
+    pick: "Choose", an_official: "an official", place: "Place", pick_two: "Choose two officials to compare.",
+    reset: "Reset", pick_to_compare: "Choose an official to compare",
+
+    save_failed: "Couldn't save on this device", already_listed: "Already on your list", slot_full: "{slot} is full ({n})",
+    election: "2028 Elections · {d}", days: "{n} days", days_left: "to go · ★ Vote wisely",
+    not_found_short: "(no longer found)", remove: "Remove", add: "＋ Add", share: "Share", clear: "Clear",
+    ballot_note: "This list is saved only on your device — it isn't sent anywhere. COMELEC publishes the official list of 2028 candidates after the filing of certificates of candidacy.",
+    add_to: "Add to {slot}", none_yet: "(none yet)", copied: "Copied to clipboard", confirm_clear: "Clear the whole list?",
+
+    counts: "Counts", st_senators: "Senators", st_house: "House members", st_lgu: "LGU officials", st_brgy: "Barangay officials",
+    senate_by_party: "Senate by party", house_by_party: "House by party", not_recorded: "Not recorded",
+    data_sources: "Data sources", n_bills: "{n} bills", n_records: "{n} records", data_as_of: "Data as of {d}",
+    updated: "Updated {d}", pending: "Pending", no_data_short: "No data yet.",
+    legend_official: "Straight from a government agency's website (.gov.ph), or a copy of it.",
+    legend_public: "A public, non-government source such as Wikipedia or civic open data. Not official; check the official source.",
+    legend_private: "A privately run source. None used yet.",
+    about: "About Pili.PH",
+    about_body: "Pili.PH is an independent directory of the Philippines' elected officials. Information is collected automatically from official and public sources, and every record is labelled with where it came from.",
+    about_note: "Not affiliated with any government agency, party or candidate. Spot an error? Check the source linked on each profile.",
+
+    picker_title: "Choose an official", picker_ph: "Search by name…", close: "Close",
+    share_title: "My Picks 2028", share_via: "— via Pili.PH",
+  },
+};

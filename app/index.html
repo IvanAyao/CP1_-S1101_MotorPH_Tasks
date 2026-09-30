@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Pili.PH — Philippine Officials Directory</title>
-  <meta name="description" content="Hanapin, ihambing, at piliin ang mga opisyal ng Pilipinas — Senado, Kamara, LGU, at Barangay. Data mula sa opisyal na mga website ng gobyerno.">
+  <meta name="description" content="Kilalanin, ihambing, at piliin ang mga opisyal ng Pilipinas — Senado, Kamara, LGU, at Barangay. Know, compare and shortlist Philippine officials.">
   <meta name="theme-color" content="#0038a8">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -12,36 +12,56 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Cover page: shown when the app is opened (deep links skip it). -->
+  <section id="cover" class="cover" hidden aria-labelledby="cover-title">
+    <div class="cover-inner">
+      <img class="cover-logo" src="logo.svg" alt="Pili.PH" width="220" height="220">
+      <h1 id="cover-title" class="cover-title" data-i18n="tagline">Direktoryo ng mga Opisyal ng Pilipinas</h1>
+      <p class="cover-lead" data-i18n="cover_lead"></p>
+      <div class="cover-lang" role="group" aria-labelledby="cover-lang-label">
+        <span id="cover-lang-label" data-i18n="cover_lang">Wika</span>
+        <div class="seg">
+          <button type="button" data-lang="tl">Tagalog</button>
+          <button type="button" data-lang="en">English</button>
+        </div>
+      </div>
+      <button type="button" id="enter" class="btn primary cover-enter" data-i18n="cover_enter">Pumasok</button>
+      <p class="cover-note" data-i18n="cover_note"></p>
+    </div>
+  </section>
+
   <div id="app" class="shell">
     <header class="topbar" id="topbar">
-      <button class="back" id="back" aria-label="Bumalik" hidden>←</button>
-      <a class="brand" href="#/"><span class="brand-word">Pili</span><span class="brand-dot">.</span><span class="brand-ph">PH</span></a>
-      <span class="topbar-sub" id="topbar-sub">Philippines Officials Directory</span>
+      <button class="back" id="back" data-i18n-aria="back" aria-label="Bumalik" hidden>←</button>
+      <a class="brand" href="#/"><img class="brand-logo" src="icon.svg" alt="" width="28" height="28"><span class="brand-word">Pili</span><span class="brand-dot">.</span><span class="brand-ph">PH</span></a>
+      <span class="topbar-sub" id="topbar-sub"></span>
+      <button type="button" id="lang" class="lang-toggle" data-i18n-aria="lang_toggle" aria-label="Change language">EN</button>
     </header>
 
     <main id="view" tabindex="-1" aria-live="polite"></main>
 
-    <nav class="tabbar" aria-label="Pangunahing navigation">
-      <a href="#/" data-tab="home"><span class="ti" aria-hidden="true">🏛️</span><span>Opisyal</span></a>
-      <a href="#/hanap" data-tab="hanap"><span class="ti" aria-hidden="true">🔍</span><span>Hanapin</span></a>
-      <a href="#/ihambing" data-tab="ihambing"><span class="ti" aria-hidden="true">⚖️</span><span>Ihambing</span></a>
-      <a href="#/pili" data-tab="pili"><span class="ti" aria-hidden="true">🗳️</span><span>Pili Ko</span></a>
-      <a href="#/ako" data-tab="ako"><span class="ti" aria-hidden="true">📊</span><span>Datos</span></a>
+    <nav class="tabbar" data-i18n-aria="nav_label" aria-label="Pangunahing navigation">
+      <a href="#/" data-tab="home"><span class="ti" aria-hidden="true">🏛️</span><span data-i18n="tab_home">Opisyal</span></a>
+      <a href="#/hanap" data-tab="hanap"><span class="ti" aria-hidden="true">🔍</span><span data-i18n="tab_hanap">Hanapin</span></a>
+      <a href="#/ihambing" data-tab="ihambing"><span class="ti" aria-hidden="true">⚖️</span><span data-i18n="tab_ihambing">Ihambing</span></a>
+      <a href="#/pili" data-tab="pili"><span class="ti" aria-hidden="true">🗳️</span><span data-i18n="tab_pili">Pili Ko</span></a>
+      <a href="#/ako" data-tab="ako"><span class="ti" aria-hidden="true">📊</span><span data-i18n="tab_ako">Datos</span></a>
     </nav>
   </div>
 
   <dialog id="picker" class="picker">
     <form method="dialog" class="picker-head">
-      <strong id="picker-title">Pumili ng opisyal</strong>
-      <button value="cancel" aria-label="Isara">✕</button>
+      <strong id="picker-title" data-i18n="picker_title">Pumili ng opisyal</strong>
+      <button value="cancel" data-i18n-aria="close" aria-label="Isara">✕</button>
     </form>
-    <input id="picker-q" type="search" placeholder="Hanapin ang pangalan…" autocomplete="off">
+    <input id="picker-q" type="search" data-i18n-placeholder="picker_ph" placeholder="Hanapin ang pangalan…" autocomplete="off">
     <ul id="picker-list" class="list"></ul>
   </dialog>
 
   <div id="toast" class="toast" role="status" hidden></div>
 
-  <noscript><p class="empty">Kailangan ng JavaScript para gumana ang Pili.PH.</p></noscript>
+  <noscript><p class="empty">Kailangan ng JavaScript para gumana ang Pili.PH. · Pili.PH needs JavaScript to run.</p></noscript>
+  <script src="i18n.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>
