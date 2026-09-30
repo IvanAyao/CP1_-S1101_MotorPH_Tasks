@@ -402,7 +402,7 @@
     const inBallot = Object.values(getBallot()).some((arr) => arr.includes(key(o)));
     const nAch = cleanAch(o.achievements).length;
 
-    view.innerHTML = `
+    view.innerHTML = `<div class="profile-layout"><div class="profile-side">
       <div class="profile-head">
         ${avatar(o, "lg")}
         <h1>${esc(o.name)}</h1>
@@ -415,7 +415,7 @@
       <div class="btn-row">
         <button class="btn" id="cmp">${t("compare_btn")}</button>
         <button class="btn primary" id="pick">${inBallot ? t("in_ballot") : t("add_ballot")}</button>
-      </div>
+      </div></div><div class="profile-main">
       <div class="section-label">${t("info")}</div>
       <table class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}
         ${extra.slice(0, 20).map(([k, v]) => `<tr><th>${esc(pretty(k))}</th><td>${esc(v)}</td></tr>`).join("")}</table>
@@ -430,7 +430,7 @@
         ${t("source")}: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a> (${typeLabel(typeOf(o))})
         ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">${/wikipedia\.org/.test(o.profile_url) ? t("wikipedia_article") : t("official_profile")} ↗</a>` : ""}
         <br>${t("last_updated")}: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · ${t("copied_on", { d: fmtDate(d.copied_on) })}` : ""}
-      </div>`;
+      </div></div></div>`;
 
     $("#cmp").addEventListener("click", () => {
       const slot = state.compare[0] ? 1 : 0;
@@ -595,7 +595,7 @@
         <div class="big">${t("days", { n: fmtNum(days) })}</div>
         <small>${t("days_left")}</small>
       </div>
-      ${BALLOT_SLOTS.map((s) => {
+      <div class="ballot-grid">${BALLOT_SLOTS.map((s) => {
         const picks = (b[s.key] || []).map((k) => state.byKey.get(k) || { name: t("not_found_short"), position: "", _k: k });
         picks.forEach((o) => lines.push(`${slotLabel(s)}: ${o.name}`));
         return `<div class="card">
@@ -603,7 +603,7 @@
           ${picks.map((o, i) => `<div class="pick-row">${o.id ? avatar(o) : ""}<div class="who"><b>${esc(o.name)}</b><span>${esc(levelLabel(o))}</span></div><button class="x" data-rm="${s.key}:${i}" aria-label="${esc(t("remove"))}">✕</button></div>`).join("")}
           ${picks.length < s.max ? `<button class="add" data-add="${s.key}">${t("add")}</button>` : ""}
         </div>`;
-      }).join("")}
+      }).join("")}</div>
       <div class="btn-row"><button class="btn" id="share">${t("share")}</button><button class="btn" id="reset">${t("clear")}</button></div>
       <p class="notice">${t("ballot_note")}</p>`;
 
@@ -651,12 +651,13 @@
         <div class="stat"><b>${fmtNum(lguCount)}</b><span>${t("st_lgu")}</span></div>
         <div class="stat"><b>${fmtNum(state.brgyIndex?.count)}</b><span>${t("st_brgy")}</span></div>
       </div>
-      ${partyBars("senate", t("senate_by_party"))}
-      ${partyBars("house", t("house_by_party"))}
+      <div class="ako-grid"><div>${partyBars("senate", t("senate_by_party"))}</div><div>${partyBars("house", t("house_by_party"))}</div></div>
+      <div class="ako-grid"><div>
       <div class="section-label">${t("data_sources")}</div>
       <div class="card"><table class="kv">
         ${ds.map((d) => `<tr><th><a href="${esc(safeUrl(d.source_url))}" target="_blank" rel="noopener">${esc(d.source)}</a><br>${typeBadge(typeOf(d))}</th><td>${d.key === "bills" ? t("n_bills", { n: fmtNum(d.count) }) : t("n_records", { n: fmtNum(d.count) })}<br><span class="meta">${d.key === "bills" && d.as_of ? t("data_as_of", { d: fmtDate(d.as_of) }) : d.scraped_at ? t("updated", { d: fmtDate(d.scraped_at) }) : t("pending")}</span></td></tr>`).join("") || `<tr><td>${t("no_data_short")}</td></tr>`}
-      </table></div>
+      </table></div></div><div>
+      <div class="section-label desk-only" aria-hidden="true">&nbsp;</div>
       <div class="card legend">
         <p>${typeBadge("official")} ${t("legend_official")}</p>
         <p>${typeBadge("public")} ${t("legend_public")}</p>
@@ -666,7 +667,7 @@
       <div class="card">
         <p style="margin-top:0">${t("about_body")}</p>
         <p class="meta" style="margin-bottom:0">${t("about_note")}</p>
-      </div>`;
+      </div></div></div>`;
   }
 
   // ------------------------------------------------------------ picker
@@ -711,7 +712,7 @@
     const cover = $("#cover");
     cover.classList.add("leaving");
     document.body.classList.remove("covered");
-    setTimeout(() => { cover.hidden = true; cover.classList.remove("leaving"); $("#view").focus(); }, 250);
+    setTimeout(() => { cover.hidden = true; cover.classList.remove("leaving"); $("#view").focus({ preventScroll: true }); }, 250);
   }
 
   // ------------------------------------------------------------ router
@@ -723,6 +724,7 @@
   function render() {
     const parts = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
     const tab = parts[0] === "o" ? "" : parts[0] || "home";
+    view.dataset.view = parts[0] === "o" ? "profile" : tab;
     document.querySelectorAll(".tabbar a").forEach((a) => a.classList.toggle("active", a.dataset.tab === tab));
     document.querySelectorAll(".tabbar a").forEach((a) => (a.dataset.tab === tab ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
     $("#back").hidden = parts[0] !== "o";
