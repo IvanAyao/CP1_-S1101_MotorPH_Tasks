@@ -335,3 +335,30 @@ body.covered { overflow: hidden; }
   .cover-logo { width: 240px; }
 }
 #view:focus, #view:focus-visible { outline: none; }
+
+/* Search bar with filter button and panel */
+.searchbar { display: flex; gap: 8px; align-items: stretch; }
+.searchbar .search { flex: 1; min-width: 0; }
+.filter-btn {
+  flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 0 14px; min-height: 46px;
+  border: 1px solid var(--line); border-radius: 14px; background: var(--card); color: var(--text); font-weight: 600; font-size: 14px;
+}
+.filter-btn:hover { border-color: var(--blue); }
+.filter-btn[aria-expanded="true"], .filter-btn.on { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
+.fb-count { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--blue); color: #fff; font-size: 12px; display: inline-grid; place-items: center; }
+@media (prefers-color-scheme: dark) { .fb-count { color: #0c111d; } }
+.filter-panel {
+  margin-top: 10px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--card); box-shadow: var(--shadow);
+}
+.fp-label { font-size: 12px; font-weight: 700; color: var(--muted); margin: 6px 0 0; }
+.fp-label:first-child { margin-top: 0; }
+.chips.wrap { flex-wrap: wrap; overflow: visible; padding: 8px 0 6px; }
+.fp-more { display: inline-block; margin: 4px 0 2px; font-size: 14px; text-decoration: none; }
+.filter-panel .place-grid { margin-top: 6px; }
+.fp-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.filter-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 10px; }
+.ftag { border: 1px solid var(--blue); background: var(--blue-soft); color: var(--blue); border-radius: 999px; padding: 5px 10px; font-size: 13px; font-weight: 600; }
+.ftag span { opacity: .7; margin-left: 2px; }
+@media (max-width: 360px) { .fb-text { display: none; } }
+@media (min-width: 900px) { .filter-panel .place-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
