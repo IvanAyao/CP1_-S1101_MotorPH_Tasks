@@ -13,6 +13,7 @@ import sys
 import threading
 from functools import partial
 from pathlib import Path
+from urllib.parse import unquote
 
 import pytest
 
@@ -32,6 +33,8 @@ FIXTURES = HERE / "fixtures"
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):  # noqa: N802
+        if self.path.startswith("/hq/senators/congress/28"):
+            self.path = "/hq/senators/congress/28.json"
         if self.path.startswith("/api/members"):
             page = self.path.split("page=")[-1]
             self.path = f"/api/members_page{page}.json"
@@ -105,8 +108,24 @@ def test_wide_and_long_rows():
     assert recs[0]["level"] == "punong_barangay" and recs[0]["barangay"] == "Cogon"
 
 
-def test_senate_cards(site, browser, monkeypatch):
+def test_senate_api_with_menu_noise(site, browser, monkeypatch):
+    """Mirrors the live page: a 31-link menu, heading cards, and a JSON API."""
     monkeypatch.setattr(senate, "URL", f"{site}/senate.html")
+    recs = senate.scrape(browser)
+    assert len(recs) == 24  # inactive senator excluded, menu links ignored
+    by_name = {r["name"]: r for r in recs}
+    first = by_name["Juan Dela Cruz"]
+    assert first["position"] == "Senator · Senate President"
+    assert first["photo"].endswith("/hq/uploads/500.jpg")
+    assert first["profile_url"].endswith("/senator/Juan-Dela-Cruz")
+    assert "Fictional test record number 0" in first["details"]["biography"]
+    quoted = by_name['Maria "Ma" B. Santos']
+    assert unquote(quoted["profile_url"]).endswith('/senator/Maria-"Ma"-B.-Santos')
+    assert quoted["photo"]
+
+
+def test_senate_cards_fallback(site, browser, monkeypatch):
+    monkeypatch.setattr(senate, "URL", f"{site}/senate_cards.html")
     recs = senate.scrape(browser)
     assert len(recs) == 24
     first = recs[0]
@@ -159,3 +178,10 @@ def test_write_dataset_rejects_bad_counts(isolated_output):
     with pytest.raises(SystemExit):
         common.write_dataset("senate", [], "u", min_count=20)
     assert not (isolated_output / "data" / "senate.json").exists()
+
+
+def test_waits_past_bot_check_page(site, browser, monkeypatch):
+    """congress.gov.ph shows a Cloudflare check page before the real one."""
+    monkeypatch.setattr(house, "URL", f"{site}/challenge.html")
+    recs = house.scrape(browser)
+    assert len(recs) == 300

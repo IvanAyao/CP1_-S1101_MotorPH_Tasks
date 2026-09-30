@@ -43,6 +43,11 @@ FIRST_KEYS = ("first_name", "firstname", "fname", "given_name")
 LAST_KEYS = ("last_name", "lastname", "lname", "surname", "family_name")
 MIDDLE_KEYS = ("middle_name", "middlename", "mname", "middle_initial")
 
+INTERSTITIAL = re.compile(
+    r"just a moment|performing security verification|checking your browser|attention required",
+    re.I,
+)
+
 HONORIFICS = re.compile(
     r"^(hon\.?|honorable|sen\.?|senator|rep\.?|representative|cong\.?|"
     r"congressman|congresswoman|mayor|gov\.?|governor|atty\.?|dr\.?|engr\.?)\s+",
@@ -218,7 +223,10 @@ def extract_cards(soup: BeautifulSoup, base_url: str) -> list[Card]:
     the biggest group: listings are almost always a run of identical cards.
     """
     groups: dict[str, list[Card]] = {}
+    heading_groups: set[str] = set()
     for el in soup.find_all(["li", "div", "article", "a", "section", "figure"]):
+        if el.find_parent(["nav", "header", "footer"]) or el.find_parent(attrs={"role": "navigation"}):
+            continue
         name_el = None
         for cand in el.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "strong", "b", "a", "span", "p"], limit=12):
             txt = clean(cand.get_text(" "))
@@ -242,6 +250,8 @@ def extract_cards(soup: BeautifulSoup, base_url: str) -> list[Card]:
         img_src = ""
         if img:
             img_src = img.get("src") or img.get("data-src") or img.get("data-lazy-src") or ""
+        if re.fullmatch(r"h[1-6]", name_el.name):
+            heading_groups.add(sig)
         groups.setdefault(sig, []).append(Card(
             name=name,
             subtitle=subtitle[:6],
@@ -250,7 +260,9 @@ def extract_cards(soup: BeautifulSoup, base_url: str) -> list[Card]:
         ))
     if not groups:
         return []
-    best = max(groups.values(), key=lambda cards: len({c.name for c in cards}))
+    # Listings of people title each card with a heading; menus are bare links.
+    best_sig = max(groups, key=lambda g: len({c.name for c in groups[g]}) * (2 if g in heading_groups else 1))
+    best = groups[best_sig]
     seen, out = set(), []
     for c in best:
         if c.name.lower() not in seen:
@@ -308,6 +320,7 @@ class Browser:
         for attempt in range(retries):
             try:
                 self.page.goto(url, wait_until="domcontentloaded", timeout=90_000)
+                self.wait_past_interstitial()
                 try:
                     self.page.wait_for_load_state("networkidle", timeout=30_000)
                 except Exception:
@@ -322,6 +335,24 @@ class Browser:
                 log(f"  retry {attempt + 1}/{retries} for {url}: {err}")
                 time.sleep(2 ** (attempt + 1))
         raise RuntimeError(f"could not load {url}: {last_err}")
+
+    def wait_past_interstitial(self, timeout_s: float = 90) -> None:
+        """Wait while a bot-protection check page is showing.
+
+        Cloudflare shows "Just a moment..." / "Performing security
+        verification" and then reloads into the real page on its own.
+        """
+        deadline = time.time() + timeout_s
+        while time.time() < deadline:
+            try:
+                title = self.page.title()
+                text = self.page.evaluate("document.body ? document.body.innerText.slice(0, 400) : ''")
+            except Exception:
+                title, text = "", ""  # page is navigating
+            if not INTERSTITIAL.search(f"{title} {text}"):
+                return
+            self.page.wait_for_timeout(2000)
+        raise RuntimeError("stuck on a bot-protection check page")
 
     def scroll_to_bottom(self, max_rounds: int = 30) -> None:
         """Trigger lazy-loaded / infinite-scroll listings."""
