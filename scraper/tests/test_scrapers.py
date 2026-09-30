@@ -332,6 +332,7 @@ def test_bills_attach_by_code_and_name(isolated_output):
     senators = [
         {"name": "Raffy T. Tulfo", "lis_code": ""}, {"name": "Erwin T. Tulfo", "lis_code": ""},
         {"name": "Win Gatchalian", "lis_code": "GSHER"},
+        {"name": "Juan Miguel F. Zubiri", "lis_code": "ZJMIG, ZMIGU"},
     ]
     (data / "senate.json").write_text(json.dumps({"records": senators}))
     monkey = [
@@ -343,6 +344,8 @@ def test_bills_attach_by_code_and_name(isolated_output):
          "authors": ["TERWI"], "authors_raw": "Tulfo, Erwin T."},
         {"number": "SBN-4", "bill_number": 4, "title": "D", "date": "", "status": "Pending", "url": "",
          "authors": ["GSHER"], "authors_raw": "Gatchalian, Win"},
+        {"number": "SBN-5", "bill_number": 5, "title": "E", "date": "", "status": "Pending", "url": "",
+         "authors": ["ZJMIG"], "authors_raw": "Zubiri, Juan Miguel F."},
     ]
     import common
     bills.DATA_DIR = common.DATA_DIR
@@ -352,6 +355,7 @@ def test_bills_attach_by_code_and_name(isolated_output):
     assert [b["number"] for b in by["Erwin T. Tulfo"]["bills"]] == ["SBN-3", "SBN-2"]
     assert by["Raffy T. Tulfo"]["bills"][0]["coauthored"] is True
     assert by["Win Gatchalian"]["bills_count"] == 1
+    assert by["Juan Miguel F. Zubiri"]["bills_count"] == 1  # several codes in one field
     assert doc["bills_source"]["source_type"] == "public" and doc["bills_source"]["as_of"] == "2025-10-16"
 
 

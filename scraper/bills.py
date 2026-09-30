@@ -78,13 +78,15 @@ def name_index(bills: list[dict]) -> dict[str, tuple[str, str]]:
     return out
 
 
-def match_code(senator: dict, names: dict[str, tuple[str, str]]) -> str:
-    if senator.get("lis_code"):
-        return senator["lis_code"]
+def match_codes(senator: dict, names: dict[str, tuple[str, str]]) -> list[str]:
+    """Author codes for a senator. The Senate API may list several ("ZJMIG, ZMIGU")."""
+    codes = [c.strip() for c in re.split(r"[,;\s]+", senator.get("lis_code") or "") if c.strip()]
+    if codes:
+        return codes
     words = norm(senator["name"])
     hits = [code for code, (last, first) in names.items()
             if norm(last) <= words and (norm(first) & words)]
-    return hits[0] if len(hits) == 1 else ""
+    return hits[:1] if len(hits) == 1 else []
 
 
 def attach(bills: list[dict], as_of: str) -> dict:
@@ -98,8 +100,14 @@ def attach(bills: list[dict], as_of: str) -> dict:
 
     matched = 0
     for rec in doc["records"]:
-        code = match_code(rec, names)
-        items = sorted(by_code.get(code, []), key=lambda b: -b["bill_number"])
+        codes = match_codes(rec, names)
+        seen, items = set(), []
+        for code in codes:
+            for b in by_code.get(code, []):
+                if b["number"] not in seen:
+                    seen.add(b["number"])
+                    items.append(b)
+        items.sort(key=lambda b: -b["bill_number"])
         rec["bills"] = [{
             "number": b["number"], "title": b["title"], "date": b["date"],
             "status": b["status"], "url": b["url"],
@@ -108,7 +116,7 @@ def attach(bills: list[dict], as_of: str) -> dict:
         rec["bills_count"] = len(items)
         if items:
             matched += 1
-            rec.setdefault("lis_code", code)
+            rec.setdefault("lis_code", ", ".join(codes))
     doc["bills_source"] = {
         "name": SOURCE,
         "url": REPO,
