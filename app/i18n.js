@@ -14,6 +14,7 @@ window.PILI_I18N = {
     cover_note: "Datos mula sa opisyal at pampublikong pinagkunan. Bawat tala ay may label kung saan ito galing.",
     lang_toggle: "Change language to English",
 
+    go_home: "Pili.PH — Bumalik sa simula",
     tab_home: "Opisyal", tab_hanap: "Lugar", tab_ihambing: "Ihambing", tab_pili: "Pili Ko", tab_ako: "Datos",
     nav_label: "Pangunahing navigation", back: "Bumalik",
     title_hanap: "Hanapin ayon sa Lugar", title_ihambing: "Ihambing", title_pili: "Pili Ko 2028", title_ako: "Datos at Stats",
@@ -105,6 +106,7 @@ window.PILI_I18N = {
     cover_note: "Data from official and public sources. Every record is labelled with where it came from.",
     lang_toggle: "Palitan ang wika sa Tagalog",
 
+    go_home: "Pili.PH — Back to home",
     tab_home: "Officials", tab_hanap: "Location", tab_ihambing: "Compare", tab_pili: "My Picks", tab_ako: "Data",
     nav_label: "Main navigation", back: "Back",
     title_hanap: "Find by Location", title_ihambing: "Compare", title_pili: "My Picks 2028", title_ako: "Data & Stats",
