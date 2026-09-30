@@ -1,9 +1,37 @@
 {
- "generated_at": null,
+ "generated_at": "2026-09-30T10:21:00+00:00",
  "datasets": [
-  {"key": "senate", "file": "senate.json", "source": "Senate of the Philippines", "source_url": "https://senate.gov.ph/senators/20-congress-senators", "count": 0, "scraped_at": null},
-  {"key": "house", "file": "house.json", "source": "House of Representatives", "source_url": "https://www.congress.gov.ph/house-members", "count": 0, "scraped_at": null},
-  {"key": "lgu", "file": "lgu.json", "source": "PSA RSSO NCR – LGU Directory", "source_url": "https://rssoncr.psa.gov.ph/lgu-directory", "count": 0, "scraped_at": null},
-  {"key": "barangay", "file": "barangay/index.json", "source": "DILG – Barangay Officials Directory", "source_url": "https://www.dilg.gov.ph/barangay-officials-directory", "count": 0, "scraped_at": null}
+  {
+   "key": "senate",
+   "file": "senate.json",
+   "source": "Senate of the Philippines",
+   "source_url": "https://senate.gov.ph/senators/20-congress-senators",
+   "count": 0,
+   "scraped_at": null
+  },
+  {
+   "key": "house",
+   "file": "house.json",
+   "source": "House of Representatives",
+   "source_url": "https://www.congress.gov.ph/house-members",
+   "count": 0,
+   "scraped_at": null
+  },
+  {
+   "key": "lgu",
+   "file": "lgu.json",
+   "source": "PSA RSSO NCR – LGU Directory",
+   "source_url": "https://rssoncr.psa.gov.ph/lgu-directory",
+   "count": 0,
+   "scraped_at": null
+  },
+  {
+   "key": "barangay",
+   "file": "barangay/index.json",
+   "source": "DILG – Barangay Officials Directory",
+   "source_url": "https://www.dilg.gov.ph/barangay-officials-directory",
+   "count": 0,
+   "scraped_at": null
+  }
  ]
 }
