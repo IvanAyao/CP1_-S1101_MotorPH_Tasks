@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T20:22:48+00:00",
+ "generated_at": "2026-09-30T20:38:11+00:00",
  "datasets": [
   {
    "key": "senate",
@@ -35,7 +35,7 @@
    "source": "PSA RSSO NCR – LGU Directory + Wikipedia (unofficial)",
    "source_url": "https://rssoncr.psa.gov.ph/lgu-directory",
    "count": 460,
-   "scraped_at": "2026-09-30T20:22:47+00:00",
+   "scraped_at": "2026-09-30T20:38:11+00:00",
    "source_type": "official+public"
   },
   {

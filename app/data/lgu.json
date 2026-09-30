@@ -1,7 +1,7 @@
 {
  "dataset": "lgu",
  "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
- "scraped_at": "2026-09-30T20:22:47+00:00",
+ "scraped_at": "2026-09-30T20:38:11+00:00",
  "count": 460,
  "lgus": [],
  "method": "official+wikipedia",
@@ -14,8 +14,8 @@
    "party": "",
    "district": "",
    "region": "Region X (Northern Mindanao)",
-   "province": "Huc",
-   "lgu": "Cagayan De Oro City",
+   "province": "",
+   "lgu": "Cagayan de Oro City",
    "barangay": "",
    "photo": "",
    "profile_url": "",
@@ -23,7 +23,7 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorklarexuy.cdo@gmail.com",
+    "lgu_class": "Highly Urbanized City",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -36,8 +36,8 @@
    "party": "",
    "district": "",
    "region": "Region X (Northern Mindanao)",
-   "province": "Huc",
-   "lgu": "Cagayan De Oro City",
+   "province": "",
+   "lgu": "Cagayan de Oro City",
    "barangay": "",
    "photo": "",
    "profile_url": "",
@@ -45,6 +45,7 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
+    "lgu_class": "Highly Urbanized City",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -57,8 +58,8 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Huc",
-   "lgu": "Cagayan De Oro City",
+   "province": "",
+   "lgu": "Cagayan de Oro City",
    "barangay": "",
    "photo": "",
    "profile_url": "",
@@ -66,6 +67,7 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
+    "lgu_class": "Highly Urbanized City",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -78,8 +80,8 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Huc",
-   "lgu": "Cagayan De Oro City",
+   "province": "",
+   "lgu": "Cagayan de Oro City",
    "barangay": "",
    "photo": "",
    "profile_url": "",
@@ -87,6 +89,7 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
+    "lgu_class": "Highly Urbanized City",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -99,7 +102,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Huc",
+   "province": "",
    "lgu": "Iligan City",
    "barangay": "",
    "photo": "",
@@ -108,7 +111,7 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "cmo.eaoiligan@gmail.com",
+    "lgu_class": "Highly Urbanized City",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -121,7 +124,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Huc",
+   "province": "",
    "lgu": "Iligan City",
    "barangay": "",
    "photo": "",
@@ -130,6 +133,7 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
+    "lgu_class": "Highly Urbanized City",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -142,7 +146,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Huc",
+   "province": "",
    "lgu": "Iligan City",
    "barangay": "",
    "photo": "",
@@ -151,6 +155,7 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
+    "lgu_class": "Highly Urbanized City",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -298,7 +303,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "malaybalaycitylgu@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -362,7 +366,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "officegalariofernandez01@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -426,7 +429,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mmo@lgubaungon.gov.ph",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -453,10 +455,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-baungon-1st-pedro-r-alvarez",
+   "id": "councilor-bukidnon-baungon-1st-pedro-r-alvarez",
    "name": "Pedro R. Alvarez",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -469,7 +471,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -491,7 +492,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mmocabanglasan@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -518,10 +518,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-cabanglasan-2nd-frencis-jhean-d-butal",
+   "id": "councilor-bukidnon-cabanglasan-2nd-frencis-jhean-d-butal",
    "name": "Frencis Jhean D. Butal",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -534,7 +534,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -556,7 +555,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgudamulog@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -583,10 +581,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-damulog-3rd-melven-l-buro",
+   "id": "councilor-bukidnon-damulog-3rd-melven-l-buro",
    "name": "Melven L. Buro",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "3Rd",
    "region": "Region X (Northern Mindanao)",
@@ -599,7 +597,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -621,7 +618,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mmodangcagan2022@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -648,10 +644,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-dangcagan-3rd-mark-gil-l-bautista",
+   "id": "councilor-bukidnon-dangcagan-3rd-mark-gil-l-bautista",
    "name": "Mark Gil L. Bautista",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "3Rd",
    "region": "Region X (Northern Mindanao)",
@@ -664,7 +660,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -686,7 +681,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mavictoriapizarro@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -713,10 +707,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-don-carlos-3rd-jose-miguel-anton-o-pizarro",
+   "id": "councilor-bukidnon-don-carlos-3rd-jose-miguel-anton-o-pizarro",
    "name": "Jose Miguel Anton O. Pizarro",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "3Rd",
    "region": "Region X (Northern Mindanao)",
@@ -729,7 +723,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -751,7 +744,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "iamokayptl88@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -778,10 +770,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-impasug-ong-2nd-von-omar-p-lagayan",
+   "id": "councilor-bukidnon-impasug-ong-2nd-von-omar-p-lagayan",
    "name": "Von Omar P. Lagayan",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -794,7 +786,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -816,7 +807,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgukadingilanmmo@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -843,10 +833,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-kadingilan-3rd-jerry-o-canoy",
+   "id": "councilor-bukidnon-kadingilan-3rd-jerry-o-canoy",
    "name": "Jerry O. Canoy",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "3Rd",
    "region": "Region X (Northern Mindanao)",
@@ -859,7 +849,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -881,7 +870,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgukalilangan@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -908,10 +896,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-kalilangan-4th-jhya-p-aurelio-tulic",
+   "id": "councilor-bukidnon-kalilangan-4th-jhya-p-aurelio-tulic",
    "name": "Jhya P. Aurelio-Tulic",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "4Th",
    "region": "Region X (Northern Mindanao)",
@@ -924,7 +912,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -946,7 +933,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "kibawemmo@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -973,10 +959,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-kibawe-3rd-arcadio-l-pitogo-jr",
+   "id": "councilor-bukidnon-kibawe-3rd-arcadio-l-pitogo-jr",
    "name": "Arcadio L. Pitogo, Jr.",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "3Rd",
    "region": "Region X (Northern Mindanao)",
@@ -989,7 +975,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1011,7 +996,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "edwinabucayan05@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1038,10 +1022,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-kitaotao-3rd-titoe-p-abucayan",
+   "id": "councilor-bukidnon-kitaotao-3rd-titoe-p-abucayan",
    "name": "Titoe P. Abucayan",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "3Rd",
    "region": "Region X (Northern Mindanao)",
@@ -1054,7 +1038,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1076,7 +1059,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "MMO@LANTAPAN.GOV.PH",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1103,10 +1085,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-lantapan-2nd-sulpicio-d-gallano-jr",
+   "id": "councilor-bukidnon-lantapan-2nd-sulpicio-d-gallano-jr",
    "name": "Sulpicio D. Gallano, Jr.",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -1119,7 +1101,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1141,7 +1122,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "munlibona@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1168,10 +1148,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-libona-1st-ursula-c-buta",
+   "id": "councilor-bukidnon-libona-1st-ursula-c-buta",
    "name": "Ursula C. Buta",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -1184,7 +1164,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1206,7 +1185,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "omm.malitbogbukidnon@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1233,10 +1211,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-malitbog-1st-sacheen-famela-t-tupaz",
+   "id": "councilor-bukidnon-malitbog-1st-sacheen-famela-t-tupaz",
    "name": "Sacheen Famela T. Tupaz",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -1249,7 +1227,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1271,7 +1248,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mmo@manolofortich.gov.ph",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1298,10 +1274,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-manolo-fortich-1st-miguel-d-demata",
+   "id": "councilor-bukidnon-manolo-fortich-1st-miguel-d-demata",
    "name": "Miguel D. Demata",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -1314,7 +1290,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1336,7 +1311,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mmolgumaramag@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1363,10 +1337,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-maramag-3rd-jonathan-e-luceno",
+   "id": "councilor-bukidnon-maramag-3rd-jonathan-e-luceno",
    "name": "Jonathan E. Luceño",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "3Rd",
    "region": "Region X (Northern Mindanao)",
@@ -1379,7 +1353,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1401,7 +1374,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "pangantucanmmo@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1428,10 +1400,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-pangantucan-4th-darwin-l-salvacion",
+   "id": "councilor-bukidnon-pangantucan-4th-darwin-l-salvacion",
    "name": "Darwin L. Salvacion",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "4Th",
    "region": "Region X (Northern Mindanao)",
@@ -1444,7 +1416,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1466,7 +1437,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgu.quezon.bukidnon@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1493,10 +1463,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-quezon-3rd-clyde-joseph-a-baguio",
+   "id": "councilor-bukidnon-quezon-3rd-clyde-joseph-a-baguio",
    "name": "Clyde Joseph A. Baguio",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "3Rd",
    "region": "Region X (Northern Mindanao)",
@@ -1509,7 +1479,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1531,7 +1500,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mmo.rogelioyeke.2022@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1558,10 +1526,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-san-fernando-2nd-fretznheil-rickz-d-butal",
+   "id": "councilor-bukidnon-san-fernando-2nd-fretznheil-rickz-d-butal",
    "name": "Fretznheil Rickz D. Butal",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -1574,7 +1542,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1596,7 +1563,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgusumilao@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1623,10 +1589,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-sumilao-1st-marie-ann-a-baula",
+   "id": "councilor-bukidnon-sumilao-1st-marie-ann-a-baula",
    "name": "Marie Ann A. Baula",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -1639,7 +1605,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1661,7 +1626,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorrenzsulatan@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1688,10 +1652,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-bukidnon-talakag-1st-rey-anthony-s-sulatan",
+   "id": "councilor-bukidnon-talakag-1st-rey-anthony-s-sulatan",
    "name": "Rey Anthony S. Sulatan",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -1704,7 +1668,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1726,7 +1689,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "governor@camiguin.gov.ph",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1811,7 +1773,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "kit.palarca19@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1838,10 +1799,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-camiguin-catarman-2nd-carlito-n-sagocsoc",
+   "id": "councilor-camiguin-catarman-2nd-carlito-n-sagocsoc",
    "name": "Carlito N. Sagocsoc",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2nd",
    "region": "Region X (Northern Mindanao)",
@@ -1854,7 +1815,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1876,7 +1836,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "Mayorsofficelguguinsiliban@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1903,10 +1862,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-camiguin-guinsiliban-2nd-rando-l-waminal",
+   "id": "councilor-camiguin-guinsiliban-2nd-rando-l-waminal",
    "name": "Rando L. Waminal",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2nd",
    "region": "Region X (Northern Mindanao)",
@@ -1919,7 +1878,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1941,7 +1899,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgumahinog@yahoo.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -1968,10 +1925,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-camiguin-mahinog-2nd-david-john-d-acle",
+   "id": "councilor-camiguin-mahinog-2nd-david-john-d-acle",
    "name": "David John D. Acle",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2nd",
    "region": "Region X (Northern Mindanao)",
@@ -1984,7 +1941,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2006,7 +1962,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayoryggyoffice@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2033,10 +1988,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-camiguin-mambajao-2nd-lander-jun-o-cutab",
+   "id": "councilor-camiguin-mambajao-2nd-lander-jun-o-cutab",
    "name": "Lander Jun O. Cutab",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2nd",
    "region": "Region X (Northern Mindanao)",
@@ -2049,7 +2004,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2071,7 +2025,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgusagay110@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2098,10 +2051,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-camiguin-sagay-2nd-nestor-e-tongol",
+   "id": "councilor-camiguin-sagay-2nd-nestor-e-tongol",
    "name": "Nestor E. Tongol",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2nd",
    "region": "Region X (Northern Mindanao)",
@@ -2114,7 +2067,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2127,7 +2079,7 @@
    "party": "",
    "district": "2nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sagay",
    "barangay": "",
    "photo": "",
@@ -2136,7 +2088,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "govkhaliddimaporo@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2149,7 +2100,7 @@
    "party": "",
    "district": "2nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sagay",
    "barangay": "",
    "photo": "",
@@ -2170,7 +2121,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sagay",
    "barangay": "",
    "photo": "",
@@ -2191,7 +2142,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sagay",
    "barangay": "",
    "photo": "",
@@ -2212,7 +2163,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Bacolod",
    "barangay": "",
    "photo": "",
@@ -2221,7 +2172,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorsoffice440@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2234,7 +2184,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Bacolod",
    "barangay": "",
    "photo": "",
@@ -2248,14 +2198,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-bacolod-1st-efimaco-v-duhaylungsod",
+   "id": "councilor-lanao-del-norte-bacolod-1st-efimaco-v-duhaylungsod",
    "name": "Efimaco V. Duhaylungsod",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Bacolod",
    "barangay": "",
    "photo": "",
@@ -2264,7 +2214,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2277,7 +2226,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Baloi",
    "barangay": "",
    "photo": "",
@@ -2298,7 +2247,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Baloi",
    "barangay": "",
    "photo": "",
@@ -2312,14 +2261,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-baloi-1st-najer-m-ali",
+   "id": "councilor-lanao-del-norte-baloi-1st-najer-m-ali",
    "name": "Najer M. Ali",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Baloi",
    "barangay": "",
    "photo": "",
@@ -2328,7 +2277,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2341,7 +2289,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Baroy",
    "barangay": "",
    "photo": "",
@@ -2350,7 +2298,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgubaroy1949@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2363,7 +2310,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Baroy",
    "barangay": "",
    "photo": "",
@@ -2377,14 +2324,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-baroy-1st-romuel-john-g-buhat",
+   "id": "councilor-lanao-del-norte-baroy-1st-romuel-john-g-buhat",
    "name": "Romuel John G. Buhat",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Baroy",
    "barangay": "",
    "photo": "",
@@ -2393,7 +2340,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2406,7 +2352,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kapatagan",
    "barangay": "",
    "photo": "",
@@ -2427,7 +2373,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kapatagan",
    "barangay": "",
    "photo": "",
@@ -2441,14 +2387,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-kapatagan-2nd-christine-celeste-d-atay",
+   "id": "councilor-lanao-del-norte-kapatagan-2nd-christine-celeste-d-atay",
    "name": "Christine Celesté D. Atay",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kapatagan",
    "barangay": "",
    "photo": "",
@@ -2457,7 +2403,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2470,7 +2415,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kauswagan",
    "barangay": "",
    "photo": "",
@@ -2491,7 +2436,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kauswagan",
    "barangay": "",
    "photo": "",
@@ -2505,14 +2450,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-kauswagan-1st-leah-q-bandejon",
+   "id": "councilor-lanao-del-norte-kauswagan-1st-leah-q-bandejon",
    "name": "Leah Q. Bandejon",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kauswagan",
    "barangay": "",
    "photo": "",
@@ -2521,7 +2466,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2534,7 +2478,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kolambugan",
    "barangay": "",
    "photo": "",
@@ -2543,7 +2487,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgukolambugan9207@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2556,7 +2499,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kolambugan",
    "barangay": "",
    "photo": "",
@@ -2570,14 +2513,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-kolambugan-1st-ruben-s-martinez",
+   "id": "councilor-lanao-del-norte-kolambugan-1st-ruben-s-martinez",
    "name": "Ruben S. Martinez",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Kolambugan",
    "barangay": "",
    "photo": "",
@@ -2586,7 +2529,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2599,7 +2541,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Lala",
    "barangay": "",
    "photo": "",
@@ -2620,7 +2562,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Lala",
    "barangay": "",
    "photo": "",
@@ -2634,14 +2576,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-lala-2nd-ralph-c-lim",
+   "id": "councilor-lanao-del-norte-lala-2nd-ralph-c-lim",
    "name": "Ralph C. Lim",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Lala",
    "barangay": "",
    "photo": "",
@@ -2650,7 +2592,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2663,7 +2604,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Linamon",
    "barangay": "",
    "photo": "",
@@ -2672,7 +2613,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "MMMO.LINAMON.2017@GMAIL.COM",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2685,7 +2625,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Linamon",
    "barangay": "",
    "photo": "",
@@ -2699,14 +2639,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-linamon-1st-marmarc-jan-m-achondo",
+   "id": "councilor-lanao-del-norte-linamon-1st-marmarc-jan-m-achondo",
    "name": "Marmarc Jan M. Achondo",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Linamon",
    "barangay": "",
    "photo": "",
@@ -2715,7 +2655,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2728,7 +2667,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Magsaysay",
    "barangay": "",
    "photo": "",
@@ -2737,7 +2676,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgumagsaysay1960@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2750,7 +2688,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Magsaysay",
    "barangay": "",
    "photo": "",
@@ -2764,14 +2702,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-magsaysay-2nd-vic-vic-b-oyog",
+   "id": "councilor-lanao-del-norte-magsaysay-2nd-vic-vic-b-oyog",
    "name": "Vic-Vic B. Oyog",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Magsaysay",
    "barangay": "",
    "photo": "",
@@ -2780,7 +2718,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2793,7 +2730,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Maigo",
    "barangay": "",
    "photo": "",
@@ -2814,7 +2751,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Maigo",
    "barangay": "",
    "photo": "",
@@ -2828,14 +2765,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-maigo-1st-elbert-p-mejorada",
+   "id": "councilor-lanao-del-norte-maigo-1st-elbert-p-mejorada",
    "name": "Elbert P. Mejorada",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Maigo",
    "barangay": "",
    "photo": "",
@@ -2844,7 +2781,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2857,7 +2793,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Matungao",
    "barangay": "",
    "photo": "",
@@ -2866,7 +2802,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "matungaolgu@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2879,7 +2814,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Matungao",
    "barangay": "",
    "photo": "",
@@ -2893,14 +2828,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-matungao-1st-janissah-a-azis",
+   "id": "councilor-lanao-del-norte-matungao-1st-janissah-a-azis",
    "name": "Janissah A. Azis",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Matungao",
    "barangay": "",
    "photo": "",
@@ -2909,7 +2844,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2922,7 +2856,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Munai",
    "barangay": "",
    "photo": "",
@@ -2931,7 +2865,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgumunai2019@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2944,7 +2877,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Munai",
    "barangay": "",
    "photo": "",
@@ -2958,14 +2891,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-munai-2nd-moamar-l-aninter",
+   "id": "councilor-lanao-del-norte-munai-2nd-moamar-l-aninter",
    "name": "Moamar L. Aninter",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Munai",
    "barangay": "",
    "photo": "",
@@ -2974,7 +2907,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -2987,7 +2919,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Nunungan",
    "barangay": "",
    "photo": "",
@@ -2996,7 +2928,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "LGU3.NUNUNGAN@GMAIL.COM",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3009,7 +2940,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Nunungan",
    "barangay": "",
    "photo": "",
@@ -3023,14 +2954,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-nunungan-2nd-abdullah-m-pamanay",
+   "id": "councilor-lanao-del-norte-nunungan-2nd-abdullah-m-pamanay",
    "name": "Abdullah M. Pamanay",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Nunungan",
    "barangay": "",
    "photo": "",
@@ -3039,7 +2970,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3052,7 +2982,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Pantao Ragat",
    "barangay": "",
    "photo": "",
@@ -3061,7 +2991,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgupantaoragat@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3074,7 +3003,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Pantao Ragat",
    "barangay": "",
    "photo": "",
@@ -3088,14 +3017,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-pantao-ragat-2nd-ryan-bin-lacson-d-lantud",
+   "id": "councilor-lanao-del-norte-pantao-ragat-2nd-ryan-bin-lacson-d-lantud",
    "name": "Ryan Bin Lacson D. Lantud",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Pantao Ragat",
    "barangay": "",
    "photo": "",
@@ -3104,7 +3033,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3117,7 +3045,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Pantar",
    "barangay": "",
    "photo": "",
@@ -3138,7 +3066,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Pantar",
    "barangay": "",
    "photo": "",
@@ -3152,14 +3080,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-pantar-1st-pao-o-alingan",
+   "id": "councilor-lanao-del-norte-pantar-1st-pao-o-alingan",
    "name": "Pao O. Alingan",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Pantar",
    "barangay": "",
    "photo": "",
@@ -3168,7 +3096,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3181,7 +3108,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Poona Piagapo",
    "barangay": "",
    "photo": "",
@@ -3202,7 +3129,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Poona Piagapo",
    "barangay": "",
    "photo": "",
@@ -3216,14 +3143,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-poona-piagapo-2nd-alibasher-o-mustafha",
+   "id": "councilor-lanao-del-norte-poona-piagapo-2nd-alibasher-o-mustafha",
    "name": "Alibasher O. Mustafha",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Poona Piagapo",
    "barangay": "",
    "photo": "",
@@ -3232,7 +3159,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3245,7 +3171,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Salvador",
    "barangay": "",
    "photo": "",
@@ -3254,7 +3180,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorsofficesldn@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3267,7 +3192,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Salvador",
    "barangay": "",
    "photo": "",
@@ -3281,14 +3206,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-salvador-2nd-merlyn-c-genetiano",
+   "id": "councilor-lanao-del-norte-salvador-2nd-merlyn-c-genetiano",
    "name": "Merlyn C. Genetiano",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Salvador",
    "barangay": "",
    "photo": "",
@@ -3297,7 +3222,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3310,7 +3234,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sapad",
    "barangay": "",
    "photo": "",
@@ -3319,7 +3243,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "sapadmayorsoffice@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3332,7 +3255,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sapad",
    "barangay": "",
    "photo": "",
@@ -3346,14 +3269,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-sapad-2nd-mohammad-sahab-d-asis",
+   "id": "councilor-lanao-del-norte-sapad-2nd-mohammad-sahab-d-asis",
    "name": "Mohammad Sahab D. Asis",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sapad",
    "barangay": "",
    "photo": "",
@@ -3362,7 +3285,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3375,7 +3297,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sultan Naga Dimaporo",
    "barangay": "",
    "photo": "",
@@ -3396,7 +3318,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sultan Naga Dimaporo",
    "barangay": "",
    "photo": "",
@@ -3410,14 +3332,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-sultan-naga-dimaporo-2nd-aiman-g-maruhom",
+   "id": "councilor-lanao-del-norte-sultan-naga-dimaporo-2nd-aiman-g-maruhom",
    "name": "Aiman G. Maruhom",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Sultan Naga Dimaporo",
    "barangay": "",
    "photo": "",
@@ -3426,7 +3348,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3439,7 +3360,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tagoloan",
    "barangay": "",
    "photo": "",
@@ -3460,7 +3381,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tagoloan",
    "barangay": "",
    "photo": "",
@@ -3474,14 +3395,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-tagoloan-1st-abdulah-c-dimakuta",
+   "id": "councilor-lanao-del-norte-tagoloan-1st-abdulah-c-dimakuta",
    "name": "Abdulah C. Dimakuta",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tagoloan",
    "barangay": "",
    "photo": "",
@@ -3490,7 +3411,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3503,7 +3423,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tangcal",
    "barangay": "",
    "photo": "",
@@ -3524,7 +3444,7 @@
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tangcal",
    "barangay": "",
    "photo": "",
@@ -3538,14 +3458,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-tangcal-2nd-saidali-t-diragon",
+   "id": "councilor-lanao-del-norte-tangcal-2nd-saidali-t-diragon",
    "name": "Saidali T. Diragon",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tangcal",
    "barangay": "",
    "photo": "",
@@ -3554,7 +3474,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3567,7 +3486,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tubod",
    "barangay": "",
    "photo": "",
@@ -3588,7 +3507,7 @@
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tubod",
    "barangay": "",
    "photo": "",
@@ -3602,14 +3521,14 @@
    "source_type": "official"
   },
   {
-   "id": "other-lanao-del-norte-tubod-1st-nelly-m-pepito",
+   "id": "councilor-lanao-del-norte-tubod-1st-nelly-m-pepito",
    "name": "Nelly M. Pepito",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
-   "province": "Lanao Del Norte",
+   "province": "Lanao del Norte",
    "lgu": "Tubod",
    "barangay": "",
    "photo": "",
@@ -3618,7 +3537,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3640,7 +3558,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "pms.pgmo@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3725,7 +3642,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "ocm.oroquietacity@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3852,7 +3768,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "bencanama_cmo@yahoo.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3916,7 +3831,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "asensoaloran@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3943,10 +3857,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-aloran-1st-remy-t-cawit",
+   "id": "councilor-misamis-occidental-aloran-1st-remy-t-cawit",
    "name": "Remy T. Cawit",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -3959,7 +3873,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -3981,7 +3894,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "oneasensobaliangao@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4008,10 +3920,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-baliangao-1st-nikki-marie-b-serenio",
+   "id": "councilor-misamis-occidental-baliangao-1st-nikki-marie-b-serenio",
    "name": "Nikki Marie B. Serenio",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -4024,7 +3936,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4046,7 +3957,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorsoffice.bonifacio@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4073,10 +3983,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-bonifacio-2nd-girbert-a-aljas",
+   "id": "councilor-misamis-occidental-bonifacio-2nd-girbert-a-aljas",
    "name": "Girbert A. Aljas",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -4089,7 +3999,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4111,7 +4020,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "VILLANUEVA@CALAMBAMISOCC.GOV.PH",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4138,10 +4046,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-calamba-1st-ceasar-ian-e-enerio",
+   "id": "councilor-misamis-occidental-calamba-1st-ceasar-ian-e-enerio",
    "name": "Ceasar Ian E. Enerio",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -4154,7 +4062,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4176,7 +4083,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "Asensoclarin@clarinmisocc.gov.oh",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4203,10 +4109,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-clarin-2nd-regino-l-barrientos",
+   "id": "councilor-misamis-occidental-clarin-2nd-regino-l-barrientos",
    "name": "Regino L. Barrientos",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -4219,7 +4125,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4267,10 +4172,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-concepcion-1st-ismael-p-loquias",
+   "id": "councilor-misamis-occidental-concepcion-1st-ismael-p-loquias",
    "name": "Ismael P. Loquias",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1st",
    "region": "Region X (Northern Mindanao)",
@@ -4283,7 +4188,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4305,7 +4209,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "donvictoriano.mayors@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4332,10 +4235,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-don-victoriano-2nd-junnifer-a-caday",
+   "id": "councilor-misamis-occidental-don-victoriano-2nd-junnifer-a-caday",
    "name": "Junnifer A. Caday",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -4348,7 +4251,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4370,7 +4272,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorsoffice.lgujimenez@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4397,10 +4298,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-jimenez-1st-rownil-james-m-cabug",
+   "id": "councilor-misamis-occidental-jimenez-1st-rownil-james-m-cabug",
    "name": "Rownil James M. Cabug",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -4413,7 +4314,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4435,7 +4335,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "officeofthemayor.lgulopezjaena@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4462,10 +4361,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-lopez-jaena-1st-hermenio-c-aca-ac",
+   "id": "councilor-misamis-occidental-lopez-jaena-1st-hermenio-c-aca-ac",
    "name": "Hermenio C. Aca-Ac",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -4478,7 +4377,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4500,7 +4398,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgupanaon2016@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4527,10 +4424,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-panaon-1st-patricio-m-jalapit-jr",
+   "id": "councilor-misamis-occidental-panaon-1st-patricio-m-jalapit-jr",
    "name": "Patricio M. Jalapit, Jr.",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -4543,7 +4440,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4565,7 +4461,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "asensoplaridel@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4592,10 +4487,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-plaridel-1st-jose-h-enguito-jr",
+   "id": "councilor-misamis-occidental-plaridel-1st-jose-h-enguito-jr",
    "name": "Jose H. Enguito, Jr.",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -4608,7 +4503,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4630,7 +4524,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgusapangdalaga7212@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4657,10 +4550,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-sapang-dalaga-1st-demmie-m-animas",
+   "id": "councilor-misamis-occidental-sapang-dalaga-1st-demmie-m-animas",
    "name": "Demmie M. Animas",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -4673,7 +4566,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4695,7 +4587,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "officeofthemayor.sinacaban@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4722,10 +4613,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-sinacaban-2nd-nelson-v-mercado",
+   "id": "councilor-misamis-occidental-sinacaban-2nd-nelson-v-mercado",
    "name": "Nelson V. Mercado",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -4738,7 +4629,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4760,7 +4650,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgu_tudela7202@yahoo.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4787,10 +4676,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-occidental-tudela-2nd-rosito-y-tampoog-jr",
+   "id": "councilor-misamis-occidental-tudela-2nd-rosito-y-tampoog-jr",
    "name": "Rosito Y. Tampoog, Jr.",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -4803,7 +4692,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4825,7 +4713,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "GOV.JTUMISOROFFICE@GMAIL.COM",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4910,7 +4797,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorsoffice@elsalvadorcity.gov.ph",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -4974,7 +4860,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorsoffice@gingoog.gov.ph",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5038,7 +4923,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorsofficealubijid@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5065,10 +4949,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-alubijid-2nd-joar-j-dy",
+   "id": "councilor-misamis-oriental-alubijid-2nd-joar-j-dy",
    "name": "Joar J. Dy",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5081,7 +4965,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5103,7 +4986,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgu_balingasag@yahoo.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5130,10 +5012,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-balingasag-1st-cristina-teresa-m-ociones",
+   "id": "councilor-misamis-oriental-balingasag-1st-cristina-teresa-m-ociones",
    "name": "Cristina Teresa M. Ociones",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -5146,7 +5028,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5168,7 +5049,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "LOCALCHIEFEXEC@GMAIL.COM",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5195,10 +5075,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-balingoan-1st-jhon-eliezer-q-padillo",
+   "id": "councilor-misamis-oriental-balingoan-1st-jhon-eliezer-q-padillo",
    "name": "Jhon Eliezer Q.. Padillo",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -5211,7 +5091,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5233,7 +5112,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "dannlusterio@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5260,10 +5138,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-binuangan-1st-cristian-krigg-z-balaman",
+   "id": "councilor-misamis-oriental-binuangan-1st-cristian-krigg-z-balaman",
    "name": "Cristian Krigg Z. Balaman",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -5276,7 +5154,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5298,7 +5175,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "sboffice24@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5325,10 +5201,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-claveria-2nd-van-yves-a-barros",
+   "id": "councilor-misamis-oriental-claveria-2nd-van-yves-a-barros",
    "name": "Van Yves A. Barros",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5341,7 +5217,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5363,7 +5238,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "LGUGITAGUM04@GMAIL.COM",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5390,10 +5264,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-gitagum-2nd-sante-c-ansigbat",
+   "id": "councilor-misamis-oriental-gitagum-2nd-sante-c-ansigbat",
    "name": "Sante C. Ansigbat",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5406,7 +5280,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5428,7 +5301,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "initao.lgu@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5455,10 +5327,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-initao-2nd-louie-jay-ban-v-jarales",
+   "id": "councilor-misamis-oriental-initao-2nd-louie-jay-ban-v-jarales",
    "name": "Louie Jay Ban V. Jarales",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5471,7 +5343,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5493,7 +5364,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "rsjardin@yahoo.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5520,10 +5390,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-jasaan-2nd-dianne-y-carreon",
+   "id": "councilor-misamis-oriental-jasaan-2nd-dianne-y-carreon",
    "name": "Dianne Y. Carreon",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5536,7 +5406,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5584,10 +5453,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-kinoguitan-1st-lilibeth-m-lagbas",
+   "id": "councilor-misamis-oriental-kinoguitan-1st-lilibeth-m-lagbas",
    "name": "Lilibeth M. Lagbas",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -5600,7 +5469,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5622,7 +5490,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lagonglonglavender2018@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5649,10 +5516,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-lagonglong-1st-kaiser-p-acao",
+   "id": "councilor-misamis-oriental-lagonglong-1st-kaiser-p-acao",
    "name": "Kaiser P. Acao",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -5665,7 +5532,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5687,7 +5553,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "laguindinganmisor@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5714,10 +5579,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-laguindingan-2nd-diel-adams-g-obsioma",
+   "id": "councilor-misamis-oriental-laguindingan-2nd-diel-adams-g-obsioma",
    "name": "Diel Adams G. Obsioma",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5730,7 +5595,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5752,7 +5616,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lguamslibertad@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5779,10 +5642,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-libertad-2nd-rexcel-s-illana",
+   "id": "councilor-misamis-oriental-libertad-2nd-rexcel-s-illana",
    "name": "Rexcel S. Illana",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5795,7 +5658,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5817,7 +5679,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lgu_lugait@yahoo.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5844,10 +5705,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-lugait-2nd-sharon-joy-g-agosto",
+   "id": "councilor-misamis-oriental-lugait-2nd-sharon-joy-g-agosto",
    "name": "Sharon Joy G. Agosto",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5860,7 +5721,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5882,7 +5742,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayor@sikatmagsaysay.gov.ph",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5909,10 +5768,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-magsaysay-1st-johnnylou-f-roxas",
+   "id": "councilor-misamis-oriental-magsaysay-1st-johnnylou-f-roxas",
    "name": "Johnnylou F. Roxas",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -5925,7 +5784,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5947,7 +5805,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "LGUmanticao202@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -5974,10 +5831,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-manticao-2nd-juhammed-jalil-y-macacua",
+   "id": "councilor-misamis-oriental-manticao-2nd-juhammed-jalil-y-macacua",
    "name": "Juhammed Jalil Y. Macacua",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -5990,7 +5847,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6012,7 +5868,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "munisipalidad.medina@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6039,10 +5894,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-medina-1st-darwin-concordio-l-balingit",
+   "id": "councilor-misamis-oriental-medina-1st-darwin-concordio-l-balingit",
    "name": "Darwin Concordio L. Balingit",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -6055,7 +5910,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6077,7 +5931,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "naawanmisor1957@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6104,10 +5957,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-naawan-2nd-jaime-c-roa",
+   "id": "councilor-misamis-oriental-naawan-2nd-jaime-c-roa",
    "name": "Jaime C. Roa",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -6120,7 +5973,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6142,7 +5994,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "jdbago@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6169,10 +6020,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-opol-2nd-clessa-monique-o-garces",
+   "id": "councilor-misamis-oriental-opol-2nd-clessa-monique-o-garces",
    "name": "Clessa Monique O. Garces",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -6185,7 +6036,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6207,7 +6057,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "mayorjboycapistrano@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6234,10 +6083,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-salay-1st-felipe-jojo-c-agnes",
+   "id": "councilor-misamis-oriental-salay-1st-felipe-jojo-c-agnes",
    "name": "Felipe Jojo C. Agnes",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -6250,7 +6099,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6272,7 +6120,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lagbaschizsalvador@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6299,10 +6146,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-sugbongcogon-1st-benedict-j-lagbas-jr",
+   "id": "councilor-misamis-oriental-sugbongcogon-1st-benedict-j-lagbas-jr",
    "name": "Benedict J. Lagbas, Jr.",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -6315,7 +6162,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6337,7 +6183,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "address": "lagbaschizsalvador@gmail.com",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6364,10 +6209,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-tagoloan-2nd-mikka-n-sultan",
+   "id": "councilor-misamis-oriental-tagoloan-2nd-mikka-n-sultan",
    "name": "Mikka N. Sultan",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -6380,7 +6225,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6428,10 +6272,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-talisayan-1st-marnil-e-asupan",
+   "id": "councilor-misamis-oriental-talisayan-1st-marnil-e-asupan",
    "name": "Marnil E. Asupan",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "1St",
    "region": "Region X (Northern Mindanao)",
@@ -6444,7 +6288,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
@@ -6492,10 +6335,10 @@
    "source_type": "official"
   },
   {
-   "id": "other-misamis-oriental-villanueva-2nd-robert-b-cabrera",
+   "id": "councilor-misamis-oriental-villanueva-2nd-robert-b-cabrera",
    "name": "Robert B. Cabrera",
-   "position": "Sb Members",
-   "level": "other",
+   "position": "Councilor",
+   "level": "councilor",
    "party": "",
    "district": "2Nd",
    "region": "Region X (Northern Mindanao)",
@@ -6508,7 +6351,6 @@
    "source": "DILG Region X (Northern Mindanao) – Local Officials 2025–2028",
    "source_url": "https://region10.dilg.gov.ph/local-officials-for-the-term-2025-2028/",
    "details": {
-    "position_raw": "SB MEMBERS",
     "published_via": "https://docs.google.com/spreadsheets/d/1OmsTygQz4gPwQi89vj8fgBgBQ1fn39uu0ABZgIp5_gE"
    },
    "source_type": "official"
