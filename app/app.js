@@ -75,6 +75,7 @@
     island: "",
     filtersOpen: false,
     sort: "name",
+    scope: "term",
     q: "",
     shown: PAGE,
     compare: [null, null],
@@ -138,7 +139,8 @@
     const bills = o.bills || [];
     const co = bills.filter((b) => b.coauthored).length;
     return { bills: o.bills_count ?? bills.length, main: bills.length - co, co,
-      bills_all: o.bills_all ?? bills.length, law_all: o.law_all ?? 0, avg: perCongress(o) };
+      bills_all: o.bills_all ?? bills.length, law_all: o.law_all ?? 0, avg: perCongress(o),
+      main_all: (o.bill_terms || []).reduce((sum, x) => sum + x.main, 0) };
   };
   const serviceText = (o) => (o.service?.first_senate_year
     ? `${t("senator_since", { y: o.service.first_senate_year })} · ${t(o.service.senate_terms === 1 ? "term_one" : "terms_n", { n: o.service.senate_terms })}`
@@ -153,7 +155,15 @@
     });
     return runs.map(([a, b]) => `${congressStart(a)}–${b >= cur ? t("present") : congressStart(b) + 3}`).join(", ");
   }
-  const SORTS = ["name", "bills", "bills_all", "avg", "law_all"];
+  // Sorting starts with this term (the sitting Congress, the same period for
+  // every senator); "whole career" switches to totals since 2004 and adds
+  // bills that became law.
+  const SORTS = ["name", "filed", "main", "law"];
+  const sortKey = () => (state.scope === "career"
+    ? { filed: "bills_all", main: "main_all", law: "law_all" }[state.sort]
+    : { filed: "bills", main: "main" }[state.sort]);
+  const scopeSeg = (scope, attr) => `<div class="scope-seg" role="group" aria-label="${esc(t("period"))}">${["term", "career"].map((k) =>
+    `<button type="button" ${attr}="${k}" aria-pressed="${k === scope}">${t(`scope_${k}`)}</button>`).join("")}</div>`;
 
   function toast(msg) {
     const el = $("#toast");
@@ -299,7 +309,7 @@
       .filter((o) => terms.every((w) => o._s.includes(w)));
     const bySort = state.sort !== "name";
     if (bySort) {
-      const val = (o) => billStats(o)[state.sort] ?? -1;
+      const val = (o) => billStats(o)[sortKey()] ?? -1;
       list = list.filter((o) => o.level === "senate")
         .sort((a, b) => val(b) - val(a) || a.name.localeCompare(b.name));
     }
@@ -308,7 +318,7 @@
     const tags = [];
     if (state.filter !== "all") tags.push(["f", t(`f_${state.filter}`)]);
     if (state.island) tags.push(["island", t(`island_${state.island}`)]);
-    if (bySort) tags.push(["sort", t(`sort_${state.sort}`)]);
+    if (bySort) tags.push(["sort", `${t(`sort_${state.sort}`)} · ${t(`scope_${state.scope}`)}`]);
     view.innerHTML = `
       ${searchBar({ id: "q", value: state.q, placeholder: t("search_ph"), label: t("search_label"), count: tags.length, open: state.filtersOpen, panelId: "home-filters" })}
       <div class="filter-panel" id="home-filters" ${state.filtersOpen ? "" : "hidden"}>
@@ -318,7 +328,9 @@
         <div class="chips wrap" role="group" aria-label="${esc(t("island"))}">${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === state.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}</div>
         <a class="fp-more" href="#/hanap">📍 ${t("more_place")}</a>
         <div class="fp-label">${t("sort_by")}</div>
-        <div class="chips wrap" role="group" aria-label="${esc(t("sort_by"))}">${SORTS.map((k) => `<button class="chip" data-sort="${k}" aria-pressed="${k === state.sort}">${t(`sort_${k}`)}</button>`).join("")}</div>
+        <div class="chips wrap" role="group" aria-label="${esc(t("sort_by"))}">${SORTS.filter((k) => k !== "law" || state.scope === "career").map((k) => `<button class="chip" data-sort="${k}" aria-pressed="${k === state.sort}">${t(`sort_${k}`)}</button>`).join("")}</div>
+        <div class="fp-label">${t("period")}</div>
+        ${scopeSeg(state.scope, "data-scope")}
         <p class="meta fp-hint">${t("sort_hint")}</p>
         ${panelFoot("home-filters")}
       </div>
@@ -340,19 +352,26 @@
     } else {
       // Ranked rows: the name opens the profile, the number opens the bills by term.
       const rankRow = (o, i) => {
-        const v = billStats(o)[state.sort];
+        const v = billStats(o)[sortKey()];
         return `<div class="row rank-row"><span class="num">${i + 1}</span>
           <a class="rank-main" href="#/o/senate/${encodeURIComponent(o.id)}">${avatar(o)}<span class="who"><b>${esc(o.name)}</b><span>${esc(serviceText(o) || levelLabel(o))}</span></span></a>
-          <a class="bill-count" href="#/bills/${encodeURIComponent(o.id)}" aria-label="${esc(t("open_bills", { name: o.name }))}"><b>${v == null ? "—" : fmtNum(v)}</b><small>${v == null ? t("no_completed") : t(`count_${state.sort}`)}</small></a>
+          <a class="bill-count" href="#/bills/${encodeURIComponent(o.id)}${state.scope === "career" ? "/career" : ""}" aria-label="${esc(t("open_bills", { name: o.name }))}"><b>${v == null ? "—" : fmtNum(v)}</b><small>${t(`count_${sortKey()}`)}</small></a>
         </div>`;
       };
-      results.innerHTML = `<div class="section-label">${bySort ? esc(t(`sort_${state.sort}`)) : esc(t(`f_${f[0]}`))}${state.island ? " · " + esc(t(`island_${state.island}`)) : ""} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
-        ${bySort ? `<div class="notice rank-note"><b>${t("rank_caveat_title")}</b> ${t(`period_${state.sort}`, { d: fmtDate(state.billsSource?.as_of) })} ${t("rank_caveat")}</div>${billsNote()}` : ""}
+      results.innerHTML = `${bySort ? scopeSeg(state.scope, "data-scope") : ""}<div class="section-label">${bySort ? esc(`${t(`sort_${state.sort}`)} · ${t(`scope_${state.scope}`)}`) : esc(t(`f_${f[0]}`))}${state.island ? " · " + esc(t(`island_${state.island}`)) : ""} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
+        ${bySort ? `<div class="notice rank-note"><b>${t("rank_caveat_title")}</b> ${t(`period_${sortKey()}`, { d: fmtDate(state.billsSource?.as_of) })} ${t("rank_caveat")}</div>${billsNote()}` : ""}
         <div class="list${bySort ? " ranked" : ""}">${list.slice(0, state.shown).map((o, i) => (bySort ? rankRow(o, i) : row(o))).join("") || `<div class="empty">${t("no_match", { q: esc(state.q) })}</div>`}</div>
         ${list.length > state.shown ? `<button class="btn more" id="more">${t("show_more", { n: fmtNum(list.length - state.shown) })}</button>` : ""}`;
     }
 
     wireSearch("q", { set: (v) => { state.q = v; state.shown = PAGE; }, rerender: viewHome, toggle: () => (state.filtersOpen = !state.filtersOpen) });
+    view.querySelectorAll("[data-scope]").forEach((b) => b.addEventListener("click", () => {
+      state.scope = b.dataset.scope;
+      if (state.scope === "term" && state.sort === "law") state.sort = "filed";
+      if (state.sort === "name") { state.sort = "filed"; state.filter = "senate"; }
+      state.shown = PAGE;
+      viewHome();
+    }));
     view.querySelectorAll(".chip[data-sort]").forEach((b) => b.addEventListener("click", () => {
       state.sort = b.dataset.sort;
       if (state.sort !== "name") state.filter = "senate";
@@ -360,7 +379,7 @@
       viewHome();
     }));
     const clearHome = (k) => {
-      if (k === "sort" || k === "*") state.sort = "name";
+      if (k === "sort" || k === "*") { state.sort = "name"; state.scope = "term"; }
       if (k === "f" || k === "*") state.filter = "all";
       if (k === "island" || k === "*") { state.island = ""; HANAP_ORDER.forEach((kk) => (hanap[kk] = "")); }
       state.shown = PAGE;
@@ -533,7 +552,7 @@
       ${nAch ? `<div class="section-label">${t("achievements_n", { n: nAch })}</div>${groupAchievements(o.achievements).map(([g, items]) => `<div class="ach-group">${esc(t(g))} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
       ${(o.bills || []).length ? `<div class="section-label">${t("bills_n", { n: fmtNum(o.bills_count || o.bills.length) })}</div>
         <p class="meta bill-split">${t("bill_split", { main: fmtNum(billStats(o).main), co: fmtNum(billStats(o).co) })} · <a href="#/" data-rank-link>${t("see_ranking")}</a></p>
-        ${o.bills_file ? `<p><a class="btn block" href="#/bills/${encodeURIComponent(o.id)}">${t("see_all_terms", { n: fmtNum(o.bills_all) })}</a></p>` : ""}
+        ${o.bills_file ? `<div class="btn-row"><a class="btn" href="#/bills/${encodeURIComponent(o.id)}">${t("see_term_bills", { n: fmtNum(o.bills_count) })}</a><a class="btn" href="#/bills/${encodeURIComponent(o.id)}/career">${t("see_all_terms", { n: fmtNum(o.bills_all) })}</a></div>` : ""}
         ${billsNote()}
         <details class="bills-more"${o.bills.length <= 10 ? " open" : ""}><summary>${t("see_bills", { n: fmtNum(o.bills.length) })}</summary>
         <ul class="bills">${o.bills.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.coauthored ? `<span class="meta"> · ${t("coauthor")}</span>` : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · ${t("filed", { d: esc(b.date) })}</span>` : ""}</li>`).join("")}</ul></details>` : ""}
@@ -547,7 +566,7 @@
 
     view.querySelector("[data-rank-link]")?.addEventListener("click", (e) => {
       e.preventDefault();
-      Object.assign(state, { sort: "bills", filter: "senate", island: "", q: "", shown: PAGE });
+      Object.assign(state, { sort: "filed", scope: "term", filter: "senate", island: "", q: "", shown: PAGE });
       location.hash = "#/";
     });
     $("#cmp").addEventListener("click", () => {
@@ -566,7 +585,7 @@
   // Every bill a senator filed, by term (Congress) and year, from the
   // per-senator file written by the scraper.
   const billsView = { id: "", q: "", show: "all" };
-  async function viewBills(id) {
+  async function viewBills(id, scope = "term") {
     view.innerHTML = '<div class="skeleton" style="height:160px"></div>'.repeat(2);
     const o = await findOfficial("senate", id);
     if (!o || !o.bills_file) {
@@ -574,12 +593,14 @@
       return;
     }
     if (billsView.id !== id) Object.assign(billsView, { id, q: "", show: "all" });
+    if (scope === "term" && billsView.show === "law") billsView.show = "all";
     setTitle(t("bills_page_title"));
     let doc;
     try { doc = await getJSON(o.bills_file); } catch (e) {
       view.innerHTML = `<div class="empty">${t("no_data_short")}</div>`;
       return;
     }
+    const career = scope === "career";
     const s = o.service || {};
     const cur = currentCongress();
     const asOf = fmtDate(doc.as_of);
@@ -588,21 +609,25 @@
     const congresses = [...new Set([...(s.senate_congresses || []), ...doc.terms.map((x) => x.congress)])].sort((a, b) => b - a);
     const first = state.billsSource?.first_congress || 13;
     const totals = doc.terms.reduce((acc, x) => ({ filed: acc.filed + x.filed, main: acc.main + x.main, law: acc.law + x.law }), { filed: 0, main: 0, law: 0 });
+    const now = byCongress.get(cur) || { filed: 0, main: 0, bills: [] };
+    const shownTerms = career ? doc.terms : doc.terms.filter((x) => x.congress === cur);
+    const stat = (v, label) => `<div class="service-item"><b>${v}</b><span>${label}</span></div>`;
 
     view.innerHTML = `
       <div class="bills-head">
         <a class="bills-who" href="#/o/senate/${encodeURIComponent(o.id)}">${avatar(o)}<span><b>${esc(o.name)}</b><span>${esc(levelLabel(o))}</span></span></a>
+        ${scopeSeg(scope, "data-bscope")}
         <div class="service">
-          <div class="service-item"><b>${s.first_senate_year || "—"}</b><span>${t("cmp_since")}</span></div>
-          <div class="service-item"><b>${s.senate_terms ?? "—"}</b><span>${t("cmp_terms")}</span></div>
-          <div class="service-item"><b>${fmtNum(totals.filed)}</b><span>${t("count_bills_all")}</span></div>
-          <div class="service-item"><b>${fmtNum(totals.law)}</b><span>${t("col_law")}</span></div>
+          ${stat(s.first_senate_year || "—", t("cmp_since"))}
+          ${stat(s.senate_terms ?? "—", t("cmp_terms"))}
+          ${career ? stat(fmtNum(totals.filed), t("count_bills_all")) + stat(fmtNum(totals.law), t("col_law"))
+            : stat(fmtNum(now.filed), t("filed_this_term")) + stat(fmtNum(now.main), t("col_main"))}
         </div>
         <p class="meta">${t("in_senate")}: ${esc(congressRanges(s.senate_congresses || []))}${(s.house_congresses || []).length ? ` · ${t("house_note", { list: esc(congressRanges(s.house_congresses)) })}` : ""}</p>
       </div>
-      <div class="notice">${t("bills_page_note", { first: congressName(first), y: congressStart(first) })}</div>
+      <div class="notice">${career ? t("bills_page_note", { first: congressName(first), y: congressStart(first) }) : t("term_view_note", { d: asOf })}</div>
       ${billsNote()}
-      <div class="section-label">${t("per_term")}</div>
+      ${career ? `<div class="section-label">${t("per_term")}</div>
       <div class="table-wrap"><table class="terms">
         <thead><tr><th>${t("col_term")}</th><th class="n">${t("col_filed")}</th><th class="n">${t("col_main")}</th><th class="n">${t("col_law")}</th></tr></thead>
         <tbody>${congresses.map((c) => {
@@ -612,19 +637,20 @@
             ? `<tr><td><button type="button" class="link-btn" data-jump="${c}">${congressName(c)}</button>${note}</td><td class="n">${fmtNum(x.filed)}</td><td class="n">${fmtNum(x.main)}</td><td class="n">${c === cur ? "—" : fmtNum(x.law)}</td></tr>`
             : `<tr class="nodata"><td>${congressName(c)}${note}</td><td colspan="3">${c < first ? t("no_bill_data", { y: congressStart(first) }) : "0"}</td></tr>`;
         }).join("")}</tbody>
-      </table></div>
+      </table></div>` : ""}
       <div class="bills-tools">
         <input class="search" id="bills-q" type="search" placeholder="${esc(t("bills_search_ph"))}" value="${esc(billsView.q)}" aria-label="${esc(t("bills_search_ph"))}">
-        <div class="chips wrap" role="group">${["all", "main", "law"].map((k) => `<button class="chip" data-show="${k}" aria-pressed="${k === billsView.show}">${t(`bills_filter_${k}`)}</button>`).join("")}</div>
+        <div class="chips wrap" role="group">${(career ? ["all", "main", "law"] : ["all", "main"]).map((k) => `<button class="chip" data-show="${k}" aria-pressed="${k === billsView.show}">${t(`bills_filter_${k}`)}</button>`).join("")}</div>
       </div>
-      <div id="bill-sections"></div>`;
+      <div id="bill-sections"></div>
+      ${career ? "" : `<p><a class="btn block" href="#/bills/${encodeURIComponent(o.id)}/career">${t("see_career", { n: fmtNum(totals.filed), l: fmtNum(totals.law) })}</a></p>`}`;
 
     const drawSections = () => {
       const terms = norm(billsView.q).split(/\s+/).filter(Boolean);
       const keep = (b) => (billsView.show === "all" || (billsView.show === "main" ? b.role === "main" : b.law))
         && terms.every((w) => norm(`${b.number} ${b.title} ${b.status}`).includes(w));
       const filtering = terms.length || billsView.show !== "all";
-      $("#bill-sections").innerHTML = doc.terms.map((x, i) => {
+      $("#bill-sections").innerHTML = shownTerms.map((x, i) => {
         const bills = x.bills.filter(keep);
         if (filtering && !bills.length) return "";
         const years = new Map();
@@ -639,7 +665,7 @@
             <ul class="bills">${list.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number)}</b> ${esc(b.title)}${safeUrl(b.url) ? "</a>" : ""}
               <span class="bill-meta">${b.law ? `<span class="badge src-official">✓ ${t("law_badge")}</span> ` : ""}${b.role === "co" ? `<span class="meta">${t("role_co")} · </span>` : ""}<span class="meta">${t("filed", { d: esc(b.date || "—") })}${b.status && !b.law ? ` · ${esc(b.status)}` : ""}</span></span></li>`).join("")}</ul>`).join("")}
         </details>`;
-      }).join("") || `<div class="empty">${t("no_match_short")}</div>`;
+      }).join("") || `<div class="empty">${career || now.filed ? t("no_match_short") : t("no_term_bills")}</div>`;
     };
     drawSections();
     $("#bills-q").addEventListener("input", (e) => { billsView.q = e.target.value; drawSections(); });
@@ -647,6 +673,10 @@
       billsView.show = b.dataset.show;
       view.querySelectorAll("[data-show]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
       drawSections();
+    }));
+    view.querySelectorAll("[data-bscope]").forEach((b) => b.addEventListener("click", () => {
+      if (b.dataset.bscope === scope) return;
+      location.hash = `#/bills/${encodeURIComponent(o.id)}${b.dataset.bscope === "career" ? "/career" : ""}`;
     }));
     view.querySelectorAll("[data-jump]").forEach((b) => b.addEventListener("click", () => {
       const el = $(`#term-${b.dataset.jump}`);
@@ -949,7 +979,7 @@
     setTitle(titles[tab] ? t(titles[tab]) : "");
     switch (parts[0]) {
       case "o": return viewProfile(parts[1], parts.slice(2).join("/"));
-      case "bills": return viewBills(parts.slice(1).join("/"));
+      case "bills": return viewBills(parts[1], parts[2] === "career" ? "career" : "term");
       case "hanap": return viewHanap();
       case "ihambing": return viewCompare();
       case "pili": return viewPili();
@@ -961,7 +991,7 @@
   // The logo returns to the start: a fresh home list behind the cover page.
   $(".brand").addEventListener("click", (e) => {
     e.preventDefault();
-    Object.assign(state, { q: "", filter: "all", island: "", shown: PAGE, filtersOpen: false, sort: "name" });
+    Object.assign(state, { q: "", filter: "all", island: "", shown: PAGE, filtersOpen: false, sort: "name", scope: "term" });
     HANAP_ORDER.forEach((k) => (hanap[k] = ""));
     hanap.q = "";
     hanap.open = false;
