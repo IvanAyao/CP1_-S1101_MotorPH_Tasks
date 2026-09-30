@@ -73,6 +73,7 @@
     brgyFiles: new Map(),    // file -> records (lazy)
     filter: "all",
     island: "",
+    filtersOpen: false,
     q: "",
     shown: PAGE,
     compare: [null, null],
@@ -230,6 +231,31 @@
   }
 
   // --------------------------------------------------------------- views
+  // Search box with a Filter button; the filters live in a panel that opens
+  // below it, and the ones in use show as removable tags.
+  const FILTER_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>';
+  function searchBar({ id, value, placeholder, label, count, open, panelId }) {
+    return `<div class="searchbar">
+      <input class="search" id="${id}" type="search" placeholder="${esc(placeholder)}" value="${esc(value)}" aria-label="${esc(label)}">
+      <button type="button" class="filter-btn${count ? " on" : ""}" id="${id}-filter" aria-expanded="${open}" aria-controls="${panelId}">
+        ${FILTER_ICON}<span class="fb-text">${t("filter_btn")}</span>${count ? `<span class="fb-count">${count}</span>` : ""}
+      </button>
+    </div>`;
+  }
+  const filterTags = (tags) => (tags.length
+    ? `<div class="filter-tags">${tags.map(([k, text]) => `<button type="button" class="ftag" data-rm="${esc(k)}" aria-label="${esc(t("remove_filter", { f: text }))}">${esc(text)} <span aria-hidden="true">✕</span></button>`).join("")}<button type="button" class="link-btn" data-rm="*">${t("clear_filters")}</button></div>`
+    : "");
+  const panelFoot = (panelId) => `<div class="fp-foot"><button type="button" class="link-btn" data-fp-reset>${t("clear_filters")}</button><button type="button" class="btn primary" data-fp-done="${panelId}">${t("show_results")}</button></div>`;
+  function wireSearch(id, { get, set, rerender, toggle }) {
+    const input = $("#" + id);
+    input.addEventListener("input", () => {
+      set(input.value);
+      const pos = input.selectionStart;
+      Promise.resolve(rerender()).then(() => { const i2 = $("#" + id); i2.focus(); i2.setSelectionRange(pos, pos); });
+    });
+    $(`#${id}-filter`).addEventListener("click", () => { toggle(); rerender(); });
+  }
+
   function viewHome() {
     const f = FILTERS.find((x) => x[0] === state.filter) || FILTERS[0];
     const q = norm(state.q).trim();
@@ -238,10 +264,20 @@
       .filter((o) => terms.every((w) => o._s.includes(w)));
     const brgyNote = state.filter === "brgy";
 
+    const tags = [];
+    if (state.filter !== "all") tags.push(["f", t(`f_${state.filter}`)]);
+    if (state.island) tags.push(["island", t(`island_${state.island}`)]);
     view.innerHTML = `
-      <input class="search" id="q" type="search" placeholder="${esc(t("search_ph"))}" value="${esc(state.q)}" aria-label="${esc(t("search_label"))}">
-      <div class="chips" role="toolbar" aria-label="Filter">${FILTERS.map(([k]) => `<button class="chip" data-f="${k}" aria-pressed="${k === state.filter}">${t(`f_${k}`)}</button>`).join("")}</div>
-      <div class="chips islands" role="toolbar" aria-label="${esc(t("island"))}"><span class="chips-label" aria-hidden="true">📍</span>${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === state.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}<a class="chip more-place" href="#/hanap">${t("more_place")}</a></div>
+      ${searchBar({ id: "q", value: state.q, placeholder: t("search_ph"), label: t("search_label"), count: tags.length, open: state.filtersOpen, panelId: "home-filters" })}
+      <div class="filter-panel" id="home-filters" ${state.filtersOpen ? "" : "hidden"}>
+        <div class="fp-label">${t("position")}</div>
+        <div class="chips wrap" role="group" aria-label="${esc(t("position"))}">${FILTERS.map(([k]) => `<button class="chip" data-f="${k}" aria-pressed="${k === state.filter}">${t(`f_${k}`)}</button>`).join("")}</div>
+        <div class="fp-label">${t("island")}</div>
+        <div class="chips wrap" role="group" aria-label="${esc(t("island"))}">${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === state.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}</div>
+        <a class="fp-more" href="#/hanap">📍 ${t("more_place")}</a>
+        ${panelFoot("home-filters")}
+      </div>
+      ${state.filtersOpen ? "" : filterTags(tags)}
       <div class="quick">
         <a href="#/ihambing"><span class="qi">⚖️</span><b>${t("quick_compare")}</b><small>${t("quick_compare_sub")}</small></a>
         <a href="#/pili"><span class="qi">🗳️</span><b>${t("quick_list")}</b><small>${t("quick_list_sub")}</small></a>
@@ -262,16 +298,16 @@
         ${list.length > state.shown ? `<button class="btn more" id="more">${t("show_more", { n: fmtNum(list.length - state.shown) })}</button>` : ""}`;
     }
 
-    const input = $("#q");
-    input.addEventListener("input", () => {
-      state.q = input.value;
+    wireSearch("q", { set: (v) => { state.q = v; state.shown = PAGE; }, rerender: viewHome, toggle: () => (state.filtersOpen = !state.filtersOpen) });
+    const clearHome = (k) => {
+      if (k === "f" || k === "*") state.filter = "all";
+      if (k === "island" || k === "*") { state.island = ""; HANAP_ORDER.forEach((kk) => (hanap[kk] = "")); }
       state.shown = PAGE;
-      const pos = input.selectionStart;
       viewHome();
-      const i2 = $("#q");
-      i2.focus();
-      i2.setSelectionRange(pos, pos);
-    });
+    };
+    view.querySelectorAll("[data-rm]").forEach((b) => b.addEventListener("click", () => clearHome(b.dataset.rm)));
+    view.querySelector("[data-fp-reset]")?.addEventListener("click", () => clearHome("*"));
+    view.querySelector("[data-fp-done]")?.addEventListener("click", () => { state.filtersOpen = false; viewHome(); });
     view.querySelectorAll(".chip[data-f]").forEach((b) => b.addEventListener("click", () => { state.filter = b.dataset.f; state.shown = PAGE; viewHome(); }));
     view.querySelectorAll(".chip[data-island]").forEach((b) => b.addEventListener("click", () => {
       state.island = b.dataset.island;
@@ -285,7 +321,7 @@
 
   // Find by place: island group -> region -> province -> city/municipality
   // -> district -> barangay, plus a free-text search.
-  const hanap = { island: "", region: "", province: "", lgu: "", district: "", barangay: "", q: "" };
+  const hanap = { island: "", region: "", province: "", lgu: "", district: "", barangay: "", q: "", open: false };
   const HANAP_ORDER = ["island", "region", "province", "lgu", "district", "barangay"];
   async function viewHanap() {
     if (state.loading) { view.innerHTML = '<div class="skeleton"></div>'.repeat(4); return; }
@@ -327,10 +363,13 @@
     const regionOrder = GEO.regionsOf("");
     const brgyNote = !brgyFiles.length ? t("no_brgy_data") : h.province ? t("all_brgys") : t("pick_province_first");
 
+    const placeTags = HANAP_ORDER.filter((k) => h[k]).map((k) => [k,
+      k === "island" ? t(`island_${h.island}`) : k === "district" ? districtLabel(h.district) : k === "barangay" ? `Brgy. ${h.barangay}` : h[k]]);
     view.innerHTML = `
-      <div class="section-label">${t("by_place")}</div>
-      <input class="search" id="place-q" type="search" placeholder="${esc(t("place_search_ph"))}" value="${esc(h.q)}" aria-label="${esc(t("place_search_ph"))}">
-      <div class="chips" role="toolbar" aria-label="${esc(t("island"))}">${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === h.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}</div>
+      ${searchBar({ id: "place-q", value: h.q, placeholder: t("place_search_ph"), label: t("place_search_ph"), count: placeTags.length, open: h.open, panelId: "place-filters" })}
+      <div class="filter-panel" id="place-filters" ${h.open ? "" : "hidden"}>
+      <div class="fp-label">${t("island")}</div>
+      <div class="chips wrap" role="group" aria-label="${esc(t("island"))}">${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === h.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}</div>
       <div class="place-grid">
         <label><span>${t("region")}</span><select class="select" data-k="region">${opt(sorted(regions, (a, b) => regionOrder.indexOf(a) - regionOrder.indexOf(b)), h.region, t("all_regions"))}</select></label>
         <label><span>${t("province")}</span><select class="select" data-k="province">${opt(sorted(provinces), h.province, t("all_provinces"))}</select></label>
@@ -338,7 +377,10 @@
         <label><span>${t("district")}</span><select class="select" data-k="district" ${districts.size ? "" : "disabled"}>${opt(sorted(districts, (a, b) => (a === "lone" ? -1 : b === "lone" ? 1 : a - b)), h.district, h.province ? t("all_districts") : t("pick_province_district"), districtLabel)}</select></label>
         <label class="wide"><span>${t("barangay")}</span><select class="select" data-k="barangay" ${brgys.size ? "" : "disabled"}>${opt(sorted(brgys), h.barangay, brgys.size ? t("all_brgys") : brgyNote)}</select></label>
       </div>
-      ${anyFilter ? `<div class="place-head"><div class="section-label">${t("n_officials", { n: fmtNum(list.length) })}</div><button class="link-btn" id="place-reset">${t("reset_place")}</button></div>
+      ${panelFoot("place-filters")}
+      </div>
+      ${h.open ? "" : filterTags(placeTags)}
+      ${anyFilter ? `<div class="place-head"><div class="section-label">${t("n_officials", { n: fmtNum(list.length) })}</div></div>
         <div class="list">${list.slice(0, 400).map((o) => row(o)).join("") || `<div class="empty">${t("none_here")}</div>`}</div>${list.length > 400 ? `<p class="meta">${t("first_400")}</p>` : ""}`
         : `<div class="empty"><span class="ei">📍</span>${t("hanap_hint")}<br><br>${t("hanap_senators", { link: `<a href="#/">${t("tab_home")}</a>` })}</div>`}`;
 
@@ -361,18 +403,17 @@
       state.island = h.island;
       viewHanap();
     }));
-    const input = $("#place-q");
-    input.addEventListener("input", () => {
-      h.q = input.value;
-      const pos = input.selectionStart;
-      viewHanap().then(() => { const i2 = $("#place-q"); i2.focus(); i2.setSelectionRange(pos, pos); });
-    });
-    $("#place-reset")?.addEventListener("click", () => {
-      HANAP_ORDER.forEach((k) => (h[k] = ""));
-      h.q = "";
-      state.island = "";
+    wireSearch("place-q", { set: (v) => (h.q = v), rerender: viewHanap, toggle: () => (h.open = !h.open) });
+    // Removing a place also clears the narrower ones under it.
+    const clearPlace = (k) => {
+      const from = k === "*" ? 0 : HANAP_ORDER.indexOf(k);
+      HANAP_ORDER.slice(from).forEach((kk) => (h[kk] = ""));
+      state.island = h.island;
       viewHanap();
-    });
+    };
+    view.querySelectorAll("[data-rm]").forEach((b) => b.addEventListener("click", () => clearPlace(b.dataset.rm)));
+    view.querySelector("[data-fp-reset]")?.addEventListener("click", () => clearPlace("*"));
+    view.querySelector("[data-fp-done]")?.addEventListener("click", () => { h.open = false; viewHanap(); });
   }
 
   async function viewProfile(dataset, id) {
@@ -740,16 +781,17 @@
     }
   }
 
-  // The logo always returns to a fresh home list.
+  // The logo returns to the start: a fresh home list behind the cover page.
   $(".brand").addEventListener("click", (e) => {
     e.preventDefault();
-    state.q = "";
-    state.filter = "all";
-    state.island = "";
-    state.shown = PAGE;
+    Object.assign(state, { q: "", filter: "all", island: "", shown: PAGE, filtersOpen: false });
+    HANAP_ORDER.forEach((k) => (hanap[k] = ""));
+    hanap.q = "";
+    hanap.open = false;
     if (location.hash === "#/" || !location.hash) render();
     else location.hash = "#/";
     window.scrollTo(0, 0);
+    showCover();
   });
   $("#back").addEventListener("click", () => (history.length > 1 ? history.back() : (location.hash = "#/")));
   $("#lang").addEventListener("click", () => setLang(lang === "en" ? "tl" : "en"));
