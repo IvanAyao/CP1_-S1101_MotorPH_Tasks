@@ -1,0 +1,88 @@
+"""Run every scraper and rebuild app/data/manifest.json.
+
+Each scraper is independent: one failing (site down, layout changed) keeps its
+previous data and does not block the others. Exit code is non-zero if any
+failed, so CI surfaces it.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import time
+import traceback
+
+from common import DATA_DIR, Browser, log, now_iso, write_dataset
+import barangay
+import house
+import lgu
+import senate
+
+DATASETS = {
+    "senate": ("senate.json", senate.URL, "Senate of the Philippines"),
+    "house": ("house.json", house.URL, "House of Representatives"),
+    "lgu": ("lgu.json", lgu.URL, lgu.SOURCE),
+    "barangay": ("barangay/index.json", barangay.URL, barangay.SOURCE),
+}
+
+
+def build_manifest() -> None:
+    entries = []
+    for key, (file, url, label) in DATASETS.items():
+        path = DATA_DIR / file
+        meta = {"key": key, "file": file, "source": label, "source_url": url,
+                "count": 0, "scraped_at": None}
+        if path.exists():
+            doc = json.loads(path.read_text())
+            meta.update(count=doc.get("count", 0), scraped_at=doc.get("scraped_at"))
+        entries.append(meta)
+    (DATA_DIR / "manifest.json").write_text(json.dumps(
+        {"generated_at": now_iso(), "datasets": entries}, indent=1, ensure_ascii=False))
+    log("manifest rebuilt")
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--only", nargs="*", choices=list(DATASETS), help="subset to run")
+    ap.add_argument("--barangay-minutes", type=float, default=240)
+    ap.add_argument("--headed", action="store_true")
+    args = ap.parse_args()
+    wanted = args.only or list(DATASETS)
+
+    failures = []
+    browser = Browser(headless=not args.headed)
+    try:
+        for key in ("senate", "house", "lgu"):
+            if key not in wanted:
+                continue
+            try:
+                if key == "senate":
+                    write_dataset("senate", senate.scrape(browser), senate.URL, min_count=20, max_count=26)
+                elif key == "house":
+                    write_dataset("house", house.scrape(browser), house.URL, min_count=250, max_count=340)
+                else:
+                    lgus, officials = lgu.scrape(browser)
+                    write_dataset("lgu", officials, lgu.URL, min_count=10,
+                                  extra_meta={"lgus": lgus, "lgu_count": len(lgus)})
+            except (Exception, SystemExit) as err:  # noqa: BLE001
+                log(f"{key} FAILED: {err}")
+                traceback.print_exc()
+                failures.append(key)
+        if "barangay" in wanted:
+            try:
+                barangay.scrape(browser, deadline=time.time() + args.barangay_minutes * 60,
+                                only_region=None, reset=False)
+            except Exception as err:  # noqa: BLE001
+                log(f"barangay FAILED: {err}")
+                traceback.print_exc()
+                failures.append("barangay")
+    finally:
+        browser.close()
+        build_manifest()
+
+    if failures:
+        raise SystemExit(f"failed: {', '.join(failures)}")
+
+
+if __name__ == "__main__":
+    main()

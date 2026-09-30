@@ -1,0 +1,18 @@
+<!doctype html><html><body><form id="f" onsubmit="return false">
+<label for="region">Region</label><select id="region"><option value="">-- Select Region --</option></select>
+<label for="province">Province</label><select id="province"><option value="">-- Select Province --</option></select>
+<label for="city">City/Municipality</label><select id="city"><option value="">-- Select City/Municipality --</option></select>
+<label for="barangay">Barangay</label><select id="barangay"><option value="">-- Select Barangay --</option></select>
+<button type="submit" id="go">Search</button></form><div id="out"></div>
+<script>
+let T;const $=id=>document.getElementById(id);
+const fill=(id,arr)=>{$(id).innerHTML='<option value="">-- Select --</option>'+arr.map(x=>`<option value="${x}">${x}</option>`).join('')};
+fetch('/api/tree.json').then(r=>r.json()).then(t=>{T=t;fill('region',Object.keys(T))});
+$('region').onchange=e=>{fill('province',Object.keys(T[e.target.value]||{}));fill('city',[]);fill('barangay',[])};
+$('province').onchange=e=>{fill('city',Object.keys(T[$('region').value][e.target.value]||{}));fill('barangay',[])};
+$('city').onchange=e=>{fill('barangay',T[$('region').value][$('province').value][e.target.value]||[])};
+$('go').onclick=()=>{const b=$('barangay').value;if(!b)return;
+ const names=['Juan Dela Cruz','Maria Santos','Pedro Reyes','Ana Garcia'];
+ const pos=['Punong Barangay','Barangay Kagawad','Barangay Kagawad','SK Chairperson'];
+ $('out').innerHTML='<table><thead><tr><th>Position</th><th>Name</th></tr></thead><tbody>'+names.map((n,i)=>`<tr><td>${pos[i]}</td><td>${n} ${b}</td></tr>`).join('')+'</tbody></table>';};
+</script></body></html>

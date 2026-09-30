@@ -1,0 +1,9 @@
+<!doctype html><html><body><h1>House Members</h1><div id="list"></div>
+<nav class="pagination"><button id="next" aria-label="Next page">Next</button></nav>
+<script>
+let page=1;
+async function load(){const r=await fetch('/api/members?page='+page);const d=await r.json();
+ document.getElementById('list').innerHTML=d.data.map(m=>`<div class="member"><h4>${m.first_name} ${m.last_name}</h4><span>${m.district}</span></div>`).join('');
+ document.getElementById('next').disabled=!d.next;}
+document.getElementById('next').onclick=()=>{page++;load();};load();
+</script></body></html>
