@@ -353,10 +353,49 @@ def test_bills_attach_by_code_and_name(isolated_output):
     by = {r["name"]: r for r in doc["records"]}
     assert [b["number"] for b in by["Raffy T. Tulfo"]["bills"]] == ["SBN-2", "SBN-1"]  # initials don't cross-match
     assert [b["number"] for b in by["Erwin T. Tulfo"]["bills"]] == ["SBN-3", "SBN-2"]
-    assert by["Raffy T. Tulfo"]["bills"][0]["coauthored"] is True
+    # Co-authorship is per senator: the first-listed author is the main author.
+    assert by["Raffy T. Tulfo"]["bills"][0]["coauthored"] is False
+    assert by["Erwin T. Tulfo"]["bills"][1]["coauthored"] is True
     assert by["Win Gatchalian"]["bills_count"] == 1
     assert by["Juan Miguel F. Zubiri"]["bills_count"] == 1  # several codes in one field
     assert doc["bills_source"]["source_type"] == "public" and doc["bills_source"]["as_of"] == "2025-10-16"
+
+
+def test_bills_terms_and_service(isolated_output):
+    import bills
+    import common
+
+    assert bills.senate_terms([20]) == 1
+    assert bills.senate_terms([18, 19, 20]) == 2            # elected 2019, re-elected 2025
+    assert bills.senate_terms([9, 10, 11, 12, 15, 16, 17, 18, 20]) == 5
+    assert bills.senate_terms([11, 12, 14, 15, 16, 17, 19, 20]) == 4
+
+    data = isolated_output / "data"
+    data.mkdir(parents=True, exist_ok=True)
+    (data / "senate.json").write_text(json.dumps({"records": [
+        {"id": "senate-x-legarda", "name": "Loren Legarda", "lis_code": "LLORE"},
+        {"id": "senate-x-new", "name": "New Senator", "lis_code": "NEWSE"}]}))
+    mk = lambda c, n, authors, status="Pending in the Committee": {
+        "congress": c, "number": f"SBN-{n}", "bill_number": n, "title": f"T{n}", "date": f"{2000 + c}-01-01",
+        "status": status, "status_date": "", "url": "", "authors": authors, "authors_raw": ""}
+    sample = [mk(20, 1, ["LLORE"]), mk(20, 2, ["NEWSE", "LLORE"]), mk(17, 5, ["LLORE"], "Approved by the President of the Philippines"),
+              mk(14, 9, ["OTHER", "LLORE"], "Lapsed into Law")]
+    people = {"LLORE": {"senate": [11, 12, 14, 15, 16, 17, 19, 20], "house": [18]}}
+    congresses = {c: {"start": y, "end": y + 3, "ordinal": ""} for c, y in [(11, 1998), (14, 2007), (17, 2016), (20, 2025)]}
+    doc = bills.attach(sample, "2025-10-16", people, congresses)
+    by = {r["name"]: r for r in doc["records"]}
+    leg = by["Loren Legarda"]
+    assert leg["service"]["first_senate_year"] == 1998 and leg["service"]["senate_terms"] == 4
+    assert leg["service"]["house_congresses"] == [18] and leg["service"]["basis"] == "membership"
+    assert leg["bills_count"] == 2 and leg["bills_all"] == 4 and leg["law_all"] == 2
+    t = {x["congress"]: x for x in leg["bill_terms"]}
+    assert (t[20]["filed"], t[20]["main"]) == (2, 1) and t[17]["law"] == 1 and t[14]["main"] == 0
+    assert 11 not in t  # no bill data before the 13th Congress
+    new = by["New Senator"]["service"]
+    assert new["basis"] == "bills" and new["senate_terms"] == 1 and new["first_senate_year"] == 2025
+    page = json.loads((common.DATA_DIR / "bills" / "senate-x-legarda.json").read_text())
+    assert [x["congress"] for x in page["terms"]] == [20, 19, 17, 16, 15, 14]
+    assert page["terms"][2]["bills"][0]["law"] is True and page["terms"][0]["years"] == "2025–2028"
 
 
 def test_source_type():

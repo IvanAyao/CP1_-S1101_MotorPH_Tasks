@@ -696,7 +696,7 @@
      "date": "2025-07-02",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-53",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00052",
@@ -715,7 +715,56 @@
      "coauthored": false
     }
    ],
-   "bills_count": 85
+   "bills_count": 85,
+   "service": {
+    "senate_congresses": [
+     17,
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [
+     12,
+     16
+    ],
+    "first_senate_congress": 17,
+    "first_senate_year": 2016,
+    "senate_terms": 2,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 85,
+     "main": 85,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 251,
+     "main": 165,
+     "law": 39
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 195,
+     "main": 122,
+     "law": 40
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 181,
+     "main": 125,
+     "law": 34
+    }
+   ],
+   "bills_all": 712,
+   "law_all": 113,
+   "bills_file": "bills/senate-nationwide-win-gatchalian.json"
   },
   {
    "id": "senate-nationwide-vicente-c-sotto-iii",
@@ -854,7 +903,65 @@
      "coauthored": false
     }
    ],
-   "bills_count": 14
+   "bills_count": 14,
+   "service": {
+    "senate_congresses": [
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     18,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 9,
+    "first_senate_year": 1992,
+    "senate_terms": 5,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 14,
+     "main": 13,
+     "law": 0
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 123,
+     "main": 65,
+     "law": 25
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 85,
+     "main": 49,
+     "law": 16
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 38,
+     "main": 19,
+     "law": 9
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 31,
+     "main": 10,
+     "law": 5
+    }
+   ],
+   "bills_all": 291,
+   "law_all": 55,
+   "bills_file": "bills/senate-nationwide-vicente-c-sotto-iii.json"
   },
   {
    "id": "senate-nationwide-juan-miguel-f-zubiri",
@@ -1169,7 +1276,73 @@
      "coauthored": false
     }
    ],
-   "bills_count": 36
+   "bills_count": 36,
+   "service": {
+    "senate_congresses": [
+     14,
+     15,
+     17,
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [
+     11,
+     12,
+     13
+    ],
+    "first_senate_congress": 14,
+    "first_senate_year": 2007,
+    "senate_terms": 3,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 36,
+     "main": 36,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 141,
+     "main": 66,
+     "law": 31
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 198,
+     "main": 101,
+     "law": 47
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 131,
+     "main": 77,
+     "law": 34
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 61,
+     "main": 55,
+     "law": 2
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 141,
+     "main": 76,
+     "law": 37
+    }
+   ],
+   "bills_all": 708,
+   "law_all": 151,
+   "bills_file": "bills/senate-nationwide-juan-miguel-f-zubiri.json"
   },
   {
    "id": "senate-nationwide-alan-peter-s-cayetano",
@@ -1304,7 +1477,7 @@
      "date": "2025-07-10",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-345",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00110",
@@ -1360,7 +1533,7 @@
      "date": "2025-07-03",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-104",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00103",
@@ -1368,7 +1541,7 @@
      "date": "2025-07-03",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-103",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00102",
@@ -1392,10 +1565,77 @@
      "date": "2025-07-02",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-30",
-     "coauthored": true
+     "coauthored": false
     }
    ],
-   "bills_count": 21
+   "bills_count": 21,
+   "service": {
+    "senate_congresses": [
+     14,
+     15,
+     16,
+     17,
+     19,
+     20
+    ],
+    "house_congresses": [
+     11,
+     12,
+     13,
+     18
+    ],
+    "first_senate_congress": 14,
+    "first_senate_year": 2007,
+    "senate_terms": 3,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 21,
+     "main": 21,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 45,
+     "main": 36,
+     "law": 6
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 20,
+     "main": 16,
+     "law": 2
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 26,
+     "main": 18,
+     "law": 6
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 20,
+     "main": 18,
+     "law": 2
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 25,
+     "main": 16,
+     "law": 6
+    }
+   ],
+   "bills_all": 157,
+   "law_all": 22,
+   "bills_file": "bills/senate-nationwide-alan-peter-s-cayetano.json"
   },
   {
    "id": "senate-nationwide-paolo-benigno-bam-aquino-iv",
@@ -1691,10 +1931,48 @@
      "date": "2025-07-03",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-121",
-     "coauthored": true
+     "coauthored": false
     }
    ],
-   "bills_count": 34
+   "bills_count": 34,
+   "service": {
+    "senate_congresses": [
+     16,
+     17,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 16,
+    "first_senate_year": 2013,
+    "senate_terms": 2,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 34,
+     "main": 34,
+     "law": 0
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 188,
+     "main": 188,
+     "law": 24
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 107,
+     "main": 107,
+     "law": 18
+    }
+   ],
+   "bills_all": 329,
+   "law_all": 42,
+   "bills_file": "bills/senate-nationwide-paolo-benigno-bam-aquino-iv.json"
   },
   {
    "id": "senate-nationwide-pia-s-cayetano",
@@ -1969,7 +2247,79 @@
      "coauthored": false
     }
    ],
-   "bills_count": 31
+   "bills_count": 31,
+   "service": {
+    "senate_congresses": [
+     13,
+     14,
+     15,
+     16,
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [
+     17
+    ],
+    "first_senate_congress": 13,
+    "first_senate_year": 2004,
+    "senate_terms": 4,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 31,
+     "main": 27,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 75,
+     "main": 47,
+     "law": 16
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 95,
+     "main": 59,
+     "law": 25
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 79,
+     "main": 54,
+     "law": 16
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 75,
+     "main": 69,
+     "law": 9
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 92,
+     "main": 71,
+     "law": 18
+    },
+    {
+     "congress": 13,
+     "years": "2004–2007",
+     "filed": 62,
+     "main": 56,
+     "law": 4
+    }
+   ],
+   "bills_all": 509,
+   "law_all": 88,
+   "bills_file": "bills/senate-nationwide-pia-s-cayetano.json"
   },
   {
    "id": "senate-nationwide-ronald-bato-m-dela-rosa",
@@ -2196,7 +2546,45 @@
      "coauthored": false
     }
    ],
-   "bills_count": 25
+   "bills_count": 25,
+   "service": {
+    "senate_congresses": [
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 18,
+    "first_senate_year": 2019,
+    "senate_terms": 2,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 25,
+     "main": 25,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 129,
+     "main": 100,
+     "law": 31
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 94,
+     "main": 57,
+     "law": 26
+    }
+   ],
+   "bills_all": 248,
+   "law_all": 57,
+   "bills_file": "bills/senate-nationwide-ronald-bato-m-dela-rosa.json"
   },
   {
    "id": "senate-nationwide-joseph-victor-jv-g-ejercito",
@@ -2412,7 +2800,7 @@
      "date": "2025-07-09",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-339",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00338",
@@ -2476,7 +2864,7 @@
      "date": "2025-07-03",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-119",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00118",
@@ -2484,7 +2872,7 @@
      "date": "2025-07-03",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-118",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00053",
@@ -2516,7 +2904,7 @@
      "date": "2025-07-02",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-8",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00007",
@@ -2540,7 +2928,7 @@
      "date": "2025-07-02",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-5",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00004",
@@ -2548,7 +2936,7 @@
      "date": "2025-07-02",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-4",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00003",
@@ -2556,7 +2944,7 @@
      "date": "2025-07-02",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-3",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00002",
@@ -2564,7 +2952,7 @@
      "date": "2025-07-02",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-2",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00001",
@@ -2575,7 +2963,55 @@
      "coauthored": false
     }
    ],
-   "bills_count": 44
+   "bills_count": 44,
+   "service": {
+    "senate_congresses": [
+     16,
+     17,
+     19,
+     20
+    ],
+    "house_congresses": [
+     15
+    ],
+    "first_senate_congress": 16,
+    "first_senate_year": 2013,
+    "senate_terms": 2,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 44,
+     "main": 43,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 143,
+     "main": 101,
+     "law": 17
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 246,
+     "main": 193,
+     "law": 37
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 171,
+     "main": 148,
+     "law": 16
+    }
+   ],
+   "bills_all": 604,
+   "law_all": 70,
+   "bills_file": "bills/senate-nationwide-joseph-victor-jv-g-ejercito.json"
   },
   {
    "id": "senate-nationwide-francis-chiz-g-escudero",
@@ -2615,7 +3051,7 @@
      "date": "2025-08-04",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-783",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00782",
@@ -2831,7 +3267,7 @@
      "date": "2025-07-08",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-284",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00283",
@@ -3002,7 +3438,73 @@
      "coauthored": true
     }
    ],
-   "bills_count": 50
+   "bills_count": 50,
+   "service": {
+    "senate_congresses": [
+     14,
+     15,
+     16,
+     17,
+     19,
+     20
+    ],
+    "house_congresses": [
+     11,
+     12,
+     13
+    ],
+    "first_senate_congress": 14,
+    "first_senate_year": 2007,
+    "senate_terms": 3,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 50,
+     "main": 48,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 110,
+     "main": 81,
+     "law": 13
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 128,
+     "main": 107,
+     "law": 9
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 155,
+     "main": 133,
+     "law": 16
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 260,
+     "main": 219,
+     "law": 56
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 334,
+     "main": 270,
+     "law": 23
+    }
+   ],
+   "bills_all": 1037,
+   "law_all": 117,
+   "bills_file": "bills/senate-nationwide-francis-chiz-g-escudero.json"
   },
   {
    "id": "senate-nationwide-jinggoy-ejercito-estrada",
@@ -5405,7 +5907,69 @@
      "coauthored": false
     }
    ],
-   "bills_count": 297
+   "bills_count": 297,
+   "service": {
+    "senate_congresses": [
+     13,
+     14,
+     15,
+     16,
+     19,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 13,
+    "first_senate_year": 2004,
+    "senate_terms": 3,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 297,
+     "main": 297,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 330,
+     "main": 273,
+     "law": 36
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 633,
+     "main": 605,
+     "law": 14
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 616,
+     "main": 570,
+     "law": 15
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 534,
+     "main": 468,
+     "law": 28
+    },
+    {
+     "congress": 13,
+     "years": "2004–2007",
+     "filed": 275,
+     "main": 256,
+     "law": 6
+    }
+   ],
+   "bills_all": 2685,
+   "law_all": 99,
+   "bills_file": "bills/senate-nationwide-jinggoy-ejercito-estrada.json"
   },
   {
    "id": "senate-nationwide-christopher-lawrence-t-go",
@@ -5871,7 +6435,45 @@
      "coauthored": false
     }
    ],
-   "bills_count": 55
+   "bills_count": 55,
+   "service": {
+    "senate_congresses": [
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 18,
+    "first_senate_year": 2019,
+    "senate_terms": 2,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 55,
+     "main": 54,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 143,
+     "main": 79,
+     "law": 29
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 112,
+     "main": 56,
+     "law": 31
+    }
+   ],
+   "bills_all": 310,
+   "law_all": 60,
+   "bills_file": "bills/senate-nationwide-christopher-lawrence-t-go.json"
   },
   {
    "id": "senate-nationwide-risa-hontiveros",
@@ -5927,7 +6529,7 @@
      "date": "2025-08-19",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1215",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-01204",
@@ -6007,7 +6609,7 @@
      "date": "2025-07-14",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-575",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00574",
@@ -6290,7 +6892,56 @@
      "coauthored": false
     }
    ],
-   "bills_count": 49
+   "bills_count": 49,
+   "service": {
+    "senate_congresses": [
+     17,
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [
+     13,
+     14
+    ],
+    "first_senate_congress": 17,
+    "first_senate_year": 2016,
+    "senate_terms": 2,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 49,
+     "main": 49,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 114,
+     "main": 85,
+     "law": 13
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 156,
+     "main": 90,
+     "law": 28
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 98,
+     "main": 55,
+     "law": 18
+    }
+   ],
+   "bills_all": 417,
+   "law_all": 59,
+   "bills_file": "bills/senate-nationwide-risa-hontiveros.json"
   },
   {
    "id": "senate-nationwide-panfilo-ping-m-lacson",
@@ -6483,7 +7134,7 @@
      "date": "2025-07-02",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-35",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00034",
@@ -6518,7 +7169,70 @@
      "coauthored": false
     }
    ],
-   "bills_count": 20
+   "bills_count": 20,
+   "service": {
+    "senate_congresses": [
+     12,
+     13,
+     14,
+     15,
+     17,
+     18,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 12,
+    "first_senate_year": 2001,
+    "senate_terms": 4,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 20,
+     "main": 20,
+     "law": 0
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 69,
+     "main": 37,
+     "law": 17
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 66,
+     "main": 42,
+     "law": 10
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 52,
+     "main": 43,
+     "law": 3
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 83,
+     "main": 48,
+     "law": 16
+    },
+    {
+     "congress": 13,
+     "years": "2004–2007",
+     "filed": 42,
+     "main": 32,
+     "law": 4
+    }
+   ],
+   "bills_all": 332,
+   "law_all": 50,
+   "bills_file": "bills/senate-nationwide-panfilo-ping-m-lacson.json"
   },
   {
    "id": "senate-nationwide-manuel-lito-m-lapid",
@@ -7033,7 +7747,77 @@
      "coauthored": false
     }
    ],
-   "bills_count": 61
+   "bills_count": 61,
+   "service": {
+    "senate_congresses": [
+     13,
+     14,
+     15,
+     16,
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 13,
+    "first_senate_year": 2004,
+    "senate_terms": 4,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 61,
+     "main": 61,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 192,
+     "main": 144,
+     "law": 18
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 175,
+     "main": 141,
+     "law": 23
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 95,
+     "main": 83,
+     "law": 6
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 233,
+     "main": 194,
+     "law": 12
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 175,
+     "main": 112,
+     "law": 31
+    },
+    {
+     "congress": 13,
+     "years": "2004–2007",
+     "filed": 46,
+     "main": 39,
+     "law": 1
+    }
+   ],
+   "bills_all": 977,
+   "law_all": 91,
+   "bills_file": "bills/senate-nationwide-manuel-lito-m-lapid.json"
   },
   {
    "id": "senate-nationwide-loren-legarda",
@@ -7948,7 +8732,73 @@
      "coauthored": false
     }
    ],
-   "bills_count": 111
+   "bills_count": 111,
+   "service": {
+    "senate_congresses": [
+     11,
+     12,
+     14,
+     15,
+     16,
+     17,
+     19,
+     20
+    ],
+    "house_congresses": [
+     18
+    ],
+    "first_senate_congress": 11,
+    "first_senate_year": 1998,
+    "senate_terms": 4,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 111,
+     "main": 111,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 252,
+     "main": 147,
+     "law": 44
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 206,
+     "main": 124,
+     "law": 30
+    },
+    {
+     "congress": 16,
+     "years": "2013–2016",
+     "filed": 210,
+     "main": 145,
+     "law": 19
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 173,
+     "main": 141,
+     "law": 13
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 241,
+     "main": 189,
+     "law": 31
+    }
+   ],
+   "bills_all": 1193,
+   "law_all": 137,
+   "bills_file": "bills/senate-nationwide-loren-legarda.json"
   },
   {
    "id": "senate-nationwide-rodante-d-marcoleta",
@@ -8134,7 +8984,36 @@
      "coauthored": false
     }
    ],
-   "bills_count": 20
+   "bills_count": 20,
+   "service": {
+    "senate_congresses": [
+     20
+    ],
+    "house_congresses": [
+     13,
+     14,
+     15,
+     17,
+     18,
+     19
+    ],
+    "first_senate_congress": 20,
+    "first_senate_year": 2025,
+    "senate_terms": 1,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 20,
+     "main": 20,
+     "law": 0
+    }
+   ],
+   "bills_all": 20,
+   "law_all": 0,
+   "bills_file": "bills/senate-nationwide-rodante-d-marcoleta.json"
   },
   {
    "id": "senate-nationwide-imee-r-marcos",
@@ -8693,7 +9572,7 @@
      "date": "2025-07-03",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-114",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00113",
@@ -8720,7 +9599,49 @@
      "coauthored": false
     }
    ],
-   "bills_count": 70
+   "bills_count": 70,
+   "service": {
+    "senate_congresses": [
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [
+     11,
+     12,
+     13
+    ],
+    "first_senate_congress": 18,
+    "first_senate_year": 2019,
+    "senate_terms": 2,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 70,
+     "main": 67,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 345,
+     "main": 295,
+     "law": 26
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 452,
+     "main": 383,
+     "law": 30
+    }
+   ],
+   "bills_all": 867,
+   "law_all": 56,
+   "bills_file": "bills/senate-nationwide-imee-r-marcos.json"
   },
   {
    "id": "senate-nationwide-robinhood-c-padilla",
@@ -9115,7 +10036,37 @@
      "coauthored": false
     }
    ],
-   "bills_count": 46
+   "bills_count": 46,
+   "service": {
+    "senate_congresses": [
+     19,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 19,
+    "first_senate_year": 2022,
+    "senate_terms": 1,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 46,
+     "main": 45,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 124,
+     "main": 67,
+     "law": 21
+    }
+   ],
+   "bills_all": 170,
+   "law_all": 21,
+   "bills_file": "bills/senate-nationwide-robinhood-c-padilla.json"
   },
   {
    "id": "senate-nationwide-francis-kiko-pangilinan",
@@ -9486,7 +10437,70 @@
      "coauthored": true
     }
    ],
-   "bills_count": 43
+   "bills_count": 43,
+   "service": {
+    "senate_congresses": [
+     12,
+     13,
+     14,
+     15,
+     17,
+     18,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 12,
+    "first_senate_year": 2001,
+    "senate_terms": 4,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 43,
+     "main": 42,
+     "law": 0
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 112,
+     "main": 65,
+     "law": 24
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 36,
+     "main": 25,
+     "law": 6
+    },
+    {
+     "congress": 15,
+     "years": "2010–2013",
+     "filed": 29,
+     "main": 16,
+     "law": 9
+    },
+    {
+     "congress": 14,
+     "years": "2007–2010",
+     "filed": 56,
+     "main": 38,
+     "law": 8
+    },
+    {
+     "congress": 13,
+     "years": "2004–2007",
+     "filed": 61,
+     "main": 43,
+     "law": 6
+    }
+   ],
+   "bills_all": 337,
+   "law_all": 53,
+   "bills_file": "bills/senate-nationwide-francis-kiko-pangilinan.json"
   },
   {
    "id": "senate-nationwide-erwin-t-tulfo",
@@ -9781,7 +10795,7 @@
      "date": "2025-07-03",
      "status": "Pending in the Committee",
      "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-90",
-     "coauthored": true
+     "coauthored": false
     },
     {
      "number": "SBN-00035",
@@ -9792,7 +10806,31 @@
      "coauthored": true
     }
    ],
-   "bills_count": 35
+   "bills_count": 35,
+   "service": {
+    "senate_congresses": [
+     20
+    ],
+    "house_congresses": [
+     19
+    ],
+    "first_senate_congress": 20,
+    "first_senate_year": 2025,
+    "senate_terms": 1,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 35,
+     "main": 33,
+     "law": 0
+    }
+   ],
+   "bills_all": 35,
+   "law_all": 0,
+   "bills_file": "bills/senate-nationwide-erwin-t-tulfo.json"
   },
   {
    "id": "senate-nationwide-raffy-t-tulfo",
@@ -10182,7 +11220,37 @@
      "coauthored": true
     }
    ],
-   "bills_count": 41
+   "bills_count": 41,
+   "service": {
+    "senate_congresses": [
+     19,
+     20
+    ],
+    "house_congresses": [],
+    "first_senate_congress": 19,
+    "first_senate_year": 2022,
+    "senate_terms": 1,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 41,
+     "main": 39,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 198,
+     "main": 131,
+     "law": 23
+    }
+   ],
+   "bills_all": 239,
+   "law_all": 23,
+   "bills_file": "bills/senate-nationwide-raffy-t-tulfo.json"
   },
   {
    "id": "senate-nationwide-joel-villanueva",
@@ -10760,7 +11828,57 @@
      "coauthored": true
     }
    ],
-   "bills_count": 69
+   "bills_count": 69,
+   "service": {
+    "senate_congresses": [
+     17,
+     18,
+     19,
+     20
+    ],
+    "house_congresses": [
+     12,
+     13,
+     14
+    ],
+    "first_senate_congress": 17,
+    "first_senate_year": 2016,
+    "senate_terms": 2,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 69,
+     "main": 61,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 343,
+     "main": 151,
+     "law": 66
+    },
+    {
+     "congress": 18,
+     "years": "2019–2022",
+     "filed": 210,
+     "main": 94,
+     "law": 48
+    },
+    {
+     "congress": 17,
+     "years": "2016–2019",
+     "filed": 201,
+     "main": 66,
+     "law": 35
+    }
+   ],
+   "bills_all": 823,
+   "law_all": 149,
+   "bills_file": "bills/senate-nationwide-joel-villanueva.json"
   },
   {
    "id": "senate-nationwide-camille-a-villar",
@@ -11074,7 +12192,32 @@
      "coauthored": true
     }
    ],
-   "bills_count": 36
+   "bills_count": 36,
+   "service": {
+    "senate_congresses": [
+     20
+    ],
+    "house_congresses": [
+     18,
+     19
+    ],
+    "first_senate_congress": 20,
+    "first_senate_year": 2025,
+    "senate_terms": 1,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 36,
+     "main": 35,
+     "law": 0
+    }
+   ],
+   "bills_all": 36,
+   "law_all": 0,
+   "bills_file": "bills/senate-nationwide-camille-a-villar.json"
   },
   {
    "id": "senate-nationwide-mark-a-villar",
@@ -11613,7 +12756,41 @@
      "coauthored": false
     }
    ],
-   "bills_count": 64
+   "bills_count": 64,
+   "service": {
+    "senate_congresses": [
+     19,
+     20
+    ],
+    "house_congresses": [
+     15,
+     16,
+     17
+    ],
+    "first_senate_congress": 19,
+    "first_senate_year": 2022,
+    "senate_terms": 1,
+    "basis": "membership"
+   },
+   "bill_terms": [
+    {
+     "congress": 20,
+     "years": "2025–2028",
+     "filed": 64,
+     "main": 64,
+     "law": 0
+    },
+    {
+     "congress": 19,
+     "years": "2022–2025",
+     "filed": 210,
+     "main": 149,
+     "law": 24
+    }
+   ],
+   "bills_all": 274,
+   "law_all": 24,
+   "bills_file": "bills/senate-nationwide-mark-a-villar.json"
   }
  ],
  "bills_source": {
@@ -11622,8 +12799,44 @@
   "source_type": "public",
   "note": "Public, non-government dataset transcribed from the Senate Legislative Information System; each bill links to its official Senate page.",
   "congress": 20,
+  "first_congress": 13,
+  "congresses": {
+   "13": {
+    "years": "2004–2007",
+    "ordinal": "13th"
+   },
+   "14": {
+    "years": "2007–2010",
+    "ordinal": "14th"
+   },
+   "15": {
+    "years": "2010–2013",
+    "ordinal": "15th"
+   },
+   "16": {
+    "years": "2013–2016",
+    "ordinal": "16th"
+   },
+   "17": {
+    "years": "2016–2019",
+    "ordinal": "17th"
+   },
+   "18": {
+    "years": "2019–2022",
+    "ordinal": "18th"
+   },
+   "19": {
+    "years": "2022–2025",
+    "ordinal": "19th"
+   },
+   "20": {
+    "years": "2025–2028",
+    "ordinal": "20th"
+   }
+  },
   "as_of": "2025-10-16",
   "bill_count": 1330,
-  "imported_at": "2026-09-30T13:29:18+00:00"
+  "bill_count_all": 22006,
+  "imported_at": "2026-09-30T22:22:01+00:00"
  }
 }
