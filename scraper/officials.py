@@ -20,6 +20,7 @@ LEVEL_BY_POSITION = [
     (r"vice[\s_-]*mayor|bise[\s_-]*alkalde", "vice_mayor", "Vice Mayor"),
     (r"mayor|alkalde", "mayor", "Mayor"),
     (r"board[\s_-]*member|bokal|sp[\s_-]*member|panlalawigan", "board_member", "Provincial Board Member"),
+    (r"\bsb[\s_-]*members?\b|sangguniang[\s_-]*bayan", "councilor", "Councilor"),
     (r"\bsk\b|sangguniang[\s_-]*kabataan|youth", "sk_chair", "SK Chairperson"),
     (r"kagawad|sangguniang[\s_-]*barangay|barangay[\s_-]*member|sbm", "kagawad", "Barangay Kagawad"),
     (r"council|konsehal|sanggunian", "councilor", "Councilor"),
@@ -68,6 +69,8 @@ def rows_to_officials(rows: list[dict[str, str]], *, source: str, source_url: st
         }
         contact = pick(row, r"contact|tel|phone|mobile|email")
         address = pick(row, r"address")
+        if "@" in address and " " not in address.strip():
+            address = ""  # an "email address" column, already kept as contact
 
         pos_val = pick(row, r"^(position|designation|office|title|elective_position)")
         name_val = pick(row, r"^(name|full_name|official|name_of_official|complete_name)") or split_name(row)

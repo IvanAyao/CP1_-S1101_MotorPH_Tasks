@@ -385,6 +385,8 @@ def test_dilg_directory_parse(isolated_output):
     ws.append(["", "", "", "CITY VICE MAYOR", "CRUZ", "PEDRO", "D", "JR."])
     ws.append(["", "", "", "SANGGUNIANG PANLUNGSOD MEMBER", "REYES", "ANA", "", ""])
     ws.append(["", "", "PANGLAO", "MUNICIPAL MAYOR", "GARCIA", "JOSE", "", ""])
+    ws.append(["", "", "", "SB MEMBERS", "LIM", "ROSA", "", ""])
+    ws.append(["", "HUC", "CAGAYAN DE ORO CITY", "CITY MAYOR", "UY", "ROLANDO", "A", ""])
     buf = _io.BytesIO()
     wb.save(buf)
     recs = dilg_lgu.parse(buf.getvalue())
@@ -395,6 +397,8 @@ def test_dilg_directory_parse(isolated_output):
         ("Pedro D. Cruz Jr.", "vice_mayor", "Bohol", "Tagbilaran City"),
         ("Ana Reyes", "councilor", "Bohol", "Tagbilaran City"),
         ("Jose Garcia", "mayor", "Bohol", "Panglao"),
+        ("Rosa Lim", "councilor", "Bohol", "Panglao"),
+        ("Rolando A. Uy", "mayor", "", "Cagayan de Oro City"),
     }
     assert all(r["source_type"] == "official" for r in recs)
 

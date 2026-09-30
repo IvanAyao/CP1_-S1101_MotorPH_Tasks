@@ -127,6 +127,9 @@ def fill_down(rows: list[dict[str, str]], keys: tuple[str, ...]) -> None:
 ROMAN = re.compile(r"\b(Ii|Iii|Iv|Vi|Vii|Viii|Ix)\b")
 
 
+PLACE_PARTICLE = re.compile(r"(?<=\s)(De|Del|Dela|De La|Ng|Y)(?=\s)")
+
+
 def tidy_case(text: str) -> str:
     """'ARIS C. AUMENTADO III' -> 'Aris C. Aumentado III' (only if all caps)."""
     if not text or text != text.upper():
@@ -151,6 +154,13 @@ def parse(data: bytes, *, source: str = SOURCE, source_url: str = FOI_URL,
     for o in officials:
         for key in ("name", "province", "lgu", "region", "district"):
             o[key] = tidy_case(o[key])
+        for key in ("province", "lgu"):
+            o[key] = PLACE_PARTICLE.sub(lambda m: m.group(0).lower(), o[key])
+        # Regional lists group highly urbanized cities under "HUC", which is
+        # a city class, not a province.
+        if re.fullmatch(r"(?i)hucs?|highly urbani[sz]ed cit(y|ies)", o["province"]):
+            o["province"] = ""
+            o["details"]["lgu_class"] = "Highly Urbanized City"
         if o["level"] != "other":
             o["details"].pop("position_raw", None)  # keep the raw title only when unrecognised
     return dedupe(officials)
