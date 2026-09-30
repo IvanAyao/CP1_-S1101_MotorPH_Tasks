@@ -16,6 +16,7 @@ from common import DATA_DIR, Browser, log, now_iso, source_type, write_dataset
 import barangay
 import bills
 import dilg_lgu
+import dilg_regions
 import house
 import lgu
 import senate
@@ -100,6 +101,14 @@ def main() -> None:
                 log(f"dilg FAILED: {err}")
                 traceback.print_exc()
                 failures.append("dilg")
+        # DILG regional offices' published lists (official).
+        if "lgu" in wanted:
+            try:
+                dilg_regions.run(browser)
+            except (Exception, SystemExit) as err:  # noqa: BLE001
+                log(f"dilg-region FAILED: {err}")
+                traceback.print_exc()
+                failures.append("dilg-region")
         # Senate bills per senator (public BetterGov dataset, labelled as such).
         if "senate" in wanted:
             try:
