@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-09-30T10:21:00+00:00",
+ "generated_at": "2026-09-30T10:36:22+00:00",
  "datasets": [
   {
    "key": "senate",
    "file": "senate.json",
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
-   "count": 0,
-   "scraped_at": null
+   "count": 24,
+   "scraped_at": "2026-09-30T10:26:52+00:00"
   },
   {
    "key": "house",
