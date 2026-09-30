@@ -113,18 +113,27 @@ def sheet_rows(data: bytes) -> list[tuple[str, list[dict[str, str]]]]:
 
 
 def fill_down(rows: list[dict[str, str]], keys: tuple[str, ...]) -> None:
-    """Directories often print a province/LGU once, then leave it blank below."""
+    """Directories often print a province/LGU once, then leave it blank below.
+
+    `keys` go from broadest to narrowest: a new province clears the city and
+    district carried from the rows above, so provincial rows that follow a
+    city block don't inherit that city.
+    """
     last: dict[str, str] = {}
+    level = lambda k: next((i for i, p in enumerate(keys) if re.search(p, k)), None)
     for row in rows:
-        for k in list(row):
-            if any(re.search(p, k) for p in keys):
-                if row[k]:
-                    last[k] = row[k]
-                elif k in last:
-                    row[k] = last[k]
+        for k in sorted((k for k in row if level(k) is not None), key=level):
+            if row[k]:
+                if last.get(k) != row[k]:
+                    for kk in [kk for kk in last if level(kk) > level(k)]:
+                        del last[kk]
+                last[k] = row[k]
+            elif k in last:
+                row[k] = last[k]
 
 
 ROMAN = re.compile(r"\b(Ii|Iii|Iv|Vi|Vii|Viii|Ix)\b")
+ORDINAL = re.compile(r"\b(\d+)(St|Nd|Rd|Th)\b")
 
 
 PLACE_PARTICLE = re.compile(r"(?<=\s)(De|Del|Dela|De La|Ng|Y)(?=\s)")
@@ -136,6 +145,7 @@ def tidy_case(text: str) -> str:
         return text
     out = text.title()
     out = ROMAN.sub(lambda m: m.group(1).upper(), out)
+    out = ORDINAL.sub(lambda m: m.group(1) + m.group(2).lower(), out)
     return re.sub(r"\bMc(\w)", lambda m: "Mc" + m.group(1).upper(), out)
 
 
@@ -158,6 +168,10 @@ def parse(data: bytes, *, source: str = SOURCE, source_url: str = FOI_URL,
             o[key] = PLACE_PARTICLE.sub(lambda m: m.group(0).lower(), o[key])
         # Regional lists group highly urbanized cities under "HUC", which is
         # a city class, not a province.
+        # "SP members" listed under a city sit on the Sangguniang Panlungsod
+        # (city council), not the provincial board.
+        if o["level"] == "board_member" and o["lgu"]:
+            o["level"], o["position"] = "councilor", "Councilor"
         if re.fullmatch(r"(?i)hucs?|highly urbani[sz]ed cit(y|ies)", o["province"]):
             o["province"] = ""
             o["details"]["lgu_class"] = "Highly Urbanized City"
