@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T11:55:52+00:00",
+ "generated_at": "2026-09-30T13:04:13+00:00",
  "datasets": [
   {
    "key": "senate",
@@ -7,7 +7,18 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "count": 24,
-   "scraped_at": "2026-09-30T11:14:55+00:00"
+   "scraped_at": "2026-09-30T13:04:11+00:00",
+   "source_type": "official"
+  },
+  {
+   "key": "bills",
+   "file": "senate.json",
+   "source": "Senate bills · BetterGov Open Congress Data",
+   "source_url": "https://github.com/bettergovph/open-congress-data",
+   "source_type": "public",
+   "count": 1330,
+   "scraped_at": "2026-09-30T13:04:13+00:00",
+   "as_of": "2025-10-16"
   },
   {
    "key": "house",
@@ -15,7 +26,8 @@
    "source": "Wikipedia (unofficial)",
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_members_of_the_House_of_Representatives_of_the_Philippines",
    "count": 317,
-   "scraped_at": "2026-09-30T11:55:51+00:00"
+   "scraped_at": "2026-09-30T11:55:51+00:00",
+   "source_type": "public"
   },
   {
    "key": "lgu",
@@ -23,7 +35,8 @@
    "source": "Wikipedia (unofficial)",
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
    "count": 160,
-   "scraped_at": "2026-09-30T11:55:52+00:00"
+   "scraped_at": "2026-09-30T11:55:52+00:00",
+   "source_type": "public"
   },
   {
    "key": "barangay",
@@ -31,7 +44,8 @@
    "source": "DILG – Barangay Officials Directory",
    "source_url": "https://www.dilg.gov.ph/barangay-officials-directory",
    "count": 0,
-   "scraped_at": null
+   "scraped_at": null,
+   "source_type": "official"
   }
  ]
 }
