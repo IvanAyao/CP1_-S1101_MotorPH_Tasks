@@ -255,3 +255,42 @@ def test_import_saved_copies(site, browser, monkeypatch, isolated_output):
     manifest = json.loads((data / "manifest.json").read_text())
     counts = {d["key"]: d["count"] for d in manifest["datasets"]}
     assert counts["house"] == 100 and counts["lgu"] == 4 and counts["barangay"] == 2
+
+
+def test_senate_achievements_from_bio():
+    """Mirrors the Senate API's biography HTML (bullets in <p> blocks)."""
+    html = ('<p><span>Juan Dela Cruz (born 1970) is a Filipino politician.</span></p><p><br></p>'
+            '<p><span>• Best Mayor in the Region (2008)</span></p>'
+            '<p><span>• Outstanding Young Men, TOYM (2011)</span></p>'
+            '<ul><li>Author, Free Tuition Act</li></ul>'
+            '<p><span>Served two decades in public service.</span></p>')
+    assert senate.achievements(html) == [
+        "Author, Free Tuition Act", "Best Mayor in the Region (2008)", "Outstanding Young Men, TOYM (2011)"]
+    bio = senate.short_bio(html)
+    assert bio.startswith("Juan Dela Cruz (born 1970)") and "Best Mayor" not in bio
+
+
+def test_wikipedia_rowspans_and_mapping():
+    import wikipedia
+
+    html = """
+    <h2>District representatives</h2>
+    <table class="wikitable"><tr><th>Province</th><th>District</th><th>Image</th><th>Representative</th><th>Party</th></tr>
+    <tr><td rowspan="2"><a href="/wiki/Bohol">Bohol</a></td><td>1st</td><td><img src="//upload.example/a.jpg"></td>
+        <td><a href="/wiki/Juan_Dela_Cruz">Juan Dela Cruz</a><sup>[1]</sup></td><td rowspan="2">Lakas</td></tr>
+    <tr><td>2nd</td><td></td><td><a href="/wiki/Maria_Santos">Maria Santos</a></td></tr>
+    <tr><td>Aklan</td><td>Lone</td><td></td><td>Vacant</td><td></td></tr>
+    </table>
+    <h2>Party-list representatives</h2>
+    <table class="wikitable"><tr><th>Party-list</th><th>Representative</th></tr>
+    <tr><td>Example Party</td><td><a href="/wiki/Pedro_Reyes">Pedro Reyes</a></td></tr></table>
+    """
+    recs = wikipedia.officials("house", html, "123")
+    by = {r["name"]: r for r in recs}
+    assert set(by) == {"Juan Dela Cruz", "Maria Santos", "Pedro Reyes"}  # vacant seat skipped
+    assert by["Maria Santos"]["province"] == "Bohol" and by["Maria Santos"]["party"] == "Lakas"
+    assert by["Maria Santos"]["district"] == "2nd"
+    assert by["Juan Dela Cruz"]["photo"] == "https://upload.example/a.jpg"
+    assert by["Juan Dela Cruz"]["profile_url"] == "https://en.wikipedia.org/wiki/Juan_Dela_Cruz"
+    assert by["Pedro Reyes"]["position"] == "Party-list Representative"
+    assert all(r["source"] == "Wikipedia (unofficial)" for r in recs)

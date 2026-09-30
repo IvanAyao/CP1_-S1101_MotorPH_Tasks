@@ -297,7 +297,7 @@
         <p>${esc(levelLabel(o))}</p>
         <div class="badges">
           ${o.party ? `<span class="badge">${esc(o.party)}</span>` : ""}
-          <span class="badge ok">✓ Opisyal na datos</span>
+          ${/wikipedia/i.test(o.source) ? '<span class="badge warn">Wikipedia · hindi opisyal</span>' : /saved copy/i.test(o.source) ? '<span class="badge ok">✓ Kopya ng opisyal na datos</span>' : '<span class="badge ok">✓ Opisyal na datos</span>'}
         </div>
       </div>
       <div class="btn-row">
@@ -307,6 +307,8 @@
       <div class="section-label">Impormasyon</div>
       <table class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}
         ${extra.slice(0, 20).map(([k, v]) => `<tr><th>${esc(pretty(k))}</th><td>${esc(v)}</td></tr>`).join("")}</table>
+      ${(o.achievements || []).length ? `<div class="section-label">Mga Nagawa at Parangal</div><ul class="bullets">${o.achievements.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>` : ""}
+      ${(o.bills || []).length ? `<div class="section-label">Mga Panukalang Batas (${fmtNum(o.bills.length)})</div><ul class="bills">${o.bills.slice(0, 50).map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · ${esc(b.date)}</span>` : ""}</li>`).join("")}</ul>${o.bills.length > 50 ? `<p class="meta">Ipinapakita ang unang 50.</p>` : ""}` : ""}
       ${d.biography ? `<div class="section-label">Talambuhay</div><p class="bio">${esc(d.biography)}</p>` : ""}
       ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">📄 Opisyal na CV (PDF) ↗</a></p>` : ""}
       <div class="notice">
