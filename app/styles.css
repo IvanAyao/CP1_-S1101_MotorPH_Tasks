@@ -423,3 +423,9 @@ details.term { scroll-margin-top: 84px; }
 .filter-panel .scope-seg { margin-top: 8px; }
 .bills-head .scope-seg { margin-top: 14px; }
 @media (min-width: 900px) { .scope-seg { max-width: 520px; } }
+.chip-n { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 2px; }
+.sector-pick { display: block; margin: 10px 0 0; }
+.sector-pick > span { display: block; font-size: 12px; color: var(--muted); margin: 0 0 4px 2px; }
+.sector-pick .select { margin-bottom: 0; color: var(--text); }
+.bill-committee { display: block; font-size: 11px; }
+@media (min-width: 900px) { #results > .sector-pick { max-width: 520px; } }

@@ -397,6 +397,14 @@ def test_bills_terms_and_service(isolated_output):
     assert [x["congress"] for x in page["terms"]] == [20, 19, 17, 16, 15, 14]
     assert page["terms"][2]["bills"][0]["law"] is True and page["terms"][0]["years"] == "2025–2028"
 
+    # Sectors come from the committee referral; unknown committees are "other".
+    assert bills.sector_of("Agriculture, Food and Agrarian Reform") == "agriculture"
+    assert bills.sector_of("Basic Education, Arts and Culture") == "education"
+    assert bills.sector_of("Cultural Communities and Muslim Affairs") == "social"
+    assert bills.sector_of("Public Services") == "transport"
+    assert bills.sector_of("") == "other"
+    assert leg["bill_sectors"]["career"]["other"][0] == 4 and leg["bill_sectors"]["term"]["other"] == [2, 1]
+
 
 def test_source_type():
     assert common.source_type("https://senate.gov.ph/senators") == "official"

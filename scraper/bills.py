@@ -41,6 +41,37 @@ MAX_PER_SENATOR = 400
 
 
 FIRST_CONGRESS = 13  # earliest Senate bills in the dataset (2004)
+
+# Sector of a bill = the Senate committee it was referred to on first reading
+# (its primary committee), grouped. This is the Senate's own classification;
+# titles are not guessed from. Order matters: first match wins.
+SECTORS = [
+    ("agriculture", r"agricultur|agrarian|food"),
+    ("health", r"health"),
+    ("education", r"education"),
+    ("labor", r"labor|migrant"),
+    ("transport", r"public services"),
+    ("infrastructure", r"public works|housing|urban planning"),
+    ("environment", r"environment|climate"),
+    ("energy", r"energy"),
+    ("tourism", r"tourism"),
+    ("economy", r"ways and means|trade|bank|finance|economic|cooperative|government corporations"),
+    ("justice", r"justice|constitutional"),
+    ("public_order", r"public order"),
+    ("defense", r"defense|peace|foreign|maritime|marawi"),
+    ("local_gov", r"local government"),
+    ("social", r"social justice|women|youth|children|cultural communities"),
+    ("science", r"science|innovation|sustainable development"),
+    ("culture_sports", r"culture|arts|sports|games"),
+    ("governance", r"civil service|electoral|rules|accounts|accountability|public information|mass media"),
+]
+
+
+def sector_of(committee: str) -> str:
+    for key, rx in SECTORS:
+        if committee and re.search(rx, committee, re.I):
+            return key
+    return "other"
 LAW = re.compile(r"approved by the president|lapsed into law", re.I)
 
 
@@ -116,6 +147,8 @@ def load_bills(folder: Path) -> list[dict]:
             "url": clean(meta.get("senate_website_permalink")),
             "authors": [clean(c) for c in meta.get("senate_website_author_codes", []) if clean(c)],
             "authors_raw": clean(meta.get("authors_raw")),
+            "committee": next((clean(c.get("name")) for c in doc.get("committees") or []
+                               if c.get("type") == "primary" and clean(c.get("name"))), ""),
         })
     return bills
 
@@ -157,6 +190,8 @@ def attach(bills: list[dict], as_of: str, people: dict[str, dict] | None = None,
     people, congresses = people or {}, congresses or {}
     for b in bills:
         b.setdefault("congress", CONGRESS)
+        b.setdefault("committee", "")
+        b["sector"] = sector_of(b["committee"])
     names = name_index([b for b in bills if b["congress"] == CONGRESS] or bills)
     by_code: dict[str, list[dict]] = defaultdict(list)
     for b in bills:
@@ -181,7 +216,7 @@ def attach(bills: list[dict], as_of: str, people: dict[str, dict] | None = None,
         rec["bills"] = [{
             "number": b["number"], "title": b["title"], "date": b["date"],
             "status": b["status"], "url": b["url"],
-            "coauthored": role(b) == "co",
+            "coauthored": role(b) == "co", "sector": b["sector"],
         } for b in current[:MAX_PER_SENATOR]]
         rec["bills_count"] = len(current)
 
@@ -205,6 +240,16 @@ def attach(bills: list[dict], as_of: str, people: dict[str, dict] | None = None,
                           "main": sum(role(b) == "main" for b in tb),
                           "law": sum(bool(LAW.search(b["status"] or "")) for b in tb)})
         rec["bill_terms"] = terms
+        # Bills per sector: this term [filed, main] and whole career [filed, main, law].
+        sectors: dict[str, dict] = {"term": {}, "career": {}}
+        for b in items:
+            is_main, is_law = role(b) == "main", bool(LAW.search(b["status"] or ""))
+            c = sectors["career"].setdefault(b["sector"], [0, 0, 0])
+            c[0] += 1; c[1] += is_main; c[2] += is_law
+            if b["congress"] == CONGRESS:
+                tm = sectors["term"].setdefault(b["sector"], [0, 0])
+                tm[0] += 1; tm[1] += is_main
+        rec["bill_sectors"] = sectors
         rec["bills_all"] = len(items)
         rec["law_all"] = sum(t["law"] for t in terms)
 
@@ -215,6 +260,7 @@ def attach(bills: list[dict], as_of: str, people: dict[str, dict] | None = None,
             "terms": [{**t, "bills": [{
                 "number": b["number"], "title": b["title"], "date": b["date"], "status": b["status"],
                 "status_date": b.get("status_date", ""), "url": b["url"], "role": role(b),
+                "sector": b["sector"], "committee": b["committee"],
                 "law": bool(LAW.search(b["status"] or "")),
             } for b in items if b["congress"] == t["congress"]]} for t in terms],
         }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -231,6 +277,8 @@ def attach(bills: list[dict], as_of: str, people: dict[str, dict] | None = None,
         "congress": CONGRESS,
         "first_congress": min((b["congress"] for b in bills), default=CONGRESS),
         "congresses": {str(c): {"years": years(c), "ordinal": ordinal(c)} for c in sorted({b["congress"] for b in bills})},
+        "sector_basis": "Senate committee the bill was referred to on first reading (primary committee)",
+        "sectors": [k for k, _ in SECTORS] + ["other"],
         "as_of": as_of,
         "bill_count": sum(b["congress"] == CONGRESS for b in bills),
         "bill_count_all": len(bills),
