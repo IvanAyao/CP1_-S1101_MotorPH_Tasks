@@ -29,7 +29,7 @@ For barangay files you can add folders to say where they're from, e.g.
 ## How to upload (works from a phone browser)
 
 1. Open this folder on github.com, e.g.
-   `https://github.com/IvanAyao/CP1_-S1101_MotorPH_Tasks/tree/main/data-inbox/house`
+   `https://github.com/IvanAyao/Pili_App_PH/tree/main/data-inbox/house`
 2. **Add file → Upload files**, pick the saved files, **Commit changes**.
 3. The import runs automatically; the site updates a minute or two later.
    Check progress under the **Actions** tab ("Import saved pages").
