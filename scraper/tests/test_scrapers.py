@@ -304,16 +304,19 @@ def test_wikipedia_rowspans_and_mapping():
 
     gov_html = """<table class="wikitable"><tr><th>Province</th><th>Portrait</th><th>Governor</th>
       <th colspan="2">Party</th><th>Term</th></tr>
-      <tr><td>Abra ( <a href="/wiki/x">list</a> )</td><td></td><td><a href="/wiki/Takit_Bersamin">Takit Bersamin</a><sup>[3]</sup></td>
+      <tr><td>Abra<br>( <a href="/wiki/x">list</a> )</td><td></td><td><a href="/wiki/Takit_Bersamin">Takit Bersamin</a><sup>[3]</sup></td>
       <td></td><td>PFP</td><td>1</td></tr></table>"""
     (g,) = wikipedia.officials("governors", gov_html, "1")
     assert (g["name"], g["level"], g["province"], g["party"]) == ("Takit Bersamin", "governor", "Abra", "PFP")
 
     mayor_html = """<table class="wikitable"><tr><th>Independent city or municipality</th><th>Portrait</th>
-      <th>Mayor</th><th colspan="2">Party</th></tr>
-      <tr><td>Baguio ( list )</td><td></td><td><a href="/wiki/B_M">Benjamin Magalong</a></td><td></td><td>NPC</td></tr></table>
+      <th>Mayor</th><th colspan="2">Party</th><th>Age</th><th>Prior experience</th></tr>
+      <tr><td>Baguio ( list )</td><td></td><td><a href="/wiki/B_M">Benjamin Magalong</a></td><td></td><td>NPC</td>
+      <td><span>( 1970-06-04 )</span> June 4, 1970 (age 56)</td><td><div>Businessman</div><div>House of Representatives</div></td></tr></table>
       <table class="wikitable"><tr><th>Independent city or municipality</th><th>Portrait</th>
       <th>Vice mayor</th><th colspan="2">Party</th></tr>
       <tr><td>Baguio</td><td></td><td><a href="/wiki/F_O">Faustino Olowan</a></td><td></td><td>PFP</td></tr></table>"""
     m, v = wikipedia.officials("mayors", mayor_html, "1")
+    assert m["details"]["born"] == "June 4, 1970"
+    assert m["details"]["prior_experience"] == "Businessman; House of Representatives"
     assert (m["level"], m["lgu"], v["level"], v["lgu"]) == ("mayor", "Baguio", "vice_mayor", "Baguio")

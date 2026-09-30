@@ -52,8 +52,9 @@ def cell_text(cell: Tag) -> str:
         junk.decompose()  # footnote markers like [1]
     for br in cell.find_all("br"):
         br.replace_with("; ")
-    for li in cell.find_all("li"):
-        li.append("; ")
+    # Lists of roles come as <li>, <br>, or one <div>/<p> per line.
+    for block in cell.find_all(["li", "div", "p"]):
+        block.append("; ")
     text = clean(cell.get_text(" "))
     text = re.sub(r"\s*;\s*(;\s*)*", "; ", text).strip("; ")
     return text
@@ -63,7 +64,7 @@ def tidy(key: str, value: str) -> str:
     value = re.sub(r"\(\s*list\s*\)", "", value)                   # "Abra ( list )"
     value = re.sub(r"\(\s*\d{4}-\d{2}-\d{2}\s*\)", "", value)       # hidden sort date
     value = re.sub(r"\(\s*age\s+\d+\s*\)", "", value)                # goes stale
-    return clean(value)
+    return clean(value).strip("; ").strip()
 
 
 def is_partylist(constituency: str) -> bool:
@@ -188,7 +189,7 @@ def officials(kind: str, html: str, revid: str) -> list[dict]:
             if not name or len(name.split()) < 2 or re.search(r"\bvacant\b", name, re.I):
                 continue
             place_col = col(header, r"constituency|district|province|city|lgu")
-            details = {k: v for k, v in text.items()
+            details = {("born" if k == "age" else k): v for k, v in text.items()
                        if v and k not in {name_col, party_col, photo_col, place_col} and len(v) < 300}
             details["wikipedia_revision"] = revid
             common = dict(name=name, party=text.get(party_col, "") if party_col else "",
