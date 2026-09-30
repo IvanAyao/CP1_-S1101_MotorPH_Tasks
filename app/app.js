@@ -307,7 +307,7 @@
       <div class="section-label">Impormasyon</div>
       <table class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}
         ${extra.slice(0, 20).map(([k, v]) => `<tr><th>${esc(pretty(k))}</th><td>${esc(v)}</td></tr>`).join("")}</table>
-      ${(o.achievements || []).length ? `<div class="section-label">Mga Nagawa at Parangal</div><ul class="bullets">${o.achievements.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>` : ""}
+      ${cleanAch(o.achievements).length ? `<div class="section-label">Mga Nagawa at Parangal (${cleanAch(o.achievements).length})</div>${groupAchievements(o.achievements).map(([label, items]) => `<div class="ach-group">${esc(label)} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
       ${(o.bills || []).length ? `<div class="section-label">Mga Panukalang Batas (${fmtNum(o.bills.length)})</div><ul class="bills">${o.bills.slice(0, 50).map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · ${esc(b.date)}</span>` : ""}</li>`).join("")}</ul>${o.bills.length > 50 ? `<p class="meta">Ipinapakita ang unang 50.</p>` : ""}` : ""}
       ${d.biography ? `<div class="section-label">Talambuhay</div><p class="bio">${esc(d.biography)}</p>` : ""}
       ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">📄 Opisyal na CV (PDF) ↗</a></p>` : ""}
@@ -346,6 +346,59 @@
     } catch {}
   }
 
+  // Achievements from official bios mix laws, awards, probes and past posts;
+  // group them so profiles and comparisons stay like-for-like.
+  const ACH_GROUPS = [
+    ["Batas na inakda", /\b(republic act|r\.?a\.? ?\d|act of \d{4}|\blaw\b|laws\b|authored|co-?author|sponsor|filed|\bbill\b|bills\b)/i],
+    ["Parangal", /\b(award|awardee|honoree|honou?r|best|outstanding|fellow|commended|finalist|medal|recogni|toym|hall of fame|honoris|most inspiring|10 outstanding)/i],
+    ["Imbestigasyon", /\b(investigat|hearing|irregularit|alleged|scam|probe|expos|anomal)/i],
+    ["Mga naging posisyon", /\b(chair|member|leader|vice|deputy|spokesperson|officer|columnist|anchor|producer|newscaster|writer|disc jockey|publisher|president|secretary|director|head|mayor|governor|councilor|representative)/i],
+  ];
+  const cleanAch = (list) => (list || [])
+    .map((x) => String(x).replace(/\s*<?\s*b?r\s*\/>\s*/gi, " ").replace(/^[\s\-–*•]+/, "").trim())
+    .filter((x) => x && !/:\s*$/.test(x));
+  function groupAchievements(list) {
+    const groups = new Map([...ACH_GROUPS.map(([l]) => [l, []]), ["Iba pa", []]]);
+    for (const item of cleanAch(list)) {
+      const hit = ACH_GROUPS.find(([, rx]) => rx.test(item));
+      groups.get(hit ? hit[0] : "Iba pa").push(item);
+    }
+    return [...groups].filter(([, items]) => items.length);
+  }
+
+  // Side-by-side lists: achievements, prior roles, bills.
+  const achievementsOf = (o) => cleanAch(o.achievements);
+  const priorRolesOf = (o) => (o.details?.prior_experience || "").split(/\s*;\s*/).filter(Boolean);
+  const billsOf = (o) => (o.bills || []).map((b) => [b.number, b.title].filter(Boolean).join(" · "));
+
+  function compareLists(a, b) {
+    const achGroup = (label) => (o) => (groupAchievements(o.achievements).find(([l]) => l === label) || [, []])[1];
+    const groupLabels = [...ACH_GROUPS.map(([l]) => l), "Iba pa"];
+    const anyAch = achievementsOf(a).length || achievementsOf(b).length;
+    const sections = [
+      { label: "Mga Nagawa at Parangal · kabuuan", of: achievementsOf, always: true, countOnly: anyAch,
+        none: "Walang nakatalang nagawa o parangal sa opisyal na talambuhay" },
+      ...groupLabels.map((l) => ({ label: `Nagawa · ${l}`, of: achGroup(l), none: "Wala" })),
+      { label: "Dating Karanasan", of: priorRolesOf, none: "Walang nakatala" },
+      { label: "Mga Panukalang Batas", of: billsOf, none: "Walang nakatala" },
+    ];
+    return sections.map(({ label, of, always, none, countOnly }) => {
+      const la = of(a), lb = of(b);
+      if (!la.length && !lb.length && !always) return "";
+      const norm = (x) => x.toLowerCase().replace(/\s+/g, " ").trim();
+      const inA = new Set(la.map(norm)), inB = new Set(lb.map(norm));
+      const col = (list, other) => list.length
+        ? `<ul class="cmp-list">${list.slice(0, 30).map((x) => `<li class="${other.has(norm(x)) ? "same" : ""}">${esc(x)}</li>`).join("")}</ul>${list.length > 30 ? `<p class="meta">+${list.length - 30} pa</p>` : ""}`
+        : `<p class="meta cmp-none">${none}</p>`;
+      const count = (list) => `<span class="cmp-count">${list.length}</span>`;
+      return `<div class="cmp-row cmp-lists">
+        <div class="lbl">${label}</div>
+        <div class="vals"><div>${count(la)}</div><div>${count(lb)}</div></div>
+        ${countOnly ? "" : `<details class="cmp-more"${la.length + lb.length <= 6 ? " open" : ""}><summary>Tingnan ang listahan</summary><div class="vals lists"><div>${col(la, inB)}</div><div>${col(lb, inA)}</div></div></details>`}
+      </div>`;
+    }).join("");
+  }
+
   function viewCompare() {
     if (!state.loading && !hasData()) { view.innerHTML = noData(); return; }
     const [a, b] = state.compare;
@@ -358,13 +411,14 @@
         ["Posisyon", levelLabel], ["Partido", (o) => o.party], ["Distrito", (o) => o.district],
         ["Lugar", (o) => place(o, false)], ["Pinagkunan", (o) => o.source],
       ];
-      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on/.test(k));
+      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on|prior_experience/.test(k));
       shared.slice(0, 12).forEach((k) => fields.push([k.replace(/_/g, " "), (o) => o.details[k]]));
       table = fields.map(([lab, fn]) => {
         const va = fn(a) || "—", vb = fn(b) || "—";
         const same = va !== "—" && va === vb;
         return `<div class="cmp-row"><div class="lbl">${esc(lab)}</div><div class="vals"><div class="${same ? "same" : ""}">${esc(va)}</div><div class="${same ? "same" : ""}">${esc(vb)}</div></div></div>`;
       }).join("");
+      table += compareLists(a, b);
     }
     view.innerHTML = `
       <div class="section-label">Ihambing</div>
