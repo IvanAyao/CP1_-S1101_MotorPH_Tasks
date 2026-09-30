@@ -429,3 +429,20 @@ details.term { scroll-margin-top: 84px; }
 .sector-pick .select { margin-bottom: 0; color: var(--text); }
 .bill-committee { display: block; font-size: 11px; }
 @media (min-width: 900px) { #results > .sector-pick { max-width: 520px; } }
+
+/* Privacy & Terms, Report an error */
+.legal { max-width: 720px; line-height: 1.6; font-size: 15px; }
+.legal h2 { font-size: 20px; margin: 22px 0 6px; scroll-margin-top: 84px; }
+.legal section { scroll-margin-top: 84px; }
+.legal h3 { font-size: 15px; margin: 16px 0 4px; }
+.legal ul, .legal ol { padding-left: 20px; margin: 6px 0 10px; }
+.legal li { margin-bottom: 8px; }
+.legal-toc { font-size: 14px; }
+.legal-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.legal-links a { text-decoration: none; font-weight: 600; font-size: 14px; }
+.report-form label { display: block; margin-bottom: 4px; }
+.report-form label > span { display: block; font-size: 13px; font-weight: 600; margin: 0 0 4px 2px; }
+.report-form textarea { resize: vertical; min-height: 110px; font: inherit; }
+.report-form .select { color: var(--text); }
+.cover-links { margin: 2px 0 0; font-size: 12px; }
+.cover-links a { color: rgba(255, 255, 255, .8); }

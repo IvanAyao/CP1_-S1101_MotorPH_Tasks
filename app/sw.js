@@ -1,6 +1,6 @@
 /* Offline support: always try the network first so updates show up right
  * away; fall back to the cached copy only when offline. */
-const VERSION = "pili-v12";
+const VERSION = "pili-v13";
 const SHELL = ["./", "index.html", "styles.css", "app.js", "i18n.js", "geo.js", "icon.svg", "logo.svg", "manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
