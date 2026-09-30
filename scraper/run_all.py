@@ -15,6 +15,7 @@ import traceback
 from common import DATA_DIR, Browser, log, now_iso, source_type, write_dataset
 import barangay
 import bills
+import dilg_lgu
 import house
 import lgu
 import senate
@@ -37,6 +38,9 @@ def build_manifest() -> None:
         meta["source_type"] = source_type(url)
         if path.exists():
             doc = json.loads(path.read_text())
+            if doc.get("source_label"):
+                label = doc["source_label"]
+                meta.update(source=label, source_url=doc.get("source_url", url))
             meta.update(count=doc.get("count", 0), scraped_at=doc.get("scraped_at"))
             method = doc.get("method", "")
             if method == "wikipedia":
@@ -88,6 +92,14 @@ def main() -> None:
                 log(f"{key} FAILED: {err}")
                 traceback.print_exc()
                 failures.append(key)
+        # Official DILG directory of elected LGU officials (FOI release).
+        if "lgu" in wanted:
+            try:
+                dilg_lgu.merge_into_lgu(dilg_lgu.run(browser))
+            except (Exception, SystemExit) as err:  # noqa: BLE001
+                log(f"dilg FAILED: {err}")
+                traceback.print_exc()
+                failures.append("dilg")
         # Senate bills per senator (public BetterGov dataset, labelled as such).
         if "senate" in wanted:
             try:

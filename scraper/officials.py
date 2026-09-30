@@ -41,6 +41,19 @@ def classify(position: str) -> tuple[str, str]:
     return "other", clean(position).title()
 
 
+def split_name(row: dict[str, str]) -> str:
+    """'First Middle Last Suffix' from separate name columns, if present."""
+    last = pick(row, r"^(last_?name|surname|family_name|lname)")
+    first = pick(row, r"^(first_?name|given_name|fname)")
+    if not (first and last):
+        return ""
+    middle = pick(row, r"^(middle_?(name|initial)|mi|mname)")
+    suffix = pick(row, r"^(suffix|ext|extension|name_extension)")
+    if middle and len(middle) == 1:
+        middle += "."
+    return clean(" ".join(p for p in (first, middle, last, suffix) if p))
+
+
 def rows_to_officials(rows: list[dict[str, str]], *, source: str, source_url: str,
                       defaults: dict[str, str]) -> list[dict]:
     out = []
@@ -56,12 +69,14 @@ def rows_to_officials(rows: list[dict[str, str]], *, source: str, source_url: st
         contact = pick(row, r"contact|tel|phone|mobile|email")
         address = pick(row, r"address")
 
-        pos_val = pick(row, r"^(position|designation|office|title)")
-        name_val = pick(row, r"^(name|full_name|official|name_of_official)")
+        pos_val = pick(row, r"^(position|designation|office|title|elective_position)")
+        name_val = pick(row, r"^(name|full_name|official|name_of_official|complete_name)") or split_name(row)
         if pos_val and name_val:  # long form
             level, label = classify(pos_val)
-            out.append(record(name=name_val, position=label, level=level, source=source,
-                              source_url=source_url, contact=contact,
+            district = pick(row, r"district")
+            out.append(record(name=strip_honorific(name_val), position=label, level=level, source=source,
+                              source_url=source_url, contact=contact, party=pick(row, r"party"),
+                              district=district,
                               details={"address": address, "position_raw": pos_val}, **ctx))
             continue
 
