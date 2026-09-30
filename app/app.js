@@ -699,21 +699,15 @@
   }
 
   // ------------------------------------------------------------ cover
-  // Shown when someone opens the app at its start page; links straight to a
-  // profile or tab skip it. Once entered, it stays hidden for the session.
-  const COVER_KEY = "pili.entered";
-  function showCoverIfNeeded() {
-    let entered = false;
-    try { entered = sessionStorage.getItem(COVER_KEY) === "1"; } catch {}
-    const atStart = !location.hash || location.hash === "#" || location.hash === "#/";
-    if (entered || !atStart) return;
+  // Shown every time the app is opened or refreshed; Enter continues to the
+  // page in the address (home, or a shared profile link).
+  function showCover() {
     const cover = $("#cover");
     cover.hidden = false;
     document.body.classList.add("covered");
     $("#enter").focus();
   }
   function enterApp() {
-    try { sessionStorage.setItem(COVER_KEY, "1"); } catch {}
     const cover = $("#cover");
     cover.classList.add("leaving");
     document.body.classList.remove("covered");
@@ -744,13 +738,24 @@
     }
   }
 
+  // The logo always returns to a fresh home list.
+  $(".brand").addEventListener("click", (e) => {
+    e.preventDefault();
+    state.q = "";
+    state.filter = "all";
+    state.island = "";
+    state.shown = PAGE;
+    if (location.hash === "#/" || !location.hash) render();
+    else location.hash = "#/";
+    window.scrollTo(0, 0);
+  });
   $("#back").addEventListener("click", () => (history.length > 1 ? history.back() : (location.hash = "#/")));
   $("#lang").addEventListener("click", () => setLang(lang === "en" ? "tl" : "en"));
   document.querySelectorAll("[data-lang]").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
   $("#enter").addEventListener("click", enterApp);
   window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
   applyStatic();
-  showCoverIfNeeded();
+  showCover();
   render();
   load();
 
