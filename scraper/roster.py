@@ -66,12 +66,13 @@ def people_from_capture(cap: Capture) -> tuple[str, list[dict]]:
     candidates = [(m, p) for m, p in candidates if p]
     if not candidates:
         return "none", []
-    # Prefer structured sources when they are about as complete as the best.
+    # Prefer structured sources (the site's own API) unless they are clearly
+    # incomplete: HTML heuristics tend to over-count (menus, footers).
     best_n = max(len(p) for _, p in candidates)
     order = {"json": 0, "table": 1, "cards": 2}
     method, people = min(
-        (c for c in candidates if len(c[1]) >= best_n * 0.9),
-        key=lambda c: order[c[0].split(":")[0]],
+        (c for c in candidates if len(c[1]) >= best_n * 0.6),
+        key=lambda c: (order[c[0].split(":")[0]], -len(c[1])),
     )
     return method, people
 
