@@ -434,3 +434,43 @@ def test_import_dilg_from_inbox(monkeypatch, isolated_output):
     (rec,) = doc["records"]
     assert (rec["name"], rec["level"], rec["lgu"], rec["source_type"]) == ("Jose Garcia", "mayor", "Panglao", "official")
     assert rec["details"]["copied_on"]
+
+
+def test_dilg_region_import(site, browser, monkeypatch, isolated_output):
+    import io as _io
+
+    import dilg_lgu
+    import dilg_regions
+    from openpyxl import Workbook
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "BUKIDNON"
+    ws.append(["CITY/MUNICIPALITY", "POSITION", "NAME"])
+    for i in range(25):
+        ws.append([f"TOWN {i}", "MUNICIPAL MAYOR", f"JUAN DELA CRUZ {chr(65 + i)}"])
+        ws.append([f"TOWN {i}", "MUNICIPAL VICE MAYOR", f"MARIA SANTOS {chr(65 + i)}"])
+        for j in range(8):
+            ws.append([f"TOWN {i}", "SANGGUNIANG BAYAN MEMBER", f"PEDRO REYES {chr(65 + i)}{chr(65 + j)}"])
+    buf = _io.BytesIO()
+    wb.save(buf)
+    requested = []
+
+    def fake_download(sid):
+        requested.append(sid)
+        if sid.startswith("1NotAllowed"):
+            raise SystemExit("download not permitted")
+        return buf.getvalue()
+
+    monkeypatch.setattr(dilg_lgu, "download", fake_download)
+    monkeypatch.setattr(dilg_regions, "REGION_PAGES", {"Region X (Northern Mindanao)": f"{site}/region.html"})
+    counts = dilg_regions.run(browser)
+    assert counts == {"Region X (Northern Mindanao)": 250}
+    assert len(requested) == 2  # the refused sheet is skipped, not worked around
+    doc = json.loads((isolated_output / "data" / "lgu.json").read_text())
+    rec = next(r for r in doc["records"] if r["level"] == "mayor")
+    assert rec["province"] == "Bukidnon" and rec["region"] == "Region X (Northern Mindanao)"
+    assert rec["source"] == "DILG Region X (Northern Mindanao) – Local Officials 2025–2028"
+    # Served from 127.0.0.1 here; real DILG pages are *.dilg.gov.ph -> "official".
+    assert common.source_type("https://region10.dilg.gov.ph/local-officials/") == "official"
+    assert "DILG Region X" in doc["source_label"]

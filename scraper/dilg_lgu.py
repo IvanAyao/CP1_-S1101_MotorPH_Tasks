@@ -136,15 +136,16 @@ def tidy_case(text: str) -> str:
     return re.sub(r"\bMc(\w)", lambda m: "Mc" + m.group(1).upper(), out)
 
 
-def parse(data: bytes) -> list[dict]:
+def parse(data: bytes, *, source: str = SOURCE, source_url: str = FOI_URL,
+          defaults: dict[str, str] | None = None) -> list[dict]:
     officials = []
     for tab, rows in sheet_rows(data):
         fill_down(rows, (r"region", r"province", r"city|municipal|lgu", r"district"))
         # A tab named after a province (and no province column) gives context.
-        defaults = {}
+        tab_defaults = dict(defaults or {})
         if rows and not any("province" in k for k in rows[0]):
-            defaults["province"] = clean(re.sub(r"(?i)province of", "", tab))
-        found = rows_to_officials(rows, source=SOURCE, source_url=FOI_URL, defaults=defaults)
+            tab_defaults["province"] = clean(re.sub(r"(?i)province of", "", tab))
+        found = rows_to_officials(rows, source=source, source_url=source_url, defaults=tab_defaults)
         log(f"dilg: tab {tab!r} -> {len(found)} officials")
         officials += found
     for o in officials:
@@ -176,17 +177,26 @@ def run(browser: Browser | None = None) -> list[dict]:
     return officials
 
 
-def merge_into_lgu(officials: list[dict]) -> None:
-    """Official DILG records replace Wikipedia ones for the same office."""
+def merge_into_lgu(officials: list[dict], *, source: str = SOURCE, source_url: str = FOI_URL,
+                   min_count: int | None = None) -> None:
+    """Merge official DILG records into lgu.json.
+
+    Records from `source` are replaced wholesale; any other record for the
+    same office (e.g. a Wikipedia entry for the same mayor) is dropped, so
+    official data wins. Records from other official sources are kept.
+    """
     path = common.DATA_DIR / "lgu.json"
     old = json.loads(path.read_text()) if path.exists() else {"records": []}
     covered = {(o["level"], (o["lgu"] or o["province"]).lower()) for o in officials}
     keep = [r for r in old.get("records", [])
-            if "dilg" not in r.get("source", "").lower()
+            if r.get("source") != source
             and (r["level"], (r.get("lgu") or r.get("province") or "").lower()) not in covered]
-    write_dataset("lgu", dedupe(officials + keep), FOI_URL, min_count=MIN_OFFICIALS,
-                  extra_meta={"method": "official+wikipedia" if keep else "official",
-                              "source_label": SOURCE, "published_via": FOLDER_URL,
+    merged = dedupe(officials + keep)
+    official_sources = sorted({r["source"] for r in merged if r.get("source_type") == "official"})
+    public = any(r.get("source_type") != "official" for r in merged)
+    write_dataset("lgu", merged, source_url, min_count=MIN_OFFICIALS if min_count is None else min_count,
+                  extra_meta={"method": "official+wikipedia" if public else "official",
+                              "source_label": " + ".join(official_sources) or source,
                               "lgus": old.get("lgus", [])})
 
 

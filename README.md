@@ -79,6 +79,15 @@ each run; until it's allowed, put a properly obtained copy (FOI / DILG) in
 `data-inbox/dilg/`. Its records are labelled official and replace Wikipedia
 entries for the same office.
 
+### DILG regional offices (official)
+
+`scraper/dilg_regions.py` imports the lists of local officials 2025–2028
+that DILG regional offices publish on their own sites as embedded Google
+Sheets (currently Region X: region10.dilg.gov.ph). Sheets are downloaded
+with Google's standard export only when their owner allows it; refused
+downloads and pages behind verification checks are skipped. Add a region by
+adding its page to `REGION_PAGES`.
+
 ### Wikipedia fallback (unofficial)
 
 Until official copies are available, House members, provincial governors
