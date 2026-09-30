@@ -123,12 +123,37 @@
 
   // Bill counts per senator: all filed, as main author, as co-author. Only
   // senators have bill data, so sorting by these limits the list to them.
+  // Terms: bill data covers the Senate from the 13th Congress (2004); the
+  // sitting Congress is still in progress, so averages use completed ones.
+  const currentCongress = () => state.billsSource?.congress || 20;
+  const congressStart = (n) => (n <= 8 ? 1987 : 1992 + 3 * (n - 9));
+  const congressYears = (n) => state.billsSource?.congresses?.[n]?.years || `${congressStart(n)}–${n === 8 ? 1992 : congressStart(n) + 3}`;
+  const congressName = (n) => t("congress_n", { n, nth: ordinal(n) });
+  function perCongress(o) {
+    const senate = new Set(o.service?.senate_congresses || []);
+    const done = (o.bill_terms || []).filter((x) => x.congress !== currentCongress() && senate.has(x.congress));
+    return done.length ? Math.round(done.reduce((sum, x) => sum + x.filed, 0) / done.length) : null;
+  }
   const billStats = (o) => {
     const bills = o.bills || [];
     const co = bills.filter((b) => b.coauthored).length;
-    return { bills: bills.length, main: bills.length - co, co };
+    return { bills: o.bills_count ?? bills.length, main: bills.length - co, co,
+      bills_all: o.bills_all ?? bills.length, law_all: o.law_all ?? 0, avg: perCongress(o) };
   };
-  const SORTS = ["name", "bills", "main"];
+  const serviceText = (o) => (o.service?.first_senate_year
+    ? `${t("senator_since", { y: o.service.first_senate_year })} · ${t(o.service.senate_terms === 1 ? "term_one" : "terms_n", { n: o.service.senate_terms })}`
+    : "");
+  // [20, 19, 17, 16] -> "2016–2022, 2025–present" style ranges.
+  function congressRanges(list) {
+    const cur = currentCongress();
+    const runs = [];
+    [...list].sort((a, b) => a - b).forEach((c) => {
+      const last = runs[runs.length - 1];
+      if (last && c === last[1] + 1) last[1] = c; else runs.push([c, c]);
+    });
+    return runs.map(([a, b]) => `${congressStart(a)}–${b >= cur ? t("present") : congressStart(b) + 3}`).join(", ");
+  }
+  const SORTS = ["name", "bills", "bills_all", "avg", "law_all"];
 
   function toast(msg) {
     const el = $("#toast");
@@ -274,8 +299,9 @@
       .filter((o) => terms.every((w) => o._s.includes(w)));
     const bySort = state.sort !== "name";
     if (bySort) {
+      const val = (o) => billStats(o)[state.sort] ?? -1;
       list = list.filter((o) => o.level === "senate")
-        .sort((a, b) => billStats(b)[state.sort] - billStats(a)[state.sort] || a.name.localeCompare(b.name));
+        .sort((a, b) => val(b) - val(a) || a.name.localeCompare(b.name));
     }
     const brgyNote = state.filter === "brgy";
 
@@ -312,13 +338,17 @@
     } else if (brgyNote) {
       results.innerHTML = `<div class="empty"><span class="ei">🏘️</span>${t("brgy_note", { n: fmtNum(state.brgyIndex?.count) })}<br>${t("brgy_note2", { link: `<a href="#/hanap">${t("tab_hanap")}</a>` })}</div>`;
     } else {
-      const countCell = (o) => {
-        const st = billStats(o);
-        return `<span class="bill-count"><b>${fmtNum(st[state.sort])}</b><small>${t(`count_${state.sort}`)}</small></span>`;
+      // Ranked rows: the name opens the profile, the number opens the bills by term.
+      const rankRow = (o, i) => {
+        const v = billStats(o)[state.sort];
+        return `<div class="row rank-row"><span class="num">${i + 1}</span>
+          <a class="rank-main" href="#/o/senate/${encodeURIComponent(o.id)}">${avatar(o)}<span class="who"><b>${esc(o.name)}</b><span>${esc(serviceText(o) || levelLabel(o))}</span></span></a>
+          <a class="bill-count" href="#/bills/${encodeURIComponent(o.id)}" aria-label="${esc(t("open_bills", { name: o.name }))}"><b>${v == null ? "—" : fmtNum(v)}</b><small>${v == null ? t("no_completed") : t(`count_${state.sort}`)}</small></a>
+        </div>`;
       };
       results.innerHTML = `<div class="section-label">${bySort ? esc(t(`sort_${state.sort}`)) : esc(t(`f_${f[0]}`))}${state.island ? " · " + esc(t(`island_${state.island}`)) : ""} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
-        ${bySort ? `<div class="notice rank-note"><b>${t("rank_caveat_title")}</b> ${t("rank_caveat")}</div>${billsNote()}` : ""}
-        <div class="list${bySort ? " ranked" : ""}">${list.slice(0, state.shown).map((o, i) => (bySort ? row(o, i, countCell(o)) : row(o))).join("") || `<div class="empty">${t("no_match", { q: esc(state.q) })}</div>`}</div>
+        ${bySort ? `<div class="notice rank-note"><b>${t("rank_caveat_title")}</b> ${t(`period_${state.sort}`, { d: fmtDate(state.billsSource?.as_of) })} ${t("rank_caveat")}</div>${billsNote()}` : ""}
+        <div class="list${bySort ? " ranked" : ""}">${list.slice(0, state.shown).map((o, i) => (bySort ? rankRow(o, i) : row(o))).join("") || `<div class="empty">${t("no_match", { q: esc(state.q) })}</div>`}</div>
         ${list.length > state.shown ? `<button class="btn more" id="more">${t("show_more", { n: fmtNum(list.length - state.shown) })}</button>` : ""}`;
     }
 
@@ -470,6 +500,10 @@
       [t("region"), o.region],
       [t("contact"), o.contact],
     ];
+    if (o.service?.first_senate_year) {
+      rows.push([t("cmp_since"), `${o.service.first_senate_year} (${congressName(o.service.first_senate_congress)})`]);
+      rows.push([t("cmp_terms"), `${o.service.senate_terms} · ${congressRanges(o.service.senate_congresses)}`]);
+    }
     const d = o.details || {};
     if (d.address) rows.push([t("office"), d.address]);
     const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on", "published_via"]);
@@ -499,6 +533,7 @@
       ${nAch ? `<div class="section-label">${t("achievements_n", { n: nAch })}</div>${groupAchievements(o.achievements).map(([g, items]) => `<div class="ach-group">${esc(t(g))} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
       ${(o.bills || []).length ? `<div class="section-label">${t("bills_n", { n: fmtNum(o.bills_count || o.bills.length) })}</div>
         <p class="meta bill-split">${t("bill_split", { main: fmtNum(billStats(o).main), co: fmtNum(billStats(o).co) })} · <a href="#/" data-rank-link>${t("see_ranking")}</a></p>
+        ${o.bills_file ? `<p><a class="btn block" href="#/bills/${encodeURIComponent(o.id)}">${t("see_all_terms", { n: fmtNum(o.bills_all) })}</a></p>` : ""}
         ${billsNote()}
         <details class="bills-more"${o.bills.length <= 10 ? " open" : ""}><summary>${t("see_bills", { n: fmtNum(o.bills.length) })}</summary>
         <ul class="bills">${o.bills.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.coauthored ? `<span class="meta"> · ${t("coauthor")}</span>` : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · ${t("filed", { d: esc(b.date) })}</span>` : ""}</li>`).join("")}</ul></details>` : ""}
@@ -526,6 +561,97 @@
       if (addToBallot(slot.key, o)) toast(t("added_to", { slot: slotLabel(slot) }));
       viewProfile(dataset, id);
     });
+  }
+
+  // Every bill a senator filed, by term (Congress) and year, from the
+  // per-senator file written by the scraper.
+  const billsView = { id: "", q: "", show: "all" };
+  async function viewBills(id) {
+    view.innerHTML = '<div class="skeleton" style="height:160px"></div>'.repeat(2);
+    const o = await findOfficial("senate", id);
+    if (!o || !o.bills_file) {
+      view.innerHTML = `<div class="empty"><span class="ei">🤷</span>${t("not_found")}<br><a href="#/">${t("back_to_list")}</a></div>`;
+      return;
+    }
+    if (billsView.id !== id) Object.assign(billsView, { id, q: "", show: "all" });
+    setTitle(t("bills_page_title"));
+    let doc;
+    try { doc = await getJSON(o.bills_file); } catch (e) {
+      view.innerHTML = `<div class="empty">${t("no_data_short")}</div>`;
+      return;
+    }
+    const s = o.service || {};
+    const cur = currentCongress();
+    const asOf = fmtDate(doc.as_of);
+    const byCongress = new Map(doc.terms.map((x) => [x.congress, x]));
+    // Every Senate Congress, newest first, including service before the data starts.
+    const congresses = [...new Set([...(s.senate_congresses || []), ...doc.terms.map((x) => x.congress)])].sort((a, b) => b - a);
+    const first = state.billsSource?.first_congress || 13;
+    const totals = doc.terms.reduce((acc, x) => ({ filed: acc.filed + x.filed, main: acc.main + x.main, law: acc.law + x.law }), { filed: 0, main: 0, law: 0 });
+
+    view.innerHTML = `
+      <div class="bills-head">
+        <a class="bills-who" href="#/o/senate/${encodeURIComponent(o.id)}">${avatar(o)}<span><b>${esc(o.name)}</b><span>${esc(levelLabel(o))}</span></span></a>
+        <div class="service">
+          <div class="service-item"><b>${s.first_senate_year || "—"}</b><span>${t("cmp_since")}</span></div>
+          <div class="service-item"><b>${s.senate_terms ?? "—"}</b><span>${t("cmp_terms")}</span></div>
+          <div class="service-item"><b>${fmtNum(totals.filed)}</b><span>${t("count_bills_all")}</span></div>
+          <div class="service-item"><b>${fmtNum(totals.law)}</b><span>${t("col_law")}</span></div>
+        </div>
+        <p class="meta">${t("in_senate")}: ${esc(congressRanges(s.senate_congresses || []))}${(s.house_congresses || []).length ? ` · ${t("house_note", { list: esc(congressRanges(s.house_congresses)) })}` : ""}</p>
+      </div>
+      <div class="notice">${t("bills_page_note", { first: congressName(first), y: congressStart(first) })}</div>
+      ${billsNote()}
+      <div class="section-label">${t("per_term")}</div>
+      <div class="table-wrap"><table class="terms">
+        <thead><tr><th>${t("col_term")}</th><th class="n">${t("col_filed")}</th><th class="n">${t("col_main")}</th><th class="n">${t("col_law")}</th></tr></thead>
+        <tbody>${congresses.map((c) => {
+          const x = byCongress.get(c);
+          const note = `<small>${esc((x && x.years) || congressYears(c))}${c === cur ? ` · ${t("in_progress", { d: asOf })}` : ""}</small>`;
+          return x
+            ? `<tr><td><button type="button" class="link-btn" data-jump="${c}">${congressName(c)}</button>${note}</td><td class="n">${fmtNum(x.filed)}</td><td class="n">${fmtNum(x.main)}</td><td class="n">${c === cur ? "—" : fmtNum(x.law)}</td></tr>`
+            : `<tr class="nodata"><td>${congressName(c)}${note}</td><td colspan="3">${c < first ? t("no_bill_data", { y: congressStart(first) }) : "0"}</td></tr>`;
+        }).join("")}</tbody>
+      </table></div>
+      <div class="bills-tools">
+        <input class="search" id="bills-q" type="search" placeholder="${esc(t("bills_search_ph"))}" value="${esc(billsView.q)}" aria-label="${esc(t("bills_search_ph"))}">
+        <div class="chips wrap" role="group">${["all", "main", "law"].map((k) => `<button class="chip" data-show="${k}" aria-pressed="${k === billsView.show}">${t(`bills_filter_${k}`)}</button>`).join("")}</div>
+      </div>
+      <div id="bill-sections"></div>`;
+
+    const drawSections = () => {
+      const terms = norm(billsView.q).split(/\s+/).filter(Boolean);
+      const keep = (b) => (billsView.show === "all" || (billsView.show === "main" ? b.role === "main" : b.law))
+        && terms.every((w) => norm(`${b.number} ${b.title} ${b.status}`).includes(w));
+      const filtering = terms.length || billsView.show !== "all";
+      $("#bill-sections").innerHTML = doc.terms.map((x, i) => {
+        const bills = x.bills.filter(keep);
+        if (filtering && !bills.length) return "";
+        const years = new Map();
+        bills.forEach((b) => {
+          const y = (b.date || "").slice(0, 4) || t("no_date");
+          if (!years.has(y)) years.set(y, []);
+          years.get(y).push(b);
+        });
+        return `<details class="term" id="term-${x.congress}"${i === 0 || filtering ? " open" : ""}>
+          <summary><b>${congressName(x.congress)}</b> <span class="meta">${esc(x.years || congressYears(x.congress))}</span><span class="term-count">${t(bills.length === 1 ? "n_bill_one" : "n_bills_short", { n: fmtNum(bills.length) })}</span></summary>
+          ${[...years].map(([y, list]) => `<div class="year-head">${esc(y)} · ${t(list.length === 1 ? "n_bill_one" : "n_bills_short", { n: fmtNum(list.length) })}</div>
+            <ul class="bills">${list.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number)}</b> ${esc(b.title)}${safeUrl(b.url) ? "</a>" : ""}
+              <span class="bill-meta">${b.law ? `<span class="badge src-official">✓ ${t("law_badge")}</span> ` : ""}${b.role === "co" ? `<span class="meta">${t("role_co")} · </span>` : ""}<span class="meta">${t("filed", { d: esc(b.date || "—") })}${b.status && !b.law ? ` · ${esc(b.status)}` : ""}</span></span></li>`).join("")}</ul>`).join("")}
+        </details>`;
+      }).join("") || `<div class="empty">${t("no_match_short")}</div>`;
+    };
+    drawSections();
+    $("#bills-q").addEventListener("input", (e) => { billsView.q = e.target.value; drawSections(); });
+    view.querySelectorAll("[data-show]").forEach((b) => b.addEventListener("click", () => {
+      billsView.show = b.dataset.show;
+      view.querySelectorAll("[data-show]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      drawSections();
+    }));
+    view.querySelectorAll("[data-jump]").forEach((b) => b.addEventListener("click", () => {
+      const el = $(`#term-${b.dataset.jump}`);
+      if (el) { el.open = true; el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    }));
   }
 
   function billsNote() {
@@ -618,6 +744,14 @@
         [t("position"), levelLabel], [t("party"), (o) => o.party], [t("district"), (o) => o.district],
         [t("place"), (o) => place(o, false)], [t("source"), (o) => `${o.source} (${typeLabel(typeOf(o))})`],
       ];
+      if (a.service || b.service) {
+        fields.push([t("cmp_since"), (o) => (o.service?.first_senate_year ? String(o.service.first_senate_year) : "")],
+          [t("cmp_terms"), (o) => (o.service ? String(o.service.senate_terms) : "")],
+          [t("cmp_bills_now"), (o) => (o.bills_count != null ? fmtNum(o.bills_count) : "")],
+          [t("cmp_bills_all"), (o) => (o.bills_all != null ? fmtNum(o.bills_all) : "")],
+          [t("cmp_avg"), (o) => { const v = perCongress(o); return v == null ? (o.service ? t("no_completed") : "") : fmtNum(v); }],
+          [t("cmp_law"), (o) => (o.law_all != null ? fmtNum(o.law_all) : "")]);
+      }
       const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on|published_via|prior_experience/.test(k));
       shared.slice(0, 12).forEach((k) => fields.push([k === "address" ? t("office") : k.replace(/_/g, " "), (o) => o.details[k]]));
       table = fields.map(([lab, fn]) => {
@@ -806,15 +940,16 @@
 
   function render() {
     const parts = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
-    const tab = parts[0] === "o" ? "" : parts[0] || "home";
-    view.dataset.view = parts[0] === "o" ? "profile" : tab;
+    const tab = parts[0] === "o" || parts[0] === "bills" ? "" : parts[0] || "home";
+    view.dataset.view = parts[0] === "o" ? "profile" : parts[0] === "bills" ? "bills" : tab;
     document.querySelectorAll(".tabbar a").forEach((a) => a.classList.toggle("active", a.dataset.tab === tab));
     document.querySelectorAll(".tabbar a").forEach((a) => (a.dataset.tab === tab ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
-    $("#back").hidden = parts[0] !== "o";
+    $("#back").hidden = parts[0] !== "o" && parts[0] !== "bills";
     const titles = { hanap: "title_hanap", ihambing: "title_ihambing", pili: "title_pili", ako: "title_ako" };
     setTitle(titles[tab] ? t(titles[tab]) : "");
     switch (parts[0]) {
       case "o": return viewProfile(parts[1], parts.slice(2).join("/"));
+      case "bills": return viewBills(parts.slice(1).join("/"));
       case "hanap": return viewHanap();
       case "ihambing": return viewCompare();
       case "pili": return viewPili();

@@ -374,3 +374,46 @@ body.covered { overflow: hidden; }
 .rank-note b { color: var(--text); }
 .fp-hint { margin: 0 0 2px; }
 .bill-split { margin: -2px 0 8px; }
+
+/* Ranked senators: name opens the profile, number opens bills by term */
+.rank-row { padding: 8px 4px; }
+.rank-row .rank-main { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.rank-row a.bill-count { text-decoration: none; padding: 6px 8px; border-radius: 10px; border: 1px solid transparent; }
+.rank-row a.bill-count:hover, .rank-row a.bill-count:focus-visible { border-color: var(--blue); background: var(--blue-soft); }
+.rank-row a.bill-count small { display: block; }
+.rank-row a.bill-count::after { content: "›"; float: right; margin-left: 4px; color: var(--blue); font-weight: 700; }
+
+/* Bills by term page */
+.bills-head { padding: 4px 0 6px; }
+.bills-who { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.bills-who > span b { display: block; font-size: 18px; }
+.bills-who > span span { color: var(--muted); font-size: 13px; }
+.service { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 12px 0 8px; }
+.service-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 8px; text-align: center; }
+.service-item b { display: block; font-size: 20px; color: var(--blue); font-variant-numeric: tabular-nums; }
+.service-item span { font-size: 11px; color: var(--muted); line-height: 1.2; display: block; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+.terms { width: 100%; border-collapse: collapse; font-size: 14px; }
+.terms th, .terms td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.terms th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; background: var(--surface); }
+.terms .n { text-align: right; font-variant-numeric: tabular-nums; }
+.terms td small { display: block; color: var(--muted); font-size: 11px; }
+.terms tr:last-child td { border-bottom: 0; }
+.terms tr.nodata td { color: var(--muted); }
+.terms .link-btn { padding: 0; font-weight: 600; text-align: left; }
+.bills-tools { margin: 16px 0 4px; }
+details.term { border: 1px solid var(--line); border-radius: var(--radius); margin: 10px 0; background: var(--card); }
+details.term > summary { cursor: pointer; padding: 12px 14px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; list-style: none; }
+details.term > summary::-webkit-details-marker { display: none; }
+details.term > summary::before { content: "▸"; color: var(--blue); }
+details.term[open] > summary::before { content: "▾"; }
+.term-count { margin-left: auto; font-weight: 600; color: var(--blue); font-size: 13px; }
+details.term .year-head { margin: 4px 14px 6px; font-size: 12px; font-weight: 700; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
+details.term .bills { margin: 0 14px 10px 14px; }
+.bill-meta { display: block; margin-top: 2px; }
+@media (max-width: 420px) { .service { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { [data-view="bills"] { max-width: 980px; } }
+.rank-row .who span { white-space: normal; }
+.rank-row a.bill-count { max-width: 104px; }
+.rank-row a.bill-count small { white-space: normal; line-height: 1.2; }
+details.term { scroll-margin-top: 84px; }
