@@ -31,7 +31,11 @@ def scrape(browser: Browser) -> tuple[list[dict], list[dict]]:
         if not browser.click_next():
             break
         cap = browser.capture()
+    return from_rows(rows)
 
+
+def from_rows(rows: list[dict], source: str = SOURCE) -> tuple[list[dict], list[dict]]:
+    """Directory table rows -> (LGU list, official records)."""
     lgus = []
     for r in rows:
         name = pick(r, r"^(lgu|city|municipality|name)")
@@ -48,7 +52,7 @@ def scrape(browser: Browser) -> tuple[list[dict], list[dict]]:
             "website": pick(r, r"website|url|site"),
             "details": {k: clean(v) for k, v in r.items() if not k.startswith("__")},
         })
-    officials = rows_to_officials(rows, source=SOURCE, source_url=URL, defaults={"region": "NCR"})
+    officials = rows_to_officials(rows, source=source, source_url=URL, defaults={"region": "NCR"})
     return dedupe(lgus, key=lambda x: x["id"]), dedupe(officials)
 
 

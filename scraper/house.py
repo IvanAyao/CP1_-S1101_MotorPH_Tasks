@@ -41,7 +41,12 @@ def scrape(browser: Browser) -> list[dict]:
         if not new:
             break
         all_people += new
+    return to_records(all_people)
 
+
+def to_records(all_people: list[dict], source: str = "House of Representatives",
+               copied_on: str = "") -> list[dict]:
+    """Map extracted people (see roster.people_from_capture) to House records."""
     records = []
     for p in all_people:
         f = p["fields"]
@@ -57,9 +62,10 @@ def scrape(browser: Browser) -> list[dict]:
             region=pick(f, r"region"),
             photo=p["photo"],
             profile_url=p["profile_url"],
-            source="House of Representatives",
+            source=source,
             source_url=URL,
-            details={k: v for k, v in f.items() if len(clean(v)) < 200},
+            details={**{k: v for k, v in f.items() if len(clean(v)) < 200},
+                     **({"copied_on": copied_on} if copied_on else {})},
         ))
     return dedupe(records)
 
