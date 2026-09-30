@@ -282,9 +282,12 @@
       ["Rehiyon", o.region],
       ["Contact", o.contact],
     ];
-    const skip = new Set(["title", "position_raw"]);
-    const extra = Object.entries(o.details || {}).filter(([k, v]) => v && !skip.has(k) && !/^line\d|href|photo|image|img|^id$|_id$|slug/.test(k) && !rows.some(([, rv]) => rv === v));
+    const d = o.details || {};
+    if (d.address) rows.push(["Opisina", d.address]);
+    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at"]);
+    const extra = Object.entries(d).filter(([k, v]) => v && !skip.has(k) && !/^line\d|href|photo|image|img|^id$|_id$|slug/.test(k) && !rows.some(([, rv]) => rv === v));
     const pretty = (k) => k.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    const cv = safeUrl(d.resume);
     const inBallot = Object.values(getBallot()).some((arr) => arr.includes(key(o)));
 
     view.innerHTML = `
@@ -304,6 +307,8 @@
       <div class="section-label">Impormasyon</div>
       <table class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}
         ${extra.slice(0, 20).map(([k, v]) => `<tr><th>${esc(pretty(k))}</th><td>${esc(v)}</td></tr>`).join("")}</table>
+      ${d.biography ? `<div class="section-label">Talambuhay</div><p class="bio">${esc(d.biography)}</p>` : ""}
+      ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">📄 Opisyal na CV (PDF) ↗</a></p>` : ""}
       <div class="notice">
         Pinagkunan: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a>
         ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">Opisyal na profile ↗</a>` : ""}
@@ -351,7 +356,7 @@
         ["Posisyon", levelLabel], ["Partido", (o) => o.party], ["Distrito", (o) => o.district],
         ["Lugar", (o) => place(o, false)], ["Pinagkunan", (o) => o.source],
       ];
-      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw/.test(k));
+      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at/.test(k));
       shared.slice(0, 12).forEach((k) => fields.push([k.replace(/_/g, " "), (o) => o.details[k]]));
       table = fields.map(([lab, fn]) => {
         const va = fn(a) || "—", vb = fn(b) || "—";
