@@ -249,3 +249,17 @@ body.covered { overflow: hidden; }
 .cover :focus-visible { outline: 2px solid #fcd116; outline-offset: 3px; }
 .cover-note { margin: 4px 0 0; font-size: 12px; color: rgba(255, 255, 255, .6); line-height: 1.5; }
 @media (prefers-reduced-motion: reduce) { .cover { transition: none; } }
+
+/* Location filters */
+.chips.islands { padding-top: 4px; align-items: center; }
+.chips-label { flex: none; font-size: 15px; }
+.chip.more-place { text-decoration: none; color: var(--blue); border-style: dashed; }
+.place-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10px; margin-top: 10px; }
+.place-grid label { display: block; min-width: 0; }
+.place-grid label.wide { grid-column: 1 / -1; }
+.place-grid label > span { display: block; font-size: 12px; color: var(--muted); margin: 0 0 4px 2px; }
+.place-grid .select { color: var(--text); text-overflow: ellipsis; }
+.place-grid .select:disabled { opacity: .6; }
+.place-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.link-btn { border: 0; background: none; color: var(--blue); font-size: 13px; padding: 4px 0; cursor: pointer; }
+@media (max-width: 340px) { .place-grid { grid-template-columns: 1fr; } }

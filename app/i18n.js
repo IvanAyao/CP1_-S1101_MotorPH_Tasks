@@ -14,9 +14,9 @@ window.PILI_I18N = {
     cover_note: "Datos mula sa opisyal at pampublikong pinagkunan. Bawat tala ay may label kung saan ito galing.",
     lang_toggle: "Change language to English",
 
-    tab_home: "Opisyal", tab_hanap: "Hanapin", tab_ihambing: "Ihambing", tab_pili: "Pili Ko", tab_ako: "Datos",
+    tab_home: "Opisyal", tab_hanap: "Lugar", tab_ihambing: "Ihambing", tab_pili: "Pili Ko", tab_ako: "Datos",
     nav_label: "Pangunahing navigation", back: "Bumalik",
-    title_hanap: "Hanapin", title_ihambing: "Ihambing", title_pili: "Pili Ko 2028", title_ako: "Datos at Stats",
+    title_hanap: "Hanapin ayon sa Lugar", title_ihambing: "Ihambing", title_pili: "Pili Ko 2028", title_ako: "Datos at Stats",
 
     lvl_senate: "Senador", lvl_house: "Kinatawan", lvl_governor: "Gobernador", lvl_vice_governor: "Bise Gobernador",
     lvl_board_member: "Bokal", lvl_mayor: "Alkalde", lvl_vice_mayor: "Bise Alkalde", lvl_councilor: "Konsehal",
@@ -43,12 +43,17 @@ window.PILI_I18N = {
     brgy_note: "May {n} barangay officials sa directory.", brgy_note2: "Piliin ang lugar sa {link} para makita sila.",
     no_match: "Walang tugma sa “{q}”.", no_match_short: "Walang tugma.", show_more: "Ipakita pa ({n})",
 
+    island: "Pangkat ng isla", island_all: "Buong bansa", island_luzon: "Luzon", island_visayas: "Visayas", island_mindanao: "Mindanao",
+    more_place: "Iba pang lugar →", place_search_ph: "Hanapin ang lungsod, probinsya, barangay o pangalan…",
+    all_districts: "Lahat ng distrito", pick_province_district: "Pumili muna ng probinsya para sa distrito",
+    district_n: "Ika-{n} Distrito", district_lone: "Nag-iisang Distrito", no_brgy_data: "Wala pang datos ng barangay",
+    reset_place: "I-reset ang lugar",
     by_place: "Hanapin ayon sa lugar", region: "Rehiyon", province: "Probinsya", lgu: "Lungsod / Bayan", barangay: "Barangay",
     all_regions: "Lahat ng rehiyon", all_provinces: "Lahat ng probinsya", all_lgus: "Lahat ng lungsod / bayan",
     all_brgys: "Lahat ng barangay", pick_province_first: "Pumili muna ng probinsya para sa barangay",
     none_here: "Walang opisyal na nakatala para sa lugar na ito.",
     first_400: "Ipinapakita ang unang 400. Paliitin ang lugar para makita ang iba.",
-    hanap_hint: "Pumili ng rehiyon o probinsya para makita ang mga kinatawan, alkalde, at barangay officials doon.",
+    hanap_hint: "Pumili ng Luzon, Visayas o Mindanao, o ng rehiyon, probinsya, lungsod, distrito o barangay — o i-type ang lugar — para makita ang mga kinatawan, gobernador, alkalde at iba pang opisyal doon.",
     hanap_senators: "Para sa mga senador (nationwide), gamitin ang {link} tab.",
 
     not_found: "Hindi nahanap ang opisyal na ito.", back_to_list: "Bumalik sa listahan",
@@ -100,9 +105,9 @@ window.PILI_I18N = {
     cover_note: "Data from official and public sources. Every record is labelled with where it came from.",
     lang_toggle: "Palitan ang wika sa Tagalog",
 
-    tab_home: "Officials", tab_hanap: "Browse", tab_ihambing: "Compare", tab_pili: "My Picks", tab_ako: "Data",
+    tab_home: "Officials", tab_hanap: "Location", tab_ihambing: "Compare", tab_pili: "My Picks", tab_ako: "Data",
     nav_label: "Main navigation", back: "Back",
-    title_hanap: "Browse", title_ihambing: "Compare", title_pili: "My Picks 2028", title_ako: "Data & Stats",
+    title_hanap: "Find by Location", title_ihambing: "Compare", title_pili: "My Picks 2028", title_ako: "Data & Stats",
 
     lvl_senate: "Senator", lvl_house: "Representative", lvl_governor: "Governor", lvl_vice_governor: "Vice Governor",
     lvl_board_member: "Board Member", lvl_mayor: "Mayor", lvl_vice_mayor: "Vice Mayor", lvl_councilor: "Councilor",
@@ -129,12 +134,17 @@ window.PILI_I18N = {
     brgy_note: "The directory has {n} barangay officials.", brgy_note2: "Choose a place in {link} to see them.",
     no_match: "No matches for “{q}”.", no_match_short: "No matches.", show_more: "Show more ({n})",
 
-    by_place: "Browse by place", region: "Region", province: "Province", lgu: "City / Municipality", barangay: "Barangay",
+    island: "Island group", island_all: "Nationwide", island_luzon: "Luzon", island_visayas: "Visayas", island_mindanao: "Mindanao",
+    more_place: "More places →", place_search_ph: "Search a city, province, barangay or name…",
+    all_districts: "All districts", pick_province_district: "Choose a province first to see districts",
+    district_n: "{nth} District", district_lone: "Lone District", no_brgy_data: "No barangay data yet",
+    reset_place: "Reset place",
+    by_place: "Find by location", region: "Region", province: "Province", lgu: "City / Municipality", barangay: "Barangay",
     all_regions: "All regions", all_provinces: "All provinces", all_lgus: "All cities / municipalities",
     all_brgys: "All barangays", pick_province_first: "Choose a province first to see barangays",
     none_here: "No officials recorded for this place.",
     first_400: "Showing the first 400. Narrow the place to see the rest.",
-    hanap_hint: "Choose a region or province to see its representatives, mayors and barangay officials.",
+    hanap_hint: "Choose Luzon, Visayas or Mindanao, or a region, province, city, district or barangay — or type a place — to see its representatives, governors, mayors and other officials.",
     hanap_senators: "For senators (nationwide), use the {link} tab.",
 
     not_found: "We couldn't find this official.", back_to_list: "Back to the list",

@@ -72,6 +72,7 @@
     brgyIndex: null,
     brgyFiles: new Map(),    // file -> records (lazy)
     filter: "all",
+    island: "",
     q: "",
     shown: PAGE,
     compare: [null, null],
@@ -89,7 +90,9 @@
   const fmtDate = (iso) => (iso ? new Date(iso).toLocaleDateString(t("locale"), { year: "numeric", month: "long", day: "numeric" }) : "—");
   const fmtNum = (n) => Number(n || 0).toLocaleString("en-PH");
   const initials = (name) => name.split(/\s+/).filter((w) => /^[A-Za-zÀ-ÿÑñ]/.test(w)).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
-  const place = (o, withDistrict = true) => [o.barangay && `Brgy. ${o.barangay}`, o.lgu, withDistrict && o.district, o.province, o.region].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ");
+  // A bare "1st" (DILG lists) reads better as "1st District".
+  const districtText = (o) => (o._dist && /^\s*(\d+\s*(st|nd|rd|th)?|lone)\s*$/i.test(o.district || "") ? districtLabel(o._dist) : o.district);
+  const place = (o, withDistrict = true) => [o.barangay && `Brgy. ${o.barangay}`, o.lgu, withDistrict && districtText(o), o.province, o.region].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ");
   // Positions come from the sources as published; the level name is only a fallback.
   const levelLabel = (o) => o.position || (LEVEL_KEYS.includes(o.level) ? t(`lvl_${o.level}`) : o.level);
   // Where data comes from: government (.gov.ph) sites are "official"; other
@@ -130,9 +133,32 @@
     return res.json();
   }
 
+  // ------------------------------------------------------------ location
+  // Island group, region, province and city come from geo.js, since most
+  // sources only give a province (or a city in its place).
+  const GEO = window.PILI_GEO;
+  function withLoc(o) {
+    o._loc = GEO.locate(o);
+    o._dist = districtOf(o);
+    return o;
+  }
+  const locWords = (o) => [o.province, o.lgu, o.region, o._loc.province, o._loc.city, o._loc.region,
+    o._loc.island && t(`island_${o._loc.island}`), o._loc.island];
+  // "Agusan del Sur–1st", "1St", "Pasig at-large" -> "1", "1", "lone"
+  function districtOf(o) {
+    const d = String(o.district || "");
+    if (!d || /nationwide|party-?list/i.test(d)) return "";
+    if (/at-?large|\blone\b/i.test(d)) return "lone";
+    const m = d.match(/(\d+)\s*(?:st|nd|rd|th)?(?:\s*district)?\s*$/i);
+    return m ? String(+m[1]) : "";
+  }
+  const ordinal = (n) => n + (["th", "st", "nd", "rd"][(n % 100 >> 3 ^ 1) && n % 10] || "th");
+  const districtLabel = (k) => (k === "lone" ? t("district_lone") : t("district_n", { n: k, nth: ordinal(+k) }));
+
   function addRecords(records, dataset) {
     for (const r of records || []) {
-      const o = { ...r, dataset, _s: norm([r.name, r.position, r.party, r.district, r.province, r.lgu, r.barangay, r.region].join(" ")) };
+      const o = withLoc({ ...r, dataset });
+      o._s = norm([r.name, r.position, r.party, r.district, r.barangay, ...locWords(o)].join(" "));
       state.byKey.set(key(o), o);
       state.officials.push(o);
     }
@@ -170,7 +196,11 @@
   async function loadBrgyFile(file) {
     if (state.brgyFiles.has(file)) return state.brgyFiles.get(file);
     const doc = await getJSON(file);
-    const recs = doc.records.map((r) => ({ ...r, dataset: "barangay", _file: file, _s: norm([r.name, r.position, r.lgu, r.barangay, r.province].join(" ")) }));
+    const recs = doc.records.map((r) => {
+      const o = withLoc({ ...r, dataset: "barangay", _file: file });
+      o._s = norm([r.name, r.position, r.barangay, ...locWords(o)].join(" "));
+      return o;
+    });
     recs.forEach((o) => state.byKey.set(key(o), o));
     state.brgyFiles.set(file, recs);
     return recs;
@@ -204,12 +234,14 @@
     const f = FILTERS.find((x) => x[0] === state.filter) || FILTERS[0];
     const q = norm(state.q).trim();
     const terms = q.split(/\s+/).filter(Boolean);
-    const list = state.officials.filter(f[1]).filter((o) => terms.every((w) => o._s.includes(w)));
+    const list = state.officials.filter(f[1]).filter((o) => !state.island || o._loc.island === state.island)
+      .filter((o) => terms.every((w) => o._s.includes(w)));
     const brgyNote = state.filter === "brgy";
 
     view.innerHTML = `
       <input class="search" id="q" type="search" placeholder="${esc(t("search_ph"))}" value="${esc(state.q)}" aria-label="${esc(t("search_label"))}">
       <div class="chips" role="toolbar" aria-label="Filter">${FILTERS.map(([k]) => `<button class="chip" data-f="${k}" aria-pressed="${k === state.filter}">${t(`f_${k}`)}</button>`).join("")}</div>
+      <div class="chips islands" role="toolbar" aria-label="${esc(t("island"))}"><span class="chips-label" aria-hidden="true">📍</span>${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === state.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}<a class="chip more-place" href="#/hanap">${t("more_place")}</a></div>
       <div class="quick">
         <a href="#/ihambing"><span class="qi">⚖️</span><b>${t("quick_compare")}</b><small>${t("quick_compare_sub")}</small></a>
         <a href="#/pili"><span class="qi">🗳️</span><b>${t("quick_list")}</b><small>${t("quick_list_sub")}</small></a>
@@ -225,7 +257,7 @@
     } else if (brgyNote) {
       results.innerHTML = `<div class="empty"><span class="ei">🏘️</span>${t("brgy_note", { n: fmtNum(state.brgyIndex?.count) })}<br>${t("brgy_note2", { link: `<a href="#/hanap">${t("tab_hanap")}</a>` })}</div>`;
     } else {
-      results.innerHTML = `<div class="section-label">${esc(t(`f_${f[0]}`))} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
+      results.innerHTML = `<div class="section-label">${esc(t(`f_${f[0]}`))}${state.island ? " · " + esc(t(`island_${state.island}`)) : ""} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
         <div class="list">${list.slice(0, state.shown).map((o) => row(o)).join("") || `<div class="empty">${t("no_match", { q: esc(state.q) })}</div>`}</div>
         ${list.length > state.shown ? `<button class="btn more" id="more">${t("show_more", { n: fmtNum(list.length - state.shown) })}</button>` : ""}`;
     }
@@ -240,56 +272,107 @@
       i2.focus();
       i2.setSelectionRange(pos, pos);
     });
-    view.querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => { state.filter = b.dataset.f; state.shown = PAGE; viewHome(); }));
+    view.querySelectorAll(".chip[data-f]").forEach((b) => b.addEventListener("click", () => { state.filter = b.dataset.f; state.shown = PAGE; viewHome(); }));
+    view.querySelectorAll(".chip[data-island]").forEach((b) => b.addEventListener("click", () => {
+      state.island = b.dataset.island;
+      if (hanap.island !== state.island) HANAP_ORDER.forEach((k) => (hanap[k] = ""));
+      hanap.island = state.island;
+      state.shown = PAGE;
+      viewHome();
+    }));
     $("#more")?.addEventListener("click", () => { state.shown += PAGE * 2; viewHome(); });
   }
 
-  // Browse by place: region -> province -> city/municipality -> barangay
-  const hanap = { region: "", province: "", lgu: "", barangay: "" };
+  // Find by place: island group -> region -> province -> city/municipality
+  // -> district -> barangay, plus a free-text search.
+  const hanap = { island: "", region: "", province: "", lgu: "", district: "", barangay: "", q: "" };
+  const HANAP_ORDER = ["island", "region", "province", "lgu", "district", "barangay"];
   async function viewHanap() {
     if (state.loading) { view.innerHTML = '<div class="skeleton"></div>'.repeat(4); return; }
     if (!hasData()) { view.innerHTML = noData(); return; }
+    const h = hanap;
+    const brgyFiles = (state.brgyIndex?.files || []).map((f) => ({ ...f, _loc: GEO.locate({ province: f.province, region: f.region }) }));
 
-    const brgyFiles = state.brgyIndex?.files || [];
-    const regions = new Set(), provinces = new Set();
-    state.officials.forEach((o) => { if (o.region) regions.add(o.region); });
-    brgyFiles.forEach((f) => { if (f.region) regions.add(f.region); });
-    const inRegion = (r) => !hanap.region || r === hanap.region;
-    state.officials.forEach((o) => { if (o.province && inRegion(o.region)) provinces.add(o.province); });
-    brgyFiles.forEach((f) => { if (f.province && inRegion(f.region)) provinces.add(f.province); });
+    // Each step narrows the pool the next dropdown is built from.
+    const steps = {
+      island: (o) => !h.island || o._loc.island === h.island,
+      region: (o) => !h.region || o._loc.region === h.region,
+      province: (o) => !h.province || o._loc.province === h.province,
+      lgu: (o) => !h.lgu || o._loc.city === h.lgu,
+      district: (o) => !h.district || o._dist === h.district,
+      barangay: (o) => !h.barangay || o.barangay === h.barangay,
+    };
+    const upTo = (k) => (o) => HANAP_ORDER.slice(0, HANAP_ORDER.indexOf(k)).every((s) => steps[s](o));
 
     let brgyRecs = [];
-    const files = brgyFiles.filter((f) => inRegion(f.region) && (!hanap.province || f.province === hanap.province));
-    if (hanap.province && files.length) {
+    const files = brgyFiles.filter((f) => upTo("lgu")(f) && h.province);
+    if (files.length) {
       view.innerHTML = '<div class="skeleton"></div>'.repeat(4);
       brgyRecs = (await Promise.all(files.map((f) => loadBrgyFile(f.file).catch(() => [])))).flat();
     }
-    const lgus = new Set();
-    state.officials.forEach((o) => { if (o.lgu && inRegion(o.region) && (!hanap.province || o.province === hanap.province)) lgus.add(o.lgu); });
-    brgyRecs.forEach((o) => o.lgu && lgus.add(o.lgu));
-    const brgys = new Set(brgyRecs.filter((o) => !hanap.lgu || o.lgu === hanap.lgu).map((o) => o.barangay).filter(Boolean));
+    const pool = [...state.officials.filter((o) => o.level !== "senate" && o._loc.island), ...brgyRecs];
+    const values = (k, get) => new Set([...pool, ...(k === "province" || k === "region" ? brgyFiles : [])].filter(upTo(k)).map(get).filter(Boolean));
+    const regions = values("region", (o) => o._loc.region);
+    const provinces = values("province", (o) => o._loc.province);
+    const lgus = values("lgu", (o) => o._loc.city);
+    const districts = h.province ? values("district", (o) => o._dist) : new Set();
+    const brgys = values("barangay", (o) => o.barangay);
 
-    const opt = (set, cur, all) => `<option value="">${all}</option>` + [...set].sort().map((v) => `<option ${v === cur ? "selected" : ""}>${esc(v)}</option>`).join("");
-    const match = (o) => inRegion(o.region) && (!hanap.province || o.province === hanap.province) && (!hanap.lgu || o.lgu === hanap.lgu) && (!hanap.barangay || o.barangay === hanap.barangay);
-    const anyFilter = hanap.region || hanap.province || hanap.lgu || hanap.barangay;
-    const list = anyFilter ? [...state.officials.filter((o) => o.level !== "senate" && match(o)), ...brgyRecs.filter(match)] : [];
+    const terms = norm(h.q).split(/\s+/).filter(Boolean);
+    const anyFilter = HANAP_ORDER.some((k) => h[k]) || terms.length;
+    const list = anyFilter ? pool.filter((o) => HANAP_ORDER.every((k) => steps[k](o)) && terms.every((w) => o._s.includes(w))) : [];
+
+    const sorted = (set, by) => [...set].sort(by || ((a, b) => a.localeCompare(b)));
+    const opt = (items, cur, all, label = (v) => v) => `<option value="">${esc(all)}</option>` + items.map((v) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label(v))}</option>`).join("");
+    const regionOrder = GEO.regionsOf("");
+    const brgyNote = !brgyFiles.length ? t("no_brgy_data") : h.province ? t("all_brgys") : t("pick_province_first");
 
     view.innerHTML = `
       <div class="section-label">${t("by_place")}</div>
-      <select class="select" data-k="region" aria-label="${esc(t("region"))}">${opt(regions, hanap.region, t("all_regions"))}</select>
-      <select class="select" data-k="province" aria-label="${esc(t("province"))}">${opt(provinces, hanap.province, t("all_provinces"))}</select>
-      <select class="select" data-k="lgu" aria-label="${esc(t("lgu"))}" ${lgus.size ? "" : "disabled"}>${opt(lgus, hanap.lgu, t("all_lgus"))}</select>
-      <select class="select" data-k="barangay" aria-label="${esc(t("barangay"))}" ${brgys.size ? "" : "disabled"}>${opt(brgys, hanap.barangay, hanap.province ? t("all_brgys") : t("pick_province_first"))}</select>
-      ${anyFilter ? `<div class="section-label">${t("n_officials", { n: fmtNum(list.length) })}</div><div class="list">${list.slice(0, 400).map((o) => row(o)).join("") || `<div class="empty">${t("none_here")}</div>`}</div>${list.length > 400 ? `<p class="meta">${t("first_400")}</p>` : ""}`
+      <input class="search" id="place-q" type="search" placeholder="${esc(t("place_search_ph"))}" value="${esc(h.q)}" aria-label="${esc(t("place_search_ph"))}">
+      <div class="chips" role="toolbar" aria-label="${esc(t("island"))}">${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === h.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}</div>
+      <div class="place-grid">
+        <label><span>${t("region")}</span><select class="select" data-k="region">${opt(sorted(regions, (a, b) => regionOrder.indexOf(a) - regionOrder.indexOf(b)), h.region, t("all_regions"))}</select></label>
+        <label><span>${t("province")}</span><select class="select" data-k="province">${opt(sorted(provinces), h.province, t("all_provinces"))}</select></label>
+        <label><span>${t("lgu")}</span><select class="select" data-k="lgu" ${lgus.size ? "" : "disabled"}>${opt(sorted(lgus), h.lgu, t("all_lgus"))}</select></label>
+        <label><span>${t("district")}</span><select class="select" data-k="district" ${districts.size ? "" : "disabled"}>${opt(sorted(districts, (a, b) => (a === "lone" ? -1 : b === "lone" ? 1 : a - b)), h.district, h.province ? t("all_districts") : t("pick_province_district"), districtLabel)}</select></label>
+        <label class="wide"><span>${t("barangay")}</span><select class="select" data-k="barangay" ${brgys.size ? "" : "disabled"}>${opt(sorted(brgys), h.barangay, brgys.size ? t("all_brgys") : brgyNote)}</select></label>
+      </div>
+      ${anyFilter ? `<div class="place-head"><div class="section-label">${t("n_officials", { n: fmtNum(list.length) })}</div><button class="link-btn" id="place-reset">${t("reset_place")}</button></div>
+        <div class="list">${list.slice(0, 400).map((o) => row(o)).join("") || `<div class="empty">${t("none_here")}</div>`}</div>${list.length > 400 ? `<p class="meta">${t("first_400")}</p>` : ""}`
         : `<div class="empty"><span class="ei">📍</span>${t("hanap_hint")}<br><br>${t("hanap_senators", { link: `<a href="#/">${t("tab_home")}</a>` })}</div>`}`;
 
-    view.querySelectorAll("select[data-k]").forEach((s) => s.addEventListener("change", () => {
-      const k = s.dataset.k;
-      hanap[k] = s.value;
-      const order = ["region", "province", "lgu", "barangay"];
-      order.slice(order.indexOf(k) + 1).forEach((kk) => (hanap[kk] = ""));
+    view.querySelectorAll("select[data-k]").forEach((sel) => sel.addEventListener("change", () => {
+      const k = sel.dataset.k;
+      h[k] = sel.value;
+      HANAP_ORDER.slice(HANAP_ORDER.indexOf(k) + 1).forEach((kk) => (h[kk] = ""));
+      // Picking a province fills in its region and island group.
+      if (k === "province" && h.province) {
+        const any = [...pool, ...brgyFiles].find((o) => o._loc.province === h.province);
+        if (any) { h.island = any._loc.island; h.region = any._loc.region || h.region; }
+      }
+      if (k === "region" && h.region) h.island = GEO.islandOfRegion(h.region) || h.island;
+      state.island = h.island;
       viewHanap();
     }));
+    view.querySelectorAll(".chip[data-island]").forEach((b) => b.addEventListener("click", () => {
+      HANAP_ORDER.forEach((k) => (h[k] = ""));
+      h.island = b.dataset.island;
+      state.island = h.island;
+      viewHanap();
+    }));
+    const input = $("#place-q");
+    input.addEventListener("input", () => {
+      h.q = input.value;
+      const pos = input.selectionStart;
+      viewHanap().then(() => { const i2 = $("#place-q"); i2.focus(); i2.setSelectionRange(pos, pos); });
+    });
+    $("#place-reset")?.addEventListener("click", () => {
+      HANAP_ORDER.forEach((k) => (h[k] = ""));
+      h.q = "";
+      state.island = "";
+      viewHanap();
+    });
   }
 
   async function viewProfile(dataset, id) {
@@ -303,7 +386,7 @@
     const rows = [
       [t("position"), levelLabel(o)],
       [t("party"), o.party],
-      [t("district"), o.district],
+      [t("district"), districtText(o)],
       [t("barangay"), o.barangay],
       [t("lgu"), o.lgu],
       [t("province"), o.province],
