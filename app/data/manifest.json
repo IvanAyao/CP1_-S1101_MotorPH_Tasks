@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T13:37:21+00:00",
+ "generated_at": "2026-09-30T20:22:48+00:00",
  "datasets": [
   {
    "key": "senate",
@@ -32,11 +32,11 @@
   {
    "key": "lgu",
    "file": "lgu.json",
-   "source": "Wikipedia (unofficial)",
-   "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
-   "count": 160,
-   "scraped_at": "2026-09-30T13:29:19+00:00",
-   "source_type": "public"
+   "source": "PSA RSSO NCR – LGU Directory + Wikipedia (unofficial)",
+   "source_url": "https://rssoncr.psa.gov.ph/lgu-directory",
+   "count": 460,
+   "scraped_at": "2026-09-30T20:22:47+00:00",
+   "source_type": "official+public"
   },
   {
    "key": "barangay",
