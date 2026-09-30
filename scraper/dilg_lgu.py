@@ -28,7 +28,8 @@ from common import DATA_DIR, USER_AGENT, Browser, clean, dedupe, log, norm_key, 
 from officials import rows_to_officials
 
 FOI_URL = "https://www.foi.gov.ph/agencies/dilg/list-of-elected-government-official-for-the-term-2025-2028-by-province/"
-FOLDER_URL = "https://drive.google.com/drive/folders/1fcyeVj_aNF3mdcnDq8rvL8Zj9r77oLZw"
+FOLDER_ID = "1fcyeVj_aNF3mdcnDq8rvL8Zj9r77oLZw"
+FOLDER_URL = f"https://drive.google.com/drive/folders/{FOLDER_ID}"
 SOURCE = "DILG – Directory of LGU Elective Officials 2025–2028 (via FOI)"
 # 82 provinces + ~1,640 cities/municipalities: governors, vice governors,
 # board members, mayors, vice mayors and councilors run well over 10,000.
@@ -45,7 +46,7 @@ def find_files(browser: Browser) -> list[tuple[str, str]]:
     seen, out = set(), []
     for it in items:
         fid, text = it["id"], clean(it["text"])
-        if fid and FILE_ID.match(fid) and fid not in seen and text:
+        if fid and FILE_ID.match(fid) and fid not in seen and text and fid != FOLDER_ID:
             seen.add(fid)
             out.append((fid, text.split("\n")[0]))
     log(f"dilg: folder lists {len(out)} item(s): {out}")
@@ -158,7 +159,9 @@ def run(browser: Browser | None = None) -> list[dict]:
     finally:
         if own:
             browser.close()
-    sheets = [f for f in files if re.search(r"director|elective|official", f[1], re.I)] or files
+    # The folder page also lists the folder itself; prefer the directory file.
+    sheets = ([f for f in files if re.search(r"directory", f[1], re.I)]
+              or [f for f in files if re.search(r"elective|official", f[1], re.I)] or files)
     if not sheets:
         raise SystemExit("dilg: no files found in the public folder")
     officials = parse(download(sheets[0][0]))
