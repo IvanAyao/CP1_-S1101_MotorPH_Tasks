@@ -149,6 +149,18 @@ main { flex: 1; padding: 14px 16px calc(96px + env(safe-area-inset-bottom)); out
 .cmp-row .vals { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
 .cmp-row .vals div { text-align: center; font-weight: 600; word-break: break-word; }
 .cmp-row .same { color: var(--ok); }
+.cmp-count { font-size: 22px; font-weight: 800; color: var(--blue); font-variant-numeric: tabular-nums; }
+.cmp-row .vals.lists { align-items: start; margin-top: 8px; }
+.cmp-row .vals.lists div { text-align: left; font-weight: 400; }
+.cmp-list { margin: 0; padding-left: 16px; font-size: 13px; line-height: 1.45; }
+.cmp-list li { margin-bottom: 6px; }
+.cmp-list li.same { font-weight: 600; }
+.ach-group { font-size: 13px; font-weight: 700; margin: 10px 0 4px; }
+.cmp-more summary { text-align: center; font-size: 12px; color: var(--blue); cursor: pointer; margin-top: 4px; list-style: none; }
+.cmp-more summary::-webkit-details-marker { display: none; }
+.cmp-more summary::after { content: " ▾"; }
+.cmp-more[open] summary::after { content: " ▴"; }
+.cmp-none { margin: 0; text-align: center; font-style: italic; }
 
 .countdown { background: linear-gradient(135deg, var(--blue), #1b56d6); color: #fff; border-radius: var(--radius); padding: 18px; margin-bottom: 14px; }
 .countdown .big { font-size: 34px; font-weight: 800; line-height: 1.1; }

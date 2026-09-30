@@ -262,10 +262,12 @@ def test_senate_achievements_from_bio():
     html = ('<p><span>Juan Dela Cruz (born 1970) is a Filipino politician.</span></p><p><br></p>'
             '<p><span>• Best Mayor in the Region (2008)</span></p>'
             '<p><span>• Outstanding Young Men, TOYM (2011)</span></p>'
+            '<p>Co-author of the following laws:</p><p>• - Best Anchor</p>'
             '<ul><li>Author, Free Tuition Act</li></ul>'
             '<p><span>Served two decades in public service.</span></p>')
     assert senate.achievements(html) == [
-        "Author, Free Tuition Act", "Best Mayor in the Region (2008)", "Outstanding Young Men, TOYM (2011)"]
+        "Author, Free Tuition Act", "Best Mayor in the Region (2008)", "Outstanding Young Men, TOYM (2011)",
+        "Best Anchor"]
     bio = senate.short_bio(html)
     assert bio.startswith("Juan Dela Cruz (born 1970)") and "Best Mayor" not in bio
 

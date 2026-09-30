@@ -47,6 +47,9 @@ def achievements(html: str) -> list[str]:
             out.append(BULLET.sub("", para))
     seen, uniq = set(), []
     for a in out:
+        a = BULLET.sub("", a).strip()
+        if a.endswith(":"):  # list headers like "Co-author of the following laws:"
+            continue
         if a and 3 < len(a) < 300 and a.lower() not in seen:
             seen.add(a.lower())
             uniq.append(a)
