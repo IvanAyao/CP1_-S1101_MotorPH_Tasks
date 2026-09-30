@@ -27,8 +27,36 @@ def key(name: str) -> str:
     return slug(re.sub(r"[\"'“”.]", "", name))
 
 
-def short_bio(html: str, limit: int = 700) -> str:
-    text = clean(BeautifulSoup(html or "", "lxml").get_text(" "))
+BULLET = re.compile(r"^\s*[•●▪◦\-–]\s*")
+
+
+def bio_paragraphs(html: str) -> list[str]:
+    soup = BeautifulSoup(html or "", "lxml")
+    blocks = soup.find_all(["p", "li"]) or [soup]
+    return [t for t in (clean(b.get_text(" ")) for b in blocks) if t]
+
+
+def achievements(html: str) -> list[str]:
+    """Bulleted lines of an official bio: awards, honours, landmark laws."""
+    out = []
+    soup = BeautifulSoup(html or "", "lxml")
+    for li in soup.find_all("li"):
+        out.append(clean(li.get_text(" ")))
+    for para in bio_paragraphs(html):
+        if BULLET.match(para):
+            out.append(BULLET.sub("", para))
+    seen, uniq = set(), []
+    for a in out:
+        if a and 3 < len(a) < 300 and a.lower() not in seen:
+            seen.add(a.lower())
+            uniq.append(a)
+    return uniq
+
+
+def short_bio(html: str, limit: int = 1500) -> str:
+    """Narrative paragraphs of the bio (bullets are kept separately)."""
+    paras = [p for p in bio_paragraphs(html) if not BULLET.match(p)]
+    text = " ".join(paras)
     if len(text) <= limit:
         return text
     cut = text[:limit].rsplit(". ", 1)[0]
@@ -68,7 +96,7 @@ def scrape(browser: Browser) -> list[dict]:
             if bio:
                 details["biography"] = bio
             role = clean(s.get("position"))
-            records.append(record(
+            rec = record(
                 name=name,
                 position=f"Senator · {role}" if role and role.lower() != "senator" else "Senator",
                 level="senate",
@@ -79,7 +107,9 @@ def scrape(browser: Browser) -> list[dict]:
                 source="Senate of the Philippines",
                 source_url=URL,
                 details=details,
-            ))
+            )
+            rec["achievements"] = achievements(s.get("biography") or "")
+            records.append(rec)
         return dedupe(records)
 
     # Fallback: no API seen, parse the rendered listing.

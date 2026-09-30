@@ -255,3 +255,65 @@ def test_import_saved_copies(site, browser, monkeypatch, isolated_output):
     manifest = json.loads((data / "manifest.json").read_text())
     counts = {d["key"]: d["count"] for d in manifest["datasets"]}
     assert counts["house"] == 100 and counts["lgu"] == 4 and counts["barangay"] == 2
+
+
+def test_senate_achievements_from_bio():
+    """Mirrors the Senate API's biography HTML (bullets in <p> blocks)."""
+    html = ('<p><span>Juan Dela Cruz (born 1970) is a Filipino politician.</span></p><p><br></p>'
+            '<p><span>• Best Mayor in the Region (2008)</span></p>'
+            '<p><span>• Outstanding Young Men, TOYM (2011)</span></p>'
+            '<ul><li>Author, Free Tuition Act</li></ul>'
+            '<p><span>Served two decades in public service.</span></p>')
+    assert senate.achievements(html) == [
+        "Author, Free Tuition Act", "Best Mayor in the Region (2008)", "Outstanding Young Men, TOYM (2011)"]
+    bio = senate.short_bio(html)
+    assert bio.startswith("Juan Dela Cruz (born 1970)") and "Best Mayor" not in bio
+
+
+def test_wikipedia_rowspans_and_mapping():
+    """Layouts mirror the live Wikipedia lists (Sept 2026)."""
+    import wikipedia
+
+    house_html = """
+    <table class="wikitable sortable"><tr><th>Constituency</th><th>Portrait</th><th>Representative</th>
+      <th colspan="2">Party</th><th>Bloc</th><th>Born</th><th>Prior experience</th><th>Took office</th></tr>
+    <tr><td>Bohol–1st</td><td><img src="//upload.example/a.jpg"></td>
+        <td><a href="/wiki/Juan_Dela_Cruz">Juan Dela Cruz</a><sup>[1]</sup></td>
+        <td style="background:red"></td><td>Lakas<sup>[a]</sup></td><td rowspan="2">Majority</td>
+        <td><span style="display:none">( 1978-10-06 )</span> October 6, 1978 (age 47)</td>
+        <td>House of Representatives<br>Mayor of Tagbilaran</td><td>June 30, 2025</td></tr>
+    <tr><td>Aklan at-large</td><td></td><td><a href="/wiki/Maria_Santos">Maria Santos</a></td>
+        <td></td><td>NUP</td><td>1970</td><td></td><td>June 30, 2022</td></tr>
+    <tr><td>Example Party</td><td></td><td><a href="/wiki/Pedro_Reyes">Pedro Reyes</a></td>
+        <td></td><td>Example Party</td><td>Minority</td><td></td><td></td><td>June 30, 2025</td></tr>
+    <tr><td>Leyte–2nd</td><td></td><td>Vacant</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>"""
+    recs = wikipedia.officials("house", house_html, "123")
+    by = {r["name"]: r for r in recs}
+    assert set(by) == {"Juan Dela Cruz", "Maria Santos", "Pedro Reyes"}  # vacant seat skipped
+    juan = by["Juan Dela Cruz"]
+    assert (juan["position"], juan["district"], juan["province"], juan["party"]) == (
+        "District Representative", "Bohol–1st", "Bohol", "Lakas")
+    assert juan["photo"] == "https://upload.example/a.jpg"
+    assert juan["profile_url"] == "https://en.wikipedia.org/wiki/Juan_Dela_Cruz"
+    assert juan["details"]["born"] == "October 6, 1978"
+    assert juan["details"]["prior_experience"] == "House of Representatives; Mayor of Tagbilaran"
+    assert by["Maria Santos"]["province"] == "Aklan" and by["Maria Santos"]["details"]["bloc"] == "Majority"
+    assert by["Pedro Reyes"]["position"] == "Party-list Representative" and by["Pedro Reyes"]["province"] == ""
+    assert all(r["source"] == "Wikipedia (unofficial)" for r in recs)
+
+    gov_html = """<table class="wikitable"><tr><th>Province</th><th>Portrait</th><th>Governor</th>
+      <th colspan="2">Party</th><th>Term</th></tr>
+      <tr><td>Abra ( <a href="/wiki/x">list</a> )</td><td></td><td><a href="/wiki/Takit_Bersamin">Takit Bersamin</a><sup>[3]</sup></td>
+      <td></td><td>PFP</td><td>1</td></tr></table>"""
+    (g,) = wikipedia.officials("governors", gov_html, "1")
+    assert (g["name"], g["level"], g["province"], g["party"]) == ("Takit Bersamin", "governor", "Abra", "PFP")
+
+    mayor_html = """<table class="wikitable"><tr><th>Independent city or municipality</th><th>Portrait</th>
+      <th>Mayor</th><th colspan="2">Party</th></tr>
+      <tr><td>Baguio ( list )</td><td></td><td><a href="/wiki/B_M">Benjamin Magalong</a></td><td></td><td>NPC</td></tr></table>
+      <table class="wikitable"><tr><th>Independent city or municipality</th><th>Portrait</th>
+      <th>Vice mayor</th><th colspan="2">Party</th></tr>
+      <tr><td>Baguio</td><td></td><td><a href="/wiki/F_O">Faustino Olowan</a></td><td></td><td>PFP</td></tr></table>"""
+    m, v = wikipedia.officials("mayors", mayor_html, "1")
+    assert (m["level"], m["lgu"], v["level"], v["lgu"]) == ("mayor", "Baguio", "vice_mayor", "Baguio")
