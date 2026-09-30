@@ -1,7 +1,7 @@
 {
  "dataset": "senate",
  "source_url": "https://senate.gov.ph/senators/20-congress-senators",
- "scraped_at": "2026-09-30T13:04:11+00:00",
+ "scraped_at": "2026-09-30T13:24:23+00:00",
  "count": 24,
  "records": [
   {
@@ -879,8 +879,297 @@
    "source_type": "official",
    "achievements": [],
    "lis_code": "ZJMIG, ZMIGU",
-   "bills": [],
-   "bills_count": 0
+   "bills": [
+    {
+     "number": "SBN-01219",
+     "title": "AMENDING R.A. NO. 9173 (THE PHILIPPINE NURSING ACT OF 2002)",
+     "date": "2025-08-19",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1219",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01198",
+     "title": "PHILIPPINE MICROBIOLOGY ACT OF 2025",
+     "date": "2025-08-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1198",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01197",
+     "title": "PHILIPPINE GERIATRIC MEDICAL CENTER ACT OR SENIOR CITIZENS' HOSPITAL",
+     "date": "2025-08-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1197",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01196",
+     "title": "JAIL INTEGRATION ACT",
+     "date": "2025-08-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1196",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01195",
+     "title": "BUKIDNON PROVINCIAL HOSPITAL-MARAMAG",
+     "date": "2025-08-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1195",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01194",
+     "title": "CREATION OF DENTAL UNIT IN EVERY RURAL HEALTH UNIT",
+     "date": "2025-08-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1194",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01193",
+     "title": "THE PHILIPPINE NURSING PRACTICE ACT OF 2025",
+     "date": "2025-08-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1193",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00664",
+     "title": "COUNTER FOREIGN INTERFERENCE ACT",
+     "date": "2025-07-15",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-664",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00663",
+     "title": "NEW ANTI-ESPIONAGE ACT",
+     "date": "2025-07-15",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-663",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00662",
+     "title": "CRITICAL INFORMATION INFRASTRUCTURE PROTECTION ACT",
+     "date": "2025-07-15",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-662",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00661",
+     "title": "CHURCH DECREED ANNULMENT ACT",
+     "date": "2025-07-15",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-661",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00583",
+     "title": "AMENDING COMMONWEALTH ACT NO. 473 (REVISED NATURALIZATION LAW)",
+     "date": "2025-07-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-583",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00582",
+     "title": "SAFE BOTTLED WATER ACT OF 2025",
+     "date": "2025-07-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-582",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00581",
+     "title": "POTABLE WATER SUPPLY SYSTEM IN EVERY BARANGAY",
+     "date": "2025-07-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-581",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00580",
+     "title": "BARANGAY OFFICIALS RETIREMENT BENEFITS ACT",
+     "date": "2025-07-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-580",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00579",
+     "title": "SUPPORT FOR BARANGAY WORKERS ACT OF 2025",
+     "date": "2025-07-14",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-579",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00301",
+     "title": "PHILIPPINE NATIONAL GAMES ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-301",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00300",
+     "title": "ZERO FOOD WASTE ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-300",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00299",
+     "title": "AUTISM CENTER",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-299",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00298",
+     "title": "THE NATIONAL CANCER CENTER OF THE PHILIPPINES (NCCP) ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-298",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00297",
+     "title": "MARITIME PASSENGER SAFETY ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-297",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00296",
+     "title": "PHILIPPINE IMMIGRATION ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-296",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00295",
+     "title": "MEDICAL RESERVE CORPS ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-295",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00294",
+     "title": "PHILIPPINE BAMBOO INDUSTRY DEVELOPMENT ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-294",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00293",
+     "title": "MINDANAO RAILWAYS DEVELOPMENT ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-293",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00292",
+     "title": "WASTE-TO-ENERGY ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-292",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00150",
+     "title": "AMENDING R.A. NO. 1405 (SECRECY OF BANK DEPOSITS LAW)",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-150",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00149",
+     "title": "MAGNA CARTA FOR BARANGAYS",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-149",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00148",
+     "title": "BARANGAY HEALTH WORKERS ACT OF 2025",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-148",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00147",
+     "title": "REVISED PHILIPPINE COAST GUARD LAW",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-147",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00146",
+     "title": "THE NATIONAL DEFENSE ACT",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-146",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00145",
+     "title": "NATIONAL WATER RESOURCES MANAGEMENT ACT",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-145",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00144",
+     "title": "NATIONAL LAND USE ACT OF THE PHILIPPINES",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-144",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00143",
+     "title": "DEPARTMENT OF DISASTER RESILIENCE ACT",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-143",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00142",
+     "title": "ANTI-ONLINE GAMBLING ACT OF 2025",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-142",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00141",
+     "title": "P100 DAILY MINIMUM WAGE INCREASE ACT OF 2025",
+     "date": "2025-07-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-141",
+     "coauthored": false
+    }
+   ],
+   "bills_count": 36
   },
   {
    "id": "senate-nationwide-alan-peter-s-cayetano",
@@ -1131,8 +1420,281 @@
    "source_type": "official",
    "achievements": [],
    "lis_code": "BAQUI, APAOL",
-   "bills": [],
-   "bills_count": 0
+   "bills": [
+    {
+     "number": "SBN-01330",
+     "title": "PHILIPPINE NATIONAL BUDGET BLOCKCHAIN ACT",
+     "date": "2025-09-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1330",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01317",
+     "title": "TEACHER IN EVERY BARRIO ACT",
+     "date": "2025-09-01",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1317",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01316",
+     "title": "AMENDING SECS. 235 AND 272 OF R. A. NO. 7160 (LOCAL GOVERNMENT CODE OF 1991)",
+     "date": "2025-09-01",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1316",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01312",
+     "title": "MASUSTANSYANG PAGKAIN PARA SA BATANG PILIPINO ACT",
+     "date": "2025-08-28",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1312",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01206",
+     "title": "PHILIPPINE NUCLEAR LIABILITY ACT",
+     "date": "2025-08-19",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1206",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01205",
+     "title": "NATIONAL COASTAL GREENBELT ACT",
+     "date": "2025-08-19",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1205",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00765",
+     "title": "POVERTY REDUCTION THROUGH SOCIAL ENTREPRENEURSHIP (PRESENT) ACT",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-765",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00764",
+     "title": "REGIONAL INNOVATION ECOSYSTEM DEVELOPMENT ACT OF 2025",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-764",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00763",
+     "title": "PHILIPPINE GLOBAL VALUE CHAIN (GVC) INTEGRATION ACT",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-763",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00762",
+     "title": "BUSINESS FORMALIZATION, INTEGRATION AND TRANSITION ACT OF 2025",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-762",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00761",
+     "title": "MSME DEVELOPMENT MODERNIZATION ACT OF 2025",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-761",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00760",
+     "title": "ENHANCED STARTUP LAW",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-760",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00759",
+     "title": "ENHANCED GO NEGOSYO ACT OF 2025",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-759",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00758",
+     "title": "DEEPFAKE REGULATION AND DIGITAL IDENTITY PROTECTION ACT",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-758",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00274",
+     "title": "PROFIT SHARING ACT",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-274",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00273",
+     "title": "P200 DAILY MINIMUM WAGE INCREASE ACT OF 2025",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-273",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00272",
+     "title": "BARANGAY WORKERS ACT",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-272",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00271",
+     "title": "UPGRADING THE MINIMUM SALARY GRADE LEVEL OF NURSES",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-271",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00270",
+     "title": "LIBRENG CHECK-UP ACT",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-270",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00269",
+     "title": "INCREASING THE MONTHLY SOCIAL PENSION OF SENIOR CITIZENS",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-269",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00268",
+     "title": "ABOLISHING THE TRAVEL TAX FOR FILIPINOS AND ON ASEAN TRAVEL",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-268",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00267",
+     "title": "INCREASING THE INCOME TAX EXEMPTION CEILING FOR INDIVIDUAL TAXPAYERS",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-267",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00266",
+     "title": "PRICE OF ELECTRICITY",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-266",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00265",
+     "title": "ABOLITION OF EXCISE TAX ON PETROLEUM PRODUCTS",
+     "date": "2025-07-08",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-265",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00130",
+     "title": "UNIVERSAL ACCESS TO QUALITY TERTIARY EDUCATION ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-130",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00129",
+     "title": "ADOPT-A-SCHOOL ACT OF 2025",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-129",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00128",
+     "title": "PRIVATE EDUCATION VOUCHER EXPANSION (PEVE) ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-128",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00127",
+     "title": "ANGAT SWELDO PARA SA GURO ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-127",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00126",
+     "title": "STUDENT DISCOUNT PARA SA LOAD ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-126",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00125",
+     "title": "SCHOOL-TO-EMPLOYMENT PROGRAM (STEP) ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-125",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00124",
+     "title": "BAYANIHAN WORK PROGRAM ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-124",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00123",
+     "title": "LIBRENG RLE ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-123",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00122",
+     "title": "E-TEXBOOK PARA SA LAHAT ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-122",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00121",
+     "title": "CLASSROOM-BUILDING ACCELERATION PROGRAM (CAP) ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-121",
+     "coauthored": true
+    }
+   ],
+   "bills_count": 34
   },
   {
    "id": "senate-nationwide-pia-s-cayetano",
@@ -1659,8 +2221,361 @@
    "source_type": "official",
    "achievements": [],
    "lis_code": "JVEJE, EVICT, EJOSE",
-   "bills": [],
-   "bills_count": 0
+   "bills": [
+    {
+     "number": "SBN-01214",
+     "title": "INTEGRATED COASTAL MANAGEMENT ACT",
+     "date": "2025-08-19",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1214",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01213",
+     "title": "WASTONG NUTRISYON SA OSPITAL ACT",
+     "date": "2025-08-19",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1213",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01143",
+     "title": "PARKING FEE REGULATION ACT",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1143",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01142",
+     "title": "REVISED PHILIPPINE COAST GUARD LAW",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1142",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01141",
+     "title": "OVERSEAS FILIPINO WORKERS CREDIT ASSISTANCE ACT OF 2025",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1141",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01140",
+     "title": "RESILIENT HOUSING AND HUMAN SETTLEMENTS ACT",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1140",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01139",
+     "title": "SUPORTA PARA SA PRODUKTONG PILIPINO ACT OF 2025",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1139",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01138",
+     "title": "HAZARD PAY FOR PUBLIC SECTOR WORKERS ACT",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1138",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01137",
+     "title": "NATIONAL LAND USE ACT OF THE PHILIPPINES",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1137",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01136",
+     "title": "SIMPLIFIED FILING OF RETURNS AND PAYMENT OF INCOME TAX",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1136",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01135",
+     "title": "POVERTY REDUCTION THROUGH SOCIAL ENTREPRENEURSHIP ACT",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1135",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01134",
+     "title": "CONTINUING PROFESSIONAL DEVELOPMENT ACT OF 2016",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1134",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-01133",
+     "title": "COMPREHENSIVE ROAD SAFETY EDUCATION ACT",
+     "date": "2025-08-07",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1133",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00770",
+     "title": "PEOPLES FREEDOM OF INFORMATION ACT",
+     "date": "2025-07-29",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-770",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00745",
+     "title": "SURVEILLANCE CAMERA FOR COMMERCIAL ESTABLISHMENTS ACT OF 2025",
+     "date": "2025-07-21",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-745",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00744",
+     "title": "YOUNG FARMERS AND AGRIPRENEURS ACT",
+     "date": "2025-07-21",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-744",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00743",
+     "title": "NATIONAL AGRICULTURAL CROP PROGRAM OF 2025",
+     "date": "2025-07-21",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-743",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00742",
+     "title": "DELIVERY RIDERS PROTECTION ACT",
+     "date": "2025-07-21",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-742",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00741",
+     "title": "TOURIST SAFETY, PROTECTION AND ASSISTANCE ACT",
+     "date": "2025-07-21",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-741",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00740",
+     "title": "HEALTH FACILITIES REGULATION ACT",
+     "date": "2025-07-21",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-740",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00739",
+     "title": "COMPREHENSIVE RENAL REPLACEMENT ACT",
+     "date": "2025-07-21",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-739",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00738",
+     "title": "HEALTH WORKERS SALARY UPGRADING ACT",
+     "date": "2025-07-21",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-738",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00340",
+     "title": "ARCHIPELAGIC DEFENSE OF THE PHILIPPINES ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-340",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00339",
+     "title": "CROP INSURANCE PROGRAM FOR SMALL FARMERS ACT OF 2025",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-339",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00338",
+     "title": "DEFENSIVE DRIVING PROTECTION ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-338",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00337",
+     "title": "FREELANCE WORKERS PROTECTION ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-337",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00336",
+     "title": "PHYSICIAN PRO BONO CARE ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-336",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00335",
+     "title": "DAGDAG SUWELDO PARA SA MGA GURO ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-335",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00334",
+     "title": "EXPANDING THE USE OF THE LEGAL ASSISTANCE FUND (AMENDING R.A. NO. 8042)",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-334",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00333",
+     "title": "STUDENT LOAD DISCOUNT ACT",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-333",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00332",
+     "title": "THE MAGNA CARTA FOR BARANGAYS",
+     "date": "2025-07-09",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-332",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00119",
+     "title": "LGU FISCAL AUTONOMY ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-119",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00118",
+     "title": "NATIONAL TAX ALLOTMENT ACT",
+     "date": "2025-07-03",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-118",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00053",
+     "title": "21ST CENTURY SCHOOL BOARDS ACT",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-53",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00010",
+     "title": "MOTORCYCLE-FOR-HIRE ACT",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-10",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00009",
+     "title": "FILIPINO COMMUTERS' RIGHTS AND WELFARE ACT OF 2025",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-9",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00008",
+     "title": "AGRI-FOOD TERMINAL AND TRADING CENTERS ACT",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-8",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00007",
+     "title": "SECURITY OF TENURE ACT",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-7",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00006",
+     "title": "250 DAILY MINIMUM WAGE INCREASE ACT OF 2025",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-6",
+     "coauthored": false
+    },
+    {
+     "number": "SBN-00005",
+     "title": "AUTOMATIC SUSPENSION OF EXCISE TAXES ON PETROLEUM PRODUCTS",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-5",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00004",
+     "title": "MAGNA CARTA OF BARANGAY HEALTH WORKERS",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-4",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00003",
+     "title": "AMENDING UNIVERSAL HEALTH CARE ACT (PHILHEALTH PREMIUM CONTRIBUTION)",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-3",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00002",
+     "title": "MASTERPLAN FOR INFRASTRUCTURE AND NATIONAL DEVELOPMENT (MIND) ACT",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-2",
+     "coauthored": true
+    },
+    {
+     "number": "SBN-00001",
+     "title": "SUPPLEMENTAL APPROPRIATIONS FOR FY 2025",
+     "date": "2025-07-02",
+     "status": "Pending in the Committee",
+     "url": "https://web.senate.gov.ph/lis/bill_res.aspx?congress=20&q=SBN-1",
+     "coauthored": false
+    }
+   ],
+   "bills_count": 44
   },
   {
    "id": "senate-nationwide-francis-chiz-g-escudero",
@@ -10709,6 +11624,6 @@
   "congress": 20,
   "as_of": "2025-10-16",
   "bill_count": 1330,
-  "imported_at": "2026-09-30T13:04:13+00:00"
+  "imported_at": "2026-09-30T13:29:18+00:00"
  }
 }

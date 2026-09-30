@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T13:13:29+00:00",
+ "generated_at": "2026-09-30T13:29:19+00:00",
  "datasets": [
   {
    "key": "senate",
@@ -7,7 +7,7 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "count": 24,
-   "scraped_at": "2026-09-30T13:04:11+00:00",
+   "scraped_at": "2026-09-30T13:24:23+00:00",
    "source_type": "official"
   },
   {
@@ -17,7 +17,7 @@
    "source_url": "https://github.com/bettergovph/open-congress-data",
    "source_type": "public",
    "count": 1330,
-   "scraped_at": "2026-09-30T13:04:13+00:00",
+   "scraped_at": "2026-09-30T13:29:18+00:00",
    "as_of": "2025-10-16"
   },
   {
@@ -35,7 +35,7 @@
    "source": "Wikipedia (unofficial)",
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
    "count": 160,
-   "scraped_at": "2026-09-30T13:13:29+00:00",
+   "scraped_at": "2026-09-30T13:29:19+00:00",
    "source_type": "public"
   },
   {
