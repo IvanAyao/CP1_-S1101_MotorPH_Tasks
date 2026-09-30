@@ -17,6 +17,7 @@ import barangay
 import house
 import lgu
 import senate
+import wikipedia
 
 DATASETS = {
     "senate": ("senate.json", senate.URL, "Senate of the Philippines"),
@@ -35,6 +36,13 @@ def build_manifest() -> None:
         if path.exists():
             doc = json.loads(path.read_text())
             meta.update(count=doc.get("count", 0), scraped_at=doc.get("scraped_at"))
+            method = doc.get("method", "")
+            if method == "wikipedia":
+                meta.update(source="Wikipedia (unofficial)", source_url=doc.get("source_url", url))
+            elif method == "official+wikipedia":
+                meta["source"] = f"{label} + Wikipedia (unofficial)"
+            elif method == "saved-copy":
+                meta["source"] = f"{label} (saved copy, {doc.get('copied_on', '')})"
         entries.append(meta)
     (DATA_DIR / "manifest.json").write_text(json.dumps(
         {"generated_at": now_iso(), "datasets": entries}, indent=1, ensure_ascii=False))
@@ -68,6 +76,16 @@ def main() -> None:
                 log(f"{key} FAILED: {err}")
                 traceback.print_exc()
                 failures.append(key)
+        # Where official sites block us, fill gaps from Wikipedia (labelled
+        # unofficial). Official records are never replaced.
+        fallback = [k for k, want in (("house", "house"), ("governors", "lgu"), ("mayors", "lgu")) if want in wanted]
+        if fallback:
+            try:
+                wikipedia.run(fallback)
+            except (Exception, SystemExit) as err:  # noqa: BLE001
+                log(f"wikipedia FAILED: {err}")
+                traceback.print_exc()
+                failures.append("wikipedia")
         if "barangay" in wanted:
             try:
                 barangay.scrape(browser, deadline=time.time() + args.barangay_minutes * 60,

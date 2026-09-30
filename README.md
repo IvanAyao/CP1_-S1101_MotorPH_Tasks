@@ -67,6 +67,20 @@ to `data-inbox/` (see [data-inbox/README.md](data-inbox/README.md)). The
 **Import saved pages** workflow parses them (HTML, MHTML, XLSX, CSV, JSON)
 and labels every record as a saved copy with its import date.
 
+### Wikipedia fallback (unofficial)
+
+Until official copies are available, House members, provincial governors
+and independent-city mayors/vice mayors come from Wikipedia's current lists
+(`scraper/wikipedia.py`). These records carry a "Wikipedia · hindi opisyal"
+badge in the app and never replace official records: the live scrape or a
+saved copy always wins.
+
+Senators' achievements come from the bulleted lines of their official
+Senate bios. Bills per legislator are not included yet: the Senate's bills
+pages are behind Cloudflare and the legacy LIS (web.senate.gov.ph) is
+offline. The profile page shows bills automatically once a source provides
+them (`record["bills"]`).
+
 ## Running locally
 
 ```bash

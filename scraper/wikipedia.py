@@ -46,9 +46,37 @@ def page_url(page: str) -> str:
 
 
 def cell_text(cell: Tag) -> str:
-    for sup in cell.find_all(["sup", "style"]):
-        sup.decompose()  # footnote markers like [1]
-    return clean(cell.get_text(" "))
+    """Visible text of a cell: no footnote markers, list items/lines joined by '; '."""
+    cell = BeautifulSoup(str(cell), "lxml")
+    for junk in cell.find_all(["sup", "style"]):
+        junk.decompose()  # footnote markers like [1]
+    for br in cell.find_all("br"):
+        br.replace_with("; ")
+    for li in cell.find_all("li"):
+        li.append("; ")
+    text = clean(cell.get_text(" "))
+    text = re.sub(r"\s*;\s*(;\s*)*", "; ", text).strip("; ")
+    return text
+
+
+def tidy(key: str, value: str) -> str:
+    value = re.sub(r"\(\s*list\s*\)", "", value)                   # "Abra ( list )"
+    value = re.sub(r"\(\s*\d{4}-\d{2}-\d{2}\s*\)", "", value)       # hidden sort date
+    value = re.sub(r"\(\s*age\s+\d+\s*\)", "", value)                # goes stale
+    return clean(value)
+
+
+def is_partylist(constituency: str) -> bool:
+    c = constituency.lower()
+    if re.search(r"party.?list", c):
+        return True
+    # District seats read "Province–1st" or "Province at-large".
+    return not ("–" in constituency or "-" in constituency and re.search(r"\d(st|nd|rd|th)", c)
+                or "at-large" in c or "lone" in c or "district" in c)
+
+
+def province_of(constituency: str) -> str:
+    return clean(re.split(r"–| at-large| lone", constituency, maxsplit=1, flags=re.I)[0])
 
 
 def expand_table(table: Tag) -> tuple[list[str], list[list[Tag]]]:
@@ -110,7 +138,7 @@ def tables(html: str) -> list[tuple[str, list[str], list[dict[str, str]], list[d
             continue
         text_rows, cell_rows = [], []
         for cells in grid:
-            text_rows.append({h: cell_text(c) for h, c in zip(header, cells)})
+            text_rows.append({h: tidy(h, cell_text(c)) for h, c in zip(header, cells)})
             cell_rows.append(dict(zip(header, cells)))
         out.append((clean(heading.get_text(" ")) if heading else "", header, text_rows, cell_rows))
     return out
@@ -154,33 +182,34 @@ def officials(kind: str, html: str, revid: str) -> list[dict]:
             continue
         party_col = col(header, r"^party$", r"party")
         photo_col = col(header, r"image|portrait|photo")
+        vice = bool(re.search(r"vice", name_col))
         for text, cells in zip(text_rows, cell_rows):
             name, wiki = person(cells.get(name_col))
             if not name or len(name.split()) < 2 or re.search(r"\bvacant\b", name, re.I):
                 continue
+            place_col = col(header, r"constituency|district|province|city|lgu")
             details = {k: v for k, v in text.items()
-                       if v and k not in {name_col, party_col, photo_col} and len(v) < 200}
+                       if v and k not in {name_col, party_col, photo_col, place_col} and len(v) < 300}
             details["wikipedia_revision"] = revid
             common = dict(name=name, party=text.get(party_col, "") if party_col else "",
                           photo=photo(cells.get(photo_col)) if photo_col else photo(cells.get(name_col)),
                           profile_url=wiki, source=SOURCE, source_url=page_url(page), details=details)
             if kind == "house":
-                district = text.get(col(header, r"district|constituency") or "", "")
-                partylist = "party-list" in heading.lower() or "party-list" in " ".join(header) or \
-                    not district
-                province = text.get(col(header, r"province|region") or "", "")
-                recs.append(record(position="Party-list Representative" if partylist else "District Representative",
-                                   level="house", district=district or "Party-list",
-                                   province="" if partylist else province, **common))
+                constituency = text.get(col(header, r"constituency|district") or "", "")
+                partylist = "party-list" in heading.lower() or is_partylist(constituency)
+                recs.append(record(
+                    position="Party-list Representative" if partylist else "District Representative",
+                    level="house", district=constituency or "Party-list",
+                    province="" if partylist else province_of(constituency), **common))
             elif kind == "governors":
-                province = text.get(col(header, r"province") or "", "") or heading
-                recs.append(record(position="Governor", level="governor", province=province,
-                                   region=text.get(col(header, r"region") or "", ""), lgu=province, **common))
+                province = text.get(col(header, r"province") or "", "")
+                recs.append(record(position="Vice Governor" if vice else "Governor",
+                                   level="vice_governor" if vice else "governor",
+                                   province=province, **common))
             else:
-                city = text.get(col(header, r"city|lgu") or "", "")
-                recs.append(record(position="Mayor", level="mayor", lgu=city,
-                                   province=text.get(col(header, r"province") or "", ""),
-                                   region=text.get(col(header, r"region") or "", "") or heading, **common))
+                city = text.get(col(header, r"city|lgu|municipality") or "", "")
+                recs.append(record(position="Vice Mayor" if vice else "Mayor",
+                                   level="vice_mayor" if vice else "mayor", lgu=city, **common))
     return dedupe(recs)
 
 
