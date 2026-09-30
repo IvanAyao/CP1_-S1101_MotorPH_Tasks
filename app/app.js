@@ -622,6 +622,17 @@
   load();
 
   if ("serviceWorker" in navigator && location.protocol === "https:") {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
+    // Always check for a new service worker, and reload once when one takes
+    // over so visitors never stay on an old version of the app.
+    const hadController = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (hadController && !sessionStorage.getItem("pili.reloaded")) {
+        try { sessionStorage.setItem("pili.reloaded", "1"); } catch {}
+        location.reload();
+      }
+    });
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" })
+      .then((reg) => reg.update())
+      .catch(() => {});
   }
 })();

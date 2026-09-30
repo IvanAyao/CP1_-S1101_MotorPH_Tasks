@@ -1,5 +1,6 @@
-/* Offline support: app shell cache-first, data network-first. */
-const VERSION = "pili-v1";
+/* Offline support: always try the network first so updates show up right
+ * away; fall back to the cached copy only when offline. */
+const VERSION = "pili-v2";
 const SHELL = ["./", "index.html", "styles.css", "app.js", "icon.svg", "manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
@@ -17,23 +18,15 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin) return;
-  if (url.pathname.includes("/data/")) {
-    e.respondWith(
-      fetch(e.request)
-        .then((res) => {
-          const copy = res.clone();
-          if (res.ok) caches.open(VERSION).then((c) => c.put(e.request, copy));
-          return res;
-        })
-        .catch(() => caches.match(e.request)),
-    );
-    return;
-  }
   e.respondWith(
-    caches.match(e.request).then((hit) => hit || fetch(e.request).then((res) => {
-      const copy = res.clone();
-      if (res.ok) caches.open(VERSION).then((c) => c.put(e.request, copy));
-      return res;
-    })),
+    fetch(e.request, { cache: "no-cache" })
+      .then((res) => {
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(VERSION).then((c) => c.put(e.request, copy));
+        }
+        return res;
+      })
+      .catch(() => caches.match(e.request).then((hit) => hit || caches.match("index.html"))),
   );
 });
