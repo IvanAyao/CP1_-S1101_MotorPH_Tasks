@@ -74,6 +74,7 @@
     filter: "all",
     island: "",
     filtersOpen: false,
+    sort: "name",
     q: "",
     shown: PAGE,
     compare: [null, null],
@@ -111,14 +112,23 @@
   // When the photo loads it covers the initials; if it fails we remove it.
   document.addEventListener("load", (e) => { if (e.target.matches?.(".avatar img")) e.target.nextElementSibling?.remove(); }, true);
 
-  function row(o, i) {
+  function row(o, i, right) {
     return `<a class="row" href="#/o/${encodeURIComponent(o.dataset)}/${encodeURIComponent(o.id)}">
       ${i != null ? `<span class="num">${i + 1}</span>` : ""}
       ${avatar(o)}
       <span class="who"><b>${esc(o.name)}</b><span>${esc(levelLabel(o))}${place(o) ? " · " + esc(place(o)) : ""}</span></span>
-      ${o.party ? `<span class="tag">${esc(o.party)}</span>` : ""}
+      ${right ?? (o.party ? `<span class="tag">${esc(o.party)}</span>` : "")}
     </a>`;
   }
+
+  // Bill counts per senator: all filed, as main author, as co-author. Only
+  // senators have bill data, so sorting by these limits the list to them.
+  const billStats = (o) => {
+    const bills = o.bills || [];
+    const co = bills.filter((b) => b.coauthored).length;
+    return { bills: bills.length, main: bills.length - co, co };
+  };
+  const SORTS = ["name", "bills", "main"];
 
   function toast(msg) {
     const el = $("#toast");
@@ -260,13 +270,19 @@
     const f = FILTERS.find((x) => x[0] === state.filter) || FILTERS[0];
     const q = norm(state.q).trim();
     const terms = q.split(/\s+/).filter(Boolean);
-    const list = state.officials.filter(f[1]).filter((o) => !state.island || o._loc.island === state.island)
+    let list = state.officials.filter(f[1]).filter((o) => !state.island || o._loc.island === state.island)
       .filter((o) => terms.every((w) => o._s.includes(w)));
+    const bySort = state.sort !== "name";
+    if (bySort) {
+      list = list.filter((o) => o.level === "senate")
+        .sort((a, b) => billStats(b)[state.sort] - billStats(a)[state.sort] || a.name.localeCompare(b.name));
+    }
     const brgyNote = state.filter === "brgy";
 
     const tags = [];
     if (state.filter !== "all") tags.push(["f", t(`f_${state.filter}`)]);
     if (state.island) tags.push(["island", t(`island_${state.island}`)]);
+    if (bySort) tags.push(["sort", t(`sort_${state.sort}`)]);
     view.innerHTML = `
       ${searchBar({ id: "q", value: state.q, placeholder: t("search_ph"), label: t("search_label"), count: tags.length, open: state.filtersOpen, panelId: "home-filters" })}
       <div class="filter-panel" id="home-filters" ${state.filtersOpen ? "" : "hidden"}>
@@ -275,6 +291,9 @@
         <div class="fp-label">${t("island")}</div>
         <div class="chips wrap" role="group" aria-label="${esc(t("island"))}">${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === state.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}</div>
         <a class="fp-more" href="#/hanap">📍 ${t("more_place")}</a>
+        <div class="fp-label">${t("sort_by")}</div>
+        <div class="chips wrap" role="group" aria-label="${esc(t("sort_by"))}">${SORTS.map((k) => `<button class="chip" data-sort="${k}" aria-pressed="${k === state.sort}">${t(`sort_${k}`)}</button>`).join("")}</div>
+        <p class="meta fp-hint">${t("sort_hint")}</p>
         ${panelFoot("home-filters")}
       </div>
       ${state.filtersOpen ? "" : filterTags(tags)}
@@ -293,13 +312,25 @@
     } else if (brgyNote) {
       results.innerHTML = `<div class="empty"><span class="ei">🏘️</span>${t("brgy_note", { n: fmtNum(state.brgyIndex?.count) })}<br>${t("brgy_note2", { link: `<a href="#/hanap">${t("tab_hanap")}</a>` })}</div>`;
     } else {
-      results.innerHTML = `<div class="section-label">${esc(t(`f_${f[0]}`))}${state.island ? " · " + esc(t(`island_${state.island}`)) : ""} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
-        <div class="list">${list.slice(0, state.shown).map((o) => row(o)).join("") || `<div class="empty">${t("no_match", { q: esc(state.q) })}</div>`}</div>
+      const countCell = (o) => {
+        const st = billStats(o);
+        return `<span class="bill-count"><b>${fmtNum(st[state.sort])}</b><small>${t(`count_${state.sort}`)}</small></span>`;
+      };
+      results.innerHTML = `<div class="section-label">${bySort ? esc(t(`sort_${state.sort}`)) : esc(t(`f_${f[0]}`))}${state.island ? " · " + esc(t(`island_${state.island}`)) : ""} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
+        ${bySort ? `<div class="notice rank-note"><b>${t("rank_caveat_title")}</b> ${t("rank_caveat")}</div>${billsNote()}` : ""}
+        <div class="list${bySort ? " ranked" : ""}">${list.slice(0, state.shown).map((o, i) => (bySort ? row(o, i, countCell(o)) : row(o))).join("") || `<div class="empty">${t("no_match", { q: esc(state.q) })}</div>`}</div>
         ${list.length > state.shown ? `<button class="btn more" id="more">${t("show_more", { n: fmtNum(list.length - state.shown) })}</button>` : ""}`;
     }
 
     wireSearch("q", { set: (v) => { state.q = v; state.shown = PAGE; }, rerender: viewHome, toggle: () => (state.filtersOpen = !state.filtersOpen) });
+    view.querySelectorAll(".chip[data-sort]").forEach((b) => b.addEventListener("click", () => {
+      state.sort = b.dataset.sort;
+      if (state.sort !== "name") state.filter = "senate";
+      state.shown = PAGE;
+      viewHome();
+    }));
     const clearHome = (k) => {
+      if (k === "sort" || k === "*") state.sort = "name";
       if (k === "f" || k === "*") state.filter = "all";
       if (k === "island" || k === "*") { state.island = ""; HANAP_ORDER.forEach((kk) => (hanap[kk] = "")); }
       state.shown = PAGE;
@@ -308,7 +339,12 @@
     view.querySelectorAll("[data-rm]").forEach((b) => b.addEventListener("click", () => clearHome(b.dataset.rm)));
     view.querySelector("[data-fp-reset]")?.addEventListener("click", () => clearHome("*"));
     view.querySelector("[data-fp-done]")?.addEventListener("click", () => { state.filtersOpen = false; viewHome(); });
-    view.querySelectorAll(".chip[data-f]").forEach((b) => b.addEventListener("click", () => { state.filter = b.dataset.f; state.shown = PAGE; viewHome(); }));
+    view.querySelectorAll(".chip[data-f]").forEach((b) => b.addEventListener("click", () => {
+      state.filter = b.dataset.f;
+      if (!["senate", "all"].includes(state.filter)) state.sort = "name";
+      state.shown = PAGE;
+      viewHome();
+    }));
     view.querySelectorAll(".chip[data-island]").forEach((b) => b.addEventListener("click", () => {
       state.island = b.dataset.island;
       if (hanap.island !== state.island) HANAP_ORDER.forEach((k) => (hanap[k] = ""));
@@ -462,6 +498,7 @@
         ${extra.slice(0, 20).map(([k, v]) => `<tr><th>${esc(pretty(k))}</th><td>${esc(v)}</td></tr>`).join("")}</table>
       ${nAch ? `<div class="section-label">${t("achievements_n", { n: nAch })}</div>${groupAchievements(o.achievements).map(([g, items]) => `<div class="ach-group">${esc(t(g))} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
       ${(o.bills || []).length ? `<div class="section-label">${t("bills_n", { n: fmtNum(o.bills_count || o.bills.length) })}</div>
+        <p class="meta bill-split">${t("bill_split", { main: fmtNum(billStats(o).main), co: fmtNum(billStats(o).co) })} · <a href="#/" data-rank-link>${t("see_ranking")}</a></p>
         ${billsNote()}
         <details class="bills-more"${o.bills.length <= 10 ? " open" : ""}><summary>${t("see_bills", { n: fmtNum(o.bills.length) })}</summary>
         <ul class="bills">${o.bills.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.coauthored ? `<span class="meta"> · ${t("coauthor")}</span>` : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · ${t("filed", { d: esc(b.date) })}</span>` : ""}</li>`).join("")}</ul></details>` : ""}
@@ -473,6 +510,11 @@
         <br>${t("last_updated")}: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · ${t("copied_on", { d: fmtDate(d.copied_on) })}` : ""}
       </div></div></div>`;
 
+    view.querySelector("[data-rank-link]")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      Object.assign(state, { sort: "bills", filter: "senate", island: "", q: "", shown: PAGE });
+      location.hash = "#/";
+    });
     $("#cmp").addEventListener("click", () => {
       const slot = state.compare[0] ? 1 : 0;
       state.compare[slot] = o;
@@ -784,7 +826,7 @@
   // The logo returns to the start: a fresh home list behind the cover page.
   $(".brand").addEventListener("click", (e) => {
     e.preventDefault();
-    Object.assign(state, { q: "", filter: "all", island: "", shown: PAGE, filtersOpen: false });
+    Object.assign(state, { q: "", filter: "all", island: "", shown: PAGE, filtersOpen: false, sort: "name" });
     HANAP_ORDER.forEach((k) => (hanap[k] = ""));
     hanap.q = "";
     hanap.open = false;

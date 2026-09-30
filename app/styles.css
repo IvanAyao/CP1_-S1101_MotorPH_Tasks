@@ -361,4 +361,16 @@ body.covered { overflow: hidden; }
 .ftag { border: 1px solid var(--blue); background: var(--blue-soft); color: var(--blue); border-radius: 999px; padding: 5px 10px; font-size: 13px; font-weight: 600; }
 .ftag span { opacity: .7; margin-left: 2px; }
 @media (max-width: 360px) { .fb-text { display: none; } }
-@media (min-width: 900px) { .filter-panel .place-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 900px) {
+  .filter-panel .place-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .list.ranked { grid-template-columns: 1fr; max-width: 820px; }
+}
+
+/* Bill counts when sorting senators */
+.bill-count { flex: none; text-align: right; line-height: 1.15; min-width: 64px; }
+.bill-count b { display: block; font-size: 18px; color: var(--blue); font-variant-numeric: tabular-nums; }
+.bill-count small { font-size: 11px; color: var(--muted); }
+.rank-note { margin: 0 0 8px; line-height: 1.5; }
+.rank-note b { color: var(--text); }
+.fp-hint { margin: 0 0 2px; }
+.bill-split { margin: -2px 0 8px; }
