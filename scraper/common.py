@@ -23,7 +23,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup, Tag
 
@@ -454,6 +454,17 @@ def write_dataset(name: str, records: list[dict], source_url: str, *,
     return path
 
 
+def source_type(url: str) -> str:
+    """'official' for Philippine government sites (.gov.ph), else 'public'.
+
+    Every source used is publicly accessible; 'public' marks non-government
+    publishers such as Wikipedia or civic open-data projects. 'private' is
+    reserved for privately run sources (none are used).
+    """
+    host = urlparse(url or "").hostname or ""
+    return "official" if host == "gov.ph" or host.endswith(".gov.ph") else "public"
+
+
 def record(*, name: str, position: str, level: str, source: str, source_url: str,
            **fields: Any) -> dict:
     """Build a record in the shared schema used by the app."""
@@ -480,6 +491,7 @@ def record(*, name: str, position: str, level: str, source: str, source_url: str
             rec["details"] = {kk: clean(vv) for kk, vv in (v or {}).items() if clean(vv)}
         elif v is not None:
             rec[k] = clean(v)
+    rec["source_type"] = source_type(rec["source_url"])
     rec["id"] = slug("-".join(p for p in (level, rec["province"], rec["lgu"], rec["barangay"], rec["district"], rec["name"]) if p))
     return rec
 

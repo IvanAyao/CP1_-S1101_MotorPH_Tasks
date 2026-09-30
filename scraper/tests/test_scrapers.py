@@ -322,3 +322,42 @@ def test_wikipedia_rowspans_and_mapping():
     assert m["details"]["born"] == "June 4, 1970"
     assert m["details"]["prior_experience"] == "Businessman; House of Representatives"
     assert (m["level"], m["lgu"], v["level"], v["lgu"]) == ("mayor", "Baguio", "vice_mayor", "Baguio")
+
+
+def test_bills_attach_by_code_and_name(isolated_output):
+    import bills
+
+    data = isolated_output / "data"
+    data.mkdir(parents=True, exist_ok=True)
+    senators = [
+        {"name": "Raffy T. Tulfo", "lis_code": ""}, {"name": "Erwin T. Tulfo", "lis_code": ""},
+        {"name": "Win Gatchalian", "lis_code": "GSHER"},
+    ]
+    (data / "senate.json").write_text(json.dumps({"records": senators}))
+    monkey = [
+        {"number": "SBN-2", "bill_number": 2, "title": "B", "date": "", "status": "Pending", "url": "https://web.senate.gov.ph/x",
+         "authors": ["TRAFF", "TERWI"], "authors_raw": "Tulfo, Raffy T., Tulfo, Erwin T."},
+        {"number": "SBN-1", "bill_number": 1, "title": "A", "date": "", "status": "Pending", "url": "",
+         "authors": ["TRAFF"], "authors_raw": "Tulfo, Raffy T."},
+        {"number": "SBN-3", "bill_number": 3, "title": "C", "date": "", "status": "Pending", "url": "",
+         "authors": ["TERWI"], "authors_raw": "Tulfo, Erwin T."},
+        {"number": "SBN-4", "bill_number": 4, "title": "D", "date": "", "status": "Pending", "url": "",
+         "authors": ["GSHER"], "authors_raw": "Gatchalian, Win"},
+    ]
+    import common
+    bills.DATA_DIR = common.DATA_DIR
+    doc = bills.attach(monkey, "2025-10-16")
+    by = {r["name"]: r for r in doc["records"]}
+    assert [b["number"] for b in by["Raffy T. Tulfo"]["bills"]] == ["SBN-2", "SBN-1"]  # initials don't cross-match
+    assert [b["number"] for b in by["Erwin T. Tulfo"]["bills"]] == ["SBN-3", "SBN-2"]
+    assert by["Raffy T. Tulfo"]["bills"][0]["coauthored"] is True
+    assert by["Win Gatchalian"]["bills_count"] == 1
+    assert doc["bills_source"]["source_type"] == "public" and doc["bills_source"]["as_of"] == "2025-10-16"
+
+
+def test_source_type():
+    assert common.source_type("https://senate.gov.ph/senators") == "official"
+    assert common.source_type("https://www.dilg.gov.ph/x") == "official"
+    assert common.source_type("https://en.wikipedia.org/wiki/X") == "public"
+    assert common.source_type("https://github.com/bettergovph/open-congress-data") == "public"
+    assert common.source_type("https://notgov.ph.example.com/") == "public"

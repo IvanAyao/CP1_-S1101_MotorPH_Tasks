@@ -112,6 +112,7 @@ def scrape(browser: Browser) -> list[dict]:
                 details=details,
             )
             rec["achievements"] = achievements(s.get("biography") or "")
+            rec["lis_code"] = clean(s.get("lis_code"))  # Senate LIS author code, links bills
             records.append(rec)
         return dedupe(records)
 

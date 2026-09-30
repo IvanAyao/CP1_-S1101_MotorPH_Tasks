@@ -130,6 +130,12 @@ main { flex: 1; padding: 14px 16px calc(96px + env(safe-area-inset-bottom)); out
 .kv th { text-align: left; color: var(--muted); font-weight: 400; width: 40%; padding-right: 12px; }
 .kv td { text-align: right; word-break: break-word; }
 
+.badge.src-official { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, var(--line)); }
+.badge.src-public, .badge.src-official-public { color: #9a6700; border-color: color-mix(in srgb, #d4a72c 50%, var(--line)); }
+.badge.src-private { color: var(--red); border-color: color-mix(in srgb, var(--red) 40%, var(--line)); }
+@media (prefers-color-scheme: dark) { .badge.src-public { color: #e3b341; } }
+.legend p { font-size: 13px; margin: 0 0 8px; }
+.bills-more summary { color: var(--blue); cursor: pointer; font-size: 13px; margin-bottom: 6px; }
 .badge.warn { color: #9a6700; border-color: color-mix(in srgb, #d4a72c 50%, var(--line)); }
 .bullets, .bills { margin: 0 0 12px; padding-left: 20px; font-size: 14px; line-height: 1.5; }
 .bullets li, .bills li { margin-bottom: 6px; }
