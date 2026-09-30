@@ -361,3 +361,35 @@ def test_source_type():
     assert common.source_type("https://en.wikipedia.org/wiki/X") == "public"
     assert common.source_type("https://github.com/bettergovph/open-congress-data") == "public"
     assert common.source_type("https://notgov.ph.example.com/") == "public"
+
+
+def test_dilg_directory_parse(isolated_output):
+    """Layout guesses for the DILG sheet: title rows, split names, fill-down."""
+    import io as _io
+
+    import dilg_lgu
+    from openpyxl import Workbook
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "BOHOL"
+    ws.append(["DIRECTORY OF LGU ELECTIVE OFFICIALS"])
+    ws.append(["TERM 2025-2028"])
+    ws.append(["REGION", "PROVINCE", "CITY/MUNICIPALITY", "POSITION", "LAST NAME", "FIRST NAME", "MIDDLE NAME", "SUFFIX"])
+    ws.append(["VII", "BOHOL", "", "GOVERNOR", "AUMENTADO", "ARIS", "C", ""])
+    ws.append(["", "", "TAGBILARAN CITY", "CITY MAYOR", "YAP", "JANE", "", ""])
+    ws.append(["", "", "", "CITY VICE MAYOR", "CRUZ", "PEDRO", "D", "JR."])
+    ws.append(["", "", "", "SANGGUNIANG PANLUNGSOD MEMBER", "REYES", "ANA", "", ""])
+    ws.append(["", "", "PANGLAO", "MUNICIPAL MAYOR", "GARCIA", "JOSE", "", ""])
+    buf = _io.BytesIO()
+    wb.save(buf)
+    recs = dilg_lgu.parse(buf.getvalue())
+    got = {(r["name"], r["level"], r["province"], r["lgu"]) for r in recs}
+    assert got == {
+        ("Aris C. Aumentado", "governor", "Bohol", ""),
+        ("Jane Yap", "mayor", "Bohol", "Tagbilaran City"),
+        ("Pedro D. Cruz Jr.", "vice_mayor", "Bohol", "Tagbilaran City"),
+        ("Ana Reyes", "councilor", "Bohol", "Tagbilaran City"),
+        ("Jose Garcia", "mayor", "Bohol", "Panglao"),
+    }
+    assert all(r["source_type"] == "official" for r in recs)

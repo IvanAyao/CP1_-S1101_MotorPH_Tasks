@@ -67,6 +67,16 @@ to `data-inbox/` (see [data-inbox/README.md](data-inbox/README.md)). The
 **Import saved pages** workflow parses them (HTML, MHTML, XLSX, CSV, JSON)
 and labels every record as a saved copy with its import date.
 
+### DILG directory of elected LGU officials (official)
+
+`scraper/dilg_lgu.py` imports the *Directory of LGU Elective Officials for
+Term 2025–2028* that DILG released through the government FOI portal
+([request](https://www.foi.gov.ph/agencies/dilg/list-of-elected-government-official-for-the-term-2025-2028-by-province/))
+as a publicly shared Google Drive folder. The spreadsheet is fetched with
+Google's standard public export, the same file as the folder's Download
+button. Its records are labelled official and replace Wikipedia entries for
+the same office.
+
 ### Wikipedia fallback (unofficial)
 
 Until official copies are available, House members, provincial governors
