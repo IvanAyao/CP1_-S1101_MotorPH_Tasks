@@ -284,7 +284,7 @@
     ];
     const d = o.details || {};
     if (d.address) rows.push(["Opisina", d.address]);
-    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at"]);
+    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on"]);
     const extra = Object.entries(d).filter(([k, v]) => v && !skip.has(k) && !/^line\d|href|photo|image|img|^id$|_id$|slug/.test(k) && !rows.some(([, rv]) => rv === v));
     const pretty = (k) => k.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
     const cv = safeUrl(d.resume);
@@ -313,8 +313,8 @@
       ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">📄 Opisyal na CV (PDF) ↗</a></p>` : ""}
       <div class="notice">
         Pinagkunan: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a>
-        ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">Opisyal na profile ↗</a>` : ""}
-        <br>Huling na-update: ${fmtDate(datasetDate(o.dataset, o._file))}
+        ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">${/wikipedia\.org/.test(o.profile_url) ? "Wikipedia article" : "Opisyal na profile"} ↗</a>` : ""}
+        <br>Huling na-update: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · Kinopya noong ${fmtDate(d.copied_on)}` : ""}
       </div>`;
 
     $("#cmp").addEventListener("click", () => {
@@ -358,7 +358,7 @@
         ["Posisyon", levelLabel], ["Partido", (o) => o.party], ["Distrito", (o) => o.district],
         ["Lugar", (o) => place(o, false)], ["Pinagkunan", (o) => o.source],
       ];
-      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at/.test(k));
+      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on/.test(k));
       shared.slice(0, 12).forEach((k) => fields.push([k.replace(/_/g, " "), (o) => o.details[k]]));
       table = fields.map(([lab, fn]) => {
         const va = fn(a) || "—", vb = fn(b) || "—";
