@@ -90,6 +90,18 @@ with Google's standard export only when their owner allows it; refused
 downloads and pages behind verification checks are skipped. Add a region by
 adding its page to `REGION_PAGES`.
 
+### 2025 election winners (public)
+
+`scraper/openhalalan.py` fills the remaining local offices — mayors, vice
+mayors, councilors, governors, vice governors and provincial board members
+nationwide — from [OpenHalalan](https://github.com/RobertRLeung/OpenHalalan)'s
+list of 2025 election winners (built mainly from COMELEC results; ODbL v1.0,
+so data derived from it stays open). These are election winners, not a live
+roster, so they only fill gaps: DILG's official regional lists win for their
+whole region and Wikipedia wins for the offices it tracks. Earlier winners in
+the same dataset give each official's consecutive terms (the app shows who
+reaches the three-term limit in 2028). Barangay officials are not included.
+
 ### Wikipedia fallback (unofficial)
 
 Until official copies are available, House members, provincial governors

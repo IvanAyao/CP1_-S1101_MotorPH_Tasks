@@ -17,6 +17,7 @@ import barangay
 import bills
 import dilg_lgu
 import dilg_regions
+import openhalalan
 import house
 import lgu
 import senate
@@ -46,8 +47,10 @@ def build_manifest() -> None:
             method = doc.get("method", "")
             if method == "wikipedia":
                 meta["source_type"] = "public"
-            elif method == "official+wikipedia":
+            elif method in {"official+wikipedia", "official+public"}:
                 meta["source_type"] = "official+public"
+            elif method == "public":
+                meta["source_type"] = "public"
             if method == "wikipedia":
                 meta.update(source="Wikipedia (unofficial)", source_url=doc.get("source_url", url))
             elif method == "official+wikipedia":
@@ -127,6 +130,15 @@ def main() -> None:
                 log(f"wikipedia FAILED: {err}")
                 traceback.print_exc()
                 failures.append("wikipedia")
+        # 2025 election winners (public, OpenHalalan) fill the remaining
+        # local offices; official and Wikipedia records keep priority.
+        if "lgu" in wanted:
+            try:
+                openhalalan.run()
+            except (Exception, SystemExit) as err:  # noqa: BLE001
+                log(f"openhalalan FAILED: {err}")
+                traceback.print_exc()
+                failures.append("openhalalan")
         if "barangay" in wanted:
             try:
                 barangay.scrape(browser, deadline=time.time() + args.barangay_minutes * 60,

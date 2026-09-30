@@ -243,7 +243,10 @@ def run(kinds: list[str]) -> None:
         meta = {}
         if path.exists():
             doc = json.loads(path.read_text())
-            existing = [r for r in doc.get("records", []) if "wikipedia" not in r.get("source", "").lower()]
+            # OpenHalalan's 2025 winners only fill gaps and are re-added after
+            # this step, so they don't count as covering an office here.
+            existing = [r for r in doc.get("records", [])
+                        if not any(s in r.get("source", "").lower() for s in ("wikipedia", "openhalalan"))]
             meta = {k: v for k, v in doc.items() if k in {"lgus", "lgu_count"}}
         official_keys = {(r["level"], (r.get("lgu") or r.get("province") or "").lower()) for r in existing}
         wiki = []

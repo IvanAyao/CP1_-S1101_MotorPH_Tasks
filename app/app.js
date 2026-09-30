@@ -129,6 +129,15 @@
 
   // Bill counts per senator: all filed, as main author, as co-author. Only
   // senators have bill data, so sorting by these limits the list to them.
+  // Consecutive term (1-3) of a local official, from Wikipedia's term column
+  // or OpenHalalan's election history; anything else is left unstated.
+  const TERM_LIMITED_LEVELS = new Set(["governor", "vice_governor", "board_member", "mayor", "vice_mayor", "councilor"]);
+  const termOf = (o) => {
+    const n = parseInt(o.details?.term, 10);
+    return TERM_LIMITED_LEVELS.has(o.level) && n >= 1 && n <= 3 ? n : 0;
+  };
+  const tidyName = (s) => String(s).replace(/\b([A-Za-zÀ-ÿÑñ])([A-Za-zÀ-ÿÑñ'.-]*)/g, (m, a, b) => a.toUpperCase() + b.toLowerCase());
+
   // Terms: bill data covers the Senate from the 13th Congress (2004); the
   // sitting Congress is still in progress, so averages use completed ones.
   const currentCongress = () => state.billsSource?.congress || 20;
@@ -544,13 +553,21 @@
       [t("region"), o.region],
       [t("contact"), o.contact],
     ];
+    // Local officials: consecutive term and whether the three-term limit
+    // stops them running for the same post in 2028.
+    const term = termOf(o);
+    if (term) {
+      rows.push([t("term_label"), t("term_nth", { n: term, nth: ordinal(term) })]);
+      rows.push([t("in_2028"), term >= 3 ? t("term_limited") : t("can_run_again")]);
+    }
+    if (o.details?.full_name) rows.push([t("full_name"), tidyName(o.details.full_name)]);
     if (o.service?.first_senate_year) {
       rows.push([t("cmp_since"), `${o.service.first_senate_year} (${congressName(o.service.first_senate_congress)})`]);
       rows.push([t("cmp_terms"), `${o.service.senate_terms} · ${congressRanges(o.service.senate_congresses)}`]);
     }
     const d = o.details || {};
     if (d.address) rows.push([t("office"), d.address]);
-    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on", "published_via"]);
+    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on", "published_via", "term", "term_source", "elected", "full_name"]);
     const extra = Object.entries(d).filter(([k, v]) => v && !skip.has(k) && !/^line\d|href|photo|image|img|^id$|_id$|slug/.test(k) && !rows.some(([, rv]) => rv === v));
     const pretty = (k) => k.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
     const cv = safeUrl(d.resume);
@@ -586,6 +603,7 @@
       <div class="notice">
         ${t("source")}: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a> (${typeLabel(typeOf(o))})
         ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">${/wikipedia\.org/.test(o.profile_url) ? t("wikipedia_article") : t("official_profile")} ↗</a>` : ""}
+        ${/openhalalan/i.test(o.source) ? `<br>${t("oh_note")}` : ""}
         <br>${t("last_updated")}: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · ${t("copied_on", { d: fmtDate(d.copied_on) })}` : ""}
         <br><a href="#/report/${encodeURIComponent(o.dataset)}/${encodeURIComponent(o.id)}">⚑ ${t("report_this")}</a>
       </div></div></div>`;
@@ -827,7 +845,7 @@
           [t("cmp_avg"), (o) => { const v = perCongress(o); return v == null ? (o.service ? t("no_completed") : "") : fmtNum(v); }],
           [t("cmp_law"), (o) => (o.law_all != null ? fmtNum(o.law_all) : "")]);
       }
-      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on|published_via|prior_experience/.test(k));
+      const shared = Object.keys(a.details || {}).filter((k) => b.details?.[k] && !/^line\d|href|photo|image|img|^id$|_id$|slug|position_raw|biography|resume|created_at|updated_at|deleted_at|wikipedia_revision|copied_on|published_via|prior_experience|^term|elected|full_name/.test(k));
       shared.slice(0, 12).forEach((k) => fields.push([k === "address" ? t("office") : k.replace(/_/g, " "), (o) => o.details[k]]));
       table = fields.map(([lab, fn]) => {
         const va = fn(a) || "—", vb = fn(b) || "—";
