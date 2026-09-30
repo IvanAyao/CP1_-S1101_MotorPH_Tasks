@@ -1,0 +1,87 @@
+name: Scrape official data
+
+on:
+  schedule:
+    - cron: "17 18 * * 0"   # Senate, House, LGU: weekly (Mon 02:17 PHT)
+    - cron: "43 16 * * *"   # Barangay directory: daily chunk until complete
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Datasets to scrape (space separated: senate house lgu barangay). Empty = all."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          pip install -r scraper/requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Choose datasets
+        id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.only }}" ]; then
+            echo "only=${{ github.event.inputs.only }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "43 16 * * *" ]; then
+            echo "only=barangay" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "17 18 * * 0" ]; then
+            echo "only=senate house lgu" >> "$GITHUB_OUTPUT"
+          else
+            echo "only=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Scrape
+        id: scrape
+        working-directory: scraper
+        continue-on-error: true
+        run: |
+          ARGS=""
+          if [ -n "${{ steps.pick.outputs.only }}" ]; then ARGS="--only ${{ steps.pick.outputs.only }}"; fi
+          python run_all.py $ARGS --barangay-minutes 300
+
+      - name: Upload raw page snapshots (for debugging parsers)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshots-${{ github.run_id }}
+          path: scraper/snapshots/
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Commit updated data
+        run: |
+          git config user.name "pili-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/data scraper/state
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: refresh official directories ($(date -u +%F))"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+      - name: Fail if a scraper failed
+        if: steps.scrape.outcome == 'failure'
+        run: |
+          echo "::error::One or more scrapers failed; previous data was kept. Download the snapshots artifact to see what the site returned."
+          exit 1

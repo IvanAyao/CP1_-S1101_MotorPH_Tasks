@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fil">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pili.PH — Philippine Officials Directory</title>
+  <meta name="description" content="Hanapin, ihambing, at piliin ang mga opisyal ng Pilipinas — Senado, Kamara, LGU, at Barangay. Data mula sa opisyal na mga website ng gobyerno.">
+  <meta name="theme-color" content="#0038a8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="shell">
+    <header class="topbar" id="topbar">
+      <button class="back" id="back" aria-label="Bumalik" hidden>←</button>
+      <a class="brand" href="#/"><span class="brand-word">Pili</span><span class="brand-dot">.</span><span class="brand-ph">PH</span></a>
+      <span class="topbar-sub" id="topbar-sub">Philippines Officials Directory</span>
+    </header>
+
+    <main id="view" tabindex="-1" aria-live="polite"></main>
+
+    <nav class="tabbar" aria-label="Pangunahing navigation">
+      <a href="#/" data-tab="home"><span class="ti" aria-hidden="true">🏛️</span><span>Opisyal</span></a>
+      <a href="#/hanap" data-tab="hanap"><span class="ti" aria-hidden="true">🔍</span><span>Hanapin</span></a>
+      <a href="#/ihambing" data-tab="ihambing"><span class="ti" aria-hidden="true">⚖️</span><span>Ihambing</span></a>
+      <a href="#/pili" data-tab="pili"><span class="ti" aria-hidden="true">🗳️</span><span>Pili Ko</span></a>
+      <a href="#/ako" data-tab="ako"><span class="ti" aria-hidden="true">📊</span><span>Datos</span></a>
+    </nav>
+  </div>
+
+  <dialog id="picker" class="picker">
+    <form method="dialog" class="picker-head">
+      <strong id="picker-title">Pumili ng opisyal</strong>
+      <button value="cancel" aria-label="Isara">✕</button>
+    </form>
+    <input id="picker-q" type="search" placeholder="Hanapin ang pangalan…" autocomplete="off">
+    <ul id="picker-list" class="list"></ul>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <noscript><p class="empty">Kailangan ng JavaScript para gumana ang Pili.PH.</p></noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>

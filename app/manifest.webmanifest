@@ -1,0 +1,13 @@
+{
+  "name": "Pili.PH — Philippine Officials Directory",
+  "short_name": "Pili.PH",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0038a8",
+  "lang": "fil",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
