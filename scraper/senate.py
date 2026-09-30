@@ -19,7 +19,7 @@ from roster import party_and_district, people_from_capture
 
 URL = "https://senate.gov.ph/senators/20-congress-senators"
 API_RX = re.compile(r"/senators/congress/\d+")
-SKIP_DETAIL = re.compile(r"^(id|congress_ids|image_upload_id|flag|lis_code|biography|description|status|name|position)$")
+SKIP_DETAIL = re.compile(r"^(id|congress_ids|image_upload_id|flag|lis_code|biography|description|status|name|position|created_at|updated_at|deleted_at)$")
 
 
 def key(name: str) -> str:
