@@ -531,3 +531,47 @@ def test_dilg_region_import(site, browser, monkeypatch, isolated_output):
     # Served from 127.0.0.1 here; real DILG pages are *.dilg.gov.ph -> "official".
     assert common.source_type("https://region10.dilg.gov.ph/local-officials/") == "official"
     assert "DILG Region X" in doc["source_label"]
+
+
+def test_openhalalan_winners_terms_and_merge(isolated_output):
+    import common
+    import openhalalan
+
+    cols = "Last Name,First Name,Middle Name,Middle Name Source,Title,Full Name,Position,Party,Year,Province,City,Region,Sex,Sex Source"
+    rows = [
+        # Three straight wins: term-limited in 2028.
+        *[f'CRUZ,JUAN,SANTOS,x,,"CRUZ, JUAN SANTOS",MAYOR,LAKAS,{y},CAMARINES SUR,NAGA,REGION V,M,x' for y in (2019, 2022, 2025)],
+        # Father then son with the same first name but a different middle name.
+        'REYES,PEDRO,LOPEZ,x,,"REYES, PEDRO LOPEZ",MAYOR,NP,2022,CEBU,NAGA,REGION VII,M,x',
+        'REYES,PEDRO,GARCIA,x,,"REYES, PEDRO GARCIA",MAYOR,NP,2025,CEBU,NAGA,REGION VII,M,x',
+        'BELMONTE,JOY,G,x,,"BELMONTE, JOY G",MAYOR,SBP,2025,NCR SECOND DISTRICT,QUEZON,NATIONAL CAPITAL REGION,F,x',
+        'SANTOS JR,ANA,,x,,"SANTOS JR, ANA",COUNCILOR,IND,2025,CEBU,NAGA,REGION VII,F,x',
+        'UY,KLAREX,,x,,"UY, KLAREX",MAYOR,PFP,2025,MISAMIS ORIENTAL,CAGAYAN DE ORO,REGION X,M,x',
+    ]
+    found = openhalalan.officials(openhalalan.load(("\n".join([cols, *rows]) + "\n").encode()))
+    by = {(o["name"], o["lgu"], o["province"]): o for o in found}
+    assert by[("Juan S. Cruz", "Naga", "Camarines Sur")]["details"]["term"] == "3"
+    assert by[("Pedro G. Reyes", "Naga", "Cebu")]["details"]["term"] == "1"
+    assert ("Joy G. Belmonte", "Quezon City", "Metro Manila") in by
+    ana = by[("Ana Santos Jr.", "Naga", "Cebu")]
+    assert ana["party"] == "Independent" and ana["source_type"] == "public" and ana["level"] == "councilor"
+
+    data = isolated_output / "data"
+    data.mkdir(parents=True, exist_ok=True)
+    existing = [
+        # Official regional list: its whole region is left to it.
+        {"level": "mayor", "name": "Rolando A. Uy", "province": "", "lgu": "Cagayan de Oro City",
+         "region": "Region X (Northern Mindanao)", "source": "DILG Region X", "source_type": "official", "details": {}},
+        # Wikipedia city mayor without a province: covers Naga, Camarines Sur only.
+        {"level": "mayor", "name": "Leni Robredo", "province": "", "lgu": "Naga", "region": "",
+         "source": "Wikipedia (unofficial)", "source_type": "public", "details": {}},
+    ]
+    (data / "lgu.json").write_text(json.dumps({"records": existing}))
+    counts = openhalalan.merge(found)
+    assert counts == {"added": 3, "in_official_regions": 1, "covered_by_other_sources": 1}
+    doc = json.loads((common.DATA_DIR / "lgu.json").read_text())
+    names = {r["name"] for r in doc["records"]}
+    assert {"Pedro G. Reyes", "Joy G. Belmonte", "Leni Robredo", "Rolando A. Uy"} <= names
+    assert "Juan S. Cruz" not in names and "Klarex Uy" not in names
+    uy = next(r for r in doc["records"] if r["name"] == "Rolando A. Uy")
+    assert uy["details"]["term"] == "1"  # term copied from the 2025 winner with the same surname
