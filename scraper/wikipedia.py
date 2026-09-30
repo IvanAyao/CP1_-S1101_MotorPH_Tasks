@@ -50,8 +50,8 @@ def cell_text(cell: Tag) -> str:
     cell = BeautifulSoup(str(cell), "lxml")
     for junk in cell.find_all(["sup", "style"]):
         junk.decompose()  # footnote markers like [1]
-    for br in cell.find_all("br"):
-        br.replace_with("; ")
+    for sep in cell.find_all(["br", "hr"]):  # the lists use <hr> between roles
+        sep.replace_with("; ")
     # Lists of roles come as <li>, <br>, or one <div>/<p> per line.
     for block in cell.find_all(["li", "div", "p"]):
         block.append("; ")

@@ -281,7 +281,7 @@ def test_wikipedia_rowspans_and_mapping():
         <td><a href="/wiki/Juan_Dela_Cruz">Juan Dela Cruz</a><sup>[1]</sup></td>
         <td style="background:red"></td><td>Lakas<sup>[a]</sup></td><td rowspan="2">Majority</td>
         <td><span style="display:none">( 1978-10-06 )</span> October 6, 1978 (age 47)</td>
-        <td>House of Representatives<br>Mayor of Tagbilaran</td><td>June 30, 2025</td></tr>
+        <td>House of Representatives<hr>Mayor of Tagbilaran</td><td>June 30, 2025</td></tr>
     <tr><td>Aklan at-large</td><td></td><td><a href="/wiki/Maria_Santos">Maria Santos</a></td>
         <td></td><td>NUP</td><td>1970</td><td></td><td>June 30, 2022</td></tr>
     <tr><td>Example Party</td><td></td><td><a href="/wiki/Pedro_Reyes">Pedro Reyes</a></td>
