@@ -417,3 +417,9 @@ details.term .bills { margin: 0 14px 10px 14px; }
 .rank-row a.bill-count { max-width: 104px; }
 .rank-row a.bill-count small { white-space: normal; line-height: 1.2; }
 details.term { scroll-margin-top: 84px; }
+.scope-seg { display: flex; width: 100%; margin: 12px 0 4px; padding: 3px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); }
+.scope-seg button { flex: 1; border: 0; background: transparent; border-radius: 9px; padding: 8px 6px; font-size: 13px; font-weight: 600; color: var(--muted); min-height: 36px; }
+.scope-seg button[aria-pressed="true"] { background: var(--card); color: var(--blue); box-shadow: var(--shadow); }
+.filter-panel .scope-seg { margin-top: 8px; }
+.bills-head .scope-seg { margin-top: 14px; }
+@media (min-width: 900px) { .scope-seg { max-width: 520px; } }
