@@ -575,3 +575,39 @@ def test_openhalalan_winners_terms_and_merge(isolated_output):
     assert "Juan S. Cruz" not in names and "Klarex Uy" not in names
     uy = next(r for r in doc["records"] if r["name"] == "Rolando A. Uy")
     assert uy["details"]["term"] == "1"  # term copied from the 2025 winner with the same surname
+
+
+def test_dilg_barangay_sheet(isolated_output):
+    """A regional punong barangay sheet becomes per-province barangay files."""
+    import io as _io
+
+    import barangay
+    import common
+    import dilg_barangays
+    from openpyxl import Workbook
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "BUKIDNON"
+    ws.append(["LIST OF PUNONG BARANGAYS TERM 2023-2025"])
+    ws.append(["PROVINCE", "CITY/MUNICIPALITY", "BARANGAY", "PUNONG BARANGAY", "CONTACT NO."])
+    ws.append(["BUKIDNON", "BAUNGON", "BALINTAD", "JUAN DELA CRUZ", "0917"])
+    ws.append(["", "", "IMBATUG", "MARIA SANTOS", ""])
+    ws.append(["", "MALAYBALAY CITY", "CASISANG", "PEDRO REYES", ""])
+    ws2 = wb.create_sheet("HUC")
+    ws2.append(["PROVINCE", "CITY/MUNICIPALITY", "BARANGAY", "PUNONG BARANGAY"])
+    ws2.append(["HUC", "CAGAYAN DE ORO CITY", "CARMEN", "ANA LIM"])
+    buf = _io.BytesIO()
+    wb.save(buf)
+    recs = dilg_barangays.parse(buf.getvalue(), "Region X (Northern Mindanao)", "https://region10.dilg.gov.ph/x", "SID")
+    got = {(r["name"], r["level"], r["barangay"], r["lgu"], r["province"]) for r in recs}
+    assert got == {
+        ("Juan Dela Cruz", "punong_barangay", "Balintad", "Baungon", "Bukidnon"),
+        ("Maria Santos", "punong_barangay", "Imbatug", "Baungon", "Bukidnon"),
+        ("Pedro Reyes", "punong_barangay", "Casisang", "Malaybalay City", "Bukidnon"),
+        ("Ana Lim", "punong_barangay", "Carmen", "Cagayan de Oro City", ""),
+    }
+    assert all(r["source_type"] == "official" and r["dataset"] == "barangay" for r in recs)
+    barangay.flush(recs)
+    index = json.loads((common.DATA_DIR / "barangay" / "index.json").read_text())
+    assert index["count"] == 4 and {f["province"] for f in index["files"]} == {"Bukidnon", ""}

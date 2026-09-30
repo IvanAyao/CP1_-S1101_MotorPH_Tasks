@@ -165,9 +165,9 @@ def parse(data: bytes, *, source: str = SOURCE, source_url: str = FOI_URL,
         log(f"dilg: tab {tab!r} -> {len(found)} officials")
         officials += found
     for o in officials:
-        for key in ("name", "province", "lgu", "region", "district"):
-            o[key] = tidy_case(o[key])
-        for key in ("province", "lgu"):
+        for key in ("name", "province", "lgu", "region", "district", "barangay"):
+            o[key] = tidy_case(o.get(key, ""))
+        for key in ("province", "lgu", "barangay"):
             o[key] = PLACE_PARTICLE.sub(lambda m: m.group(0).lower(), o[key])
         # Regional lists group highly urbanized cities under "HUC", which is
         # a city class, not a province.

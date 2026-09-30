@@ -16,6 +16,7 @@ from common import DATA_DIR, Browser, log, now_iso, source_type, write_dataset
 import barangay
 import bills
 import dilg_lgu
+import dilg_barangays
 import dilg_regions
 import openhalalan
 import house
@@ -140,6 +141,14 @@ def main() -> None:
                 traceback.print_exc()
                 failures.append("openhalalan")
         if "barangay" in wanted:
+            # Official regional barangay lists first (quick), then the national
+            # directory's resumable crawl.
+            try:
+                dilg_barangays.run(browser)
+            except (Exception, SystemExit) as err:  # noqa: BLE001
+                log(f"dilg-barangay FAILED: {err}")
+                traceback.print_exc()
+                failures.append("dilg-barangay")
             try:
                 barangay.scrape(browser, deadline=time.time() + args.barangay_minutes * 60,
                                 only_region=None, reset=False)
