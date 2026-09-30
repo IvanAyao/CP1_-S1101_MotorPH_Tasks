@@ -6,6 +6,10 @@
 (() => {
   "use strict";
 
+  const REPO_URL = "https://github.com/IvanAyao/Pili_App_PH";
+  // Leave empty to keep an email address off the public site; reports then
+  // go to GitHub Issues only.
+  const CONTACT_EMAIL = "";
   const ELECTION_DAY = new Date("2028-05-08T07:00:00+08:00"); // 2nd Monday of May 2028
   const PAGE = 60;
   const STORE_KEY = "pili.ballot.v1";
@@ -583,6 +587,7 @@
         ${t("source")}: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a> (${typeLabel(typeOf(o))})
         ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">${/wikipedia\.org/.test(o.profile_url) ? t("wikipedia_article") : t("official_profile")} ↗</a>` : ""}
         <br>${t("last_updated")}: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · ${t("copied_on", { d: fmtDate(d.copied_on) })}` : ""}
+        <br><a href="#/report/${encodeURIComponent(o.dataset)}/${encodeURIComponent(o.id)}">⚑ ${t("report_this")}</a>
       </div></div></div>`;
 
     view.querySelector("[data-rank-link]")?.addEventListener("click", (e) => {
@@ -954,7 +959,85 @@
       <div class="card">
         <p style="margin-top:0">${t("about_body")}</p>
         <p class="meta" style="margin-bottom:0">${t("about_note")}</p>
+      </div>
+      <div class="card legal-links">
+        <a href="#/privacy">🔒 ${t("privacy_title")}</a>
+        <a href="#/report">⚑ ${t("report_title")}</a>
       </div></div></div>`;
+  }
+
+  // ------------------------------------------------------------ legal
+  function viewPrivacy() {
+    setTitle(t("privacy_title"));
+    view.innerHTML = `<article class="legal">
+      <p class="meta">${t("legal_effective", { d: fmtDate("2026-09-30") })}</p>
+      <nav class="legal-toc"><button type="button" class="link-btn" data-go="privacy">${t("privacy_h")}</button> · <button type="button" class="link-btn" data-go="terms">${t("terms_h")}</button></nav>
+      <section id="privacy"><h2>${t("privacy_h")}</h2>${t("privacy_html", { gh: "https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" })}</section>
+      <section id="terms"><h2>${t("terms_h")}</h2>${t("terms_html")}</section>
+      <p><a class="btn block" href="#/report">⚑ ${t("report_title")}</a></p>
+    </article>`;
+    view.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => $("#" + b.dataset.go).scrollIntoView({ behavior: "smooth" })));
+  }
+
+  // Reports become a pre-filled GitHub issue (public), or text to copy.
+  const REPORT_KINDS = ["wrong_info", "outdated", "missing", "bills", "other"];
+  async function viewReport(dataset, id) {
+    setTitle(t("report_title"));
+    const o = dataset && id ? await findOfficial(dataset, id) : null;
+    const record = o ? `${o.name} — ${levelLabel(o)}${place(o) ? `, ${place(o)}` : ""}` : "";
+    view.innerHTML = `<article class="legal">
+      <p>${t("report_lead")}</p>
+      <form id="report-form" class="report-form">
+        <label><span>${t("report_record")}</span>
+          <input class="select" name="record" value="${esc(record)}" placeholder="${esc(t("report_record_ph"))}"></label>
+        <label><span>${t("report_kind")}</span>
+          <select class="select" name="kind">${REPORT_KINDS.map((k) => `<option value="${k}">${t(`rk_${k}`)}</option>`).join("")}</select></label>
+        <label><span>${t("report_details")} *</span>
+          <textarea class="select" name="details" rows="5" required placeholder="${esc(t("report_details_ph"))}"></textarea></label>
+        <label><span>${t("report_source")}</span>
+          <input class="select" name="source" type="url" inputmode="url" placeholder="https://…"></label>
+        <p class="notice">${t("report_public_note")}</p>
+        <div class="btn-row">
+          <button type="submit" class="btn primary">${t("report_send")}</button>
+          <button type="button" class="btn" id="report-copy">${t("report_copy")}</button>
+        </div>
+        ${CONTACT_EMAIL ? `<p><a class="btn block" id="report-mail" href="#">${t("report_email")}</a></p>` : ""}
+        <p class="meta">${t("report_after")}</p>
+      </form>
+    </article>`;
+    const form = $("#report-form");
+    const compose = () => {
+      const f = new FormData(form);
+      const kind = t(`rk_${f.get("kind")}`);
+      const title = `[${kind}] ${f.get("record") || t("report_general")}`.slice(0, 120);
+      const body = [
+        `**${t("report_record")}:** ${f.get("record") || "—"}`,
+        o ? `**Link:** ${location.origin}${location.pathname}#/o/${o.dataset}/${o.id}` : "",
+        o ? `**${t("source")}:** ${o.source} (${o.source_url})` : "",
+        `**${t("report_kind")}:** ${kind}`,
+        "", `**${t("report_details")}:**`, String(f.get("details") || "").trim(),
+        "", `**${t("report_source")}:** ${f.get("source") || "—"}`,
+        "", `_${t("report_footer")}_`,
+      ].filter((line, i, all) => line !== "" || all[i - 1] !== "").join("\n");
+      return { title, body };
+    };
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const { title, body } = compose();
+      window.open(`${REPO_URL}/issues/new?labels=data-error&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
+    });
+    $("#report-copy").addEventListener("click", async () => {
+      if (!form.reportValidity()) return;
+      const { title, body } = compose();
+      try { await navigator.clipboard.writeText(`${title}\n\n${body}`); toast(t("copied")); } catch { toast(t("save_failed")); }
+    });
+    $("#report-mail")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const { title, body } = compose();
+      location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+    });
   }
 
   // ------------------------------------------------------------ picker
@@ -1014,8 +1097,8 @@
     view.dataset.view = parts[0] === "o" ? "profile" : parts[0] === "bills" ? "bills" : tab;
     document.querySelectorAll(".tabbar a").forEach((a) => a.classList.toggle("active", a.dataset.tab === tab));
     document.querySelectorAll(".tabbar a").forEach((a) => (a.dataset.tab === tab ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
-    $("#back").hidden = parts[0] !== "o" && parts[0] !== "bills";
-    const titles = { hanap: "title_hanap", ihambing: "title_ihambing", pili: "title_pili", ako: "title_ako" };
+    $("#back").hidden = !["o", "bills", "privacy", "report"].includes(parts[0]);
+    const titles = { hanap: "title_hanap", ihambing: "title_ihambing", pili: "title_pili", ako: "title_ako", privacy: "privacy_title", report: "report_title" };
     setTitle(titles[tab] ? t(titles[tab]) : "");
     switch (parts[0]) {
       case "o": return viewProfile(parts[1], parts.slice(2).join("/"));
@@ -1024,6 +1107,8 @@
       case "ihambing": return viewCompare();
       case "pili": return viewPili();
       case "ako": return viewAko();
+      case "privacy": return viewPrivacy();
+      case "report": return viewReport(parts[1], parts.slice(2).join("/"));
       default: return viewHome();
     }
   }
@@ -1044,6 +1129,7 @@
   $("#lang").addEventListener("click", () => setLang(lang === "en" ? "tl" : "en"));
   document.querySelectorAll("[data-lang]").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
   $("#enter").addEventListener("click", enterApp);
+  $("#cover-privacy").addEventListener("click", enterApp);
   window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
   applyStatic();
   showCover();
