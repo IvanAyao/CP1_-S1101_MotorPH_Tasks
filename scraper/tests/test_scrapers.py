@@ -397,3 +397,16 @@ def test_dilg_directory_parse(isolated_output):
         ("Jose Garcia", "mayor", "Bohol", "Panglao"),
     }
     assert all(r["source_type"] == "official" for r in recs)
+
+
+def test_dilg_picks_directory_not_folder(monkeypatch):
+    import dilg_lgu
+
+    listed = [(dilg_lgu.FOLDER_ID, "List of Elective Officials Term 2025-2028"),
+              ("1B2N5SjZEBP-29tUioFHaSk-6R_1YFGcYIkSPjuApxZw", "DIRECTORY OF LGU ELECTIVE OFFICIALS FOR TERM 2025-2028")]
+    picked = []
+    monkeypatch.setattr(dilg_lgu, "find_files", lambda browser: [f for f in listed if f[0] != dilg_lgu.FOLDER_ID])
+    monkeypatch.setattr(dilg_lgu, "download", lambda fid: picked.append(fid) or b"")
+    monkeypatch.setattr(dilg_lgu, "parse", lambda data: [])
+    dilg_lgu.run(browser=object())
+    assert picked == ["1B2N5SjZEBP-29tUioFHaSk-6R_1YFGcYIkSPjuApxZw"]
