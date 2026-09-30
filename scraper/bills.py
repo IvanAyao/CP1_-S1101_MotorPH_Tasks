@@ -24,7 +24,8 @@ import tomllib
 from collections import defaultdict
 from pathlib import Path
 
-from common import DATA_DIR, clean, log, now_iso
+import common
+from common import clean, log, now_iso
 
 REPO = "https://github.com/bettergovph/open-congress-data"
 SOURCE = "BetterGov Open Congress Data"
@@ -90,7 +91,7 @@ def match_codes(senator: dict, names: dict[str, tuple[str, str]]) -> list[str]:
 
 
 def attach(bills: list[dict], as_of: str) -> dict:
-    path = DATA_DIR / "senate.json"
+    path = common.DATA_DIR / "senate.json"
     doc = json.loads(path.read_text(encoding="utf-8"))
     names = name_index(bills)
     by_code: dict[str, list[dict]] = defaultdict(list)
@@ -134,7 +135,7 @@ def attach(bills: list[dict], as_of: str) -> dict:
 
 
 def run() -> None:
-    if not (DATA_DIR / "senate.json").exists():
+    if not (common.DATA_DIR / "senate.json").exists():
         raise SystemExit("bills: no senate.json yet")
     with tempfile.TemporaryDirectory() as tmp:
         folder, as_of = fetch(Path(tmp) / "occ")

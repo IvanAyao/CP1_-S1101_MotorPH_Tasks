@@ -19,7 +19,8 @@ import urllib.request
 
 from bs4 import BeautifulSoup, Tag
 
-from common import DATA_DIR, USER_AGENT, clean, dedupe, log, norm_key, record, strip_honorific, write_dataset
+import common
+from common import USER_AGENT, clean, dedupe, log, norm_key, record, strip_honorific, write_dataset
 
 API = "https://en.wikipedia.org/w/api.php"
 SOURCE = "Wikipedia (unofficial)"
@@ -216,7 +217,7 @@ def officials(kind: str, html: str, revid: str) -> list[dict]:
 
 def official_count(dataset: str) -> int:
     """Records in an existing dataset that did NOT come from Wikipedia."""
-    path = DATA_DIR / f"{dataset}.json"
+    path = common.DATA_DIR / f"{dataset}.json"
     if not path.exists():
         return 0
     doc = json.loads(path.read_text())
@@ -238,7 +239,7 @@ def run(kinds: list[str]) -> None:
     if local:
         # Keep official records (e.g. NCR from PSA); Wikipedia fills the rest.
         existing = []
-        path = DATA_DIR / "lgu.json"
+        path = common.DATA_DIR / "lgu.json"
         meta = {}
         if path.exists():
             doc = json.loads(path.read_text())

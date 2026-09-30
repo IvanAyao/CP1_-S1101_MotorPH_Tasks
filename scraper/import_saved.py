@@ -8,6 +8,8 @@ Put files under data-inbox/ at the repo root:
 
     data-inbox/house/     saved pages of congress.gov.ph/house-members
     data-inbox/lgu/       saved pages / exports of the PSA LGU directory
+    data-inbox/dilg/      DILG "Directory of LGU Elective Officials 2025-2028"
+                          spreadsheet (.xlsx/.csv), e.g. obtained via FOI
     data-inbox/barangay/  saved pages / exports of the DILG directory
                           (optionally in <Region>/<Province>/ subfolders)
     data-inbox/senate/    saved pages of the Senate list (normally not needed)
@@ -166,6 +168,29 @@ def import_lgu(today: str) -> bool:
     return True
 
 
+def import_dilg(today: str) -> bool:
+    """DILG's Directory of LGU Elective Officials (xlsx/csv obtained via FOI)."""
+    import dilg_lgu
+
+    paths = [p for p in files(INBOX / "dilg") if p.suffix.lower() in {".xlsx", ".csv"}]
+    if not paths:
+        return False
+    officials = []
+    for path in paths:
+        if path.suffix.lower() == ".xlsx":
+            found = dilg_lgu.parse(path.read_bytes())
+        else:
+            from officials import rows_to_officials
+            found = rows_to_officials(read_table_file(path), source=dilg_lgu.SOURCE,
+                                      source_url=dilg_lgu.FOI_URL, defaults={})
+        log(f"  {path.relative_to(INBOX)}: {len(found)} officials")
+        officials += found
+    for o in officials:
+        o["details"]["copied_on"] = today
+    dilg_lgu.merge_into_lgu(dedupe(officials))
+    return True
+
+
 def import_barangay(today: str) -> bool:
     from officials import rows_to_officials
 
@@ -195,11 +220,12 @@ def import_barangay(today: str) -> bool:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--only", nargs="*", choices=["senate", "house", "lgu", "barangay"])
+    ap.add_argument("--only", nargs="*", choices=["senate", "house", "lgu", "dilg", "barangay"])
     args = ap.parse_args()
     today = date.today().isoformat()
-    wanted = args.only or ["senate", "house", "lgu", "barangay"]
-    importers = {"senate": import_senate, "house": import_house, "lgu": import_lgu, "barangay": import_barangay}
+    wanted = args.only or ["senate", "house", "lgu", "dilg", "barangay"]
+    importers = {"senate": import_senate, "house": import_house, "lgu": import_lgu,
+                 "dilg": import_dilg, "barangay": import_barangay}
     failures, done = [], []
     for key in wanted:
         try:

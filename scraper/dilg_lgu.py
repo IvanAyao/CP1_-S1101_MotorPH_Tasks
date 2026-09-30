@@ -24,7 +24,8 @@ import re
 import urllib.request
 from pathlib import Path
 
-from common import DATA_DIR, USER_AGENT, Browser, clean, dedupe, log, norm_key, write_dataset
+import common
+from common import USER_AGENT, Browser, clean, dedupe, log, norm_key, write_dataset
 from officials import rows_to_officials
 
 FOI_URL = "https://www.foi.gov.ph/agencies/dilg/list-of-elected-government-official-for-the-term-2025-2028-by-province/"
@@ -67,7 +68,10 @@ def download(file_id: str) -> bytes:
             log(f"dilg: {url} did not return a spreadsheet ({data[:60]!r})")
         except Exception as err:  # noqa: BLE001 - try the next form
             log(f"dilg: {url} failed: {err}")
-    raise SystemExit("dilg: could not download the directory spreadsheet")
+    # The folder is listed publicly, but the file's owner restricts downloads.
+    # We respect that: no workarounds (e.g. rebuilding it from the viewer).
+    # A copy obtained properly (FOI / DILG) can go in data-inbox/dilg/.
+    raise SystemExit("dilg: download not permitted by the file owner; add a copy to data-inbox/dilg/")
 
 
 def sheet_rows(data: bytes) -> list[tuple[str, list[dict[str, str]]]]:
@@ -174,7 +178,7 @@ def run(browser: Browser | None = None) -> list[dict]:
 
 def merge_into_lgu(officials: list[dict]) -> None:
     """Official DILG records replace Wikipedia ones for the same office."""
-    path = DATA_DIR / "lgu.json"
+    path = common.DATA_DIR / "lgu.json"
     old = json.loads(path.read_text()) if path.exists() else {"records": []}
     covered = {(o["level"], (o["lgu"] or o["province"]).lower()) for o in officials}
     keep = [r for r in old.get("records", [])
