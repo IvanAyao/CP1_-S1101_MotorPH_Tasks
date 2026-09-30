@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T10:55:57+00:00",
+ "generated_at": "2026-09-30T11:24:28+00:00",
  "datasets": [
   {
    "key": "senate",
@@ -7,23 +7,23 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "count": 24,
-   "scraped_at": "2026-09-30T10:26:52+00:00"
+   "scraped_at": "2026-09-30T11:14:55+00:00"
   },
   {
    "key": "house",
    "file": "house.json",
-   "source": "House of Representatives",
-   "source_url": "https://www.congress.gov.ph/house-members",
-   "count": 0,
-   "scraped_at": null
+   "source": "Wikipedia (unofficial)",
+   "source_url": "https://en.wikipedia.org/wiki/List_of_current_members_of_the_House_of_Representatives_of_the_Philippines",
+   "count": 317,
+   "scraped_at": "2026-09-30T11:24:27+00:00"
   },
   {
    "key": "lgu",
    "file": "lgu.json",
-   "source": "PSA RSSO NCR – LGU Directory",
-   "source_url": "https://rssoncr.psa.gov.ph/lgu-directory",
-   "count": 0,
-   "scraped_at": null
+   "source": "Wikipedia (unofficial)",
+   "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
+   "count": 160,
+   "scraped_at": "2026-09-30T11:24:28+00:00"
   },
   {
    "key": "barangay",

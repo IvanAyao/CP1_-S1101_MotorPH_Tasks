@@ -1,7 +1,7 @@
 {
  "dataset": "senate",
  "source_url": "https://senate.gov.ph/senators/20-congress-senators",
- "scraped_at": "2026-09-30T10:26:52+00:00",
+ "scraped_at": "2026-09-30T11:14:55+00:00",
  "count": 24,
  "records": [
   {
@@ -23,10 +23,14 @@
    "details": {
     "resume": "http://web.senate.gov.ph/senators/sen_bio/20220915_UPDATED%20CV_SENATOR%20WIN%20GATCHALIAN.pdf",
     "address": "Rooms 512 & 22 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.697562+08:00",
-    "updated_at": "2026-06-17T14:44:00.591988+08:00",
-    "biography": "Sherwin Ting Gatchalian (born April 6, 1974), known as Win Gatchalian, is a Filipino politician and businessman serving as a Senator since 2016. A member of the Nationalist People's Coalition (NPC), he previously served as the Representative of Valenzuela's 1st district from 2001 to 2004 and from 2013 to 2016. He was the Mayor of Valenzuela from 2004 to 2013. • Best Mayor in CAMANAVA (2008) • Public Service Honoree, The Outstanding Young Men, TOYM (2011) • Manila 40 Under 40 International Development Leaders (2013) • Chosen as the 69th Lee Kuan Yew Exchange Fellow (2019) WIN tayong lahat Serving for more than two decades in public service, Senator Sherwin “Win” T."
-   }
+    "biography": "Sherwin Ting Gatchalian (born April 6, 1974), known as Win Gatchalian, is a Filipino politician and businessman serving as a Senator since 2016. A member of the Nationalist People's Coalition (NPC), he previously served as the Representative of Valenzuela's 1st district from 2001 to 2004 and from 2013 to 2016. He was the Mayor of Valenzuela from 2004 to 2013. WIN tayong lahat Serving for more than two decades in public service, Senator Sherwin “Win” T. Gatchalian is known for his integrity and hard work. The people of Valenzuela City have witnessed this firsthand through world class infrastructures, innovative programs, and exemplary projects and advocacies he developed during his stint as mayor and district representative of the robust city. His relentless pursuit to serve the whole country took place after landing a seat in the Senate in 2016. A year after his win, the Free Higher Education Act that he initially authored at the House of Representatives has been signed into law. His extensive track record in public service and extraordinary contribution to the development of the country earned him to become the 69th Lee Kuan Yew Exchange Fellow in Singapore. In 2023, he received the honorary degree of Doctor of Education (honoris causa) was conferred by the Philippine Normal University. This is in recognition of his leadership in the enactment of several landmark education laws."
+   },
+   "achievements": [
+    "Best Mayor in CAMANAVA (2008)",
+    "Public Service Honoree, The Outstanding Young Men, TOYM (2011)",
+    "Manila 40 Under 40 International Development Leaders (2013)",
+    "Chosen as the 69th Lee Kuan Yew Exchange Fellow (2019)"
+   ]
   },
   {
    "id": "senate-nationwide-vicente-c-sotto-iii",
@@ -46,10 +50,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Room 603, GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.676196+08:00",
-    "updated_at": "2026-09-01T13:42:04.672127+08:00",
-    "biography": "Perhaps it is only Senator Vicente C. Sotto III among the present crop of senators who can seamlessly switch from one career to another--being an accomplished public servant, lawmaker, sportsman, and artist in his own right. He has excelled in all these fields—uncompromising and giving his best---as a true master of his own fate. So far, he has sponsored and authored more than a hundred laws, making him one of the most prolific senators. At present, he reprises his role as Majority Floor Leader, providing able support to Senate President Juan Ponce Enrile in keeping the Senate’s legislative mill running."
-   }
+    "biography": "Perhaps it is only Senator Vicente C. Sotto III among the present crop of senators who can seamlessly switch from one career to another--being an accomplished public servant, lawmaker, sportsman, and artist in his own right. He has excelled in all these fields—uncompromising and giving his best---as a true master of his own fate. So far, he has sponsored and authored more than a hundred laws, making him one of the most prolific senators. At present, he reprises his role as Majority Floor Leader, providing able support to Senate President Juan Ponce Enrile in keeping the Senate’s legislative mill running. Except for a brief period of two years, Sotto has been in public service for the past 24 years, starting in 1988 when he entered politics as Vice Mayor of Quezon City. He was by then an accomplished actor, artist, musician and sportsman. Unknown to many, Sotto is a multi-awarded bowler, winning in several international competitions. He showed his bowling skills at the Colegio de San Juan de Letran where he took up Bachelor of Arts, major in English. Seven times, he was part of the national bowling team and garnered several gold several times. The height of his bowling came in 1978 when he represented the national team at the AMF Bowling World Cup in Bogota, Colombia and in 1984, in Sydney, Australia. At the same time, Sotto also excelled in the arts. He conceptualized, produced and recorded the VST and Co."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-juan-miguel-f-zubiri",
@@ -69,10 +72,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 521A (Main) & 521B (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.693793+08:00",
-    "updated_at": "2026-06-07T20:36:49.997913+08:00",
-    "biography": "Senator Juan Miguel “Migz” Zubiri is a veteran legislator, having served in both houses of Congress and posting perfect attendance since 1998—a real Trabahador ng Senado. Prior to his career in the Senate, he served as Representative of the Third District of Bukidnon from 1998 to 2007, and was always cited as one of the most outstanding solons in the House of Representatives. At age 39, he became the youngest to be elected as Senate Majority Leader since the First Congress in 1946. Owing to his zeal and work ethic, he was again elected by his colleagues to serve as Majority Leader of the 17th and 18th Congresses."
-   }
+    "biography": "Senator Juan Miguel “Migz” Zubiri is a veteran legislator, having served in both houses of Congress and posting perfect attendance since 1998—a real Trabahador ng Senado. Prior to his career in the Senate, he served as Representative of the Third District of Bukidnon from 1998 to 2007, and was always cited as one of the most outstanding solons in the House of Representatives. At age 39, he became the youngest to be elected as Senate Majority Leader since the First Congress in 1946. Owing to his zeal and work ethic, he was again elected by his colleagues to serve as Majority Leader of the 17th and 18th Congresses. An effective consensus builder and consultative leader, he served as Senate President of the 19th Congress from 2022 to 2024. Sen. Migz is the principal author and sponsor of more than a hundred laws of national application. As a Mindanawon, the Bangsamoro Organic Law (RA 11054) is his most notable contribution to promoting peace and development in Mindanao. A fervent advocate of clean energy, he also worked for the passage of the Renewable Energy Act of 2008 (RA 9153) and the Biofuels Act of 2006 (RA 9367), earning him the moniker “Mr. Clean Energy.” He is considered the Father of the New Cooperative Code, being the principal sponsor and author of RA 9520 or the Philippine Cooperative Code of 2008."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-alan-peter-s-cayetano",
@@ -92,10 +94,43 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 209 & 3 (Extension), GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.700754+08:00",
-    "updated_at": "2026-07-02T09:59:16.785248+08:00",
-    "biography": "PERSONAL INFORMATION BIRTHDAY October 28, 1970 CIVIL STATUS Married to City of Taguig Mayor Ma. Laarni “Lani” L. Cayetano PARENTS Former Senator Renato “Rene” “Companero” Cayetano Sandra Schramm Cayetano SIBLINGS Senator Pilar Juliana “Pia” Cayetano Rene Carl Cayetano Lino Edgardo Cayetano EDUCATIONAL BACKGROUND ADMITTED TO May 1998 PHILIPPINE BAR POST GRADUATE Juris Doctor, Ateneo School of Law Graduated in 1997 2nd Honors (Silver Medalist) COLLEGE B.A."
-   }
+    "biography": "PERSONAL INFORMATION BIRTHDAY October 28, 1970 CIVIL STATUS Married to City of Taguig Mayor Ma. Laarni “Lani” L. Cayetano PARENTS Former Senator Renato “Rene” “Companero” Cayetano Sandra Schramm Cayetano SIBLINGS Senator Pilar Juliana “Pia” Cayetano Rene Carl Cayetano Lino Edgardo Cayetano EDUCATIONAL BACKGROUND ADMITTED TO May 1998 PHILIPPINE BAR POST GRADUATE Juris Doctor, Ateneo School of Law Graduated in 1997 2nd Honors (Silver Medalist) COLLEGE B.A. Political Science Graduated in 1993 University of the Philippines Diliman, Quezon City HIGH SCHOOL De La Salle Zobel ELEMENTARY PUBLIC SERVICE CAREER 19th CONGRESS Senator, Republic of the Philippines July 1, 2022 - Present • Chairperson, Committee on Science and Technology ‣ Member, Senate Special Oversight Committee on Regional Comprehensive Economic Partnership Agreement ‣ RA No. 11959 or the Regional Specialty Centers Act ‣ RA No."
+   },
+   "achievements": [
+    "Minority Floor Leader, Commission on Appointments",
+    "Member, Board of Regents, Polytechnic University of the Philippines",
+    "Ex-Officio Member, Board of Trustees, Philippine Science High School System",
+    "Co-author of the following laws:",
+    "Chairperson, Committee on Higher, Technical and Vocational Education",
+    "Chairperson, Committee on Trade, Commerce and Entrepreneurship",
+    "Chairperson, Committee on Agrarian Reform",
+    "Member, Commission on Appointments",
+    "Authored Republic Act No. 10923, postponing the October 2016 Barangay",
+    "Authored and co -sponsored the bill extending the validity of the Philippine",
+    "Filed Senate bills: Trust Fund for the Abandoned, Neglected or Voluntarily",
+    "Vice Chairperson, Committee on Agriculture",
+    "Author/Co-Author of the following laws:",
+    "Vice Chairperson, Joint Congressional Oversight Committee on the",
+    "Commended by the Senate under Resolution 46 and 94 for his efforts as",
+    "Actively participated in investigations pushing for the resolution of the alleged poll",
+    "Conducted hearings on the reliability of the “3crown jewels” of the 2013",
+    "Chairperson, Committee on the Mass Media and Information",
+    "Chairperson, Committee on Education, Culture and Arts",
+    "Senior Deputy Minority Leader",
+    "Ex-Officio member of all standing House committees",
+    "Spokesperson, Impeachment Team (2005 and 2006)",
+    "Deputy Majority Leader",
+    "Vice-Chairman, Committee on Rules",
+    "Assistant Majority Leader",
+    "Member, Committee on Rules",
+    "Chairperson, Oversight Committee on the Bases Conversion",
+    "Vice-Chairperson, Committee on Suffrage and Electoral Reforms",
+    "Chairperson, Sub-Committee on New Schools, Committee on Basic Education",
+    "Columnist, Compañero y Compañera (People’s Tonight)",
+    "Majority Floor Leader, Municipal Council, Taguig, Metro Manila",
+    "Officer and Member of Various Special Local Bodies:",
+    "Chairperson and Member of Various Legislative Committees"
+   ]
   },
   {
    "id": "senate-nationwide-paolo-benigno-bam-aquino-iv",
@@ -115,10 +150,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 523 & 25 (Extension), GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.694534+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00",
-    "biography": "A former youth leader and social entrepreneur, Senator Bam Aquino has 19 laws under his belt and continues to empower Filipino families through education, entrepreneurship and employment. His first law - the Go Negosyo Act - supports Filipinos who want to start and grow their own businesses. Thanks to this law, there are hundreds of Negosyo Centers in different parts of the Philippines to help them Filipinos earn a living through entrepreneurship. He has also helped the micro-finance sector and its beneficiaries in pushing for the Micro-Finance Institute NGOs Act. And ensured financial literacy and entrepreneurship will be taught in our schools through the Youth Entrepreneurship Act."
-   }
+    "biography": "A former youth leader and social entrepreneur, Senator Bam Aquino has 19 laws under his belt and continues to empower Filipino families through education, entrepreneurship and employment. His first law - the Go Negosyo Act - supports Filipinos who want to start and grow their own businesses. Thanks to this law, there are hundreds of Negosyo Centers in different parts of the Philippines to help them Filipinos earn a living through entrepreneurship. He has also helped the micro-finance sector and its beneficiaries in pushing for the Micro-Finance Institute NGOs Act. And ensured financial literacy and entrepreneurship will be taught in our schools through the Youth Entrepreneurship Act. His most recent law, the Universal Access to Quality Tertiary Education Act, will make tuition and other miscellaneous expenses free in our State Universities and Colleges, Local Universities and Colleges, and TESDA- accredited Technical Vocational Institutions. Sen. Bam was the principal sponsor of this law, making a college education more accessible to Filipinos. Senator Bam Aquino believes that with the right support and programs, Filipinos will rise above poverty. He continues to work for - and fight for - prosperity for every Filipino family."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-pia-s-cayetano",
@@ -138,10 +172,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Room 510 GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.687604+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00",
-    "biography": "Senator Pia S. Cayetano has built a track record for getting the tough job done. For nearly two decades, she has led the passage of landmark laws on healthcare, education, and measures to support economic growth. She chairs the Senate Committee on Sustainable Development Goals (SDGs), Innovation, and Futures Thinking in the 19th Congress. This committee works to align government programs and legislative measures with the SDGs, guided by the principles of futures thinking and strategic foresight. Senator Pia sponsored the Corporate Recovery and Tax Incentives for Enterprises Act (CREATE) as chairperson of the Committee on Ways and Means in the 18th Congress."
-   }
+    "biography": "Senator Pia S. Cayetano has built a track record for getting the tough job done. For nearly two decades, she has led the passage of landmark laws on healthcare, education, and measures to support economic growth. She chairs the Senate Committee on Sustainable Development Goals (SDGs), Innovation, and Futures Thinking in the 19th Congress. This committee works to align government programs and legislative measures with the SDGs, guided by the principles of futures thinking and strategic foresight. Senator Pia sponsored the Corporate Recovery and Tax Incentives for Enterprises Act (CREATE) as chairperson of the Committee on Ways and Means in the 18th Congress. Hailed as a game changer and long-awaited reform that took 25 years, CREATE substantially reduced corporate income tax rates, and modernized the tax and fiscal incentives system to boost businesses and investments. She shepherded the passage of the Bayanihan to Heal as One Act, and helped push two other measures on pandemic response and recovery, namely, the COVID-19 Vaccination Program Act, and Bayanihan to Recover as One Act. A staunch health advocate, Senator Pia worked for the enactment of the Sin Tax Reform Law to raise additional revenues for healthcare, while curbing harmful vices, especially among the youth. Drawing from her experiences as an adoptive mother, Senator Pia helped pass measures to give children without parental care a loving home."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-ronald-bato-m-dela-rosa",
@@ -161,10 +194,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 518 & 11 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.697241+08:00",
-    "updated_at": "2026-06-07T23:44:44.457427+08:00",
-    "biography": "A public servant with more than three decades of experience in the Executive Branch of government prior to joining the Legislative Branch in 2019 as a Senator of the Republic of the Philippines. He completed his Master’s Degree in Public Administration and Doctorate Degree in Development Administration from the University of Southeastern Philippines, Davao City in 1998 and 2006, respectively. He is also a member of the illustrious Philippine Military Academy’s Sinagtala Class of 1986. The fight against the proliferation of illegal drugs has long become a mission in his life that did not waver when he joined the Legislative Branch."
-   }
+    "biography": "A public servant with more than three decades of experience in the Executive Branch of government prior to joining the Legislative Branch in 2019 as a Senator of the Republic of the Philippines. He completed his Master’s Degree in Public Administration and Doctorate Degree in Development Administration from the University of Southeastern Philippines, Davao City in 1998 and 2006, respectively. He is also a member of the illustrious Philippine Military Academy’s Sinagtala Class of 1986. The fight against the proliferation of illegal drugs has long become a mission in his life that did not waver when he joined the Legislative Branch. Among his priority legislation are the revival and imposition of death penalty for those who will import, manufacture and cultivate illegal drugs (Senate Bill No. 226); inclusion of substance abuse prevention education for grade school students (Senate Bill No. 228); and, strengthening the public health approach in the drug abuse prevention (Senate Bill No. 513). His legislative accomplishments in his first two years in the Senate include spearheading the passage of Republic Act 11589 (BFP Modernization Act) and Republic Act 11549 (PNP, BFP, BJMP and BuCor Height Equality Act). He also actively participated to ensure the enactment of Republic Act No. 11479 (Anti-Terrorism Act of 2020)."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-joseph-victor-jv-g-ejercito",
@@ -184,10 +216,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 505 & 18 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.695195+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00",
-    "biography": "Senator Joseph Victor G. Ejercito was born on December 26, 1969 in Manila. He is the son of former San Juan City Mayor Guia Gomez and former President Joseph Ejercito Estrada. He is a proud alumnus of Xavier School, where he completed his elementary and secondary education. He earned a degree in Political Science at the De La Salle University Manila in 1991. Ejercito first entered the political limelight in 2001, when San Juan residents clamored him to run as mayor. He served as San Juan Mayor for three consecutive terms, from 2001 to 2010."
-   }
+    "biography": "Senator Joseph Victor G. Ejercito was born on December 26, 1969 in Manila. He is the son of former San Juan City Mayor Guia Gomez and former President Joseph Ejercito Estrada. He is a proud alumnus of Xavier School, where he completed his elementary and secondary education. He earned a degree in Political Science at the De La Salle University Manila in 1991. Ejercito first entered the political limelight in 2001, when San Juan residents clamored him to run as mayor. He served as San Juan Mayor for three consecutive terms, from 2001 to 2010. Under Ejercito's leadership, San Juan was distinguished for its dynamic local government reforms and economic boom, which resulted in an annual revenue increase of P100 million. From P300 million in 2001, San Juan's revenue reached P1.2 billion pesos in 2010. Because of this significant growth, San Juan was converted into a highly urbanized city in June 2007. Ejercito’s accomplishments as Mayor garnered him several prestigious awards, such as the Ten Outstanding Young Men (TOYM) Award for Public Service and Governance in 2007. In 2010, Ejercito ran unopposed as Representative for the Lone District of San Juan. In the 15th Congress, Ejercito was recognized among the Fifteen Most Outstanding Congressmen. He chaired the House Committee on Metro Manila Development and served as Vice Chairman of the Committee on Labor and Employment and Committee on Local Government."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-francis-chiz-g-escudero",
@@ -207,10 +238,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 526 & 6 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.690840+08:00",
-    "updated_at": "2026-05-12T15:15:53.174016+08:00",
-    "biography": "Chiz Escudero first came to the attention of the Filipinos when as one of the youngest members of Congress, he stood out as a charismatic, eloquent speaker with a remarkable facility with the Filipino language. He has risen to prominence when he led an impeachment drive against then President Gloria Macapagal Arroyo. His meteoric ascend to politics saw him a senate seat in 2007. Chiz was born Francis Joseph Escudero on October 10, 1969. He is the second of the three children of the late Agriculture Minister and First District Representative of Sorsogon Salvador Escudero and now congressman Evelina Guevara Escudero."
-   }
+    "biography": "Chiz Escudero first came to the attention of the Filipinos when as one of the youngest members of Congress, he stood out as a charismatic, eloquent speaker with a remarkable facility with the Filipino language. He has risen to prominence when he led an impeachment drive against then President Gloria Macapagal Arroyo. His meteoric ascend to politics saw him a senate seat in 2007. Chiz was born Francis Joseph Escudero on October 10, 1969. He is the second of the three children of the late Agriculture Minister and First District Representative of Sorsogon Salvador Escudero and now congressman Evelina Guevara Escudero. He was educated in the public school system of the University of the Philippines from kindergarten all the way to law school, where he was a member of the debate team. After passing the Philippine Bar in 1994, Chiz went into practice while at the same time took on a teaching position as a law professor at the UP College of Law. In 1996, he obtained a Masters degree in International and Comparative Law at Georgetown Law Center in Washington, D.C. In 1998 he won his first election as the Representative of the First District of Sorsogon at the age of 28. He was re-elected two more times during which he served as Assistant Majority Floor Leader and House Minority Floor Leader. In 2007, Chiz took his oath at the Senate, garnering the second highest number of votes."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-jinggoy-ejercito-estrada",
@@ -230,10 +260,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rm. 602 GSIS Bldg., Financial Center, Roxas Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.687996+08:00",
-    "updated_at": "2026-05-04T15:59:15.382121+08:00",
-    "biography": "As the eldest son of President Joseph Marcelo Ejercito Estrada and Senator Luisa Pimentel-Ejercito Estrada, it is not surprising that like his parents, the Filipino masses have a special place in the heart of Senator Jinggoy Ejercito Estrada, along with siblings, Jacqueline Ejercito-Lopez and Jude Ejercito. In 1989, he was married to Ma. Presentacion \"Precy\" Vitug-Ejercito whom he was blessed with four wonderful and beautiful children, namely, Janella Marie, Joseph Luis Manuel, Julian Emilio and baby Julienne."
-   }
+    "biography": "As the eldest son of President Joseph Marcelo Ejercito Estrada and Senator Luisa Pimentel-Ejercito Estrada, it is not surprising that like his parents, the Filipino masses have a special place in the heart of Senator Jinggoy Ejercito Estrada, along with siblings, Jacqueline Ejercito-Lopez and Jude Ejercito. In 1989, he was married to Ma. Presentacion \"Precy\" Vitug-Ejercito whom he was blessed with four wonderful and beautiful children, namely, Janella Marie, Joseph Luis Manuel, Julian Emilio and baby Julienne. Having witnessed how his famous and well-loved father, former Mayor of the historical town of San Juan has satisfactorily governed said locality over a progressive nineteen year period (1967-1986), Jinggoy knows that he is bound to follow the footsteps that his father has carved in both public service and show business arena. In his early 20s, Jinggoy became an actor and bagged the Filipino Academy for Movie Art and Science (FAMAS) Best Supporting Actor Award for his performance in the movie entitled \"Farita Punzalan Story\". In 1999, he also became the host of the television public service program, SaBAYAN, which has helped a number of Filipinos through significant exposés. Senator Jinggoy finished his primary and secondary education at the Ateneo de Manila University and earned a degree in A.B. Economics from the University of the Philippines."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-christopher-lawrence-t-go",
@@ -252,10 +281,9 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
-    "address": "Rooms 507 & 14 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.697979+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00"
-   }
+    "address": "Rooms 507 & 14 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City"
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-risa-hontiveros",
@@ -275,10 +303,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 527 & 9 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.696636+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00",
-    "biography": "Senator Risa Hontiveros is a health and women’s rights advocate, a proud activist, and a champion of the basic sectors. She is the Philippines’ first socialist woman Senator. Senator Risa Hontiveros is widely known and celebrated for her tireless work in promoting public health, the rights of women and other marginalized groups, and the welfare of the Filipino family. A multi-awarded public servant, community organizer and broadcast journalist, Hontiveros served as the representative of Akbayan Partylist from 2004 to 2010. She was first elected to the Senate in 2016, and was later re-elected by voters to a new Senate term in 2022."
-   }
+    "biography": "Senator Risa Hontiveros is a health and women’s rights advocate, a proud activist, and a champion of the basic sectors. She is the Philippines’ first socialist woman Senator. Senator Risa Hontiveros is widely known and celebrated for her tireless work in promoting public health, the rights of women and other marginalized groups, and the welfare of the Filipino family. A multi-awarded public servant, community organizer and broadcast journalist, Hontiveros served as the representative of Akbayan Partylist from 2004 to 2010. She was first elected to the Senate in 2016, and was later re-elected by voters to a new Senate term in 2022. Hontiveros has personally championed 25 new landmark laws, including the historic Expanded Maternity Leave Law (RA 11210), which gives working moms 105 days of paid maternity leave, and the Mental Health Law (RA 11036), which provides the first legal framework over mental health care in the country. As chairperson of the Senate Committee on Women, Children, Family Relations and Gender Equality, Hontiveros has successfully pushed into law the Expanded Solo Parents Welfare Act (RA 11861), which provides wider social benefits to solo parents, the Safe Spaces Act (RA 11313) which protects Filipinos - especially women - from gender-based harassment in public spaces, and the Anti-Online Sexual Abuse or Exploitation of Children Law (RA 11930) which boosts government efforts to end online abuse and exploitation of Filipino children."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-panfilo-ping-m-lacson",
@@ -298,10 +325,50 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 603 and 511, GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.698353+08:00",
-    "updated_at": "2026-05-12T08:44:21.732030+08:00",
-    "biography": "Ang tama, ipaglaban. Ang mali, labanan.(What is right must be kept right. What is wrong must be set right.) These words have served as the constant guide of PANFILO “PING” MORENA LACSON, who has been circumspect in matters of public interest and committed against various forms of corruption in his more than 50 years of public service in the fields of law enforcement, lawmaking, and humanitarian work."
-   }
+    "biography": "Ang tama, ipaglaban. Ang mali, labanan.(What is right must be kept right. What is wrong must be set right.) These words have served as the constant guide of PANFILO “PING” MORENA LACSON, who has been circumspect in matters of public interest and committed against various forms of corruption in his more than 50 years of public service in the fields of law enforcement, lawmaking, and humanitarian work. Lacson first earned a tough, no-nonsense reputation while serving in the Philippine Constabulary and Philippine National Police: solving high-profile crimes including kidnap-for-ransom cases in the 1980s and 1990s; and reviving the PNP’s glory days as Chief, PNP from 1999 to 2001 – as well as continuing to help the PNP as Chairman of the PNP Foundation, Inc. (PNPFI), which helps fill the gap in the police institution’s logistical requirements. In the Senate, Lacson was an untiring, tenacious watchdog of the national budget, making sure dubious congressional insertions (a.k.a. pork barrel) and useless appropriations are checked and deleted during plenary debates. His 18 years of scrutinizing the national budget as Senator saved the Filipino no less than a whopping P300 billion. Lacson’s continuous fight against corruption, including pork barrel in all its iterations, earned him the degree of Doctor of Laws, Honoris Causa, from the Pamantasan ng Lungsod ng Maynila in March 2019."
+   },
+   "achievements": [
+    "Republic Act 11709: An Act Prescribing Fixed Terms for Key Officers of the AFP",
+    "Republic Act 11691: An Act Creating the Office of the Judiciary Marshals",
+    "Republic Act 11683: Exemptions in Requirements for Conversion of a Municipality into a Component City",
+    "Republic Act 11279: Act Transferring the Training of Police Recruits from the Philippine Public Safety College to the Philippine National Police",
+    "Republic Act 11200: An Act Providing for Rank Classification in the Philippine National Police",
+    "Republic Act 11059: An Act Establishing a Retirement Benefit System in the Office of the Ombudsman",
+    "Republic Act 10973: Restoring the Subpoena Powers of the PNP-CIDG",
+    "Republic Act 10969: The Free Irrigation Law",
+    "Republic Act 10927: Amending the Anti-Money Laundering Act to Include Casinos as ‘Covered Persons’",
+    "Republic Act 10591: An Act Providing for a Comprehensive Law on Firearms, Light Weapons and Ammunition",
+    "Republic Act 10354: the Responsible Parenthood and Reproductive Health Act of 2012",
+    "Republic Act 10351: The Sin Tax Reform Law",
+    "Republic Act 10349: An Act Amending the Armed Forces of the Philippines Modernization Program",
+    "Republic Act 10167: An Act to Further Strengthen the Anti-Money Laundering Law",
+    "Republic Act 9160 (as amended by RA 9194): Anti-Money Laundering Act",
+    "Republic Act 9165: Comprehensive Dangerous Drugs Act of 2002",
+    "Republic Act 9163: National Service Training Program Act of 2001",
+    "Republic Act 9166: An Act Increasing the Base Pay of the Members of the AFP",
+    "Republic Act 9208: Anti-Trafficking in Persons Act of 2003",
+    "Republic Act 9416: Anti-Cheating Act of 2007",
+    "Republic Act 9484: The Philippine Dental Act of 2007",
+    "the proposed Budget Reform for Village Empowerment Act the proposed Expanded Anti-Wiretapping Act",
+    "a bill requiring the registration of prepaid subscriber identity module (SIM) cards to prevent scams and crimes involving identity theft",
+    "a bill imposing heavier penalties on those giving false testimonies",
+    "a bill that offers substantial rewards and better protection to witnesses testifying against government officials or employees involved in corruption",
+    "a bill that strips drug pushers, manufacturers, cultivators, importers and financiers of their rights under the Bank Secrecy Act, so they can no longer hide their ill-gotten money in banks.",
+    "irregularities in the Philippine government’s deal with Argentine firm Industrias Metalurgicas Pescarmona Sociedad Anonima (IMPSA) r />",
+    "the money-laundering scheme by one “Jose Pidal”* the continued operations of jueteng in the country",
+    "diversion of P728 million in fertilizer funds engineered by one Jocjoc Bolante",
+    "the “Hello Garci” tapes indicating cheating in the 2004 elections",
+    "alleged overpricing involving the decorative lampposts used in the Asean summit in Cebu City",
+    "plight of Filipino nurses recruited by Sentosa Recruitment Agency",
+    "alleged bribery in the failed impeachment bid against President Gloria Macapagal-Arroyo",
+    "the botched $329-million contract between the Philippine government and China’s ZTE for a national broadband network project",
+    "irregularities in the multibillion-peso Quedancor swine program",
+    "the “chopper scam” where secondhand helicopters were sold as brand-new to the Philippine National Police",
+    "a plan by the Social Security System to channel workers’ pension funds into a government economic stimulus program",
+    "alleged irregularities in the purchase of video equipment for the Senate’s Public Relations and Information Bureau",
+    "the “tara list” and payola (payoffs) in the Bureau of Customs",
+    "pork barrel in its various incarnations"
+   ]
   },
   {
    "id": "senate-nationwide-manuel-lito-m-lapid",
@@ -321,10 +388,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 517 & 10 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.688864+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00",
-    "biography": "Never did it occur to the lowly person of a silver screen hero that a man of his mettle would make a mark in the annals of this chamber, a place then forbidding of the not so lettered. Indeed, as a testament to a working democracy, a person with little formal education can be presented the opportunity of belonging to the group of select individuals mandated by the people to craft policies that would later on become laws and rules of conduct. For this reason, Senator Manuel “Lito” M. Lapid never passed off the chance to deliver well in this world of the erudite."
-   }
+    "biography": "Never did it occur to the lowly person of a silver screen hero that a man of his mettle would make a mark in the annals of this chamber, a place then forbidding of the not so lettered. Indeed, as a testament to a working democracy, a person with little formal education can be presented the opportunity of belonging to the group of select individuals mandated by the people to craft policies that would later on become laws and rules of conduct. For this reason, Senator Manuel “Lito” M. Lapid never passed off the chance to deliver well in this world of the erudite. The six years of his first term as a senator were marked with achievements which left the cynics perplexed and his critics baffled, but nevertheless proved his worth as a working legislator. He was one of the top performing senators having placed 4th among his peers in the number of bills and resolutions filed in the 14th Congress alone. He fathered one of the meaningful social legislations of the 14th Congress, the Free Legal Assistance Act of 2010 which seeks to ensure that the poor may be afforded free quality legal service. This measure heralded other policy initiatives that look to bridge the great divide between the rich and the poor. Since then, he never wavered on making proposals that would uplift the living standards of the little people of the society whose caused he has been championing, being the “Bida ng Masa”."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-loren-legarda",
@@ -344,10 +410,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 601 & 17 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.683319+08:00",
-    "updated_at": "2026-06-07T20:09:56.771460+08:00",
-    "biography": "Senator Loren Legarda is the longest-serving female senator in Philippine history. Over four terms in the Senate, she has authored and championed numerous landmark legislation to improve the lives of Filipinos and advance inclusive, sustainable, and resilient national development. She is the only woman in Philippine history to have topped two senatorial elections (1998 and 2007) and the only female to have served as Senate Majority Leader."
-   }
+    "biography": "Senator Loren Legarda is the longest-serving female senator in Philippine history. Over four terms in the Senate, she has authored and championed numerous landmark legislation to improve the lives of Filipinos and advance inclusive, sustainable, and resilient national development. She is the only woman in Philippine history to have topped two senatorial elections (1998 and 2007) and the only female to have served as Senate Majority Leader. In the 20th Congress, she serves as Chairperson of (1) the Committee on Culture and the Arts, (2) the Committee on Higher, Technical, and Vocational Education, and (3) the Committee on National Defense and Security, Peace, Unification, and Reconciliation, where she is the first woman to serve as Chairperson. In the 19th Congress, she served as Senate President Pro Tempore during its First and Second Regular Sessions. During the 18th Congress, she served as Representative of the Lone District of Antique and held the position of Deputy Speaker in the House of Representatives. Legarda is a recipient of the Ten Outstanding Young Men (TOYM) award and The Outstanding Women in the Nation’s Service (TOWNS) award. Her pioneering work in environmental advocacy has earned her global recognition. She has been named a Global Leader for Tomorrow by the World Economic Forum (WEF), a Global 500 Laureate by the United Nations Environment Programme (UNEP), and an ASEAN Biodiversity Hero by the ASEAN Center for Biodiversity."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-rodante-d-marcoleta",
@@ -366,10 +431,9 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
-    "address": "Rooms 524-A & 21 (Extension), GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-08T12:43:57.676462+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00"
-   }
+    "address": "Rooms 524-A & 21 (Extension), GSIS Bldg., Financial Center, Diokno Blvd., Pasay City"
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-imee-r-marcos",
@@ -388,10 +452,9 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
-    "address": "Rooms 519 & 15 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.699542+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00"
-   }
+    "address": "Rooms 519 & 15 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City"
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-robinhood-c-padilla",
@@ -411,10 +474,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 506 (Main) & 24 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.700909+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00",
-    "biography": "Biographical sketch SENADOR ROBINHOOD \"ROBIN\" C. PADILLA “Kailangan hindi ka lang action hero sa pelikula. 'Pag sinabi na action hero ka, kahit sa totoong buhay.” Ito ang patuloy na nagtutulak kay Senador Robin Padilla - Robinhood Ferdinand Cariño Padilla sa tunay na buhay - para isulong ang kapakanan ng ordinaryong Pilipino. Nais din ni Padilla na makamtan ang kapayapaan at pagkakaisa ng mga Pilipino, hindi lang para sa mga Muslim na tulad niya, nguni't para sa lahat."
-   }
+    "biography": "Biographical sketch SENADOR ROBINHOOD \"ROBIN\" C. PADILLA “Kailangan hindi ka lang action hero sa pelikula. 'Pag sinabi na action hero ka, kahit sa totoong buhay.” Ito ang patuloy na nagtutulak kay Senador Robin Padilla - Robinhood Ferdinand Cariño Padilla sa tunay na buhay - para isulong ang kapakanan ng ordinaryong Pilipino. Nais din ni Padilla na makamtan ang kapayapaan at pagkakaisa ng mga Pilipino, hindi lang para sa mga Muslim na tulad niya, nguni't para sa lahat. Sa kanyang pagtrabaho bilang artista, nakita at naranasan ni “Binoe” ang mga problemang hinaharap araw-araw ni Juan dela Cruz, kabilang na ang kahirapan at diskriminasyon - kung kaya’t determinado siyang tulungan ang mga Pilipino bilang mambabatas. Kabilang sa unang mga panukalang batas na kanyang ihinain ang pag-amyenda sa Rice Tariffication Law para sa ating magsasaka; ang civil service eligibility para sa mga casual at contractual na nagtatrabaho sa gobyerno; at sa paggamit ng Filipino bilang opisyal na wika sa mga dokumento. Isinusulong din ni Padilla ang pagturo ng Kasaysayan ng Pilipinas sa K-12, ang pagtiyak ng karapatan ng mga same-sex couples, at ang proteksyon sa pag-aasawa sa pamamagitan ng divorce bill para sa kasal na nasira dahil sa problemang hindi na malulunasan pa. Adbokasiya din ni Padilla ang pagkaroon ng mas maginhawang buhay sa pamamagitan ng pederalismo; pagsugpo sa kriminalidad at katiwalian; at pag-alaga sa kalikasan at kapaligiran."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-francis-kiko-pangilinan",
@@ -434,10 +496,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 525 & 7 (Extension) GSIS Bidg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.699771+08:00",
-    "updated_at": "2026-05-20T15:12:08.562712+08:00",
-    "biography": "Serving the people, through the years. “I HOPE you will grow up in a country you can be proud of, in a society that is safe wherever you go” forms part of Kiko’s letter to his newborn daughter Kakie when he first ran for the Senate in 2001. It was a rough year, an apparent repeat of the EDSA People Power Revolt 15 years earlier. People went out to the streets to call for President Estrada’s resignation over accusations of plunder andjueteng(illegal gambling) kickbacks worth hundreds of millions of pesos. It was also a hopeful year, as Kiko ran for his first national seat."
-   }
+    "biography": "Serving the people, through the years. “I HOPE you will grow up in a country you can be proud of, in a society that is safe wherever you go” forms part of Kiko’s letter to his newborn daughter Kakie when he first ran for the Senate in 2001. It was a rough year, an apparent repeat of the EDSA People Power Revolt 15 years earlier. People went out to the streets to call for President Estrada’s resignation over accusations of plunder andjueteng(illegal gambling) kickbacks worth hundreds of millions of pesos. It was also a hopeful year, as Kiko ran for his first national seat. His battle cry was, “Kumilos Kasama si Kiko”, a slogan that distills his conviction that genuine and lasting change can happen only when political leaders and citizens work together toward a common goal. This is a lesson he took away from the peaceful uprising that spelled the fall of Marcos the dictator. Kiko was a “martial law baby”. Typical of middle-class children of the 1970s, he was apolitical. It took the assassination of Upsilon fraternity brother and political firebrand Sen. Benigno “Ninoy” Aquino Jr. under the government of fellow brod Marcos to shake him off his apathy and veer him from his regular teenage pursuits of girls and music and sports. He began to question his unexamined assumptions about politics and society. He immersed himself in the student movement via the University of the Philippines Student Council, as its chairman and the university’s Student Regent."
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-erwin-t-tulfo",
@@ -456,10 +517,9 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
-    "address": "Rooms 516 & 4 (Extension), GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-08T12:44:34.039450+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00"
-   }
+    "address": "Rooms 516 & 4 (Extension), GSIS Bldg., Financial Center, Diokno Blvd., Pasay City"
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-raffy-t-tulfo",
@@ -479,10 +539,44 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 516 & 4 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.701062+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00",
-    "biography": "Senator Raffy Tulfo is a known defender of the poor and aggrieved with a career in public service as a broadcaster spanning over 20 years. Popular for his brand of public service where he acts swiftly on the problems of ordinary citizens, Sen. Raffy is bringing his experience and expertise in the challenge of crafting meaningful laws in his first term as Senator of the Republic. Regarded by many as “Idol,” he is also the man behind the multi-awarded and widely popular programs, “Raffy Tulfo in Action” and “Wanted sa Radyo.” As a media person, Sen."
-   }
+    "biography": "Senator Raffy Tulfo is a known defender of the poor and aggrieved with a career in public service as a broadcaster spanning over 20 years. Popular for his brand of public service where he acts swiftly on the problems of ordinary citizens, Sen. Raffy is bringing his experience and expertise in the challenge of crafting meaningful laws in his first term as Senator of the Republic. Regarded by many as “Idol,” he is also the man behind the multi-awarded and widely popular programs, “Raffy Tulfo in Action” and “Wanted sa Radyo.” As a media person, Sen. Raffy started his broadcasting career as a disc jockey in a local radio station in Puerto Princesa City in Palawan and later clinched his first big break on broadcast when he became a newscaster/reporter of PTV 4. Sen. Raffy then hosted several public service programs on ABC 5 that allowed him to provide immediate resolution to disputes. He also became the anchor of primetime TV newscast, “Frontline Pilipinas.” His advocacy includes promoting and protecting the rights of families, OFWs, and workers. Using the power of the pen to inform the public and express his opinions on burning issues, Sen. Raffy also became a columnist for several tabloids, such as Abante and Bulgar."
+   },
+   "achievements": [
+    "DYPR-AM, Puerto Princesa City – Disc Jockey/Newscaster.",
+    "DZYZ-AM, Olongapo City – Disc Jockey/Newscaster.",
+    "DYAX-AM, Tarlac City – Disc Jockey/Newscaster.",
+    "DWWC-FM, Cauayan City – Disc Jockey/Newscaster.",
+    "DWLS-FM, (GMA Network) Quezon City – News Writer Trainee.",
+    "Citynet Channel 27 (GMA Network) , Quezon City Newscaster/News Writer.",
+    "PTV4, Quezon City – Newscaster/Reporter.",
+    "Anchor/Producer; Philippines’ Most Wanted – PTV4.",
+    "Anchor/Producer; Problema Nyo, Sagot Ko – ABC5.",
+    "Anchor/Producer; Munting Hiling – ABC5.",
+    "Anchor/Producer; Task Force Siyasat – ABC5.",
+    "Anchor/Producer; Kamao – NBN4.",
+    "Anchor/Co-Producer; Isumbong Mo (Tulfo Brothers) – RPN9.",
+    "Anchor/Producer; Wanted sa Radyo – DZXL (RMN).",
+    "Anchor; Wanted sa Radyo – TV5.",
+    "Anchor; Balitaang Tapat – TV5.",
+    "Anchor; WANTED – TV5.",
+    "Anchor; T3 – TV5",
+    "Abante (Una sa Balita) – Columnist.",
+    "Abante Tonite – Columnist.",
+    "Bulgar – Columnist.",
+    "Iskandal – Publisher/Columnist.",
+    "Pinoy Parazzi – Columnist.",
+    "Commuter Express - Columnist",
+    "Volunteers Against Crime and Corruption (VACC) Philippines’ Most Wanted, PTV4 – Best Anti-crime TV Show",
+    "Volunteers Against Crime and Corruption (VACC) Wanted Sa Radyo, RMN Best Public Service Anti-Crime and Corruption Radio Show. Best Public Service Anti-Crime and Corruption Radio Anchor",
+    "Manila Anti-Crime Riders Group Wanted Sa Radyo, RMN – Best Anti-Crime Public Service Radio Anchor",
+    "Gawad Amerika Wanted Sa Radyo, RMN – Best Public Service Radio Show.",
+    "People’s Choice Award Wanted Sa Radyo, Radyo5 – Best Public Service Radio Show.",
+    "Internal Affairs Service (IAS-PNP) Wanted Sa Radyo, Radyo5 – Medallion of Honor for Media Sector Partnership",
+    "New York Radio and Film Festival 2012 Wanted, TV5 – Finalist for best community service TV Show.",
+    "New York Radio and Film Festival 2012 Wanted, TV5 – Finalist for best community service TV Show",
+    "- Best Public Service Radio Anchor",
+    "- Most inspiring male host for Public Service TV & Radio"
+   ]
   },
   {
    "id": "senate-nationwide-joel-villanueva",
@@ -501,10 +595,9 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
-    "address": "Rooms 508 & 8 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.700589+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00"
-   }
+    "address": "Rooms 508 & 8 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City"
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-camille-a-villar",
@@ -523,10 +616,9 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
-    "address": "Rooms 503 & 20 (Extension), GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-08T12:45:04.995392+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00"
-   }
+    "address": "Rooms 503 & 20 (Extension), GSIS Bldg., Financial Center, Diokno Blvd., Pasay City"
+   },
+   "achievements": []
   },
   {
    "id": "senate-nationwide-mark-a-villar",
@@ -546,10 +638,9 @@
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "details": {
     "address": "Rooms 502 & 16 (Extension) GSIS Bldg., Financial Center, Diokno Blvd., Pasay City",
-    "created_at": "2025-11-07T14:45:20.701226+08:00",
-    "updated_at": "2026-02-04T18:06:10.027710+08:00",
-    "biography": "Senator Mark A. Villar has dedicated his career to public service, serving the Philippines and Filipinos through the legislative and executive branches since 2010. As a legislator, Senator Mark Villar has greatly shaped the country's digital space and economy through sponsoring landmark laws. In the 19th Congress, Senator Villar sponsored laws like the Internet Transactions Act and the Anti-Financial Account Scamming Act. These laws ushered in an era of a safer, more reliable, and adaptable digital space and economy, fostering a trustworthy environment for users and consumers."
-   }
+    "biography": "Senator Mark A. Villar has dedicated his career to public service, serving the Philippines and Filipinos through the legislative and executive branches since 2010. As a legislator, Senator Mark Villar has greatly shaped the country's digital space and economy through sponsoring landmark laws. In the 19th Congress, Senator Villar sponsored laws like the Internet Transactions Act and the Anti-Financial Account Scamming Act. These laws ushered in an era of a safer, more reliable, and adaptable digital space and economy, fostering a trustworthy environment for users and consumers. He completed his Bachelor of Science degree in Political Science, Philosophy, and Economics at the University of Pennsylvania and his Master's Degree in Business Administration at the University of Chicago Booth School of Business. Senator Mark was conferred with a Doctor of Laws, Honoris Causa by the University of the Philippines College of Law. In 2010, he was elected as Representative for the lone district of Las Piñas and served as a Congressman until 2016. During the 19th Congress, he was the chairperson of the Senate Committee on Government Corporations and Public Enterprises and the Committee on Banks, Financial Institutions, and Currencies. Currently, in the 20th Congress, he is the chairperson of the Senate Committee on Public Works and the Government Corporations and Public Enterprises. He is married to Atty. Emmeline Aglipay-Villar. They are blessed with a daughter named Emma."
+   },
+   "achievements": []
   }
  ]
 }
