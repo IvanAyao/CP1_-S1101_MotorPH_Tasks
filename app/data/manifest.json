@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T11:37:05+00:00",
+ "generated_at": "2026-09-30T11:55:52+00:00",
  "datasets": [
   {
    "key": "senate",
@@ -15,7 +15,7 @@
    "source": "Wikipedia (unofficial)",
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_members_of_the_House_of_Representatives_of_the_Philippines",
    "count": 317,
-   "scraped_at": "2026-09-30T11:37:04+00:00"
+   "scraped_at": "2026-09-30T11:55:51+00:00"
   },
   {
    "key": "lgu",
@@ -23,7 +23,7 @@
    "source": "Wikipedia (unofficial)",
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
    "count": 160,
-   "scraped_at": "2026-09-30T11:37:05+00:00"
+   "scraped_at": "2026-09-30T11:55:52+00:00"
   },
   {
    "key": "barangay",

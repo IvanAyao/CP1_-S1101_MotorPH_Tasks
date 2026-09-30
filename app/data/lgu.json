@@ -1,7 +1,7 @@
 {
  "dataset": "lgu",
  "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
- "scraped_at": "2026-09-30T11:37:05+00:00",
+ "scraped_at": "2026-09-30T11:55:52+00:00",
  "count": 160,
  "method": "wikipedia",
  "records": [
@@ -24,7 +24,7 @@
    "details": {
     "term": "1",
     "born": "March 13, 1947",
-    "prior_experience": "Businessman Governor of Abra",
+    "prior_experience": "Businessman; Governor of Abra",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -48,7 +48,7 @@
    "details": {
     "term": "2",
     "born": "April 16, 1970",
-    "prior_experience": "Nurse Governor of Agusan del Norte House of Representatives",
+    "prior_experience": "Nurse; Governor of Agusan del Norte; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -120,7 +120,7 @@
    "details": {
     "term": "1",
     "born": "January 2, 1964",
-    "prior_experience": "Engineer Governor of Albay Mayor of Legazpi City Administrator of Legazpi",
+    "prior_experience": "Engineer; Governor of Albay; Mayor of Legazpi; City Administrator of Legazpi",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -144,7 +144,7 @@
    "details": {
     "term": "1",
     "born": "January 17, 1981",
-    "prior_experience": "Businessman House of Representatives",
+    "prior_experience": "Businessman; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -168,7 +168,7 @@
    "details": {
     "term": "2",
     "born": "May 15, 1970",
-    "prior_experience": "House of Representatives Governor of Apayao Mayor of Calanasan",
+    "prior_experience": "House of Representatives; Governor of Apayao; Mayor of Calanasan",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -192,7 +192,7 @@
    "details": {
     "term": "0",
     "born": "May 15, 1961",
-    "prior_experience": "Civil engineer, professor, entrepreneur Vice Governor of Aurora Aurora Provincial Board",
+    "prior_experience": "Civil engineer, professor, entrepreneur; Vice Governor of Aurora; Aurora Provincial Board",
     "assumed_office": "September 22, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -216,7 +216,7 @@
    "details": {
     "term": "1",
     "born": "September 11, 1972",
-    "prior_experience": "Indigenous people's rights advocate House of Representatives Governor of the Autonomous Region in Muslim Mindanao",
+    "prior_experience": "Indigenous people's rights advocate; House of Representatives; Governor of the Autonomous Region in Muslim Mindanao",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -240,7 +240,7 @@
    "details": {
     "term": "2",
     "born": "November 12, 1971",
-    "prior_experience": "House of Representatives Mayor of Balanga",
+    "prior_experience": "House of Representatives; Mayor of Balanga",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -288,7 +288,7 @@
    "details": {
     "term": "1",
     "born": "November 3, 1953",
-    "prior_experience": "Actress House of Representatives Governor of Batangas Mayor of Lipa",
+    "prior_experience": "Actress; House of Representatives; Governor of Batangas; Mayor of Lipa",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -312,7 +312,7 @@
    "details": {
     "term": "3",
     "born": "March 18, 1973",
-    "prior_experience": "Physician Mayor of Buguias Vice Mayor of Buguias",
+    "prior_experience": "Physician; Mayor of Buguias; Vice Mayor of Buguias",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -336,7 +336,7 @@
    "details": {
     "term": "1",
     "born": "June 30, 1960",
-    "prior_experience": "Businessman Governor of Biliran House of Representatives",
+    "prior_experience": "Businessman; Governor of Biliran; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -360,7 +360,7 @@
    "details": {
     "term": "2",
     "born": "December 29, 1977",
-    "prior_experience": "Businessman House of Representatives",
+    "prior_experience": "Businessman; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -384,7 +384,7 @@
    "details": {
     "term": "2",
     "born": "July 15, 1969",
-    "prior_experience": "Businessman House of Representatives Valencia City Council",
+    "prior_experience": "Businessman; House of Representatives; Valencia City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -408,7 +408,7 @@
    "details": {
     "term": "3",
     "born": "May 12, 1962",
-    "prior_experience": "Actor Vice Governor of Bulacan Bulacan Provincial Board",
+    "prior_experience": "Actor; Vice Governor of Bulacan; Bulacan Provincial Board",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -432,7 +432,7 @@
    "details": {
     "term": "1",
     "born": "September 13, 1948",
-    "prior_experience": "Businessman Philippine Retirement Authority Chairman Chief of the Philippine National Police",
+    "prior_experience": "Businessman; Philippine Retirement Authority Chairman; Chief of the Philippine National Police",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -480,7 +480,7 @@
    "details": {
     "term": "1",
     "born": "June 3, 1968",
-    "prior_experience": "Businessman House of Representatives Governor of Camarines Sur",
+    "prior_experience": "Businessman; House of Representatives; Governor of Camarines Sur",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -504,7 +504,7 @@
    "details": {
     "term": "2",
     "born": "December 5, 1986",
-    "prior_experience": "Lawyer House of Representatives",
+    "prior_experience": "Lawyer; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -528,7 +528,7 @@
    "details": {
     "term": "2",
     "born": "April 27, 1951",
-    "prior_experience": "Farmer, businessman House of Representatives",
+    "prior_experience": "Farmer, businessman; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -552,7 +552,7 @@
    "details": {
     "term": "1",
     "born": "December 18, 1968",
-    "prior_experience": "Educator Catanduanes State University President",
+    "prior_experience": "Educator; Catanduanes State University President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -600,7 +600,7 @@
    "details": {
     "term": "1",
     "born": "November 9, 1966",
-    "prior_experience": "Philanthropist LBP Resources and Development Corporation national board director",
+    "prior_experience": "Philanthropist; LBP Resources and Development Corporation national board director",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -624,7 +624,7 @@
    "details": {
     "term": "2",
     "born": "February 25, 1972",
-    "prior_experience": "Vice Governor of Cotabato Governor of Cotabato House of Representatives",
+    "prior_experience": "Vice Governor of Cotabato; Governor of Cotabato; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -648,7 +648,7 @@
    "details": {
     "term": "1",
     "born": "September 14, 1961",
-    "prior_experience": "Engineer Davao del Norte Association of Barangay Captains President",
+    "prior_experience": "Engineer; Davao del Norte Association of Barangay Captains President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -719,7 +719,7 @@
    "details": {
     "term": "2",
     "born": "April 1, 1952",
-    "prior_experience": "Lawyer Vice Governor of Davao Occidental House of Representatives Mayor of Malita",
+    "prior_experience": "Lawyer; Vice Governor of Davao Occidental; House of Representatives; Mayor of Malita",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -743,7 +743,7 @@
    "details": {
     "term": "1",
     "born": "January 24, 1966",
-    "prior_experience": "House of Representatives Governor of Davao Oriental",
+    "prior_experience": "House of Representatives; Governor of Davao Oriental",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -767,7 +767,7 @@
    "details": {
     "term": "2",
     "born": "October 23, 1968",
-    "prior_experience": "Vice Governor of Dinagat Islands Dinagat Islands Provincial Board",
+    "prior_experience": "Vice Governor of Dinagat Islands; Dinagat Islands Provincial Board",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -791,7 +791,7 @@
    "details": {
     "term": "1",
     "born": "February 14, 2000",
-    "prior_experience": "Economist Eastern Samar Philippine Councilors League President Sulat Municipal Council",
+    "prior_experience": "Economist; Eastern Samar Philippine Councilors League President; Sulat Municipal Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -815,7 +815,7 @@
    "details": {
     "term": "1",
     "born": "September 21, 1966",
-    "prior_experience": "Physician House of Representatives",
+    "prior_experience": "Physician; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -839,7 +839,7 @@
    "details": {
     "term": "3",
     "born": "February 20, 1964",
-    "prior_experience": "Civil engineer Mayor of Banaue",
+    "prior_experience": "Civil engineer; Mayor of Banaue",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -887,7 +887,7 @@
    "details": {
     "term": "2",
     "born": "September 15, 1948",
-    "prior_experience": "Businessman Vice Governor of Ilocos Sur Ilocos Sur Provincial Board Vice Mayor of Vigan",
+    "prior_experience": "Businessman; Vice Governor of Ilocos Sur; Ilocos Sur Provincial Board; Vice Mayor of Vigan",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -911,7 +911,7 @@
    "details": {
     "term": "3",
     "born": "October 8, 1969",
-    "prior_experience": "Lawyer House of Representatives Iloilo Provincial Board",
+    "prior_experience": "Lawyer; House of Representatives; Iloilo Provincial Board",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -935,7 +935,7 @@
    "details": {
     "term": "3",
     "born": "March 2, 1959",
-    "prior_experience": "House of Representatives Vice Governor of Isabela",
+    "prior_experience": "House of Representatives; Vice Governor of Isabela",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -959,7 +959,7 @@
    "details": {
     "term": "2",
     "born": "February 20, 1965",
-    "prior_experience": "Vice Governor of Kalinga Mayor of Pasil",
+    "prior_experience": "Vice Governor of Kalinga; Mayor of Pasil",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -1007,7 +1007,7 @@
    "details": {
     "term": "1",
     "born": "November 7, 1977",
-    "prior_experience": "Journalist, businesswoman House of Representatives",
+    "prior_experience": "Journalist, businesswoman; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1031,7 +1031,7 @@
    "details": {
     "term": "1",
     "born": "February 16, 1980",
-    "prior_experience": "Economist House of Representatives Governor of Lanao del Norte",
+    "prior_experience": "Economist; House of Representatives; Governor of Lanao del Norte",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1055,7 +1055,7 @@
    "details": {
     "term": "3",
     "born": "March 17, 1965",
-    "prior_experience": "Civil engineer Vice Governor of Lanao del Sur Governor of Lanao del Sur Provincial Administrator of Lanao del Sur Lanao del Sur Provincial Board",
+    "prior_experience": "Civil engineer; Vice Governor of Lanao del Sur; Governor of Lanao del Sur; Provincial Administrator of Lanao del Sur; Lanao del Sur Provincial Board",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -1079,7 +1079,7 @@
    "details": {
     "term": "2",
     "born": "April 29, 1963",
-    "prior_experience": "Secretary of Energy Governor of Leyte",
+    "prior_experience": "Secretary of Energy; Governor of Leyte",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -1103,7 +1103,7 @@
    "details": {
     "term": "1",
     "born": "September 3, 1946",
-    "prior_experience": "Mayor of Sultan Kudarat Member of the Bangsamoro Transition Authority Parliament Governor of Shariff Kabunsuan",
+    "prior_experience": "Mayor of Sultan Kudarat; Member of the Bangsamoro Transition Authority Parliament; Governor of Shariff Kabunsuan",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1127,7 +1127,7 @@
    "details": {
     "term": "1",
     "born": "November 10, 1949",
-    "prior_experience": "Farmer Mayor of Talayan",
+    "prior_experience": "Farmer; Mayor of Talayan",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1151,7 +1151,7 @@
    "details": {
     "term": "1",
     "born": "May 23, 1954",
-    "prior_experience": "Businessman Marinduque Provincial Board",
+    "prior_experience": "Businessman; Marinduque Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1175,7 +1175,7 @@
    "details": {
     "term": "1",
     "born": "December 31, 1996",
-    "prior_experience": "Lawyer House of Representatives",
+    "prior_experience": "Lawyer; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1199,7 +1199,7 @@
    "details": {
     "term": "2",
     "born": "October 11, 1958",
-    "prior_experience": "Businessman House of Representatives Vice Governor of Misamis Occidental Misamis Occidental Provincial Board",
+    "prior_experience": "Businessman; House of Representatives; Vice Governor of Misamis Occidental; Misamis Occidental Provincial Board",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -1271,7 +1271,7 @@
    "details": {
     "term": "3",
     "born": "December 13, 1959",
-    "prior_experience": "Sugar planter Vice Governor of Negros Occidental Mayor of San Carlos",
+    "prior_experience": "Sugar planter; Vice Governor of Negros Occidental; Mayor of San Carlos",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -1295,7 +1295,7 @@
    "details": {
     "term": "1",
     "born": "May 18, 1987",
-    "prior_experience": "Vice Governor of Negros Oriental Negros Oriental Provincial Board Dumaguete City Council",
+    "prior_experience": "Vice Governor of Negros Oriental; Negros Oriental Provincial Board; Dumaguete City Council",
     "assumed_office": "May 31, 2023",
     "wikipedia_revision": "1376008185"
    }
@@ -1343,7 +1343,7 @@
    "details": {
     "term": "3",
     "born": "January 25, 1966",
-    "prior_experience": "Lawyer Governor of Nueva Ecija House of Representatives National Telecommunications Commission Deputy Commissioner",
+    "prior_experience": "Lawyer; Governor of Nueva Ecija; House of Representatives; National Telecommunications Commission Deputy Commissioner",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -1367,7 +1367,7 @@
    "details": {
     "term": "1",
     "born": "July 10, 1953",
-    "prior_experience": "Lawyer Vice Governor of Nueva Vizcaya",
+    "prior_experience": "Lawyer; Vice Governor of Nueva Vizcaya",
     "assumed_office": "May 5, 2023",
     "wikipedia_revision": "1376008185"
    }
@@ -1391,7 +1391,7 @@
    "details": {
     "term": "3",
     "born": "April 1, 1963",
-    "prior_experience": "Mayor of Sablayan Vice Mayor of Sablayan",
+    "prior_experience": "Mayor of Sablayan; Vice Mayor of Sablayan",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -1415,7 +1415,7 @@
    "details": {
     "term": "3",
     "born": "November 27, 1976",
-    "prior_experience": "Vice Governor of Oriental Mindoro Oriental Mindoro Provincial Board",
+    "prior_experience": "Vice Governor of Oriental Mindoro; Oriental Mindoro Provincial Board",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -1463,7 +1463,7 @@
    "details": {
     "term": "2",
     "born": "March 19, 1975",
-    "prior_experience": "Pilot House of Representatives Mayor of Binalonan Vice Mayor of Binalonan",
+    "prior_experience": "Pilot; House of Representatives; Mayor of Binalonan; Vice Mayor of Binalonan",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -1487,7 +1487,7 @@
    "details": {
     "term": "1",
     "born": "February 20, 1951",
-    "prior_experience": "Businesswoman Vice Governor of Pampanga Governor of Pampanga Pampanga Provincial Board Mayor of Lubao",
+    "prior_experience": "Businesswoman; Vice Governor of Pampanga; Governor of Pampanga; Pampanga Provincial Board; Mayor of Lubao",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1511,7 +1511,7 @@
    "details": {
     "term": "2",
     "born": "October 1, 1971",
-    "prior_experience": "Physician House of Representatives",
+    "prior_experience": "Physician; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -1535,7 +1535,7 @@
    "details": {
     "term": "0",
     "born": "July 1, 1970",
-    "prior_experience": "Registered nurse, pastor Vice Governor of Quirino Quirino Provincial Board",
+    "prior_experience": "Registered nurse, pastor; Vice Governor of Quirino; Quirino Provincial Board",
     "assumed_office": "September 15, 2026",
     "wikipedia_revision": "1376008185"
    }
@@ -1583,7 +1583,7 @@
    "details": {
     "term": "1",
     "born": "February 18, 1982",
-    "prior_experience": "Environmental planner Mayor of Odiongan",
+    "prior_experience": "Environmental planner; Mayor of Odiongan",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1607,7 +1607,7 @@
    "details": {
     "term": "2",
     "born": "May 11, 1982",
-    "prior_experience": "Pharmacist House of Representatives Governor of Samar",
+    "prior_experience": "Pharmacist; House of Representatives; Governor of Samar",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -1679,7 +1679,7 @@
    "details": {
     "term": "2",
     "born": "September 11, 1959",
-    "prior_experience": "Businessman Mayor of Casiguran",
+    "prior_experience": "Businessman; Mayor of Casiguran",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -1727,7 +1727,7 @@
    "details": {
     "term": "3",
     "born": "November 24, 1954",
-    "prior_experience": "House of Representatives Governor of Southern Leyte Mayor of Maasin",
+    "prior_experience": "House of Representatives; Governor of Southern Leyte; Mayor of Maasin",
     "assumed_office": "October 31, 2018",
     "wikipedia_revision": "1376008185"
    }
@@ -1775,7 +1775,7 @@
    "details": {
     "term": "1",
     "born": "March 17, 1977",
-    "prior_experience": "Vice Governor of Sulu Governor of Sulu",
+    "prior_experience": "Vice Governor of Sulu; Governor of Sulu",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1823,7 +1823,7 @@
    "details": {
     "term": "1",
     "born": "March 29, 1956",
-    "prior_experience": "Businessman House of Representatives Governor of Surigao del Sur Provincial Administrator of Surigao del Sur Vice Governor of Surigao del Sur",
+    "prior_experience": "Businessman; House of Representatives; Governor of Surigao del Sur; Provincial Administrator of Surigao del Sur; Vice Governor of Surigao del Sur",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1847,7 +1847,7 @@
    "details": {
     "term": "1",
     "born": "April 29, 1985",
-    "prior_experience": "House of Representatives Mayor of Victoria",
+    "prior_experience": "House of Representatives; Mayor of Victoria",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1895,7 +1895,7 @@
    "details": {
     "term": "3",
     "born": "December 30, 1948",
-    "prior_experience": "Engineer Governor of Zambales Secretary of Public Works and Highways Secretary of National Defense Chief of the Philippine National Police",
+    "prior_experience": "Engineer; Governor of Zambales; Secretary of Public Works and Highways; Secretary of National Defense; Chief of the Philippine National Police",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1376008185"
    }
@@ -1943,7 +1943,7 @@
    "details": {
     "term": "1",
     "born": "April 21, 1974",
-    "prior_experience": "House of Representatives Vice Mayor of Pagadian",
+    "prior_experience": "House of Representatives; Vice Mayor of Pagadian",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1376008185"
    }
@@ -1967,7 +1967,7 @@
    "details": {
     "term": "2",
     "born": "June 3, 1967",
-    "prior_experience": "Educator House of Representatives",
+    "prior_experience": "Educator; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1376008185"
    }
@@ -1991,7 +1991,7 @@
    "details": {
     "term": "1",
     "born": "June 4, 1970",
-    "prior_experience": "Businessman House of Representatives Angeles City Council",
+    "prior_experience": "Businessman; House of Representatives; Angeles City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2015,7 +2015,7 @@
    "details": {
     "term": "1",
     "born": "November 19, 1970",
-    "prior_experience": "Journalist House of Representatives Vice Mayor of Bacolod Bacolod City Council",
+    "prior_experience": "Journalist; House of Representatives; Vice Mayor of Bacolod; Bacolod City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2039,7 +2039,7 @@
    "details": {
     "term": "3",
     "born": "December 15, 1960",
-    "prior_experience": "Retired police officer Deputy Chief for Operations of the Philippine National Police",
+    "prior_experience": "Retired police officer; Deputy Chief for Operations of the Philippine National Police",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
    }
@@ -2063,7 +2063,7 @@
    "details": {
     "term": "1",
     "born": "August 7, 1971",
-    "prior_experience": "Lawyer Vice Mayor of Butuan House of Representatives Butuan City Council",
+    "prior_experience": "Lawyer; Vice Mayor of Butuan; House of Representatives; Butuan City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2111,7 +2111,7 @@
    "details": {
     "term": "2",
     "born": "October 31, 1979",
-    "prior_experience": "House of Representatives Caloocan City Council",
+    "prior_experience": "House of Representatives; Caloocan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2135,7 +2135,7 @@
    "details": {
     "term": "1",
     "born": "June 2, 1958",
-    "prior_experience": "Electrical engineer, businessman, environmentalist Cebu City Council",
+    "prior_experience": "Electrical engineer, businessman, environmentalist; Cebu City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2159,7 +2159,7 @@
    "details": {
     "term": "2",
     "born": "March 20, 1974",
-    "prior_experience": "Radio personality Cotabato City Council",
+    "prior_experience": "Radio personality; Cotabato City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2183,7 +2183,7 @@
    "details": {
     "term": "2",
     "born": "May 6, 1957",
-    "prior_experience": "Businesswoman Vice Mayor of Dagupan Dagupan City Council",
+    "prior_experience": "Businesswoman; Vice Mayor of Dagupan; Dagupan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2207,7 +2207,7 @@
    "details": {
     "term": "0",
     "born": "November 3, 1987",
-    "prior_experience": "Businessman Vice Mayor of Davao City Mayor of Davao City",
+    "prior_experience": "Businessman; Vice Mayor of Davao City; Mayor of Davao City",
     "assumed_office": "January 23, 2026",
     "wikipedia_revision": "1377631853"
    }
@@ -2255,7 +2255,7 @@
    "details": {
     "term": "2",
     "born": "November 29, 1966",
-    "prior_experience": "Businessman House of Representatives Iligan City Council",
+    "prior_experience": "Businessman; House of Representatives; Iligan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2423,7 +2423,7 @@
    "details": {
     "term": "1",
     "born": "July 2, 1962",
-    "prior_experience": "Vice Mayor of Mandaluyong Mayor of Mandaluyong",
+    "prior_experience": "Vice Mayor of Mandaluyong; Mayor of Mandaluyong",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2447,7 +2447,7 @@
    "details": {
     "term": "1",
     "born": "November 16, 1974",
-    "prior_experience": "Businessman Cebu Provincial Board",
+    "prior_experience": "Businessman; Cebu Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2471,7 +2471,7 @@
    "details": {
     "term": "1",
     "born": "October 24, 1974",
-    "prior_experience": "Actor Mayor of Manila Department of Social Welfare and Development Undersecretary Vice Mayor of Manila Manila City Council",
+    "prior_experience": "Actor; Mayor of Manila; Department of Social Welfare and Development Undersecretary; Vice Mayor of Manila; Manila City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2495,7 +2495,7 @@
    "details": {
     "term": "1",
     "born": "January 9, 1981",
-    "prior_experience": "Teacher House of Representatives",
+    "prior_experience": "Teacher; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2519,7 +2519,7 @@
    "details": {
     "term": "2",
     "born": "March 20, 1969",
-    "prior_experience": "House of Representatives Bureau of Customs Commissioner Director of the Videogram Regulatory Board",
+    "prior_experience": "House of Representatives; Bureau of Customs Commissioner; Director of the Videogram Regulatory Board",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2543,7 +2543,7 @@
    "details": {
     "term": "1",
     "born": "April 23, 1965",
-    "prior_experience": "Lawyer Vice President of the Philippines House of Representatives",
+    "prior_experience": "Lawyer; Vice President of the Philippines; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2567,7 +2567,7 @@
    "details": {
     "term": "2",
     "born": "November 21, 1972",
-    "prior_experience": "House of Representatives Mayor of Navotas",
+    "prior_experience": "House of Representatives; Mayor of Navotas",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2615,7 +2615,7 @@
    "details": {
     "term": "2",
     "born": "December 11, 1974",
-    "prior_experience": "Actress House of Representatives",
+    "prior_experience": "Actress; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2639,7 +2639,7 @@
    "details": {
     "term": "1",
     "born": "December 11, 1974",
-    "prior_experience": "Businessman House of Representatives Mayor of Parañaque Vice Governor of Laguna Laguna Provincial Board",
+    "prior_experience": "Businessman; House of Representatives; Mayor of Parañaque; Vice Governor of Laguna; Laguna Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2663,7 +2663,7 @@
    "details": {
     "term": "3",
     "born": "August 16, 1960",
-    "prior_experience": "Businesswoman House of Representatives Pasay City Council",
+    "prior_experience": "Businesswoman; House of Representatives; Pasay City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
    }
@@ -2711,7 +2711,7 @@
    "details": {
     "term": "1",
     "born": "September 18, 1979",
-    "prior_experience": "Municipal Administrator of Pateros Vice Mayor of Pateros Pateros Municipal Council",
+    "prior_experience": "Municipal Administrator of Pateros; Vice Mayor of Pateros; Pateros Municipal Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2759,7 +2759,7 @@
    "details": {
     "term": "3",
     "born": "March 15, 1970",
-    "prior_experience": "Entrepreneur, archeologist Vice Mayor of Quezon City",
+    "prior_experience": "Entrepreneur, archeologist; Vice Mayor of Quezon City",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
    }
@@ -2783,7 +2783,7 @@
    "details": {
     "term": "3",
     "born": "December 5, 1977",
-    "prior_experience": "Basketball player Vice Mayor of San Juan San Juan City Council",
+    "prior_experience": "Basketball player; Vice Mayor of San Juan; San Juan City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
    }
@@ -2807,7 +2807,7 @@
    "details": {
     "term": "2",
     "born": "August 19, 1992",
-    "prior_experience": "Lawyer, accountant House of Representatives",
+    "prior_experience": "Lawyer, accountant; House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2831,7 +2831,7 @@
    "details": {
     "term": "3",
     "born": "January 14, 1962",
-    "prior_experience": "Businessman Mayor of Tacloban House of Representatives",
+    "prior_experience": "Businessman; Mayor of Tacloban; House of Representatives",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
    }
@@ -2855,7 +2855,7 @@
    "details": {
     "term": "2",
     "born": "December 11, 1981",
-    "prior_experience": "House of Representatives Mayor of Taguig",
+    "prior_experience": "House of Representatives; Mayor of Taguig",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -2903,7 +2903,7 @@
    "details": {
     "term": "1",
     "born": "March 22, 1978",
-    "prior_experience": "Master mariner House of Representatives Zamboanga City Council",
+    "prior_experience": "Master mariner; House of Representatives; Zamboanga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2927,7 +2927,7 @@
    "details": {
     "term": "1",
     "born": "June 20, 1977",
-    "prior_experience": "Businessman Angeles City Council",
+    "prior_experience": "Businessman; Angeles City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2951,7 +2951,7 @@
    "details": {
     "term": "1",
     "born": "January 9, 1979",
-    "prior_experience": "Businessman Bacolod City Council",
+    "prior_experience": "Businessman; Bacolod City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -2975,7 +2975,7 @@
    "details": {
     "term": "3",
     "born": "April 19, 1965",
-    "prior_experience": "Lawyer Baguio City Council",
+    "prior_experience": "Lawyer; Baguio City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
    }
@@ -3023,7 +3023,7 @@
    "details": {
     "term": "2",
     "born": "August 3, 1959",
-    "prior_experience": "Nurse Barangay chairperson",
+    "prior_experience": "Nurse; Barangay chairperson",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -3047,7 +3047,7 @@
    "details": {
     "term": "2",
     "born": "January 31, 1987",
-    "prior_experience": "Researcher Caloocan City Council",
+    "prior_experience": "Researcher; Caloocan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -3071,7 +3071,7 @@
    "details": {
     "term": "1",
     "born": "July 26, 1948",
-    "prior_experience": "Agriculturist Mayor of Cebu City House of Representatives",
+    "prior_experience": "Agriculturist; Mayor of Cebu City; House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3143,7 +3143,7 @@
    "details": {
     "term": "0",
     "born": "February 23, 1998",
-    "prior_experience": "Businessman Davao City Council",
+    "prior_experience": "Businessman; Davao City Council",
     "assumed_office": "January 23, 2026",
     "wikipedia_revision": "1377631853"
    }
@@ -3167,7 +3167,7 @@
    "details": {
     "term": "1",
     "born": "December 10, 1971",
-    "prior_experience": "Lawyer General Santos City Council",
+    "prior_experience": "Lawyer; General Santos City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3239,7 +3239,7 @@
    "details": {
     "term": "3",
     "born": "August 31, 1939",
-    "prior_experience": "Physician Mayor of Cordova",
+    "prior_experience": "Physician; Mayor of Cordova",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
    }
@@ -3287,7 +3287,7 @@
    "details": {
     "term": "2",
     "born": "October 17, 1971",
-    "prior_experience": "Mayor of Lucena Vice Mayor of Lucena Lucena City Council",
+    "prior_experience": "Mayor of Lucena; Vice Mayor of Lucena; Lucena City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -3311,7 +3311,7 @@
    "details": {
     "term": "1",
     "born": "August 5, 1969",
-    "prior_experience": "House of Representatives Mayor of Makati Vice Mayor of Makati Makati Association of Barangay Captains President",
+    "prior_experience": "House of Representatives; Mayor of Makati; Vice Mayor of Makati; Makati Association of Barangay Captains President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3359,7 +3359,7 @@
    "details": {
     "term": "1",
     "born": "September 25, 1970",
-    "prior_experience": "Businessman Mandaluyong City Council Vice Mayor of Mandaluyong",
+    "prior_experience": "Businessman; Mandaluyong City Council; Vice Mayor of Mandaluyong",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3383,7 +3383,7 @@
    "details": {
     "term": "1",
     "born": "March 3, 1958",
-    "prior_experience": "Mayor of Mandaue Vice Mayor of Mandaue Cebu Provincial Board Mandaue City Council",
+    "prior_experience": "Mayor of Mandaue; Vice Mayor of Mandaue; Cebu Provincial Board; Mandaue City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3431,7 +3431,7 @@
    "details": {
     "term": "1",
     "born": "January 9, 1963",
-    "prior_experience": "Mayor of Marikina House of Representatives Vice Mayor of Marikina Marikina Municipal Council",
+    "prior_experience": "Mayor of Marikina; House of Representatives; Vice Mayor of Marikina; Marikina Municipal Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3455,7 +3455,7 @@
    "details": {
     "term": "1",
     "born": "June 2, 1988",
-    "prior_experience": "Businesswoman Municipal Administrator of Naujan , Oriental Mindoro Muntinlupa City Council",
+    "prior_experience": "Businesswoman; Municipal Administrator of Naujan , Oriental Mindoro; Muntinlupa City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3479,7 +3479,7 @@
    "details": {
     "term": "1",
     "born": "February 15, 1955",
-    "prior_experience": "Writer House of Representatives Vice Mayor of Naga Naga City Council",
+    "prior_experience": "Writer; House of Representatives; Vice Mayor of Naga; Naga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3551,7 +3551,7 @@
    "details": {
     "term": "1",
     "born": "October 30, 1974",
-    "prior_experience": "Businessman Vice Mayor of Ormoc",
+    "prior_experience": "Businessman; Vice Mayor of Ormoc",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3575,7 +3575,7 @@
    "details": {
     "term": "1",
     "born": "March 21, 1975",
-    "prior_experience": "Businessman Parañaque City Council",
+    "prior_experience": "Businessman; Parañaque City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3623,7 +3623,7 @@
    "details": {
     "term": "2",
     "born": "October 14, 1971",
-    "prior_experience": "Businessman, basketball player House of Representatives San Juan Municipal Council",
+    "prior_experience": "Businessman, basketball player; House of Representatives; San Juan Municipal Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
    }
@@ -3671,7 +3671,7 @@
    "details": {
     "term": "1",
     "born": "December 4, 1967",
-    "prior_experience": "Lawyer Puerto Princesa City Council",
+    "prior_experience": "Lawyer; Puerto Princesa City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3695,7 +3695,7 @@
    "details": {
     "term": "3",
     "born": "March 18, 1978",
-    "prior_experience": "Actor, entrepreneur Quezon City Council",
+    "prior_experience": "Actor, entrepreneur; Quezon City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
    }
@@ -3719,7 +3719,7 @@
    "details": {
     "term": "1",
     "born": "March 16, 1973",
-    "prior_experience": "Lawyer San Juan City Council",
+    "prior_experience": "Lawyer; San Juan City Council",
     "assumed_office": "June 26, 2023",
     "wikipedia_revision": "1377631853"
    }
@@ -3767,7 +3767,7 @@
    "details": {
     "term": "1",
     "born": "March 18, 1987",
-    "prior_experience": "Businessman Tacloban Association of Barangay Captains President",
+    "prior_experience": "Businessman; Tacloban Association of Barangay Captains President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3815,7 +3815,7 @@
    "details": {
     "term": "1",
     "born": "August 11, 1980",
-    "prior_experience": "Businessman Valenzuela City Council",
+    "prior_experience": "Businessman; Valenzuela City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
@@ -3839,7 +3839,7 @@
    "details": {
     "term": "1",
     "born": "September 7, 1966",
-    "prior_experience": "Teacher Mayor of Zamboanga City House of Representatives Vice Mayor of Zamboanga City Zamboanga City Council",
+    "prior_experience": "Teacher; Mayor of Zamboanga City; House of Representatives; Vice Mayor of Zamboanga City; Zamboanga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
    }
