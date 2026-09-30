@@ -348,7 +348,7 @@ def test_bills_attach_by_code_and_name(isolated_output):
          "authors": ["ZJMIG"], "authors_raw": "Zubiri, Juan Miguel F."},
     ]
     import common
-    bills.DATA_DIR = common.DATA_DIR
+
     doc = bills.attach(monkey, "2025-10-16")
     by = {r["name"]: r for r in doc["records"]}
     assert [b["number"] for b in by["Raffy T. Tulfo"]["bills"]] == ["SBN-2", "SBN-1"]  # initials don't cross-match
@@ -410,3 +410,27 @@ def test_dilg_picks_directory_not_folder(monkeypatch):
     monkeypatch.setattr(dilg_lgu, "parse", lambda data: [])
     dilg_lgu.run(browser=object())
     assert picked == ["1B2N5SjZEBP-29tUioFHaSk-6R_1YFGcYIkSPjuApxZw"]
+
+
+def test_import_dilg_from_inbox(monkeypatch, isolated_output):
+    import import_saved
+    import run_all
+    from openpyxl import Workbook
+
+    inbox = isolated_output / "data-inbox"
+    (inbox / "dilg").mkdir(parents=True)
+    monkeypatch.setattr(import_saved, "INBOX", inbox)
+    monkeypatch.setattr(run_all, "DATA_DIR", isolated_output / "data")
+    import dilg_lgu
+    monkeypatch.setattr(dilg_lgu, "MIN_OFFICIALS", 1)
+    wb = Workbook()
+    ws = wb.active
+    ws.append(["PROVINCE", "CITY/MUNICIPALITY", "POSITION", "LAST NAME", "FIRST NAME"])
+    ws.append(["BOHOL", "PANGLAO", "MUNICIPAL MAYOR", "GARCIA", "JOSE"])
+    wb.save(inbox / "dilg" / "directory.xlsx")
+    monkeypatch.setattr(sys, "argv", ["import_saved.py", "--only", "dilg"])
+    import_saved.main()
+    doc = json.loads((isolated_output / "data" / "lgu.json").read_text())
+    (rec,) = doc["records"]
+    assert (rec["name"], rec["level"], rec["lgu"], rec["source_type"]) == ("Jose Garcia", "mayor", "Panglao", "official")
+    assert rec["details"]["copied_on"]

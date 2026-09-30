@@ -72,10 +72,12 @@ and labels every record as a saved copy with its import date.
 `scraper/dilg_lgu.py` imports the *Directory of LGU Elective Officials for
 Term 2025–2028* that DILG released through the government FOI portal
 ([request](https://www.foi.gov.ph/agencies/dilg/list-of-elected-government-official-for-the-term-2025-2028-by-province/))
-as a publicly shared Google Drive folder. The spreadsheet is fetched with
-Google's standard public export, the same file as the folder's Download
-button. Its records are labelled official and replace Wikipedia entries for
-the same office.
+as a publicly shared Google Drive folder. The folder is public, but the
+spreadsheet's owner has disabled downloads (export returns 401), and we
+don't work around that. The importer tries the standard public export on
+each run; until it's allowed, put a properly obtained copy (FOI / DILG) in
+`data-inbox/dilg/`. Its records are labelled official and replace Wikipedia
+entries for the same office.
 
 ### Wikipedia fallback (unofficial)
 
