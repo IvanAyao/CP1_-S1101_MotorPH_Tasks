@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 
 from common import SNAPSHOT_DIR, clean, extract_cards, looks_like_name
 
-LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 6000
+LIMIT = 6000
 
 
 def summarize(path) -> None:
@@ -81,6 +81,9 @@ def summarize(path) -> None:
 
 
 def main() -> None:
+    global LIMIT
+    if len(sys.argv) > 1:
+        LIMIT = int(sys.argv[1])
     files = sorted(SNAPSHOT_DIR.glob("*.html"))
     if not files:
         print("no snapshots")
