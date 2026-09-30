@@ -153,7 +153,10 @@ def parse(data: bytes, *, source: str = SOURCE, source_url: str = FOI_URL,
           defaults: dict[str, str] | None = None) -> list[dict]:
     officials = []
     for tab, rows in sheet_rows(data):
-        fill_down(rows, (r"region", r"province", r"city|municipal|lgu", r"district"))
+        # Council members are listed as "SP MEMBERS" once, then only rank and
+        # name on the rows below, so the position is carried down too.
+        fill_down(rows, (r"region", r"province", r"city|municipal|lgu", r"district",
+                         r"^(position|designation|elective_position)"))
         # A tab named after a province (and no province column) gives context.
         tab_defaults = dict(defaults or {})
         if rows and not any("province" in k for k in rows[0]):
