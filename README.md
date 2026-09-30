@@ -58,6 +58,15 @@ each run continues where the last one stopped.
 kept and the workflow fails loudly. Raw page snapshots are uploaded as a workflow
 artifact so a layout change can be diagnosed.
 
+## Sources that block automated access
+
+congress.gov.ph and the PSA LGU directory sit behind Cloudflare bot
+protection, and dilg.gov.ph doesn't answer requests from outside the
+Philippines. For these, save the pages from a normal browser and upload them
+to `data-inbox/` (see [data-inbox/README.md](data-inbox/README.md)). The
+**Import saved pages** workflow parses them (HTML, MHTML, XLSX, CSV, JSON)
+and labels every record as a saved copy with its import date.
+
 ## Running locally
 
 ```bash

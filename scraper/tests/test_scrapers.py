@@ -185,3 +185,73 @@ def test_waits_past_bot_check_page(site, browser, monkeypatch):
     monkeypatch.setattr(house, "URL", f"{site}/challenge.html")
     recs = house.scrape(browser)
     assert len(recs) == 300
+
+
+# --------------------------------------------------------------------------- #
+# Importing hand-saved copies (data-inbox/)
+# --------------------------------------------------------------------------- #
+
+def test_import_saved_copies(site, browser, monkeypatch, isolated_output):
+    import csv as _csv
+
+    import import_saved
+    import run_all
+    from openpyxl import Workbook
+
+    inbox = isolated_output / "data-inbox"
+    monkeypatch.setattr(import_saved, "INBOX", inbox)
+    monkeypatch.setattr(run_all, "DATA_DIR", isolated_output / "data")
+
+    # House: a rendered page saved by the browser, as MHTML ("Download page")
+    # for page 1 and plain HTML ("Save page as") for page 2.
+    (inbox / "house").mkdir(parents=True)
+    browser.page.goto(f"{site}/house.html")
+    browser.page.wait_for_selector(".member")
+    cdp = browser.page.context.new_cdp_session(browser.page)
+    mhtml = cdp.send("Page.captureSnapshot", {"format": "mhtml"})["data"]
+    (inbox / "house" / "page1.mhtml").write_text(mhtml, encoding="utf-8")
+    browser.page.click("#next")
+    browser.page.wait_for_timeout(500)
+    (inbox / "house" / "page2.html").write_text(browser.page.content(), encoding="utf-8")
+
+    # LGU: an Excel export with a title row above the header.
+    (inbox / "lgu").mkdir()
+    wb = Workbook()
+    ws = wb.active
+    ws.append(["NCR LGU Directory"])
+    ws.append(["LGU", "Mayor", "Vice Mayor", "Address"])
+    ws.append(["Pateros", "Juan Dela Cruz", "Maria Santos", "Pateros"])
+    ws.append(["Makati City", "Pedro Reyes", "Ana Garcia", "Makati"])
+    wb.save(inbox / "lgu" / "lgu.xlsx")
+
+    # Barangay: CSV in <Region>/<Province>/<City> folders, one row per official.
+    folder = inbox / "barangay" / "Region VII" / "Bohol" / "Tagbilaran City"
+    folder.mkdir(parents=True)
+    with open(folder / "cogon.csv", "w", newline="", encoding="utf-8") as fh:
+        w = _csv.writer(fh)
+        w.writerow(["Barangay", "Position", "Name"])
+        w.writerow(["Cogon", "Punong Barangay", "Jose Bautista"])
+        w.writerow(["Cogon", "Barangay Kagawad", "Rosa Mendoza"])
+
+    monkeypatch.setattr(sys, "argv", ["import_saved.py"])
+    import_saved.main()
+
+    data = isolated_output / "data"
+    house_doc = json.loads((data / "house.json").read_text())
+    assert house_doc["count"] == 100  # 50 per saved page
+    assert house_doc["method"] == "saved-copy"
+    assert house_doc["records"][0]["source"] == "House of Representatives (saved copy)"
+    assert house_doc["records"][0]["details"]["copied_on"]
+
+    lgu_doc = json.loads((data / "lgu.json").read_text())
+    assert {(r["name"], r["level"], r["lgu"]) for r in lgu_doc["records"]} >= {
+        ("Juan Dela Cruz", "mayor", "Pateros"), ("Ana Garcia", "vice_mayor", "Makati City")}
+
+    bohol = json.loads((data / "barangay" / "region-vii--bohol.json").read_text())
+    assert {(r["name"], r["level"], r["lgu"], r["barangay"]) for r in bohol["records"]} == {
+        ("Jose Bautista", "punong_barangay", "Tagbilaran City", "Cogon"),
+        ("Rosa Mendoza", "kagawad", "Tagbilaran City", "Cogon")}
+
+    manifest = json.loads((data / "manifest.json").read_text())
+    counts = {d["key"]: d["count"] for d in manifest["datasets"]}
+    assert counts["house"] == 100 and counts["lgu"] == 4 and counts["barangay"] == 2
