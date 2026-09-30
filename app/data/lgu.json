@@ -1,7 +1,7 @@
 {
  "dataset": "lgu",
  "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_governors",
- "scraped_at": "2026-09-30T11:24:28+00:00",
+ "scraped_at": "2026-09-30T11:37:05+00:00",
  "count": 160,
  "method": "wikipedia",
  "records": [
@@ -13,7 +13,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Abra;",
+   "province": "Abra",
    "lgu": "",
    "barangay": "",
    "photo": "",
@@ -37,7 +37,7 @@
    "party": "PDP–Laban",
    "district": "",
    "region": "",
-   "province": "Agusan del Norte;",
+   "province": "Agusan del Norte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Gov_Amante.png/120px-Gov_Amante.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -61,7 +61,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Agusan del Sur;",
+   "province": "Agusan del Sur",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Agusan_del_Sur_Governor_Santiago_Cane%2C_Jr_%28cropped%29.jpg/120px-Agusan_del_Sur_Governor_Santiago_Cane%2C_Jr_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -85,7 +85,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Aklan;",
+   "province": "Aklan",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Governor_Jose_Enrique_Miraflores_%40_Distribution_of_Rice_and_Other_Government_Assistance_in_Kalibo%2C_Aklan_10_06_2023_18-55.jpg/120px-Governor_Jose_Enrique_Miraflores_%40_Distribution_of_Rice_and_Other_Government_Assistance_in_Kalibo%2C_Aklan_10_06_2023_18-55.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -109,7 +109,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Albay;",
+   "province": "Albay",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Mayor_Noel_Rosal_of_Legazpi_Albay.jpg/120px-Mayor_Noel_Rosal_of_Legazpi_Albay.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -133,7 +133,7 @@
    "party": "Aksyon",
    "district": "",
    "region": "",
-   "province": "Antique;",
+   "province": "Antique",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Governor_Paolo_Javier_Portrait_2025.jpg/120px-Governor_Paolo_Javier_Portrait_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -157,7 +157,7 @@
    "party": "NPC",
    "district": "",
    "region": "",
-   "province": "Apayao;",
+   "province": "Apayao",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/LPP_Portrait_of_Elias_Bulut_Jr.jpg/120px-LPP_Portrait_of_Elias_Bulut_Jr.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -181,7 +181,7 @@
    "party": "LDP",
    "district": "",
    "region": "",
-   "province": "Aurora;",
+   "province": "Aurora",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_Portrait_of_Gov._Sid_Galban.jpg/120px-Official_Portrait_of_Gov._Sid_Galban.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -205,7 +205,7 @@
    "party": "BUP",
    "district": "",
    "region": "",
-   "province": "Basilan;",
+   "province": "Basilan",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Rep._Mujiv_Hataman_%2819th_Congress%29.jpg/120px-Rep._Mujiv_Hataman_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -229,7 +229,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Bataan;",
+   "province": "Bataan",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Governor_of_Bataan_Jose_Enrique_Sandejas_Garcia_III.png/120px-Governor_of_Bataan_Jose_Enrique_Sandejas_Garcia_III.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -253,7 +253,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Batanes;",
+   "province": "Batanes",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Ronald_Aguto_Portrait_from_LPP.jpg/120px-Ronald_Aguto_Portrait_from_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -277,7 +277,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Batangas;",
+   "province": "Batangas",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Governor_Vilma_Santos%2C_Official_portrait_2025.jpg/120px-Governor_Vilma_Santos%2C_Official_portrait_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -301,7 +301,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Benguet;",
+   "province": "Benguet",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Governor_Melchor_Diclas_-_Adivay_Festival_2022.jpg/120px-Governor_Melchor_Diclas_-_Adivay_Festival_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -325,7 +325,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Biliran;",
+   "province": "Biliran",
    "lgu": "",
    "barangay": "",
    "photo": "",
@@ -349,7 +349,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Bohol;",
+   "province": "Bohol",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Gov_Aris_Aumentado.jpg/120px-Gov_Aris_Aumentado.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -373,7 +373,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Bukidnon;",
+   "province": "Bukidnon",
    "lgu": "",
    "barangay": "",
    "photo": "",
@@ -397,7 +397,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Bulacan;",
+   "province": "Bulacan",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Daniel_Fernando_%40_the_Opening_of_the_Malolos_Congress_124th_Commemoration_2022_%28cropped%29.jpg/120px-Daniel_Fernando_%40_the_Opening_of_the_Malolos_Congress_124th_Commemoration_2022_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -421,7 +421,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Cagayan;",
+   "province": "Cagayan",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Governor_Edgar_Aglipay_Official_Portrait_2025.jpg/120px-Governor_Edgar_Aglipay_Official_Portrait_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -445,7 +445,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Camarines Norte;",
+   "province": "Camarines Norte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Camarines_Norte_Governor_Ricarte_Padilla.jpg/120px-Camarines_Norte_Governor_Ricarte_Padilla.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -469,7 +469,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Camarines Sur;",
+   "province": "Camarines Sur",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Rep._Luis_Raymund_Villafuerte_%2819th_Congress%29.jpg/120px-Rep._Luis_Raymund_Villafuerte_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -493,7 +493,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Camiguin;",
+   "province": "Camiguin",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Governor_XJ_Romualdo_LPP_Official_Portrait.jpg/120px-Governor_XJ_Romualdo_LPP_Official_Portrait.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -517,7 +517,7 @@
    "party": "Lakas; ( One Capiz )",
    "district": "",
    "region": "",
-   "province": "Capiz;",
+   "province": "Capiz",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/GOVERNOR_FREDENIL_H._CASTRO.png/120px-GOVERNOR_FREDENIL_H._CASTRO.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -541,7 +541,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Catanduanes;",
+   "province": "Catanduanes",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Portrait_of_Gov._Patrick_Azanza.jpg/120px-Portrait_of_Gov._Patrick_Azanza.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -565,7 +565,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Cavite;",
+   "province": "Cavite",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Francisco_Gabriel_Remulla_Official_Portrait_2026_%28cropped%29.jpg/120px-Francisco_Gabriel_Remulla_Official_Portrait_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -589,7 +589,7 @@
    "party": "PDP–Laban",
    "district": "",
    "region": "",
-   "province": "Cebu;",
+   "province": "Cebu",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Pam_Baricuatro_%28cropped%29.jpg/120px-Pam_Baricuatro_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -613,7 +613,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Cotabato;",
+   "province": "Cotabato",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Emmylou_Tali%C3%B1o-Mendoza_Gov_Photo_%28cropped%29.jpg/120px-Emmylou_Tali%C3%B1o-Mendoza_Gov_Photo_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -637,7 +637,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Davao de Oro;",
+   "province": "Davao de Oro",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Raul_Mabanglo_COC_2025.jpg/120px-Raul_Mabanglo_COC_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -661,7 +661,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Davao del Norte;",
+   "province": "Davao del Norte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/LPP_3rd_General_Assembly_%28GA%29_coa_Jubahib_%28cropped%29.jpg/120px-LPP_3rd_General_Assembly_%28GA%29_coa_Jubahib_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -685,7 +685,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Davao del Sur;",
+   "province": "Davao del Sur",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Yvonne_Cagas_LPP.jpg/120px-Yvonne_Cagas_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -708,7 +708,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Davao Occidental;",
+   "province": "Davao Occidental",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Governor_Franklin_Bautista_Official_Portrait_2025_%28cropped%29.jpg/120px-Governor_Franklin_Bautista_Official_Portrait_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -732,7 +732,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Davao Oriental;",
+   "province": "Davao Oriental",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Rep._Nelson_Dayanghirang_%2819th_Congress%29.jpg/120px-Rep._Nelson_Dayanghirang_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -756,7 +756,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Dinagat Islands;",
+   "province": "Dinagat Islands",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dinagat_Islands_Governor_Nilo_Demerey_Jr.jpg/120px-Dinagat_Islands_Governor_Nilo_Demerey_Jr.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -780,7 +780,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Eastern Samar;",
+   "province": "Eastern Samar",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/RV_Evardone.jpg/120px-RV_Evardone.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -804,7 +804,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Guimaras;",
+   "province": "Guimaras",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Rep._Ma._Lucille_Nava_%2819th_Congress%29.jpg/120px-Rep._Ma._Lucille_Nava_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -828,7 +828,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Ifugao;",
+   "province": "Ifugao",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Gov._Jerry_Dalipog.jpg/120px-Gov._Jerry_Dalipog.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -852,7 +852,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Ilocos Norte;",
+   "province": "Ilocos Norte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Governor_Cecilia_Marcos_Official_Portrait_Ilocos_Norte_Government_%28cropped%29.jpg/120px-Governor_Cecilia_Marcos_Official_Portrait_Ilocos_Norte_Government_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -876,7 +876,7 @@
    "party": "NPC; ( Bileg )",
    "district": "",
    "region": "",
-   "province": "Ilocos Sur;",
+   "province": "Ilocos Sur",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Governor-elect_Jeremias_Singson_holding_the_key_of_the_province_of_Ilocos_Sur.jpg/120px-Governor-elect_Jeremias_Singson_holding_the_key_of_the_province_of_Ilocos_Sur.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -900,7 +900,7 @@
    "party": "PFP; ( Uswag Ilonggo )",
    "district": "",
    "region": "",
-   "province": "Iloilo;",
+   "province": "Iloilo",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Arthur_Defensor_Jr._%28cropped%29.jpg/120px-Arthur_Defensor_Jr._%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -924,7 +924,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Isabela;",
+   "province": "Isabela",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Rodolfo_Albano_III_Portrait_from_LPP.jpg/120px-Rodolfo_Albano_III_Portrait_from_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -948,7 +948,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Kalinga;",
+   "province": "Kalinga",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Gov._James_Edduba.jpg/120px-Gov._James_Edduba.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -972,7 +972,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "La Union;",
+   "province": "La Union",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Vice_Governor_Mario_Eduardo_Ortega.jpg/120px-Vice_Governor_Mario_Eduardo_Ortega.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -996,7 +996,7 @@
    "party": "Akay",
    "district": "",
    "region": "",
-   "province": "Laguna;",
+   "province": "Laguna",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Sol_Aragones_%28cropped_2%29.jpg/120px-Sol_Aragones_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1020,7 +1020,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Lanao del Norte;",
+   "province": "Lanao del Norte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Mohamad_Khalid_Dimaporo_Official_Portrait_2026_%28cropped%29.jpg/120px-Mohamad_Khalid_Dimaporo_Official_Portrait_2026_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1044,7 +1044,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Lanao del Sur;",
+   "province": "Lanao del Sur",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/BARMM_Governors_unite_-_BARMM_Governors_Caucus_Adiong_Jr._%28cropped%29.jpg/120px-BARMM_Governors_unite_-_BARMM_Governors_Caucus_Adiong_Jr._%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1068,7 +1068,7 @@
    "party": "NPC",
    "district": "",
    "region": "",
-   "province": "Leyte;",
+   "province": "Leyte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Jericho_Petilla_Profile_Picture.jpg/120px-Jericho_Petilla_Profile_Picture.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1092,7 +1092,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Maguindanao del Norte;",
+   "province": "Maguindanao del Norte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Mastura111.jpg/120px-Mastura111.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1116,7 +1116,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Maguindanao del Sur;",
+   "province": "Maguindanao del Sur",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/3x4.svg/120px-3x4.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1140,7 +1140,7 @@
    "party": "PDP–Laban",
    "district": "",
    "region": "",
-   "province": "Marinduque;",
+   "province": "Marinduque",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Governor_Mel_Go.jpg/120px-Governor_Mel_Go.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1164,7 +1164,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Masbate;",
+   "province": "Masbate",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Rep._Ricardo_Kho_%2819th_Congress%29.jpg/120px-Rep._Ricardo_Kho_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1188,7 +1188,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Misamis Occidental;",
+   "province": "Misamis Occidental",
    "lgu": "",
    "barangay": "",
    "photo": "",
@@ -1212,7 +1212,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Misamis Oriental;",
+   "province": "Misamis Oriental",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Governor_Juliette_Uy_%28cropped%29.jpg/120px-Governor_Juliette_Uy_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1236,7 +1236,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Mountain Province;",
+   "province": "Mountain Province",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Governor_Bonifacio_Lacwasan_Jr.jpg/120px-Governor_Bonifacio_Lacwasan_Jr.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1260,7 +1260,7 @@
    "party": "NPC",
    "district": "",
    "region": "",
-   "province": "Negros Occidental;",
+   "province": "Negros Occidental",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Governor_Bong_Lacson_Negros_2019.png/120px-Governor_Bong_Lacson_Negros_2019.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1284,7 +1284,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Negros Oriental;",
+   "province": "Negros Oriental",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Manuel_Sagarbarria_2023_oathtaking_%28cropped%29.jpg/120px-Manuel_Sagarbarria_2023_oathtaking_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1308,7 +1308,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Northern Samar;",
+   "province": "Northern Samar",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Rep._Harris_Ongchuan_%2819th_Congress%29.jpg/120px-Rep._Harris_Ongchuan_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1332,7 +1332,7 @@
    "party": "Lakas; ( Unang Sigaw )",
    "district": "",
    "region": "",
-   "province": "Nueva Ecija;",
+   "province": "Nueva Ecija",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Gov._Aurelio_Umali_Official_Portrait_2022.jpg/120px-Gov._Aurelio_Umali_Official_Portrait_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1356,7 +1356,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Nueva Vizcaya;",
+   "province": "Nueva Vizcaya",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Jose_Gambito_Portrait_from_LPP.jpg/120px-Jose_Gambito_Portrait_from_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1380,7 +1380,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Occidental Mindoro;",
+   "province": "Occidental Mindoro",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Eduardo_Gadiano_LPP.jpg/120px-Eduardo_Gadiano_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1404,7 +1404,7 @@
    "party": "PDP–Laban; ( GSM )",
    "district": "",
    "region": "",
-   "province": "Oriental Mindoro;",
+   "province": "Oriental Mindoro",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Humerlito_A._Dolor_LPP.jpg/120px-Humerlito_A._Dolor_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1428,7 +1428,7 @@
    "party": "PPPL",
    "district": "",
    "region": "",
-   "province": "Palawan;",
+   "province": "Palawan",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/AmyRoaAlvarez_Palawan_Governor.png/120px-AmyRoaAlvarez_Palawan_Governor.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1452,7 +1452,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Pangasinan;",
+   "province": "Pangasinan",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Gov_Guico.png/120px-Gov_Guico.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1476,7 +1476,7 @@
    "party": "NPC; ( Kambilan )",
    "district": "",
    "region": "",
-   "province": "Pampanga;",
+   "province": "Pampanga",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Lilia_Pineda_Portrait_from_LPP.jpg/120px-Lilia_Pineda_Portrait_from_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1500,7 +1500,7 @@
    "party": "NPC; ( Stan Q )",
    "district": "",
    "region": "",
-   "province": "Quezon;",
+   "province": "Quezon",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Angelina_Tan%2C_Governor_of_Quezon_%28cropped%29.png/120px-Angelina_Tan%2C_Governor_of_Quezon_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1524,7 +1524,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Quirino;",
+   "province": "Quirino",
    "lgu": "",
    "barangay": "",
    "photo": "",
@@ -1548,7 +1548,7 @@
    "party": "NPC",
    "district": "",
    "region": "",
-   "province": "Rizal;",
+   "province": "Rizal",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Nina_Ynares_%28GSIS%29_%28cropped%29.jpg/120px-Nina_Ynares_%28GSIS%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1572,7 +1572,7 @@
    "party": "Liberal",
    "district": "",
    "region": "",
-   "province": "Romblon;",
+   "province": "Romblon",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Governor_Trina_Firmalo_Fabic.jpg/120px-Governor_Trina_Firmalo_Fabic.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1596,7 +1596,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Samar;",
+   "province": "Samar",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Gov_Tan.png/120px-Gov_Tan.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1620,7 +1620,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Sarangani;",
+   "province": "Sarangani",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Gov_Pacquiao.png/120px-Gov_Pacquiao.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1644,7 +1644,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Siquijor;",
+   "province": "Siquijor",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Gov_Villa.png/120px-Gov_Villa.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1668,7 +1668,7 @@
    "party": "NPC",
    "district": "",
    "region": "",
-   "province": "Sorsogon;",
+   "province": "Sorsogon",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Sorsogon_Governor_Jose_Edwin_Hamor.jpg/120px-Sorsogon_Governor_Jose_Edwin_Hamor.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1692,7 +1692,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "South Cotabato;",
+   "province": "South Cotabato",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Gov._Jun_Tamayo.jpg/120px-Gov._Jun_Tamayo.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1716,7 +1716,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Southern Leyte;",
+   "province": "Southern Leyte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/HoR_Official_Portrait_of_Damian_Mercado.jpg/120px-HoR_Official_Portrait_of_Damian_Mercado.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1740,7 +1740,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Sultan Kudarat;",
+   "province": "Sultan Kudarat",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Sultan_Kudarat_Governor_Pax_Ali_Mangudadatu_%28cropped%29.jpg/120px-Sultan_Kudarat_Governor_Pax_Ali_Mangudadatu_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1764,7 +1764,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Sulu;",
+   "province": "Sulu",
    "lgu": "",
    "barangay": "",
    "photo": "https://upload.wikimedia.org/wikipedia/commons/1/16/Abdusakar_Tan_II_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled",
@@ -1788,7 +1788,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Surigao del Norte;",
+   "province": "Surigao del Norte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Surigao_Del_Norte_Governor_Robert_Lyndon_Barbers_%28cropped%29.jpg/120px-Surigao_Del_Norte_Governor_Robert_Lyndon_Barbers_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1812,7 +1812,7 @@
    "party": "NUP",
    "district": "",
    "region": "",
-   "province": "Surigao del Sur;",
+   "province": "Surigao del Sur",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Rep._Johnny_Pimentel_%2819th_Congress%29.jpg/120px-Rep._Johnny_Pimentel_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1836,7 +1836,7 @@
    "party": "SST",
    "district": "",
    "region": "",
-   "province": "Tarlac;",
+   "province": "Tarlac",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Christian_Yap_Portrait_from_LPP.jpg/120px-Christian_Yap_Portrait_from_LPP.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1860,7 +1860,7 @@
    "party": "PDP–Laban",
    "district": "",
    "region": "",
-   "province": "Tawi-Tawi;",
+   "province": "Tawi-Tawi",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/BARMM_Governors_unite_-_BARMM_Governors_Caucus_Yshmael_Sali_%28cropped%29.jpg/120px-BARMM_Governors_unite_-_BARMM_Governors_Caucus_Yshmael_Sali_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1884,7 +1884,7 @@
    "party": "PFP; ( SZP )",
    "district": "",
    "region": "",
-   "province": "Zambales;",
+   "province": "Zambales",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Governor_Hermogenes_Ebdane_%40_2023_State_of_the_Province_Address_%28cropped%29.jpg/120px-Governor_Hermogenes_Ebdane_%40_2023_State_of_the_Province_Address_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1908,7 +1908,7 @@
    "party": "Nacionalista",
    "district": "",
    "region": "",
-   "province": "Zamboanga del Norte;",
+   "province": "Zamboanga del Norte",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Governor_Darel_Dexter_Uy.jpg/120px-Governor_Darel_Dexter_Uy.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1932,7 +1932,7 @@
    "party": "Lakas",
    "district": "",
    "region": "",
-   "province": "Zamboanga del Sur;",
+   "province": "Zamboanga del Sur",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Rep._Divina_Grace_Yu_%2819th_Congress%29.jpg/120px-Rep._Divina_Grace_Yu_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1956,7 +1956,7 @@
    "party": "PFP",
    "district": "",
    "region": "",
-   "province": "Zamboanga Sibugay;",
+   "province": "Zamboanga Sibugay",
    "lgu": "",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/GOVERNOR_ANN_HOFER_%28cropped%29.jpg/120px-GOVERNOR_ANN_HOFER_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
@@ -1981,7 +1981,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Angeles City;",
+   "lgu": "Angeles City",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Rep._Carmelo_Lazatin_II_%2819th_Congress%29.jpg/120px-Rep._Carmelo_Lazatin_II_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Carmelo_Lazatin_II",
@@ -1990,7 +1990,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "June 4, 1970",
+    "born": "June 4, 1970",
     "prior_experience": "Businessman House of Representatives Angeles City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2005,7 +2005,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Bacolod;",
+   "lgu": "Bacolod",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Mayor_Greg_Gasataya_Official_Portrait_%28cropped%29.jpg/120px-Mayor_Greg_Gasataya_Official_Portrait_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Greg_Gasataya",
@@ -2014,7 +2014,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "November 19, 1970",
+    "born": "November 19, 1970",
     "prior_experience": "Journalist House of Representatives Vice Mayor of Bacolod Bacolod City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2029,7 +2029,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Baguio;",
+   "lgu": "Baguio",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Mayor_Benjamin_Magalong%2C_City_of_Baguio.jpg/120px-Mayor_Benjamin_Magalong%2C_City_of_Baguio.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Benjamin_Magalong",
@@ -2038,7 +2038,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "December 15, 1960",
+    "born": "December 15, 1960",
     "prior_experience": "Retired police officer Deputy Chief for Operations of the Philippine National Police",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -2053,7 +2053,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Butuan;",
+   "lgu": "Butuan",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Lawrence_Fortun_Official_Portrait_2025_%28cropped%29.jpg/120px-Lawrence_Fortun_Official_Portrait_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Lawrence_Fortun",
@@ -2062,7 +2062,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "August 7, 1971",
+    "born": "August 7, 1971",
     "prior_experience": "Lawyer Vice Mayor of Butuan House of Representatives Butuan City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2077,7 +2077,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Cagayan de Oro;",
+   "lgu": "Cagayan de Oro",
    "barangay": "",
    "photo": "",
    "profile_url": "https://en.wikipedia.org/wiki/Rolando_Uy",
@@ -2086,7 +2086,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "July 5, 1954",
+    "born": "July 5, 1954",
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2101,7 +2101,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Caloocan;",
+   "lgu": "Caloocan",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Mayor_of_Caloocan_Dale_Gonzalo_%22Along%22_Rigor_Malapitan_%28cropped%29.jpg/120px-Mayor_of_Caloocan_Dale_Gonzalo_%22Along%22_Rigor_Malapitan_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Along_Malapitan",
@@ -2110,7 +2110,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "October 31, 1979",
+    "born": "October 31, 1979",
     "prior_experience": "House of Representatives Caloocan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2125,7 +2125,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Cebu City;",
+   "lgu": "Cebu City",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Nestor_Archival_2024.jpg/120px-Nestor_Archival_2024.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Nestor_Archival",
@@ -2134,7 +2134,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "June 2, 1958",
+    "born": "June 2, 1958",
     "prior_experience": "Electrical engineer, businessman, environmentalist Cebu City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2158,7 +2158,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "March 20, 1974",
+    "born": "March 20, 1974",
     "prior_experience": "Radio personality Cotabato City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2182,7 +2182,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "May 6, 1957",
+    "born": "May 6, 1957",
     "prior_experience": "Businesswoman Vice Mayor of Dagupan Dagupan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2197,7 +2197,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Davao City;",
+   "lgu": "Davao City",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Sebastian_%22Baste%22_Z._Duterte_%2804-11-2026%29.jpg/120px-Sebastian_%22Baste%22_Z._Duterte_%2804-11-2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Sebastian_Duterte",
@@ -2206,7 +2206,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "0",
-    "age": "November 3, 1987",
+    "born": "November 3, 1987",
     "prior_experience": "Businessman Vice Mayor of Davao City Mayor of Davao City",
     "assumed_office": "January 23, 2026",
     "wikipedia_revision": "1377631853"
@@ -2221,7 +2221,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "General Santos;",
+   "lgu": "General Santos",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/3x4.svg/120px-3x4.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "",
@@ -2230,7 +2230,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "April 14, 1979",
+    "born": "April 14, 1979",
     "prior_experience": "General Santos Association of Barangay Captains President",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2254,7 +2254,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "November 29, 1966",
+    "born": "November 29, 1966",
     "prior_experience": "Businessman House of Representatives Iligan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2269,7 +2269,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Iloilo City;",
+   "lgu": "Iloilo City",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Raisa_Tre%C3%B1as_Official_Portrait_2025_%28cropped%29.jpg/120px-Raisa_Tre%C3%B1as_Official_Portrait_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Raisa_Tre%C3%B1as",
@@ -2278,7 +2278,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "November 27, 1985",
+    "born": "November 27, 1985",
     "prior_experience": "Businesswoman",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2302,7 +2302,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "March 10, 1968",
+    "born": "March 10, 1968",
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2317,7 +2317,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Las Piñas;",
+   "lgu": "Las Piñas",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/3x4.svg/120px-3x4.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "",
@@ -2326,7 +2326,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "April 6, 1970",
+    "born": "April 6, 1970",
     "prior_experience": "Vice Mayor of Las Piñas",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2341,7 +2341,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Lucena;",
+   "lgu": "Lucena",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Mayor_Mark_Alcala.jpg/120px-Mayor_Mark_Alcala.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "",
@@ -2350,7 +2350,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "February 23, 1996",
+    "born": "February 23, 1996",
     "prior_experience": "City government staff",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2365,7 +2365,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Makati;",
+   "lgu": "Makati",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Nancy_Binay_with_her_Jose_Benjamin_Angeles_in_2025_%28cropped%29.jpg/120px-Nancy_Binay_with_her_Jose_Benjamin_Angeles_in_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Nancy_Binay",
@@ -2374,7 +2374,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "May 12, 1973",
+    "born": "May 12, 1973",
     "prior_experience": "Senate",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2389,7 +2389,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Malabon;",
+   "lgu": "Malabon",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Mayor_Jeannie_Sandoval.png/120px-Mayor_Jeannie_Sandoval.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Jeannie_Sandoval",
@@ -2398,7 +2398,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "January 14, 1965",
+    "born": "January 14, 1965",
     "prior_experience": "Vice Mayor of Malabon",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2413,7 +2413,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Mandaluyong;",
+   "lgu": "Mandaluyong",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Carmelita_Abalos_Portrait_2025_%28cropped%29.jpg/120px-Carmelita_Abalos_Portrait_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Carmelita_Abalos",
@@ -2422,7 +2422,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "July 2, 1962",
+    "born": "July 2, 1962",
     "prior_experience": "Vice Mayor of Mandaluyong Mayor of Mandaluyong",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2437,7 +2437,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Mandaue;",
+   "lgu": "Mandaue",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Jonkie_Ouano.jpg/120px-Jonkie_Ouano.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "",
@@ -2446,7 +2446,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "November 16, 1974",
+    "born": "November 16, 1974",
     "prior_experience": "Businessman Cebu Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2461,7 +2461,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Manila;",
+   "lgu": "Manila",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/IskoMorenoOfficialPortrait2025_%28cropped%29.jpg/120px-IskoMorenoOfficialPortrait2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Isko_Moreno",
@@ -2470,7 +2470,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "October 24, 1974",
+    "born": "October 24, 1974",
     "prior_experience": "Actor Mayor of Manila Department of Social Welfare and Development Undersecretary Vice Mayor of Manila Manila City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2485,7 +2485,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Marikina;",
+   "lgu": "Marikina",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Rep._Marjorie_Ann_Teodoro_%2819th_Congress%29.jpg/120px-Rep._Marjorie_Ann_Teodoro_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Maan_Teodoro",
@@ -2494,7 +2494,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "January 9, 1981",
+    "born": "January 9, 1981",
     "prior_experience": "Teacher House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2509,7 +2509,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Muntinlupa;",
+   "lgu": "Muntinlupa",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Mayor_Ruffy_Biazon_Official_Portrait_2022_%28cropped%29.jpg/120px-Mayor_Ruffy_Biazon_Official_Portrait_2022_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Ruffy_Biazon",
@@ -2518,7 +2518,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "March 20, 1969",
+    "born": "March 20, 1969",
     "prior_experience": "House of Representatives Bureau of Customs Commissioner Director of the Videogram Regulatory Board",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2533,7 +2533,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Naga;",
+   "lgu": "Naga",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Naga_City_Mayor_Leni_Robredo.jpg/120px-Naga_City_Mayor_Leni_Robredo.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Leni_Robredo",
@@ -2542,7 +2542,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "April 23, 1965",
+    "born": "April 23, 1965",
     "prior_experience": "Lawyer Vice President of the Philippines House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2557,7 +2557,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Navotas;",
+   "lgu": "Navotas",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/3x4.svg/120px-3x4.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/John_Rey_Tiangco",
@@ -2566,7 +2566,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "November 21, 1972",
+    "born": "November 21, 1972",
     "prior_experience": "House of Representatives Mayor of Navotas",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2590,7 +2590,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "April 8, 1991",
+    "born": "April 8, 1991",
     "prior_experience": "Lawyer",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2614,7 +2614,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "December 11, 1974",
+    "born": "December 11, 1974",
     "prior_experience": "Actress House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2629,7 +2629,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Parañaque;",
+   "lgu": "Parañaque",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Rep._Edwin_Olivarez_%2819th_Congress%29.jpg/120px-Rep._Edwin_Olivarez_%2819th_Congress%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Edwin_Olivarez",
@@ -2638,7 +2638,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "December 11, 1974",
+    "born": "December 11, 1974",
     "prior_experience": "Businessman House of Representatives Mayor of Parañaque Vice Governor of Laguna Laguna Provincial Board",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2653,7 +2653,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Pasay;",
+   "lgu": "Pasay",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Mayor_Imelda_%E2%80%9CEmi%E2%80%9D_Calixto-Rubiano_profile_%28cropped%29.jpg/120px-Mayor_Imelda_%E2%80%9CEmi%E2%80%9D_Calixto-Rubiano_profile_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Emi_Rubiano",
@@ -2662,7 +2662,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "August 16, 1960",
+    "born": "August 16, 1960",
     "prior_experience": "Businesswoman House of Representatives Pasay City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -2677,7 +2677,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Pasig;",
+   "lgu": "Pasig",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Vico_Sotto%2C_Official_Portrait_2025_%28cropped%29.jpg/120px-Vico_Sotto%2C_Official_Portrait_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Vico_Sotto",
@@ -2686,7 +2686,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "June 17, 1989",
+    "born": "June 17, 1989",
     "prior_experience": "Pasig City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -2701,7 +2701,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Pateros;",
+   "lgu": "Pateros",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/3x4.svg/120px-3x4.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "",
@@ -2710,7 +2710,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "September 18, 1979",
+    "born": "September 18, 1979",
     "prior_experience": "Municipal Administrator of Pateros Vice Mayor of Pateros Pateros Municipal Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2734,7 +2734,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "July 7, 1946",
+    "born": "July 7, 1946",
     "prior_experience": "Vice Mayor of Puerto Princesa",
     "assumed_office": "June 22, 2017",
     "wikipedia_revision": "1377631853"
@@ -2749,7 +2749,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Quezon City;",
+   "lgu": "Quezon City",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Joy_Belmonte_Official_Portrait_2025_%28cropped%29.jpg/120px-Joy_Belmonte_Official_Portrait_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Joy_Belmonte",
@@ -2758,7 +2758,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "March 15, 1970",
+    "born": "March 15, 1970",
     "prior_experience": "Entrepreneur, archeologist Vice Mayor of Quezon City",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -2773,7 +2773,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "San Juan;",
+   "lgu": "San Juan",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Picture_of_Franciz_Zamora.jpg/120px-Picture_of_Franciz_Zamora.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Francis_Zamora",
@@ -2782,7 +2782,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "December 5, 1977",
+    "born": "December 5, 1977",
     "prior_experience": "Basketball player Vice Mayor of San Juan San Juan City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -2806,7 +2806,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "August 19, 1992",
+    "born": "August 19, 1992",
     "prior_experience": "Lawyer, accountant House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2821,7 +2821,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Tacloban;",
+   "lgu": "Tacloban",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Alfred_S_Romualdez_01.jpg/120px-Alfred_S_Romualdez_01.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Alfred_Romualdez",
@@ -2830,7 +2830,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "January 14, 1962",
+    "born": "January 14, 1962",
     "prior_experience": "Businessman Mayor of Tacloban House of Representatives",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -2845,7 +2845,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Taguig;",
+   "lgu": "Taguig",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Mayor_of_Taguig_Maria_Laarni_%22Lani%22_Lopez_Cayetano.png/120px-Mayor_of_Taguig_Maria_Laarni_%22Lani%22_Lopez_Cayetano.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Lani_Cayetano",
@@ -2854,7 +2854,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "December 11, 1981",
+    "born": "December 11, 1981",
     "prior_experience": "House of Representatives Mayor of Taguig",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2869,7 +2869,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Valenzuela;",
+   "lgu": "Valenzuela",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Wes_Gatchalian_2022.jpg/120px-Wes_Gatchalian_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Wes_Gatchalian",
@@ -2878,7 +2878,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "August 11, 1980",
+    "born": "August 11, 1980",
     "prior_experience": "House of Representatives",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -2893,7 +2893,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Zamboanga City;",
+   "lgu": "Zamboanga City",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Mayor_Khymer_Olaso_2025_%28cropped_2%29.jpg/120px-Mayor_Khymer_Olaso_2025_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "https://en.wikipedia.org/wiki/Khymer_Olaso",
@@ -2902,7 +2902,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "March 22, 1978",
+    "born": "March 22, 1978",
     "prior_experience": "Master mariner House of Representatives Zamboanga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2926,7 +2926,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "June 20, 1977",
+    "born": "June 20, 1977",
     "prior_experience": "Businessman Angeles City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2950,7 +2950,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "January 9, 1979",
+    "born": "January 9, 1979",
     "prior_experience": "Businessman Bacolod City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -2974,7 +2974,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "April 19, 1965",
+    "born": "April 19, 1965",
     "prior_experience": "Lawyer Baguio City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -2998,7 +2998,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "January 12, 1977",
+    "born": "January 12, 1977",
     "prior_experience": "Butuan City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3022,7 +3022,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "August 3, 1959",
+    "born": "August 3, 1959",
     "prior_experience": "Nurse Barangay chairperson",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -3046,7 +3046,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "January 31, 1987",
+    "born": "January 31, 1987",
     "prior_experience": "Researcher Caloocan City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -3070,7 +3070,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "July 26, 1948",
+    "born": "July 26, 1948",
     "prior_experience": "Agriculturist Mayor of Cebu City House of Representatives",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3094,7 +3094,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "November 18, 1975",
+    "born": "November 18, 1975",
     "prior_experience": "Barangay chairperson",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3118,7 +3118,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "June 25, 1985",
+    "born": "June 25, 1985",
     "prior_experience": "Dagupan Association of Barangay Captains President",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -3142,7 +3142,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "0",
-    "age": "February 23, 1998",
+    "born": "February 23, 1998",
     "prior_experience": "Businessman Davao City Council",
     "assumed_office": "January 23, 2026",
     "wikipedia_revision": "1377631853"
@@ -3166,7 +3166,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "December 10, 1971",
+    "born": "December 10, 1971",
     "prior_experience": "Lawyer General Santos City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3190,7 +3190,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "May 14, 1971",
+    "born": "May 14, 1971",
     "prior_experience": "Businessman",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3214,7 +3214,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "November 27, 1985",
+    "born": "November 27, 1985",
     "prior_experience": "Iloilo City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3238,7 +3238,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "August 31, 1939",
+    "born": "August 31, 1939",
     "prior_experience": "Physician Mayor of Cordova",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -3262,7 +3262,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "February 6, 1947",
+    "born": "February 6, 1947",
     "prior_experience": "Mayor of Las Piñas",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3286,7 +3286,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "October 17, 1971",
+    "born": "October 17, 1971",
     "prior_experience": "Mayor of Lucena Vice Mayor of Lucena Lucena City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -3310,7 +3310,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "August 5, 1969",
+    "born": "August 5, 1969",
     "prior_experience": "House of Representatives Mayor of Makati Vice Mayor of Makati Makati Association of Barangay Captains President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3334,7 +3334,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "March 14, 1978",
+    "born": "March 14, 1978",
     "prior_experience": "Malabon City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3358,7 +3358,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "September 25, 1970",
+    "born": "September 25, 1970",
     "prior_experience": "Businessman Mandaluyong City Council Vice Mayor of Mandaluyong",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3382,7 +3382,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "March 3, 1958",
+    "born": "March 3, 1958",
     "prior_experience": "Mayor of Mandaue Vice Mayor of Mandaue Cebu Provincial Board Mandaue City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3406,7 +3406,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "July 26, 1981",
+    "born": "July 26, 1981",
     "prior_experience": "Journalist",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3430,7 +3430,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "January 9, 1963",
+    "born": "January 9, 1963",
     "prior_experience": "Mayor of Marikina House of Representatives Vice Mayor of Marikina Marikina Municipal Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3454,7 +3454,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "June 2, 1988",
+    "born": "June 2, 1988",
     "prior_experience": "Businesswoman Municipal Administrator of Naujan , Oriental Mindoro Muntinlupa City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3478,7 +3478,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "February 15, 1955",
+    "born": "February 15, 1955",
     "prior_experience": "Writer House of Representatives Vice Mayor of Naga Naga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3493,7 +3493,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Navotas;",
+   "lgu": "Navotas",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/3x4.svg/120px-3x4.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "",
@@ -3502,7 +3502,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "February 6, 1957",
+    "born": "February 6, 1957",
     "prior_experience": "Navotas City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -3526,7 +3526,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "January 16, 1995",
+    "born": "January 16, 1995",
     "prior_experience": "Olongapo City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3550,7 +3550,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "October 30, 1974",
+    "born": "October 30, 1974",
     "prior_experience": "Businessman Vice Mayor of Ormoc",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3574,7 +3574,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "March 21, 1975",
+    "born": "March 21, 1975",
     "prior_experience": "Businessman Parañaque City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3598,7 +3598,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "February 12, 1976",
+    "born": "February 12, 1976",
     "prior_experience": "Pasay City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3622,7 +3622,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "October 14, 1971",
+    "born": "October 14, 1971",
     "prior_experience": "Businessman, basketball player House of Representatives San Juan Municipal Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -3637,7 +3637,7 @@
    "district": "",
    "region": "",
    "province": "",
-   "lgu": "Pateros;",
+   "lgu": "Pateros",
    "barangay": "",
    "photo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/3x4.svg/120px-3x4.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
    "profile_url": "",
@@ -3646,7 +3646,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "July 25, 1975",
+    "born": "July 25, 1975",
     "prior_experience": "Businessman, engineer",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -3670,7 +3670,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "December 4, 1967",
+    "born": "December 4, 1967",
     "prior_experience": "Lawyer Puerto Princesa City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3694,7 +3694,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "3",
-    "age": "March 18, 1978",
+    "born": "March 18, 1978",
     "prior_experience": "Actor, entrepreneur Quezon City Council",
     "assumed_office": "June 30, 2019",
     "wikipedia_revision": "1377631853"
@@ -3718,7 +3718,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "March 16, 1973",
+    "born": "March 16, 1973",
     "prior_experience": "Lawyer San Juan City Council",
     "assumed_office": "June 26, 2023",
     "wikipedia_revision": "1377631853"
@@ -3742,7 +3742,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "May 4, 1992",
+    "born": "May 4, 1992",
     "prior_experience": "Businesswoman",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3766,7 +3766,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "March 18, 1987",
+    "born": "March 18, 1987",
     "prior_experience": "Businessman Tacloban Association of Barangay Captains President",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3790,7 +3790,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "2",
-    "age": "December 21, 1976",
+    "born": "December 21, 1976",
     "prior_experience": "Taguig City Council",
     "assumed_office": "June 30, 2022",
     "wikipedia_revision": "1377631853"
@@ -3814,7 +3814,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "August 11, 1980",
+    "born": "August 11, 1980",
     "prior_experience": "Businessman Valenzuela City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"
@@ -3838,7 +3838,7 @@
    "source_url": "https://en.wikipedia.org/wiki/List_of_current_Philippine_city_mayors",
    "details": {
     "term": "1",
-    "age": "September 7, 1966",
+    "born": "September 7, 1966",
     "prior_experience": "Teacher Mayor of Zamboanga City House of Representatives Vice Mayor of Zamboanga City Zamboanga City Council",
     "assumed_office": "June 30, 2025",
     "wikipedia_revision": "1377631853"

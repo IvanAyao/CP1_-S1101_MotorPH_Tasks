@@ -1,7 +1,7 @@
 {
  "dataset": "house",
  "source_url": "https://en.wikipedia.org/wiki/List_of_current_members_of_the_House_of_Representatives_of_the_Philippines",
- "scraped_at": "2026-09-30T11:24:27+00:00",
+ "scraped_at": "2026-09-30T11:37:04+00:00",
  "count": 317,
  "method": "wikipedia",
  "wikipedia_revision": "1377431546",
