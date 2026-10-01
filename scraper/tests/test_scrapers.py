@@ -613,13 +613,14 @@ def test_dilg_barangay_sheet(isolated_output):
         ("Pedro Reyes", "punong_barangay", "Casisang", "Malaybalay City", "Bukidnon"),
         ("Ana Lim", "punong_barangay", "Carmen", "Cagayan de Oro City", ""),
         ("Alejandro Zafra Jr", "punong_barangay", "Barangay I", "Baler", "Aurora"),
-        ("Lea Cruz", "sk_kagawad", "Barangay I", "Baler", "Aurora"),
-        ("Mae Diaz", "other", "Barangay I", "Baler", "Aurora"),
-    }
+    }  # SK members and the SK treasurer are not council members
     by = {r["name"]: r for r in recs}
-    assert by["Alejandro Zafra Jr"]["details"]["term"] == "3" and by["Mae Diaz"]["position"] == "SK Treasurer"
+    assert by["Alejandro Zafra Jr"]["details"]["term"] == "3"
+    # The national file: each row's region column is used.
+    national = dilg_barangays.parse(buf.getvalue(), None, "https://www.dilg.gov.ph/x")
+    assert {r["region"] for r in national if r["province"] == "Aurora"} == {"Region III (Central Luzon)"}
     assert all(r["source_type"] == "official" and r["dataset"] == "barangay" for r in recs)
     assert all(r["region"] == "Region X (Northern Mindanao)" and r["contact"] == "" for r in recs)
     barangay.flush(recs)
     index = json.loads((common.DATA_DIR / "barangay" / "index.json").read_text())
-    assert index["count"] == 7 and {f["province"] for f in index["files"]} == {"Bukidnon", "Aurora", ""}
+    assert index["count"] == 5 and {f["province"] for f in index["files"]} == {"Bukidnon", "Aurora", ""}

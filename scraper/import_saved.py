@@ -200,6 +200,17 @@ def import_barangay(today: str) -> bool:
         return False
     recs = []
     for path in paths:
+        if path.suffix.lower() == ".xlsx":
+            # DILG's barangay officials spreadsheet (e.g. Central Office's
+            # public file): parsed like the regional sheets, council members only.
+            import dilg_barangays
+            found = dilg_barangays.parse(path.read_bytes(), None, barangay.URL,
+                                         source=f"DILG – Barangay Officials (saved copy)")
+            for o in found:
+                o["details"]["copied_on"] = today
+            log(f"  {path.relative_to(INBOX)}: {len(found)} barangay council members")
+            recs += found
+            continue
         # Optional <Region>/<Province>/ folders give context the table may lack.
         parts = path.relative_to(base).parts[:-1]
         defaults = {"region": parts[0] if len(parts) > 0 else "",
