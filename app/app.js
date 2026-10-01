@@ -46,10 +46,12 @@
     render();
   }
 
-  const LEVEL_KEYS = ["senate", "house", "governor", "vice_governor", "board_member", "mayor", "vice_mayor", "councilor",
+  const EXEC_LEVELS = new Set(["president", "vice_president"]);
+  const LEVEL_KEYS = ["president", "vice_president", "senate", "house", "governor", "vice_governor", "board_member", "mayor", "vice_mayor", "councilor",
     "punong_barangay", "kagawad", "sk_chair", "sk_kagawad", "barangay_secretary", "barangay_treasurer", "other"];
   const FILTERS = [
     ["all", () => true],
+    ["exec", (o) => EXEC_LEVELS.has(o.level)],
     ["senate", (o) => o.level === "senate"],
     ["house", (o) => o.level === "house"],
     ["gov", (o) => o.level === "governor" || o.level === "vice_governor"],
@@ -71,6 +73,7 @@
   const state = {
     manifest: null,
     officials: [],           // senate + house + lgu (always loaded)
+    pastExec: [],            // former Presidents and Vice Presidents (history page)
     byKey: new Map(),        // `${dataset}/${id}` -> official
     lgus: [],
     brgyIndex: null,
@@ -102,7 +105,8 @@
   const districtText = (o) => (o._dist && /^\s*(\d+\s*(st|nd|rd|th)?|lone)\s*$/i.test(o.district || "") ? districtLabel(o._dist) : o.district);
   const place = (o, withDistrict = true) => [o.barangay && `Brgy. ${o.barangay}`, o.lgu, withDistrict && districtText(o), o.province, o.region].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ");
   // Positions come from the sources as published; the level name is only a fallback.
-  const levelLabel = (o) => o.position || (LEVEL_KEYS.includes(o.level) ? t(`lvl_${o.level}`) : o.level);
+  const isPast = (o) => EXEC_LEVELS.has(o.level) && o.current === false;
+  const levelLabel = (o) => (EXEC_LEVELS.has(o.level) ? t(isPast(o) ? `lvl_past_${o.level}` : `lvl_${o.level}`) : o.position || (LEVEL_KEYS.includes(o.level) ? t(`lvl_${o.level}`) : o.level));
   // Where data comes from: government (.gov.ph) sites are "official"; other
   // public publishers (Wikipedia, civic open data) are "public"; privately
   // run sources would be "private".
@@ -129,6 +133,9 @@
 
   // Bill counts per senator: all filed, as main author, as co-author. Only
   // senators have bill data, so sorting by these limits the list to them.
+  const termSpan = (x) => `${fmtDate(x.start)} – ${x.end ? fmtDate(x.end) : t("present")}`;
+  const careerSpan = (c) => `${(c.start || "").slice(0, 4) || "?"}–${c.end ? c.end.slice(0, 4) : t("present")}`;
+
   // Consecutive term (1-3) of a local official, from Wikipedia's term column
   // or OpenHalalan's election history; anything else is left unstated.
   const TERM_LIMITED_LEVELS = new Set(["governor", "vice_governor", "board_member", "mayor", "vice_mayor", "councilor", "punong_barangay", "kagawad"]);
@@ -227,7 +234,8 @@
       const o = withLoc({ ...r, dataset });
       o._s = norm([r.name, r.position, r.party, r.district, r.barangay, ...locWords(o)].join(" "));
       state.byKey.set(key(o), o);
-      state.officials.push(o);
+      // Former Presidents and VPs are on their own page, not in the directory.
+      (isPast(o) ? state.pastExec : state.officials).push(o);
     }
   }
 
@@ -239,7 +247,7 @@
       state.manifest = { datasets: [] };
     }
     const ds = Object.fromEntries((state.manifest.datasets || []).map((d) => [d.key, d]));
-    const tasks = ["senate", "house", "lgu"].filter((k) => ds[k]?.count).map(async (k) => {
+    const tasks = ["executive", "senate", "house", "lgu"].filter((k) => ds[k]?.count).map(async (k) => {
       try {
         const doc = await getJSON(ds[k].file);
         addRecords(doc.records, k);
@@ -253,7 +261,7 @@
       tasks.push(getJSON(ds.barangay.file).then((d) => (state.brgyIndex = d)).catch(console.warn));
     }
     await Promise.all(tasks);
-    const order = ["senate", "house", "governor", "vice_governor", "mayor", "vice_mayor", "board_member", "councilor"];
+    const order = ["president", "vice_president", "senate", "house", "governor", "vice_governor", "mayor", "vice_mayor", "board_member", "councilor"];
     state.officials.sort((a, b) => (order.indexOf(a.level) + 1 || 99) - (order.indexOf(b.level) + 1 || 99) || a.name.localeCompare(b.name));
     restoreCompare();
     state.loading = false;
@@ -389,6 +397,7 @@
         </div>`;
       };
       results.innerHTML = `${bySort ? `${scopeSeg(state.scope, "data-scope")}${sectorSelect()}` : ""}<div class="section-label">${bySort ? esc(`${t(`sort_${state.sort}`)} · ${t(`scope_${state.scope}`)}${state.sector ? ` · ${t(`sec_${state.sector}`)}` : ""}`) : esc(t(`f_${f[0]}`))}${state.island ? " · " + esc(t(`island_${state.island}`)) : ""} · ${t("n_officials", { n: fmtNum(list.length) })}</div>
+        ${f[0] === "exec" && !bySort ? `<p><a class="btn block" href="#/pangulo">${t("exec_history_link")}</a></p>` : ""}
         ${bySort ? `<div class="notice rank-note"><b>${t("rank_caveat_title")}</b> ${t(`period_${sortKey()}`, { d: fmtDate(state.billsSource?.as_of) })} ${t("rank_caveat")}${state.sector ? ` ${t("sector_note")}${state.sector === "transport" ? ` ${t("transport_note")}` : ""}` : ""}</div>${billsNote()}` : ""}
         <div class="list${bySort ? " ranked" : ""}">${list.slice(0, state.shown).map((o, i) => (bySort ? rankRow(o, i) : row(o))).join("") || `<div class="empty">${t("no_match", { q: esc(state.q) })}</div>`}</div>
         ${list.length > state.shown ? `<button class="btn more" id="more">${t("show_more", { n: fmtNum(list.length - state.shown) })}</button>` : ""}`;
@@ -562,6 +571,13 @@
     }
     if (o.details?.full_name) rows.push([t("full_name"), tidyName(o.details.full_name)]);
     if (o.dataset === "barangay") rows.push([t("in_office"), t("brgy_term")]);
+    if (EXEC_LEVELS.has(o.level)) {
+      if (o.ordinal) rows.push([t("exec_order"), t("exec_nth", { n: o.ordinal, nth: ordinal(+o.ordinal || 0) })]);
+      if (o.details?.term) rows.push([t(isPast(o) ? "exec_years" : "term_label"), o.details.term]);
+      if ((o.terms || []).length > 1) rows.push([t("exec_terms"), o.terms.map(termSpan).join("; ")]);
+      if (!isPast(o)) rows.push([t("in_2028"), o.level === "president" ? t("pres_not_eligible")
+        : (o.successive_terms || 1) >= 2 ? t("vp_limit") : t("vp_can_run")]);
+    }
     if (o.service?.first_senate_year) {
       rows.push([t("cmp_since"), `${o.service.first_senate_year} (${congressName(o.service.first_senate_congress)})`]);
       rows.push([t("cmp_terms"), `${o.service.senate_terms} · ${congressRanges(o.service.senate_congresses)}`]);
@@ -569,7 +585,7 @@
     const d = o.details || {};
     if (d.address) rows.push([t("office"), d.address]);
     const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on", "published_via", "term", "term_source", "term_years", "elected", "full_name"]);
-    const extra = Object.entries(d).filter(([k, v]) => v && !skip.has(k) && !/^line\d|href|photo|image|img|^id$|_id$|slug/.test(k) && !rows.some(([, rv]) => rv === v));
+    const extra = Object.entries(d).filter(([k, v]) => v && !skip.has(k) && !(k === "prior_experience" && o.career) && !/^line\d|href|photo|image|img|^id$|_id$|slug/.test(k) && !rows.some(([, rv]) => rv === v));
     const pretty = (k) => k.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
     const cv = safeUrl(d.resume);
     const inBallot = Object.values(getBallot()).some((arr) => arr.includes(key(o)));
@@ -592,6 +608,19 @@
       <div class="section-label">${t("info")}</div>
       <table class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}
         ${extra.slice(0, 20).map(([k, v]) => `<tr><th>${esc(pretty(k))}</th><td>${esc(v)}</td></tr>`).join("")}</table>
+      ${o.summary ? `<div class="section-label">${t("exec_summary")}</div><p class="bio">${esc(o.summary)}</p>
+        <p class="meta">${t("exec_summary_src")} <a href="${esc(safeUrl(o.summary_source))}" target="_blank" rel="noopener">${t("wikipedia_article")} ↗</a></p>` : ""}
+      ${o.laws_note === "before_data" ? `<div class="section-label">${t("laws_title_past")}</div><p class="meta">${t("laws_before_data")}</p>` : ""}
+      ${(o.career || []).length ? `<div class="section-label">${t("career_title")}</div>
+        <ol class="career">${[...o.career].reverse().map((c) => `<li><b>${esc(c.title)}</b>${c.place ? ` · ${esc(c.place)}` : ""}<span class="meta">${esc(careerSpan(c))}</span></li>`).join("")}</ol>` : ""}
+      ${o.laws_signed != null ? `<div class="section-label">${isPast(o) ? t("laws_title_past") : t("laws_title", { y: (o.laws_from || "").slice(0, 4) })}</div>
+        <div class="service">
+          ${o.laws_est ? `<div class="service-item"><b>≈${fmtNum(o.laws_est)}</b><span>${t("laws_est", { a: o.ra_first, b: o.ra_last })}</span></div>` : ""}
+          <div class="service-item"><b>${fmtNum(o.laws_signed)}</b><span>${t("laws_signed")}</span></div>
+          <div class="service-item"><b>${fmtNum(o.laws_lapsed)}</b><span>${t("laws_lapsed")}</span></div>
+        </div>
+        <p class="meta">${isPast(o) ? t("laws_note_past", { a: fmtDate(o.laws_from), b: fmtDate(o.laws_to) }) : t("laws_note", { d: fmtDate(o.laws_as_of) })}${o.laws_note === "partial" ? ` ${t("laws_partial")}` : ""}${o.laws_est ? ` ${t("laws_coverage", { p: o.laws_coverage, n: fmtNum(o.laws_signed + o.laws_lapsed) })}` : ""}</p>
+        <p><a class="btn block" href="#/laws/${encodeURIComponent(o.id)}">${t("see_laws", { n: fmtNum(o.laws_signed + o.laws_lapsed) })}</a></p>` : ""}
       ${nAch ? `<div class="section-label">${t("achievements_n", { n: nAch })}</div>${groupAchievements(o.achievements).map(([g, items]) => `<div class="ach-group">${esc(t(g))} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
       ${(o.bills || []).length ? `<div class="section-label">${t("bills_n", { n: fmtNum(o.bills_count || o.bills.length) })}</div>
         <p class="meta bill-split">${t("bill_split", { main: fmtNum(billStats(o).main), co: fmtNum(billStats(o).co) })} · <a href="#/" data-rank-link>${t("see_ranking")}</a></p>
@@ -748,6 +777,48 @@
     }));
   }
 
+  // Laws of a President's term (Republic Acts dated from the day the term began).
+  const lawsView = { q: "", show: "all" };
+  async function viewLaws(id) {
+    view.innerHTML = '<div class="skeleton" style="height:160px"></div>';
+    const o = state.byKey.get(`executive/${id}`);
+    if (!o) { view.innerHTML = `<div class="empty">${t("not_found")}</div>`; return; }
+    setTitle(t("laws_page_title"));
+    let doc;
+    try { doc = await getJSON("laws.json"); } catch { view.innerHTML = `<div class="empty">${t("no_data_short")}</div>`; return; }
+    const from = o.laws_from || o.details?.took_office || "";
+    const to = o.laws_to || "";
+    const all = doc.laws.filter((l) => l.date && l.date >= from && (!to || l.date < to)).reverse();
+    view.innerHTML = `
+      <div class="bills-head">
+        <a class="bills-who" href="#/o/executive/${encodeURIComponent(o.id)}">${avatar(o)}<span><b>${esc(o.name)}</b><span>${esc(levelLabel(o))} · ${esc(o.details?.term || "")}</span></span></a>
+      </div>
+      <div class="notice">${to ? t("laws_page_note_past", { a: fmtDate(from), b: fmtDate(to) }) : t("laws_page_note", { d: fmtDate(from), as: fmtDate(doc.as_of) })}</div>
+      <div class="bills-tools">
+        <input class="search" id="laws-q" type="search" placeholder="${esc(t("laws_search_ph"))}" value="${esc(lawsView.q)}" aria-label="${esc(t("laws_search_ph"))}">
+        <div class="chips wrap" role="group">${["all", "signed", "lapsed"].map((k) => `<button class="chip" data-lshow="${k}" aria-pressed="${k === lawsView.show}">${t(`laws_filter_${k}`)}</button>`).join("")}</div>
+      </div>
+      <div id="law-list"></div>`;
+    const draw = () => {
+      const terms = norm(lawsView.q).split(/\s+/).filter(Boolean);
+      const list = all.filter((l) => (lawsView.show === "all" || (lawsView.show === "lapsed") === l.lapsed)
+        && terms.every((w) => norm(`${l.ra} ${l.title}`).includes(w)));
+      const years = new Map();
+      list.forEach((l) => { const y = l.date.slice(0, 4); if (!years.has(y)) years.set(y, []); years.get(y).push(l); });
+      $("#law-list").innerHTML = [...years].map(([y, ls]) => `<div class="year-head">${esc(y)} · ${t("n_laws", { n: fmtNum(ls.length) })}</div>
+        <ul class="bills">${ls.map((l) => `<li>${safeUrl(l.url) ? `<a href="${esc(l.url)}" target="_blank" rel="noopener">` : ""}<b>RA ${esc(l.ra)}</b> ${esc(l.title)}${safeUrl(l.url) ? "</a>" : ""}
+          <span class="bill-meta">${l.lapsed ? `<span class="badge src-public">${t("laws_lapsed_badge")}</span> ` : ""}<span class="meta">${esc(fmtDate(l.date))} · ${esc(l.bill)}</span></span></li>`).join("")}</ul>`).join("")
+        || `<div class="empty">${t("no_match_short")}</div>`;
+    };
+    draw();
+    $("#laws-q").addEventListener("input", (e) => { lawsView.q = e.target.value; draw(); });
+    view.querySelectorAll("[data-lshow]").forEach((b) => b.addEventListener("click", () => {
+      lawsView.show = b.dataset.lshow;
+      view.querySelectorAll("[data-lshow]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      draw();
+    }));
+  }
+
   function billsNote() {
     const b = state.billsSource;
     if (!b) return "";
@@ -758,6 +829,55 @@
   function datasetDate(ds, file) {
     if (ds === "barangay" && file && state.brgyIndex) return state.brgyIndex.files.find((f) => f.file === file)?.scraped_at;
     return state.manifest?.datasets?.find((d) => d.key === ds)?.scraped_at;
+  }
+
+  // Time in office and laws per year, for comparing terms of different length.
+  const daysIn = (o) => (o.terms || []).reduce((n, x) => n + ((x.end ? Date.parse(x.end) : Date.now()) - Date.parse(x.start)) / 86400000, 0);
+  const yearsIn = (o) => { const d = daysIn(o); return d ? t("n_years", { n: (d / 365.25).toFixed(1) }) : ""; };
+  function lawsPerYear(o) {
+    if (o.laws_signed == null || !o.laws_from) return "";
+    const days = ((o.laws_to ? Date.parse(o.laws_to) : Date.parse(o.laws_as_of || Date.now())) - Date.parse(o.laws_from)) / 86400000;
+    return days > 180 ? `${((o.laws_est || o.laws_signed + o.laws_lapsed) / (days / 365.25)).toFixed(0)}${o.laws_note === "partial" ? " *" : ""}` : "";
+  }
+
+  // Every President and Vice President, newest first; pick two to compare.
+  const histView = { office: "president", pick: [] };
+  function viewExecHistory() {
+    const all = [...state.officials.filter((o) => EXEC_LEVELS.has(o.level)), ...state.pastExec];
+    if (!all.length) { view.innerHTML = `<div class="empty">${t("no_data_short")}</div>`; return; }
+    const list = all.filter((o) => o.level === histView.office)
+      .sort((a, b) => (b.details?.took_office || "").localeCompare(a.details?.took_office || ""));
+    const card = (o) => {
+      const k = key(o), on = histView.pick.includes(k);
+      const laws = o.laws_signed != null ? t("hist_laws", { n: `≈${fmtNum(o.laws_est || o.laws_signed + o.laws_lapsed)}` }) + (o.laws_note === "partial" ? " *" : "")
+        : o.laws_note === "before_data" || o.level === "president" ? t("hist_no_laws") : "";
+      return `<li class="hist${on ? " picked" : ""}">
+        <a class="row" href="#/o/executive/${encodeURIComponent(o.id)}">${avatar(o)}
+          <span class="who"><b>${o.ordinal ? `${esc(t("exec_nth", { n: o.ordinal, nth: ordinal(+o.ordinal || 0) }))} · ` : ""}${esc(o.name)}</b>
+          <span>${esc(o.details?.term || "")}${o.current === false ? "" : ` · ${t("hist_current")}`}${o.party ? ` · ${esc(o.party)}` : ""}${yearsIn(o) ? ` · ${esc(yearsIn(o))}` : ""}${laws ? ` · ${esc(laws)}` : ""}</span>
+          ${o.summary ? `<span class="hist-sum">${esc(o.summary.length > 220 ? o.summary.slice(0, 220).replace(/\s+\S*$/, "") + "…" : o.summary)}</span>` : ""}</span></a>
+        <button class="chip" data-hpick="${esc(k)}" aria-pressed="${on}">${on ? "✓ " : "＋ "}${t("hist_pick")}</button></li>`;
+    };
+    view.innerHTML = `
+      <div class="section-label">${t("exec_history_title")}</div>
+      <p class="meta" style="margin-top:-4px">${t("hist_lead")}</p>
+      <div class="chips" role="group">${["president", "vice_president"].map((k) => `<button class="chip" data-office="${k}" aria-pressed="${k === histView.office}">${t(`hist_${k}`)}</button>`).join("")}</div>
+      <div class="hist-bar"><span>${t("hist_picked", { n: histView.pick.length })}</span>
+        <button class="btn primary" id="hist-go" ${histView.pick.length === 2 ? "" : "disabled"}>${t("hist_compare")}</button></div>
+      <ul class="list hist-list">${list.map(card).join("")}</ul>
+      <div class="notice">${t("hist_note")}</div>`;
+    view.querySelectorAll("[data-office]").forEach((b) => b.addEventListener("click", () => { histView.office = b.dataset.office; viewExecHistory(); }));
+    view.querySelectorAll("[data-hpick]").forEach((b) => b.addEventListener("click", () => {
+      const k = b.dataset.hpick;
+      histView.pick = histView.pick.includes(k) ? histView.pick.filter((x) => x !== k) : [...histView.pick, k].slice(-2);
+      viewExecHistory();
+    }));
+    $("#hist-go").addEventListener("click", () => {
+      state.compare = histView.pick.map((k) => state.byKey.get(k));
+      histView.pick = [];
+      saveCompare();
+      location.hash = "#/ihambing";
+    });
   }
 
   // Compare
@@ -801,8 +921,10 @@
     const achGroup = (g) => (o) => (groupAchievements(o.achievements).find(([k]) => k === g) || [, []])[1];
     const groupKeys = [...ACH_GROUPS.map(([g]) => g), "ach_other"];
     const anyAch = achievementsOf(a).length || achievementsOf(b).length;
+    // Award lists come from Senate and House biographies; executives have none.
+    const bothExec = EXEC_LEVELS.has(a.level) && EXEC_LEVELS.has(b.level);
     const sections = [
-      { label: t("cmp_ach_total"), of: achievementsOf, always: true, countOnly: anyAch, none: t("cmp_no_ach") },
+      { label: t("cmp_ach_total"), of: achievementsOf, always: !bothExec, countOnly: anyAch, none: t("cmp_no_ach") },
       ...groupKeys.map((g) => ({ label: t("cmp_ach_group", { g: t(g) }), of: achGroup(g), none: t("none") })),
       { label: t("cmp_prior"), of: priorRolesOf, none: t("none_recorded") },
       { label: t("cmp_bills"), of: billsOf, none: t("none_recorded"), bills: true },
@@ -838,6 +960,16 @@
         [t("position"), levelLabel], [t("party"), (o) => o.party], [t("district"), (o) => o.district],
         [t("place"), (o) => place(o, false)], [t("source"), (o) => `${o.source} (${typeLabel(typeOf(o))})`],
       ];
+      if (EXEC_LEVELS.has(a.level) || EXEC_LEVELS.has(b.level)) {
+        fields.push([t("exec_order"), (o) => (o.ordinal ? t("exec_nth", { n: o.ordinal, nth: ordinal(+o.ordinal || 0) }) : "")],
+          [t("term_label"), (o) => o.details?.term || ""],
+          [t("exec_in_office"), (o) => yearsIn(o)],
+          [t("cmp_laws_est"), (o) => (o.laws_est ? `≈${fmtNum(o.laws_est)}${o.laws_note === "partial" ? " *" : ""} (RA ${o.ra_first}–${o.ra_last})` : o.laws_note === "before_data" ? t("hist_no_laws") : "")],
+          [t("cmp_laws_coverage"), (o) => (o.laws_est ? `${o.laws_coverage}% (${fmtNum(o.laws_signed + o.laws_lapsed)})` : "")],
+          [t("cmp_laws_signed"), (o) => (o.laws_signed != null ? fmtNum(o.laws_signed) : "")],
+          [t("cmp_laws_lapsed"), (o) => (o.laws_lapsed != null ? fmtNum(o.laws_lapsed) : "")],
+          [t("cmp_laws_per_year"), (o) => lawsPerYear(o)]);
+      }
       if (a.service || b.service) {
         fields.push([t("cmp_since"), (o) => (o.service?.first_senate_year ? String(o.service.first_senate_year) : "")],
           [t("cmp_terms"), (o) => (o.service ? String(o.service.senate_terms) : "")],
@@ -854,10 +986,17 @@
         return `<div class="cmp-row"><div class="lbl">${esc(lab)}</div><div class="vals"><div class="${same ? "same" : ""}">${esc(va)}</div><div class="${same ? "same" : ""}">${esc(vb)}</div></div></div>`;
       }).join("");
       table += compareLists(a, b);
+      if (a.summary || b.summary) {
+        table += `<div class="cmp-row cmp-lists"><div class="lbl">${t("exec_summary")}</div>
+          <details class="cmp-more" open><summary>${t("see_list")}</summary><div class="vals lists">${[a, b].map((o) => `<div>${o.summary ? `<p class="cmp-summary">${esc(o.summary)}</p>` : `<p class="meta cmp-none">${t("none_recorded")}</p>`}</div>`).join("")}</div></details>
+          <p class="meta">${t("exec_summary_src")}</p></div>`;
+      }
     }
     view.innerHTML = `
       <div class="section-label">${t("cmp_title")}</div>
       <p class="meta" style="margin-top:-4px">${t("cmp_lead")}</p>
+      <p class="notice">${t("cmp_2028_note")}</p>
+      <p><a class="btn block" href="#/pangulo">${t("exec_history_btn")}</a></p>
       <div class="compare">${slot(a, 0)}<span class="vs">vs</span>${slot(b, 1)}</div>
       ${table || `<div class="empty">${t("pick_two")}</div>`}
       ${a || b ? `<button class="btn block" id="clear-cmp">${t("reset")}</button>` : ""}`;
@@ -1068,7 +1207,7 @@
       let chosen = null;
       const draw = () => {
         const terms = norm(input.value).split(/\s+/).filter(Boolean);
-        const pool = [...state.officials, ...[...state.brgyFiles.values()].flat()];
+        const pool = [...state.officials, ...state.pastExec, ...[...state.brgyFiles.values()].flat()];
         let items = pool.filter((o) => terms.every((w) => o._s.includes(w)));
         if (!terms.length && hint) items = items.filter(hint);
         list.innerHTML = items.slice(0, 80).map((o) => `<li>${row(o).replace('<a class="row" href=', '<a class="row" data-k="' + esc(key(o)) + '" href=')}</li>`).join("") || `<li class="empty">${t("no_match_short")}</li>`;
@@ -1112,18 +1251,20 @@
 
   function render() {
     const parts = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
-    const tab = parts[0] === "o" || parts[0] === "bills" ? "" : parts[0] || "home";
-    view.dataset.view = parts[0] === "o" ? "profile" : parts[0] === "bills" ? "bills" : tab;
+    const tab = ["o", "bills", "laws"].includes(parts[0]) ? "" : parts[0] || "home";
+    view.dataset.view = parts[0] === "o" ? "profile" : ["bills", "laws"].includes(parts[0]) ? "bills" : tab;
     document.querySelectorAll(".tabbar a").forEach((a) => a.classList.toggle("active", a.dataset.tab === tab));
     document.querySelectorAll(".tabbar a").forEach((a) => (a.dataset.tab === tab ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
-    $("#back").hidden = !["o", "bills", "privacy", "report"].includes(parts[0]);
-    const titles = { hanap: "title_hanap", ihambing: "title_ihambing", pili: "title_pili", ako: "title_ako", privacy: "privacy_title", report: "report_title" };
+    $("#back").hidden = !["o", "bills", "laws", "privacy", "report", "pangulo"].includes(parts[0]);
+    const titles = { hanap: "title_hanap", ihambing: "title_ihambing", pili: "title_pili", ako: "title_ako", privacy: "privacy_title", report: "report_title", pangulo: "exec_history_title" };
     setTitle(titles[tab] ? t(titles[tab]) : "");
     switch (parts[0]) {
       case "o": return viewProfile(parts[1], parts.slice(2).join("/"));
+      case "laws": return viewLaws(parts.slice(1).join("/"));
       case "bills": return viewBills(parts[1], parts[2] === "career" ? "career" : "term", parts[3] || "");
       case "hanap": return viewHanap();
       case "ihambing": return viewCompare();
+      case "pangulo": return viewExecHistory();
       case "pili": return viewPili();
       case "ako": return viewAko();
       case "privacy": return viewPrivacy();
