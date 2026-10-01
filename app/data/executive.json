@@ -1,69 +1,12 @@
 {
  "dataset": "executive",
  "source_url": "https://www.wikidata.org/",
- "scraped_at": "2026-10-01T06:34:31+00:00",
- "count": 2,
+ "scraped_at": "2026-10-01T06:40:50+00:00",
+ "count": 33,
  "method": "public",
  "source_label": "Wikidata (public, CC0)",
- "fetched_at": "2026-10-01T06:34:31+00:00",
+ "fetched_at": "2026-10-01T06:40:50+00:00",
  "records": [
-  {
-   "id": "vice-president-nationwide-sara-duterte",
-   "name": "Sara Duterte",
-   "position": "Vice President of the Philippines",
-   "level": "vice_president",
-   "party": "Hugpong sa Tawong Lungsod",
-   "district": "Nationwide",
-   "region": "",
-   "province": "",
-   "lgu": "",
-   "barangay": "",
-   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/VPSD%20Official%20Photo%20%28cropped%29.jpg?width=300",
-   "profile_url": "https://en.wikipedia.org/wiki/Sara_Duterte",
-   "contact": "",
-   "source": "Wikidata (public, CC0)",
-   "source_url": "https://www.wikidata.org/wiki/Q1491004",
-   "details": {
-    "took_office": "2022-06-30",
-    "term": "2022–2028",
-    "born": "1978-05-31",
-    "prior_experience": "deputy mayor (2007–2010); Mayor of Davao City (2010–2013); Mayor of Davao City (2016–2022); Secretary of Education (2022–2024)"
-   },
-   "source_type": "public",
-   "career": [
-    {
-     "title": "deputy mayor",
-     "place": "",
-     "start": "2007-01-01",
-     "end": "2010-01-01"
-    },
-    {
-     "title": "Mayor of Davao City",
-     "place": "",
-     "start": "2010-06-30",
-     "end": "2013-06-30"
-    },
-    {
-     "title": "Mayor of Davao City",
-     "place": "",
-     "start": "2016-06-30",
-     "end": "2022-06-30"
-    },
-    {
-     "title": "Secretary of Education",
-     "place": "",
-     "start": "2022-06-30",
-     "end": "2024-06-19"
-    },
-    {
-     "title": "Vice President of the Philippines",
-     "place": "",
-     "start": "2022-06-30",
-     "end": ""
-    }
-   ],
-   "successive_terms": 1
-  },
   {
    "id": "president-nationwide-bongbong-marcos",
    "name": "Bongbong Marcos",
@@ -87,6 +30,15 @@
     "prior_experience": "member of the House of Representatives, Ilocos Norte's 2nd congressional district (1992–1995); Governor of Ilocos Norte (1998–2007); member of the House of Representatives, Ilocos Norte's 2nd congressional district (2007–2010); Member of the Senate of the Philippines (2010–2016); Secretary of Agriculture (2022–2023)"
    },
    "source_type": "public",
+   "current": true,
+   "terms": [
+    {
+     "start": "2022-06-30",
+     "end": "",
+     "ordinal": "17"
+    }
+   ],
+   "ordinal": "17",
    "career": [
     {
      "title": "member of the House of Representatives",
@@ -126,10 +78,2325 @@
     }
    ],
    "successive_terms": 1,
+   "summary": "Ferdinand \"Bongbong\" Romualdez Marcos Jr., commonly referred to by the initials BBM or PBBM, is a Filipino politician who has served as the 17th president of the Philippines since 2022. He is the second child and only son of 10th president Ferdinand Marcos and former first lady Imelda Marcos.",
+   "summary_source": "https://en.wikipedia.org/wiki/Bongbong_Marcos",
    "laws_signed": 316,
    "laws_lapsed": 73,
    "laws_from": "2022-06-30",
-   "laws_as_of": "2025-10-16"
+   "laws_to": "",
+   "laws_as_of": "2025-10-16",
+   "ra_first": 11893,
+   "ra_last": 12288,
+   "laws_est": 396,
+   "laws_coverage": 98
+  },
+  {
+   "id": "president-nationwide-emilio-aguinaldo",
+   "name": "Emilio Aguinaldo",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Emilio%20Aguinaldo%20ca.%201919%20%28Restored%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Emilio_Aguinaldo",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q188939",
+   "details": {
+    "took_office": "1899-01-23",
+    "term": "1899–1901",
+    "born": "1869-03-22"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1899-01-23",
+     "end": "1901-04-01",
+     "ordinal": "1"
+    }
+   ],
+   "ordinal": "1",
+   "career": [
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1899-01-23",
+     "end": "1901-04-01"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Emilio Aguinaldo y Famy was a Filipino revolutionary, politician, and military leader who served as president of the Philippines from 1899 to 1901, and the president of the first constitutional republic in Asia. He led Philippine forces first against Spain in the Philippine Revolution (1896–1898), then in the Spanish–American War (1898), and later against the United States during the Philippine–American War (1899–1901). He is regarded in the Philippines as the country's first president during the period of the First Philippine Republic, although his presidency was not widely recognized outside of the revolutionary Philippines.",
+   "summary_source": "https://en.wikipedia.org/wiki/Emilio_Aguinaldo",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-manuel-l-quezon",
+   "name": "Manuel L. Quezon",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Nacionalista Party",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Manuel%20L.%20Quezon%20%28November%201942%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Manuel_L._Quezon",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q1503",
+   "details": {
+    "took_office": "1935-11-15",
+    "term": "1935–1944",
+    "born": "1878-08-19",
+    "prior_experience": "Resident Commissioner of the Philippines (1909–1916); President of the Senate of the Philippines (1916–1935); Member of the Senate of the Philippines, Philippines's 5th senatorial district (1916–1935); Secretary of National Defense (1941–1941); member of the House of Representatives (?–present); president (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1935-11-15",
+     "end": "1944-08-01",
+     "ordinal": "2"
+    }
+   ],
+   "ordinal": "2",
+   "career": [
+    {
+     "title": "Resident Commissioner of the Philippines",
+     "place": "",
+     "start": "1909-11-23",
+     "end": "1916-10-15"
+    },
+    {
+     "title": "President of the Senate of the Philippines",
+     "place": "",
+     "start": "1916-08-29",
+     "end": "1935-11-15"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "Philippines's 5th senatorial district",
+     "start": "1916-10-16",
+     "end": "1935-09-16"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1935-11-15",
+     "end": "1944-08-01"
+    },
+    {
+     "title": "Secretary of National Defense",
+     "place": "",
+     "start": "1941-07-16",
+     "end": "1941-12-10"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "",
+     "end": ""
+    },
+    {
+     "title": "president",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Manuel Luis Quezon y Molina, also known by his initials MLQ, was a Filipino lawyer, statesman, soldier, and politician who served as the second president of the Philippines from 1935 until his death in 1944. He was the first Filipino to head a government of the entire Philippines and is considered the second president of the Philippines after Emilio Aguinaldo (1899–1901), whom Quezon defeated in the 1935 presidential election. Quezon City, a city in Metro Manila and Quezon Province, are named after him.",
+   "summary_source": "https://en.wikipedia.org/wiki/Manuel_L._Quezon",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-jose-paciano-laurel",
+   "name": "José Paciano Laurel",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Nacionalista Party",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Jose%20P.%20Laurel.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Jose_P._Laurel",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q360113",
+   "details": {
+    "took_office": "1943-10-14",
+    "term": "1943–1945",
+    "born": "1891-03-09",
+    "prior_experience": "Member of the Senate of the Philippines (1925–1931); majority leader of the Senate of the Philippines (1928–1931); Associate Justice of the Supreme Court of the Philippines (1936–1942); Secretary of Justice (1941–1942); Secretary of the Interior and Local Government (1942–1943); Member of the Senate of the Philippines (1951–1957)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1943-10-14",
+     "end": "1945-08-17",
+     "ordinal": "3"
+    }
+   ],
+   "ordinal": "3",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1925-01-01",
+     "end": "1931-01-01"
+    },
+    {
+     "title": "majority leader of the Senate of the Philippines",
+     "place": "",
+     "start": "1928-01-01",
+     "end": "1931-01-01"
+    },
+    {
+     "title": "Associate Justice of the Supreme Court of the Philippines",
+     "place": "",
+     "start": "1936-02-29",
+     "end": "1942-02-05"
+    },
+    {
+     "title": "Secretary of Justice",
+     "place": "",
+     "start": "1941-12-24",
+     "end": "1942-12-04"
+    },
+    {
+     "title": "Secretary of the Interior and Local Government",
+     "place": "",
+     "start": "1942-12-04",
+     "end": "1943-10-14"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1943-10-14",
+     "end": "1945-08-17"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1951-12-30",
+     "end": "1957-12-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "José Paciano Laurel y García was a Filipino politician, lawyer, and judge, who served as the president of the Second Philippine Republic from 1943 to 1945, which was a Japanese puppet state during World War II.",
+   "summary_source": "https://en.wikipedia.org/wiki/Jose_P._Laurel",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-sergio-osmena",
+   "name": "Sergio Osmeña",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Nacionalista Party",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Vice-President%20Osme%C3%B1a%20in%20Washington%20cropped.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Sergio_Osme%C3%B1a",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q319950",
+   "details": {
+    "took_office": "1944-08-01",
+    "term": "1944–1946",
+    "born": "1878-09-09",
+    "prior_experience": "governor (1904–1907); Speaker of the House of Representatives of the Philippines (1907–1922); President pro tempore of the Senate of the Philippines (1922–1934); Secretary of Education (1935–1940); Vice President of the Philippines (1935–1944); Secretary of Education (1941–1944); Secretary of Health (1941–1944); Secretary of Social Welfare and Development (1941–1944); Member of the Senate of the Philippines (?–1935); member of the House of Representatives (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1944-08-01",
+     "end": "1946-05-28",
+     "ordinal": "4"
+    }
+   ],
+   "ordinal": "4",
+   "career": [
+    {
+     "title": "governor",
+     "place": "",
+     "start": "1904-01-01",
+     "end": "1907-10-16"
+    },
+    {
+     "title": "Speaker of the House of Representatives of the Philippines",
+     "place": "",
+     "start": "1907-10-16",
+     "end": "1922-01-01"
+    },
+    {
+     "title": "President pro tempore of the Senate of the Philippines",
+     "place": "",
+     "start": "1922-01-01",
+     "end": "1934-01-01"
+    },
+    {
+     "title": "Secretary of Education",
+     "place": "",
+     "start": "1935-01-01",
+     "end": "1940-01-01"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1935-11-15",
+     "end": "1944-08-01"
+    },
+    {
+     "title": "Secretary of Education",
+     "place": "",
+     "start": "1941-01-01",
+     "end": "1944-01-01"
+    },
+    {
+     "title": "Secretary of Health",
+     "place": "",
+     "start": "1941-01-01",
+     "end": "1944-01-01"
+    },
+    {
+     "title": "Secretary of Social Welfare and Development",
+     "place": "",
+     "start": "1941-01-01",
+     "end": "1944-01-01"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1944-08-01",
+     "end": "1946-05-28"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "",
+     "end": "1935-11-15"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Sergio Osmeña Sr. was a Filipino lawyer and politician who served as the fourth president of the Philippines from 1944 to 1946 and as the first vice president of the Philippines from 1935 to 1944. He served the shortest term as president of the Philippines, lasting for only 1 year and 300 days. He was vice president under Manuel L. Quezon. Upon Quezon's sudden death in 1944, Osmeña succeeded him at age 65, becoming the first vice president to succeed to the Philippine presidency and the oldest person to assume the office until Rodrigo Duterte took office in 2016 at age 71. He was the founder of the Nacionalista Party.",
+   "summary_source": "https://en.wikipedia.org/wiki/Sergio_Osme%C3%B1a",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-manuel-roxas",
+   "name": "Manuel Roxas",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Manuel%20Roxas.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Manuel_Roxas",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q223419",
+   "details": {
+    "took_office": "1946-05-28",
+    "term": "1946–1948",
+    "born": "1892-01-01",
+    "prior_experience": "governor (1919–1921); Speaker of the House of Representatives of the Philippines (1922–1933); Secretary of Finance (1941–1941); President of the Senate of the Philippines (1945–1946); Member of the Senate of the Philippines (1945–1946); member of the House of Representatives (?–1938)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1946-05-28",
+     "end": "1948-04-15",
+     "ordinal": "5"
+    }
+   ],
+   "ordinal": "5",
+   "career": [
+    {
+     "title": "governor",
+     "place": "",
+     "start": "1919-01-01",
+     "end": "1921-01-01"
+    },
+    {
+     "title": "Speaker of the House of Representatives of the Philippines",
+     "place": "",
+     "start": "1922-01-01",
+     "end": "1933-01-01"
+    },
+    {
+     "title": "Secretary of Finance",
+     "place": "",
+     "start": "1941-08-21",
+     "end": "1941-12-29"
+    },
+    {
+     "title": "President of the Senate of the Philippines",
+     "place": "",
+     "start": "1945-07-09",
+     "end": "1946-05-25"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1945-07-09",
+     "end": "1946-05-25"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1946-05-28",
+     "end": "1948-04-15"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "",
+     "end": "1938-01-01"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Manuel Acuña Roxas was the fifth president of the Philippines, serving from 1946 until his death in 1948. He served briefly as the third and last President of the Commonwealth of the Philippines from May 28, 1946, to July 4, 1946, and became the first President of the Independent Third Philippine Republic after the United States ceded its sovereignty over the Philippines.",
+   "summary_source": "https://en.wikipedia.org/wiki/Manuel_Roxas",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-elpidio-quirino",
+   "name": "Elpidio Quirino",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Elpidio%20R%20Quirino.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Elpidio_Quirino",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q319943",
+   "details": {
+    "took_office": "1948-04-17",
+    "term": "1948–1953",
+    "born": "1890-11-16",
+    "prior_experience": "Member of the Senate of the Philippines (1925–1935); Secretary of the Interior and Local Government (1935–1938); President pro tempore of the Senate of the Philippines (1945–1946); Member of the Senate of the Philippines (1945–1946); Vice President of the Philippines (1946–1948); Secretary of Finance (1946–1946); Secretary of Foreign Affairs (1946–1948); member of the House of Representatives (?–1925)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1948-04-17",
+     "end": "1953-12-30",
+     "ordinal": "6"
+    }
+   ],
+   "ordinal": "6",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1925-01-01",
+     "end": "1935-11-15"
+    },
+    {
+     "title": "Secretary of the Interior and Local Government",
+     "place": "",
+     "start": "1935-01-01",
+     "end": "1938-01-01"
+    },
+    {
+     "title": "President pro tempore of the Senate of the Philippines",
+     "place": "",
+     "start": "1945-07-09",
+     "end": "1946-05-28"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1945-07-09",
+     "end": "1946-05-28"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1946-05-28",
+     "end": "1948-04-17"
+    },
+    {
+     "title": "Secretary of Finance",
+     "place": "",
+     "start": "1946-05-28",
+     "end": "1946-11-24"
+    },
+    {
+     "title": "Secretary of Foreign Affairs",
+     "place": "",
+     "start": "1946-09-16",
+     "end": "1948-04-17"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1948-04-17",
+     "end": "1953-12-30"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "",
+     "end": "1925-01-01"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Elpidio Rivera Quirino was the sixth president of the Philippines, serving from 1948 to 1953. As the second vice president from 1946 to 1948, he assumed the presidency upon the death of Manuel Roxas in 1948.",
+   "summary_source": "https://en.wikipedia.org/wiki/Elpidio_Quirino",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-ramon-magsaysay",
+   "name": "Ramon Magsaysay",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Nacionalista Party",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Ramon-Magsaysay-01.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Ramon_Magsaysay",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q117096",
+   "details": {
+    "took_office": "1953-12-30",
+    "term": "1953–1957",
+    "born": "1907-08-31",
+    "prior_experience": "member of the House of Representatives (1946–1950); Secretary of National Defense (1954–1954)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1953-12-30",
+     "end": "1957-03-17",
+     "ordinal": "7"
+    }
+   ],
+   "ordinal": "7",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "1946-05-28",
+     "end": "1950-09-01"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1953-12-30",
+     "end": "1957-03-17"
+    },
+    {
+     "title": "Secretary of National Defense",
+     "place": "",
+     "start": "1954-01-01",
+     "end": "1954-05-14"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Ramon del Fierro Magsaysay Sr. was a Filipino politician and military officer who was the seventh president of the Philippines, serving from 1953 until his death in 1957. An automobile mechanic by profession, Magsaysay was appointed military governor of Zambales after serving as a guerrilla leader during the Pacific War. He then served two terms as Liberal Party congressman for Zambales's at-large district before being appointed Secretary of National Defense by President Elpidio Quirino. He was eventually elected as president under the banner of the Nacionalista Party, the youngest to be elected to the position, and second youngest overall. He was the first Philippine president born in the 20th century and the first to be born after the Spanish colonial era. Magsaysay died in a plane crash on March 17, 1957, in Cebu. His successor, Carlos P. Garcia, assumed the presidency. He is the most recent Philippine president to have died in office.",
+   "summary_source": "https://en.wikipedia.org/wiki/Ramon_Magsaysay",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-carlos-p-garcia",
+   "name": "Carlos P. Garcia",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Nacionalista Party",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Carlos%20P%20Garcia.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Carlos_P._Garcia",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q319939",
+   "details": {
+    "took_office": "1957-03-17",
+    "term": "1957–1961",
+    "born": "1896-11-04",
+    "prior_experience": "member of the House of Representatives, Bohol's 3rd congressional district (1925–1928); member of the House of Representatives, Bohol's 3rd congressional district (1928–1930); Governor of Bohol (1933–1941); Member of the Senate of the Philippines (1945–1953); Secretary of Foreign Affairs (1953–1957); Vice President of the Philippines (1953–1957); 1970 Philippine Constitutional Convention election (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1957-03-17",
+     "end": "1961-12-30",
+     "ordinal": "8"
+    }
+   ],
+   "ordinal": "8",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "Bohol's 3rd congressional district",
+     "start": "1925-06-02",
+     "end": "1928-06-05"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Bohol's 3rd congressional district",
+     "start": "1928-07-26",
+     "end": "1930-11-07"
+    },
+    {
+     "title": "Governor of Bohol",
+     "place": "",
+     "start": "1933-12-30",
+     "end": "1941-12-30"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1945-05-25",
+     "end": "1953-12-30"
+    },
+    {
+     "title": "Secretary of Foreign Affairs",
+     "place": "",
+     "start": "1953-12-30",
+     "end": "1957-08-22"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1953-12-30",
+     "end": "1957-03-17"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1957-03-17",
+     "end": "1961-12-30"
+    },
+    {
+     "title": "1970 Philippine Constitutional Convention election",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Carlos Polestico García, often referred to by his initials CPG, was the eighth president of the Philippines, serving from 1957 to 1961. He served as the fourth vice president of the Philippines from 1953 to 1957.",
+   "summary_source": "https://en.wikipedia.org/wiki/Carlos_P._Garcia",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-diosdado-macapagal",
+   "name": "Diosdado Macapagal",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Diosdado%20Macapagal%20USS%20Oklahoma%20City%201962%20cropped.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Diosdado_Macapagal",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q312539",
+   "details": {
+    "took_office": "1961-12-30",
+    "term": "1961–1965",
+    "born": "1910-09-28",
+    "prior_experience": "member of the House of Representatives, Pampanga's 1st congressional district (1949–1957); Vice President of the Philippines (1957–1961); 1970 Philippine Constitutional Convention election (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1961-12-30",
+     "end": "1965-12-30",
+     "ordinal": "9"
+    }
+   ],
+   "ordinal": "9",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 1st congressional district",
+     "start": "1949-12-30",
+     "end": "1957-12-30"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1957-12-30",
+     "end": "1961-12-30"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1961-12-30",
+     "end": "1965-12-30"
+    },
+    {
+     "title": "1970 Philippine Constitutional Convention election",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Diosdado Pangan Macapagal Sr., also known colloquially as “Apung Dadong”, was the ninth president of the Philippines, serving from 1961 to 1965. He served as the 5th vice president from 1957 to 1961 under Carlos P. Garcia. He also served as a member of the House of Representatives, and headed the Constitutional Convention of 1970. He was the father of Gloria Macapagal Arroyo, who followed his path as President of the Philippines from 2001 to 2010. Diosdado Macapagal Sr is one of the few presidents with doctoral degrees, earning a Doctors of Civil Law degree and a PHD in Economics degree from University of Santo Tomas.",
+   "summary_source": "https://en.wikipedia.org/wiki/Diosdado_Macapagal",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-ferdinand-marcos",
+   "name": "Ferdinand Marcos",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Kilusang Bagong Lipunan",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Ferdinand%20Marcos%20%28cropped%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Ferdinand_Marcos",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q1463",
+   "details": {
+    "took_office": "1965-12-30",
+    "term": "1965–1986",
+    "born": "1917-09-11",
+    "prior_experience": "member of the House of Representatives, Ilocos Norte's 2nd congressional district (1949–1959); Member of the Senate of the Philippines (1959–1965); President of the Senate of the Philippines (1963–1965); Secretary of National Defense (1971–1972); Prime Minister of the Philippines (1978–1981)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1965-12-30",
+     "end": "1986-02-25",
+     "ordinal": "10"
+    }
+   ],
+   "ordinal": "10",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "Ilocos Norte's 2nd congressional district",
+     "start": "1949-12-30",
+     "end": "1959-12-30"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1959-12-30",
+     "end": "1965-12-30"
+    },
+    {
+     "title": "President of the Senate of the Philippines",
+     "place": "",
+     "start": "1963-04-05",
+     "end": "1965-12-30"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1965-12-30",
+     "end": "1986-02-25"
+    },
+    {
+     "title": "Secretary of National Defense",
+     "place": "",
+     "start": "1971-08-28",
+     "end": "1972-01-03"
+    },
+    {
+     "title": "Prime Minister of the Philippines",
+     "place": "",
+     "start": "1978-06-12",
+     "end": "1981-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Ferdinand Emmanuel Edralin Marcos Sr. was a Filipino lawyer and politician who served as the tenth president of the Philippines from 1965 to 1986. From 1972 to 1981, Marcos ruled the Philippines under martial law, embracing a policy of \"constitutional authoritarianism.\" Following the lifting of martial law in 1981, a wide-ranging economic crisis, and the assassination of Ninoy Aquino, Marcos was deposed in 1986 by the People Power Revolution and was succeeded as president by Aquino's widow, Corazon Aquino. He was also the father of Bongbong Marcos, the incumbent president of the Philippines since 2022.",
+   "summary_source": "https://en.wikipedia.org/wiki/Ferdinand_Marcos",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-corazon-aquino",
+   "name": "Corazon Aquino",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "independent politician",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Corazon%20Aquino%201986.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Corazon_Aquino",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q1480",
+   "details": {
+    "took_office": "1986-02-25",
+    "term": "1986–1992",
+    "born": "1933-01-25"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1986-02-25",
+     "end": "1992-06-30",
+     "ordinal": "11"
+    }
+   ],
+   "ordinal": "11",
+   "career": [
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1986-02-25",
+     "end": "1992-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "María Corazón \"Cory\" Sumulong Cojuangco-Aquino was a Filipino politician who served as the 11th president of the Philippines, serving from 1986 to 1992. The first female president in Philippine history, Aquino was the most prominent figure of the 1986 People Power Revolution, a non-violent movement which ended the two-decade rule of President Ferdinand Marcos and led to the establishment of the current democratic Fifth Philippine Republic. She has been regarded by media outlets as the \"Mother of Democracy\".",
+   "summary_source": "https://en.wikipedia.org/wiki/Corazon_Aquino",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-fidel-ramos",
+   "name": "Fidel Ramos",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Lakas–CMD",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Fidel%20Valdez%20Ramos%20Official%20Photo%20as%20President%20of%20the%20Philippines%20%281995%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Fidel_V._Ramos",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q215351",
+   "details": {
+    "took_office": "1992-06-30",
+    "term": "1992–1998",
+    "born": "1928-03-18",
+    "prior_experience": "Chairman of the Joint Chiefs (1984–1985); Chairman of the Joint Chiefs (1986–1988); Secretary of National Defense (1988–1991)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1992-06-30",
+     "end": "1998-06-30",
+     "ordinal": "12"
+    }
+   ],
+   "ordinal": "12",
+   "career": [
+    {
+     "title": "Chairman of the Joint Chiefs",
+     "place": "",
+     "start": "1984-10-24",
+     "end": "1985-12-02"
+    },
+    {
+     "title": "Chairman of the Joint Chiefs",
+     "place": "",
+     "start": "1986-02-25",
+     "end": "1988-01-21"
+    },
+    {
+     "title": "Secretary of National Defense",
+     "place": "",
+     "start": "1988-01-22",
+     "end": "1991-07-18"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1992-06-30",
+     "end": "1998-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Fidel Valdez Ramos, popularly known as FVR and Eddie Ramos, was a Filipino general and politician who served as the 12th president of the Philippines from 1992 to 1998. He was the only career military officer to reach the rank of five-star general. Rising from second lieutenant to commander-in-chief of the armed forces, Ramos is credited for revitalizing and renewing international confidence in the Philippine economy during his six years in office.",
+   "summary_source": "https://en.wikipedia.org/wiki/Fidel_V._Ramos",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-joseph-estrada",
+   "name": "Joseph Estrada",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Pwersa ng Masang Pilipino",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Josephestradapentagon.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Joseph_Estrada",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q212733",
+   "details": {
+    "took_office": "1998-06-30",
+    "term": "1998–2001",
+    "born": "1937-04-19",
+    "prior_experience": "Member of the Senate of the Philippines (1987–1992); Vice President of the Philippines (1992–1998); Mayor of Manila (2013–2019)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1998-06-30",
+     "end": "2001-01-20",
+     "ordinal": "13"
+    }
+   ],
+   "ordinal": "13",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1987-06-30",
+     "end": "1992-06-30"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1992-06-30",
+     "end": "1998-06-30"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2001-01-20"
+    },
+    {
+     "title": "Mayor of Manila",
+     "place": "",
+     "start": "2013-06-30",
+     "end": "2019-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Joseph Ejercito Estrada, also known by the nickname Erap, is a Filipino retired politician and former actor who served as the 13th president of the Philippines from 1998 until his removal from office in 2001. He served as the 14th mayor of San Juan from 1969 to 1986, the ninth vice president under Fidel V. Ramos from 1992 to 1998, and the 26th mayor of Manila, the country's capital, from 2013 to 2019. His presidency was the third-shortest in Philippine history, after Emilio Aguinaldo and Sergio Osmeña.",
+   "summary_source": "https://en.wikipedia.org/wiki/Joseph_Estrada",
+   "laws_note": "before_data"
+  },
+  {
+   "id": "president-nationwide-gloria-macapagal-arroyo",
+   "name": "Gloria Macapagal Arroyo",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Lakas–CMD",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Gloria%20Macapagal-Arroyo%20Presidential%20Portrait.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Gloria_Macapagal_Arroyo",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q123665",
+   "details": {
+    "took_office": "2001-01-20",
+    "term": "2001–2010",
+    "born": "1947-04-05",
+    "prior_experience": "Member of the Senate of the Philippines (1992–1998); Secretary of Social Welfare and Development (1998–2000); Vice President of the Philippines (1998–2001); Secretary of National Defense (2003–2003); Secretary of National Defense (2006–2007); member of the House of Representatives, Pampanga's 2nd congressional district (2010–2013); member of the House of Representatives, Pampanga's 2nd congressional district (2013–2016); member of the House of Representatives, Pampanga's 2nd congressional district (2016–2019); Deputy Speaker of the House of Representatives of the Philippines (2016–2017); member of the House of Representatives, Pampanga's 2nd congressional district (2022–present); ICDP commissioner and Vice president (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "2001-01-20",
+     "end": "2010-06-30",
+     "ordinal": "14"
+    }
+   ],
+   "ordinal": "14",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1992-06-30",
+     "end": "1998-06-30"
+    },
+    {
+     "title": "Secretary of Social Welfare and Development",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2000-10-12"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2001-01-20"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "2001-01-20",
+     "end": "2010-06-30"
+    },
+    {
+     "title": "Secretary of National Defense",
+     "place": "",
+     "start": "2003-09-01",
+     "end": "2003-10-02"
+    },
+    {
+     "title": "Secretary of National Defense",
+     "place": "",
+     "start": "2006-11-30",
+     "end": "2007-02-01"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 2nd congressional district",
+     "start": "2010-06-30",
+     "end": "2013-06-30"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 2nd congressional district",
+     "start": "2013-06-30",
+     "end": "2016-06-30"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 2nd congressional district",
+     "start": "2016-06-30",
+     "end": "2019-06-30"
+    },
+    {
+     "title": "Deputy Speaker of the House of Representatives of the Philippines",
+     "place": "",
+     "start": "2016-08-15",
+     "end": "2017-03-15"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 2nd congressional district",
+     "start": "2022-06-30",
+     "end": ""
+    },
+    {
+     "title": "ICDP commissioner and Vice president",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Maria Gloria Macaraeg Macapagal-Arroyo, often referred to as PGMA or GMA, is a Filipino academic and politician who served as the 14th president of the Philippines from 2001 to 2010. She is the longest-serving president since Ferdinand Marcos. Before her presidency, she was the 10th vice president of the Philippines from 1998 to 2001 under President Joseph Estrada, becoming the first female vice president. She was also a senator from 1992 to 1998. After her presidency, she was elected as the representative of Pampanga's 2nd district in 2010 and continues to serve in this role. She also served as the speaker of the House from 2018 to 2019, and as deputy speaker from 2016 to 2017 and 2022 to 2023. Alongside former President Sergio Osmeña, she is one of only two Filipinos to hold at least three of the four highest offices: vice president, president, and house speaker.",
+   "summary_source": "https://en.wikipedia.org/wiki/Gloria_Macapagal_Arroyo",
+   "laws_signed": 39,
+   "laws_lapsed": 13,
+   "laws_from": "2004-12-21",
+   "laws_to": "2010-06-30",
+   "laws_as_of": "2025-10-16",
+   "ra_first": 9334,
+   "ra_last": 10083,
+   "laws_est": 750,
+   "laws_coverage": 7,
+   "laws_note": "partial"
+  },
+  {
+   "id": "president-nationwide-benigno-aquino-iii",
+   "name": "Benigno Aquino III",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Noynoy%20Aquino.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Benigno_Aquino_III",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q1464",
+   "details": {
+    "took_office": "2010-06-30",
+    "term": "2010–2016",
+    "born": "1960-02-08",
+    "prior_experience": "member of the House of Representatives (1998–2007); Deputy Speaker of the House of Representatives of the Philippines (2004–2006); Member of the Senate of the Philippines (2007–2010); Secretary of the Interior and Local Government (2010–2010); president (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "2010-06-30",
+     "end": "2016-06-30",
+     "ordinal": "15"
+    }
+   ],
+   "ordinal": "15",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2007-06-30"
+    },
+    {
+     "title": "Deputy Speaker of the House of Representatives of the Philippines",
+     "place": "",
+     "start": "2004-11-08",
+     "end": "2006-02-21"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "2007-06-30",
+     "end": "2010-06-30"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "2010-06-30",
+     "end": "2016-06-30"
+    },
+    {
+     "title": "Secretary of the Interior and Local Government",
+     "place": "",
+     "start": "2010-06-30",
+     "end": "2010-07-09"
+    },
+    {
+     "title": "president",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Benigno Simeon \"Noynoy\" Cojuangco Aquino III, also known colloquially as PNoy, was the 15th president of the Philippines, serving from 2010 to 2016. A member of the Liberal Party, he was the son of assassinated politician Ninoy Aquino and 11th president Corazon Aquino, and a fourth-generation politician as part of the Aquino family of Tarlac.",
+   "summary_source": "https://en.wikipedia.org/wiki/Benigno_Aquino_III",
+   "laws_signed": 338,
+   "laws_lapsed": 6,
+   "laws_from": "2010-06-30",
+   "laws_to": "2016-06-30",
+   "laws_as_of": "2025-10-16",
+   "ra_first": 10148,
+   "ra_last": 10869,
+   "laws_est": 722,
+   "laws_coverage": 48
+  },
+  {
+   "id": "president-nationwide-rodrigo-duterte",
+   "name": "Rodrigo Duterte",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Partido Demokratiko Pilipino",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/President%20Rodrigo%20Duterte%20portrait%20%28half-body%20crop%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Rodrigo_Duterte",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q457786",
+   "details": {
+    "took_office": "2016-06-30",
+    "term": "2016–2022",
+    "born": "1945-03-28",
+    "prior_experience": "Mayor of Davao City (1988–1998); member of the House of Representatives, Davao City's 1st congressional district (1998–2001); Mayor of Davao City (2001–2010); Mayor of Davao City (2013–2016)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "2016-06-30",
+     "end": "2022-06-30",
+     "ordinal": "16"
+    }
+   ],
+   "ordinal": "16",
+   "career": [
+    {
+     "title": "Mayor of Davao City",
+     "place": "",
+     "start": "1988-02-02",
+     "end": "1998-03-19"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Davao City's 1st congressional district",
+     "start": "1998-06-30",
+     "end": "2001-06-30"
+    },
+    {
+     "title": "Mayor of Davao City",
+     "place": "",
+     "start": "2001-06-30",
+     "end": "2010-06-30"
+    },
+    {
+     "title": "Mayor of Davao City",
+     "place": "",
+     "start": "2013-06-30",
+     "end": "2016-06-30"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "2016-06-30",
+     "end": "2022-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Rodrigo Roa Duterte is a Filipino former politician who served as the 16th president of the Philippines from 2016 to 2022. He served as mayor of Davao City for three non-consecutive terms between 1988 and 2016. Duterte is the first Philippine president from Mindanao, and the oldest person to assume office, beginning his term at age 71. Duterte is the chairman of PDP–Laban, the ruling party during his presidency.",
+   "summary_source": "https://en.wikipedia.org/wiki/Rodrigo_Duterte",
+   "laws_signed": 703,
+   "laws_lapsed": 161,
+   "laws_from": "2016-06-30",
+   "laws_to": "2022-06-30",
+   "laws_as_of": "2025-10-16",
+   "ra_first": 10870,
+   "ra_last": 11892,
+   "laws_est": 1023,
+   "laws_coverage": 84
+  },
+  {
+   "id": "vice-president-nationwide-sara-duterte",
+   "name": "Sara Duterte",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Hugpong sa Tawong Lungsod",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/VPSD%20Official%20Photo%20%28cropped%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Sara_Duterte",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q1491004",
+   "details": {
+    "took_office": "2022-06-30",
+    "term": "2022–2028",
+    "born": "1978-05-31",
+    "prior_experience": "deputy mayor (2007–2010); Mayor of Davao City (2010–2013); Mayor of Davao City (2016–2022); Secretary of Education (2022–2024)"
+   },
+   "source_type": "public",
+   "current": true,
+   "terms": [
+    {
+     "start": "2022-06-30",
+     "end": "",
+     "ordinal": "15"
+    }
+   ],
+   "ordinal": "15",
+   "career": [
+    {
+     "title": "deputy mayor",
+     "place": "",
+     "start": "2007-01-01",
+     "end": "2010-01-01"
+    },
+    {
+     "title": "Mayor of Davao City",
+     "place": "",
+     "start": "2010-06-30",
+     "end": "2013-06-30"
+    },
+    {
+     "title": "Mayor of Davao City",
+     "place": "",
+     "start": "2016-06-30",
+     "end": "2022-06-30"
+    },
+    {
+     "title": "Secretary of Education",
+     "place": "",
+     "start": "2022-06-30",
+     "end": "2024-06-19"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "2022-06-30",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Sara Zimmerman Duterte-Carpio, commonly known as Inday Sara, is a Filipino lawyer and politician who is the 15th and current vice president of the Philippines. She is the third female vice president, the third vice president to come from Mindanao, and the youngest ever Philippine vice president. A daughter of the 16th president Rodrigo Duterte, she is the leading figure of Dutertismo, the political ideology associated with her father. Duterte previously served as the mayor of Davao City from 2010 to 2013, and from 2016 to 2022. Duterte was also Davao City's vice mayor from 2007 to 2010.",
+   "summary_source": "https://en.wikipedia.org/wiki/Sara_Duterte"
+  },
+  {
+   "id": "vice-president-nationwide-q247632",
+   "name": "Q247632",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Katipunan",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Mariano%20Trias%20portrait.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Mariano_Tr%C3%ADas",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q247632",
+   "details": {
+    "took_office": "1897-03-22",
+    "term": "1897–1897",
+    "born": "1868-10-12"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1897-03-22",
+     "end": "1897-11-02",
+     "ordinal": ""
+    }
+   ],
+   "ordinal": "",
+   "career": [
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1897-03-22",
+     "end": "1897-11-02"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Mariano Trías y Closas is considered to be the first de facto Philippine Vice President of that revolutionary government established at the Tejeros Convention - an assembly of Philippine revolutionary leaders that elected officials of the revolutionary movement against the colonial government of Spain. When that assembly broke into factions, a truce known as the Pact of Biak-na-Bato was signed by the group and also recognized the elected officials and Trias as the vice president of Emilio Aguinaldo, who is also considered to be the first President of the Philippines. With the promulgation of the Malolos Constitution by the Malolos Convention, the First Philippine Republic was born. Under the Aguinaldo administration, Trias served in the cabinet initially as Secretary of Finance and, later, as Secretary of War.",
+   "summary_source": "https://en.wikipedia.org/wiki/Mariano_Tr%C3%ADas"
+  },
+  {
+   "id": "vice-president-nationwide-sergio-osmena",
+   "name": "Sergio Osmeña",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Nacionalista Party",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Vice-President%20Osme%C3%B1a%20in%20Washington%20cropped.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Sergio_Osme%C3%B1a",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q319950",
+   "details": {
+    "took_office": "1935-11-15",
+    "term": "1935–1944",
+    "born": "1878-09-09",
+    "prior_experience": "governor (1904–1907); Speaker of the House of Representatives of the Philippines (1907–1922); President pro tempore of the Senate of the Philippines (1922–1934); Secretary of Education (1935–1940); Secretary of Education (1941–1944); Secretary of Health (1941–1944); Secretary of Social Welfare and Development (1941–1944); President of the Philippines (1944–1946); Member of the Senate of the Philippines (?–1935); member of the House of Representatives (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1935-11-15",
+     "end": "1944-08-01",
+     "ordinal": "1"
+    }
+   ],
+   "ordinal": "1",
+   "career": [
+    {
+     "title": "governor",
+     "place": "",
+     "start": "1904-01-01",
+     "end": "1907-10-16"
+    },
+    {
+     "title": "Speaker of the House of Representatives of the Philippines",
+     "place": "",
+     "start": "1907-10-16",
+     "end": "1922-01-01"
+    },
+    {
+     "title": "President pro tempore of the Senate of the Philippines",
+     "place": "",
+     "start": "1922-01-01",
+     "end": "1934-01-01"
+    },
+    {
+     "title": "Secretary of Education",
+     "place": "",
+     "start": "1935-01-01",
+     "end": "1940-01-01"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1935-11-15",
+     "end": "1944-08-01"
+    },
+    {
+     "title": "Secretary of Education",
+     "place": "",
+     "start": "1941-01-01",
+     "end": "1944-01-01"
+    },
+    {
+     "title": "Secretary of Health",
+     "place": "",
+     "start": "1941-01-01",
+     "end": "1944-01-01"
+    },
+    {
+     "title": "Secretary of Social Welfare and Development",
+     "place": "",
+     "start": "1941-01-01",
+     "end": "1944-01-01"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1944-08-01",
+     "end": "1946-05-28"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "",
+     "end": "1935-11-15"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Sergio Osmeña Sr. was a Filipino lawyer and politician who served as the fourth president of the Philippines from 1944 to 1946 and as the first vice president of the Philippines from 1935 to 1944. He served the shortest term as president of the Philippines, lasting for only 1 year and 300 days. He was vice president under Manuel L. Quezon. Upon Quezon's sudden death in 1944, Osmeña succeeded him at age 65, becoming the first vice president to succeed to the Philippine presidency and the oldest person to assume the office until Rodrigo Duterte took office in 2016 at age 71. He was the founder of the Nacionalista Party.",
+   "summary_source": "https://en.wikipedia.org/wiki/Sergio_Osme%C3%B1a"
+  },
+  {
+   "id": "vice-president-nationwide-elpidio-quirino",
+   "name": "Elpidio Quirino",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Elpidio%20R%20Quirino.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Elpidio_Quirino",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q319943",
+   "details": {
+    "took_office": "1946-05-28",
+    "term": "1946–1948",
+    "born": "1890-11-16",
+    "prior_experience": "Member of the Senate of the Philippines (1925–1935); Secretary of the Interior and Local Government (1935–1938); President pro tempore of the Senate of the Philippines (1945–1946); Member of the Senate of the Philippines (1945–1946); Secretary of Finance (1946–1946); Secretary of Foreign Affairs (1946–1948); President of the Philippines (1948–1953); member of the House of Representatives (?–1925)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1946-05-28",
+     "end": "1948-04-17",
+     "ordinal": "2"
+    }
+   ],
+   "ordinal": "2",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1925-01-01",
+     "end": "1935-11-15"
+    },
+    {
+     "title": "Secretary of the Interior and Local Government",
+     "place": "",
+     "start": "1935-01-01",
+     "end": "1938-01-01"
+    },
+    {
+     "title": "President pro tempore of the Senate of the Philippines",
+     "place": "",
+     "start": "1945-07-09",
+     "end": "1946-05-28"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1945-07-09",
+     "end": "1946-05-28"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1946-05-28",
+     "end": "1948-04-17"
+    },
+    {
+     "title": "Secretary of Finance",
+     "place": "",
+     "start": "1946-05-28",
+     "end": "1946-11-24"
+    },
+    {
+     "title": "Secretary of Foreign Affairs",
+     "place": "",
+     "start": "1946-09-16",
+     "end": "1948-04-17"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1948-04-17",
+     "end": "1953-12-30"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "",
+     "end": "1925-01-01"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Elpidio Rivera Quirino was the sixth president of the Philippines, serving from 1948 to 1953. As the second vice president from 1946 to 1948, he assumed the presidency upon the death of Manuel Roxas in 1948.",
+   "summary_source": "https://en.wikipedia.org/wiki/Elpidio_Quirino"
+  },
+  {
+   "id": "vice-president-nationwide-fernando-lopez",
+   "name": "Fernando Lopez",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Fernando%20Lopez%20portrait.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Fernando_Lopez",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q1302327",
+   "details": {
+    "took_office": "1949-12-30",
+    "term": "1949–1972",
+    "born": "1904-04-13",
+    "prior_experience": "Member of the Senate of the Philippines (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1949-12-30",
+     "end": "1953-12-30",
+     "ordinal": "3"
+    },
+    {
+     "start": "1965-12-30",
+     "end": "1972-09-23",
+     "ordinal": "7"
+    }
+   ],
+   "ordinal": "7",
+   "career": [
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1949-12-30",
+     "end": "1953-12-30"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1965-12-30",
+     "end": "1972-09-23"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Fernando \"Nanding\" Hofileña Lopez Sr. was a Filipino statesman. A member of the influential López family of Iloilo, he served as vice president of the Philippines under Presidents Elpidio Quirino from 1949 to 1953 under the Liberal Party and Ferdinand Marcos from 1965 to 1972, under the Nacionalista Party. He was also the chairman of ABS-CBN Corporation from 1986 to his death in 1993.",
+   "summary_source": "https://en.wikipedia.org/wiki/Fernando_Lopez"
+  },
+  {
+   "id": "vice-president-nationwide-carlos-p-garcia",
+   "name": "Carlos P. Garcia",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Nacionalista Party",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Carlos%20P%20Garcia.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Carlos_P._Garcia",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q319939",
+   "details": {
+    "took_office": "1953-12-30",
+    "term": "1953–1957",
+    "born": "1896-11-04",
+    "prior_experience": "member of the House of Representatives, Bohol's 3rd congressional district (1925–1928); member of the House of Representatives, Bohol's 3rd congressional district (1928–1930); Governor of Bohol (1933–1941); Member of the Senate of the Philippines (1945–1953); Secretary of Foreign Affairs (1953–1957); President of the Philippines (1957–1961); 1970 Philippine Constitutional Convention election (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1953-12-30",
+     "end": "1957-03-17",
+     "ordinal": "4"
+    }
+   ],
+   "ordinal": "4",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "Bohol's 3rd congressional district",
+     "start": "1925-06-02",
+     "end": "1928-06-05"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Bohol's 3rd congressional district",
+     "start": "1928-07-26",
+     "end": "1930-11-07"
+    },
+    {
+     "title": "Governor of Bohol",
+     "place": "",
+     "start": "1933-12-30",
+     "end": "1941-12-30"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1945-05-25",
+     "end": "1953-12-30"
+    },
+    {
+     "title": "Secretary of Foreign Affairs",
+     "place": "",
+     "start": "1953-12-30",
+     "end": "1957-08-22"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1953-12-30",
+     "end": "1957-03-17"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1957-03-17",
+     "end": "1961-12-30"
+    },
+    {
+     "title": "1970 Philippine Constitutional Convention election",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Carlos Polestico García, often referred to by his initials CPG, was the eighth president of the Philippines, serving from 1957 to 1961. He served as the fourth vice president of the Philippines from 1953 to 1957.",
+   "summary_source": "https://en.wikipedia.org/wiki/Carlos_P._Garcia"
+  },
+  {
+   "id": "vice-president-nationwide-diosdado-macapagal",
+   "name": "Diosdado Macapagal",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Diosdado%20Macapagal%20USS%20Oklahoma%20City%201962%20cropped.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Diosdado_Macapagal",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q312539",
+   "details": {
+    "took_office": "1957-12-30",
+    "term": "1957–1961",
+    "born": "1910-09-28",
+    "prior_experience": "member of the House of Representatives, Pampanga's 1st congressional district (1949–1957); President of the Philippines (1961–1965); 1970 Philippine Constitutional Convention election (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1957-12-30",
+     "end": "1961-12-30",
+     "ordinal": "5"
+    }
+   ],
+   "ordinal": "5",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 1st congressional district",
+     "start": "1949-12-30",
+     "end": "1957-12-30"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1957-12-30",
+     "end": "1961-12-30"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1961-12-30",
+     "end": "1965-12-30"
+    },
+    {
+     "title": "1970 Philippine Constitutional Convention election",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Diosdado Pangan Macapagal Sr., also known colloquially as “Apung Dadong”, was the ninth president of the Philippines, serving from 1961 to 1965. He served as the 5th vice president from 1957 to 1961 under Carlos P. Garcia. He also served as a member of the House of Representatives, and headed the Constitutional Convention of 1970. He was the father of Gloria Macapagal Arroyo, who followed his path as President of the Philippines from 2001 to 2010. Diosdado Macapagal Sr is one of the few presidents with doctoral degrees, earning a Doctors of Civil Law degree and a PHD in Economics degree from University of Santo Tomas.",
+   "summary_source": "https://en.wikipedia.org/wiki/Diosdado_Macapagal"
+  },
+  {
+   "id": "vice-president-nationwide-emmanuel-pelaez",
+   "name": "Emmanuel Pelaez",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Emmanuel%20Pelaez%20portrait.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Emmanuel_Pelaez",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q1338409",
+   "details": {
+    "took_office": "1961-12-30",
+    "term": "1961–1965",
+    "born": "1915-11-30",
+    "prior_experience": "member of the House of Representatives, Misamis Oriental's at-large congressional district (1949–1953); member of the House of Representatives, Misamis Oriental's at-large congressional district (1965–1967); Member of the Senate of the Philippines (1967–1972); ambassador of the Philippines to the United States (1986–1992)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1961-12-30",
+     "end": "1965-12-30",
+     "ordinal": "6"
+    }
+   ],
+   "ordinal": "6",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "Misamis Oriental's at-large congressional district",
+     "start": "1949-12-30",
+     "end": "1953-12-30"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1961-12-30",
+     "end": "1965-12-30"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Misamis Oriental's at-large congressional district",
+     "start": "1965-12-30",
+     "end": "1967-11-14"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1967-12-30",
+     "end": "1972-09-23"
+    },
+    {
+     "title": "ambassador of the Philippines to the United States",
+     "place": "",
+     "start": "1986-01-01",
+     "end": "1992-01-01"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Emmanuel Neri Pelaez was a Filipino public servant and politician who served as the 6th Vice President of the Philippines from 1961 to 1965.",
+   "summary_source": "https://en.wikipedia.org/wiki/Emmanuel_Pelaez"
+  },
+  {
+   "id": "vice-president-nationwide-arturo-m-tolentino",
+   "name": "Arturo M. Tolentino",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Nationalist People's Coalition",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Arturo%20Tolentino%20portrait.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Arturo_Tolentino",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q715565",
+   "details": {
+    "took_office": "1986-02-16",
+    "term": "1986–1986",
+    "born": "1910-09-19",
+    "prior_experience": "member of the House of Representatives (1949–1957); President of the Senate of the Philippines (1966–1967); majority leader of the Senate of the Philippines (1970–1972); Secretary of Foreign Affairs (1984–1985); Member of the Senate of the Philippines (1992–1995)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1986-02-16",
+     "end": "1986-02-25",
+     "ordinal": ""
+    }
+   ],
+   "ordinal": "",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "",
+     "start": "1949-12-30",
+     "end": "1957-12-30"
+    },
+    {
+     "title": "President of the Senate of the Philippines",
+     "place": "",
+     "start": "1966-01-17",
+     "end": "1967-01-26"
+    },
+    {
+     "title": "majority leader of the Senate of the Philippines",
+     "place": "",
+     "start": "1970-01-01",
+     "end": "1972-09-23"
+    },
+    {
+     "title": "Secretary of Foreign Affairs",
+     "place": "",
+     "start": "1984-01-01",
+     "end": "1985-01-01"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1986-02-16",
+     "end": "1986-02-25"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1992-06-30",
+     "end": "1995-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Arturo \"Ka Turing\" Modesto Tolentino was a Filipino politician, lawyer, and diplomat who served as the Senate president and the Secretary of Foreign Affairs. He was the vice-presidential running mate of Ferdinand Marcos in the 1986 Philippine election, which led to the ouster of Marcos in the People Power Revolution.",
+   "summary_source": "https://en.wikipedia.org/wiki/Arturo_Tolentino"
+  },
+  {
+   "id": "vice-president-nationwide-salvador-laurel",
+   "name": "Salvador Laurel",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Nacionalista Party",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Salvador%20Laurel%20portrait.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Salvador_Laurel",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q983387",
+   "details": {
+    "took_office": "1986-02-25",
+    "term": "1986–1992",
+    "born": "1928-11-18",
+    "prior_experience": "Prime Minister of the Philippines (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1986-02-25",
+     "end": "1992-06-30",
+     "ordinal": "8"
+    }
+   ],
+   "ordinal": "8",
+   "career": [
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1986-02-25",
+     "end": "1992-06-30"
+    },
+    {
+     "title": "Prime Minister of the Philippines",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Salvador Roman Hidalgo Laurel, also known as Doy Laurel, was a Filipino lawyer and politician who served as the Vice President of the Philippines from 1986 to 1992 under President Corazon Aquino and briefly served as the last Prime Minister from February 25 to March 25, 1986, when the position was abolished. He was a major leader of the United Nationalist Democratic Organization (UNIDO), the political party that helped topple the regime of President Ferdinand Marcos with the 1986 People Power Revolution.",
+   "summary_source": "https://en.wikipedia.org/wiki/Salvador_Laurel"
+  },
+  {
+   "id": "vice-president-nationwide-joseph-estrada",
+   "name": "Joseph Estrada",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Pwersa ng Masang Pilipino",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Josephestradapentagon.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Joseph_Estrada",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q212733",
+   "details": {
+    "took_office": "1992-06-30",
+    "term": "1992–1998",
+    "born": "1937-04-19",
+    "prior_experience": "Member of the Senate of the Philippines (1987–1992); President of the Philippines (1998–2001); Mayor of Manila (2013–2019)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1992-06-30",
+     "end": "1998-06-30",
+     "ordinal": "9"
+    }
+   ],
+   "ordinal": "9",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1987-06-30",
+     "end": "1992-06-30"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1992-06-30",
+     "end": "1998-06-30"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2001-01-20"
+    },
+    {
+     "title": "Mayor of Manila",
+     "place": "",
+     "start": "2013-06-30",
+     "end": "2019-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Joseph Ejercito Estrada, also known by the nickname Erap, is a Filipino retired politician and former actor who served as the 13th president of the Philippines from 1998 until his removal from office in 2001. He served as the 14th mayor of San Juan from 1969 to 1986, the ninth vice president under Fidel V. Ramos from 1992 to 1998, and the 26th mayor of Manila, the country's capital, from 2013 to 2019. His presidency was the third-shortest in Philippine history, after Emilio Aguinaldo and Sergio Osmeña.",
+   "summary_source": "https://en.wikipedia.org/wiki/Joseph_Estrada"
+  },
+  {
+   "id": "vice-president-nationwide-gloria-macapagal-arroyo",
+   "name": "Gloria Macapagal Arroyo",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Lakas–CMD",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Gloria%20Macapagal-Arroyo%20Presidential%20Portrait.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Gloria_Macapagal_Arroyo",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q123665",
+   "details": {
+    "took_office": "1998-06-30",
+    "term": "1998–2001",
+    "born": "1947-04-05",
+    "prior_experience": "Member of the Senate of the Philippines (1992–1998); Secretary of Social Welfare and Development (1998–2000); President of the Philippines (2001–2010); Secretary of National Defense (2003–2003); Secretary of National Defense (2006–2007); member of the House of Representatives, Pampanga's 2nd congressional district (2010–2013); member of the House of Representatives, Pampanga's 2nd congressional district (2013–2016); member of the House of Representatives, Pampanga's 2nd congressional district (2016–2019); Deputy Speaker of the House of Representatives of the Philippines (2016–2017); member of the House of Representatives, Pampanga's 2nd congressional district (2022–present); ICDP commissioner and Vice president (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "1998-06-30",
+     "end": "2001-01-20",
+     "ordinal": "10"
+    }
+   ],
+   "ordinal": "10",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1992-06-30",
+     "end": "1998-06-30"
+    },
+    {
+     "title": "Secretary of Social Welfare and Development",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2000-10-12"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2001-01-20"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "2001-01-20",
+     "end": "2010-06-30"
+    },
+    {
+     "title": "Secretary of National Defense",
+     "place": "",
+     "start": "2003-09-01",
+     "end": "2003-10-02"
+    },
+    {
+     "title": "Secretary of National Defense",
+     "place": "",
+     "start": "2006-11-30",
+     "end": "2007-02-01"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 2nd congressional district",
+     "start": "2010-06-30",
+     "end": "2013-06-30"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 2nd congressional district",
+     "start": "2013-06-30",
+     "end": "2016-06-30"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 2nd congressional district",
+     "start": "2016-06-30",
+     "end": "2019-06-30"
+    },
+    {
+     "title": "Deputy Speaker of the House of Representatives of the Philippines",
+     "place": "",
+     "start": "2016-08-15",
+     "end": "2017-03-15"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Pampanga's 2nd congressional district",
+     "start": "2022-06-30",
+     "end": ""
+    },
+    {
+     "title": "ICDP commissioner and Vice president",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Maria Gloria Macaraeg Macapagal-Arroyo, often referred to as PGMA or GMA, is a Filipino academic and politician who served as the 14th president of the Philippines from 2001 to 2010. She is the longest-serving president since Ferdinand Marcos. Before her presidency, she was the 10th vice president of the Philippines from 1998 to 2001 under President Joseph Estrada, becoming the first female vice president. She was also a senator from 1992 to 1998. After her presidency, she was elected as the representative of Pampanga's 2nd district in 2010 and continues to serve in this role. She also served as the speaker of the House from 2018 to 2019, and as deputy speaker from 2016 to 2017 and 2022 to 2023. Alongside former President Sergio Osmeña, she is one of only two Filipinos to hold at least three of the four highest offices: vice president, president, and house speaker.",
+   "summary_source": "https://en.wikipedia.org/wiki/Gloria_Macapagal_Arroyo"
+  },
+  {
+   "id": "vice-president-nationwide-teofisto-guingona-jr",
+   "name": "Teofisto Guingona Jr.",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Lakas–CMD",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Vp%20guingona.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Teofisto_Guingona_Jr.",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q983317",
+   "details": {
+    "took_office": "2001-02-07",
+    "term": "2001–2004",
+    "born": "1928-07-04",
+    "prior_experience": "Member of the Senate of the Philippines (1987–1993); Member of the Senate of the Philippines (1998–2001); ambassador (?–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "2001-02-07",
+     "end": "2004-06-30",
+     "ordinal": "11"
+    }
+   ],
+   "ordinal": "11",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1987-06-30",
+     "end": "1993-07-06"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2001-02-09"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "2001-02-07",
+     "end": "2004-06-30"
+    },
+    {
+     "title": "ambassador",
+     "place": "",
+     "start": "",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Teofisto \"Tito\" Tayko Guingona Jr. is a Filipino statesman and diplomat who served as the 11th vice president of the Philippines from 2001 to 2004, during the first term of President Gloria Macapagal Arroyo. Born in San Juan, he is a graduate of Ateneo de Manila University, where he was a working student.",
+   "summary_source": "https://en.wikipedia.org/wiki/Teofisto_Guingona_Jr."
+  },
+  {
+   "id": "vice-president-nationwide-noli-de-castro",
+   "name": "Noli de Castro",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Koalisyon ng Katapatan at Karanasan sa Kinabukasan",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Noli%20de%20Castro%20official%20cropped.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Noli_de_Castro",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q338324",
+   "details": {
+    "took_office": "2004-06-30",
+    "term": "2004–2010",
+    "born": "1949-07-06",
+    "prior_experience": "Member of the Senate of the Philippines (2001–2004)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "2004-06-30",
+     "end": "2010-06-30",
+     "ordinal": "12"
+    }
+   ],
+   "ordinal": "12",
+   "career": [
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "2001-06-30",
+     "end": "2004-06-30"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "2004-06-30",
+     "end": "2010-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Manuel \"Noli\" Leuterio de Castro Jr. is a Filipino broadcaster, journalist, and former politician who served as the 12th vice president of the Philippines from 2004 until 2010 under President Gloria Macapagal Arroyo. He was elected to the Senate of the Philippines in 2001 after receiving the most votes of any senator in the 2001 election.",
+   "summary_source": "https://en.wikipedia.org/wiki/Noli_de_Castro"
+  },
+  {
+   "id": "vice-president-nationwide-jejomar-binay",
+   "name": "Jejomar Binay",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Partido Demokratiko Pilipino",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Jejomar%20Binay.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Jejomar_Binay",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q380154",
+   "details": {
+    "took_office": "2010-06-30",
+    "term": "2010–2016",
+    "born": "1942-11-11"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "2010-06-30",
+     "end": "2016-06-30",
+     "ordinal": "13"
+    }
+   ],
+   "ordinal": "13",
+   "career": [
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "2010-06-30",
+     "end": "2016-06-30"
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Jejomar \"Jojo\" Cabauatan Binay Sr. is a Filipino lawyer, politician and human rights activist who served as the 13th vice president of the Philippines from 2010 to 2016, under President Benigno Aquino III.",
+   "summary_source": "https://en.wikipedia.org/wiki/Jejomar_Binay"
+  },
+  {
+   "id": "vice-president-nationwide-leni-robredo",
+   "name": "Leni Robredo",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Liberal Party of the Philippines",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/VP%20Leni%20Robredo%20official%20portrait%20%28cropped%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Leni_Robredo",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q6761357",
+   "details": {
+    "took_office": "2016-06-30",
+    "term": "2016–2022",
+    "born": "1965-04-23",
+    "prior_experience": "member of the House of Representatives, Camarines Sur's 3rd congressional district (2013–2016); Mayor of Naga City (2025–present)"
+   },
+   "source_type": "public",
+   "current": false,
+   "terms": [
+    {
+     "start": "2016-06-30",
+     "end": "2022-06-30",
+     "ordinal": "14"
+    }
+   ],
+   "ordinal": "14",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "Camarines Sur's 3rd congressional district",
+     "start": "2013-06-30",
+     "end": "2016-06-30"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "2016-06-30",
+     "end": "2022-06-30"
+    },
+    {
+     "title": "Mayor of Naga City",
+     "place": "",
+     "start": "2025-06-30",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1,
+   "summary": "Maria Leonor \"Leni\" Gerona Robredo is a Filipino lawyer, stateswoman and politician who has been serving as the 18th mayor of Naga since 2025, having previously served as the 14th vice president of the Philippines from 2016 to 2022 under President Rodrigo Duterte.",
+   "summary_source": "https://en.wikipedia.org/wiki/Leni_Robredo"
   }
  ]
 }
