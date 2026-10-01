@@ -131,7 +131,7 @@
   // senators have bill data, so sorting by these limits the list to them.
   // Consecutive term (1-3) of a local official, from Wikipedia's term column
   // or OpenHalalan's election history; anything else is left unstated.
-  const TERM_LIMITED_LEVELS = new Set(["governor", "vice_governor", "board_member", "mayor", "vice_mayor", "councilor"]);
+  const TERM_LIMITED_LEVELS = new Set(["governor", "vice_governor", "board_member", "mayor", "vice_mayor", "councilor", "punong_barangay", "kagawad"]);
   const termOf = (o) => {
     const n = parseInt(o.details?.term, 10);
     return TERM_LIMITED_LEVELS.has(o.level) && n >= 1 && n <= 3 ? n : 0;

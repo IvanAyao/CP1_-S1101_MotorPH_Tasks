@@ -594,6 +594,12 @@ def test_dilg_barangay_sheet(isolated_output):
     ws.append(["BUKIDNON", "BAUNGON", "BALINTAD", "JUAN DELA CRUZ", "0917"])
     ws.append(["", "", "IMBATUG", "MARIA SANTOS", ""])
     ws.append(["", "MALAYBALAY CITY", "CASISANG", "PEDRO REYES", ""])
+    ws3 = wb.create_sheet("AURORA")  # DILG Central Office's long format
+    ws3.append(["TERM", "REGION", "PROVINCE", "CITY/MUNICIPALITY", "BARANGAY", "POSITION", "TERM IN PRESENT POSITION",
+                "LASTNAME", "FIRSTNAME", "MIDDLENAME", "SUFFIX"])
+    ws3.append(["2023 - 2026", "REGION 3", "AURORA", "BALER", "Barangay I", "Punong Barangay", "3RD", "ZAFRA", "ALEJANDRO", "", "JR"])
+    ws3.append(["2023 - 2026", "REGION 3", "AURORA", "BALER", "Barangay I", "Sangguniang Kabataan Member", "1ST", "CRUZ", "LEA", "", ""])
+    ws3.append(["2023 - 2026", "REGION 3", "AURORA", "BALER", "Barangay I", "SK Treasurer", "", "DIAZ", "MAE", "", ""])
     ws2 = wb.create_sheet("Sheet1")
     ws2.append(["CITY/MUNICIPALITY", "BARANGAY", "PUNONG BARANGAY"])
     ws2.append(["CITY OF CAGAYAN DE ORO (Capital)", "CARMEN", "ana lim"])
@@ -606,9 +612,14 @@ def test_dilg_barangay_sheet(isolated_output):
         ("Maria Santos", "punong_barangay", "Imbatug", "Baungon", "Bukidnon"),
         ("Pedro Reyes", "punong_barangay", "Casisang", "Malaybalay City", "Bukidnon"),
         ("Ana Lim", "punong_barangay", "Carmen", "Cagayan de Oro City", ""),
+        ("Alejandro Zafra Jr", "punong_barangay", "Barangay I", "Baler", "Aurora"),
+        ("Lea Cruz", "sk_kagawad", "Barangay I", "Baler", "Aurora"),
+        ("Mae Diaz", "other", "Barangay I", "Baler", "Aurora"),
     }
+    by = {r["name"]: r for r in recs}
+    assert by["Alejandro Zafra Jr"]["details"]["term"] == "3" and by["Mae Diaz"]["position"] == "SK Treasurer"
     assert all(r["source_type"] == "official" and r["dataset"] == "barangay" for r in recs)
     assert all(r["region"] == "Region X (Northern Mindanao)" and r["contact"] == "" for r in recs)
     barangay.flush(recs)
     index = json.loads((common.DATA_DIR / "barangay" / "index.json").read_text())
-    assert index["count"] == 4 and {f["province"] for f in index["files"]} == {"Bukidnon", ""}
+    assert index["count"] == 7 and {f["province"] for f in index["files"]} == {"Bukidnon", "Aurora", ""}
