@@ -561,14 +561,14 @@
       rows.push([t("in_2028"), term >= 3 ? t("term_limited") : t("can_run_again")]);
     }
     if (o.details?.full_name) rows.push([t("full_name"), tidyName(o.details.full_name)]);
-    if (o.dataset === "barangay") rows.push([t("term_label"), t("brgy_term")]);
+    if (o.dataset === "barangay") rows.push([t("in_office"), t("brgy_term")]);
     if (o.service?.first_senate_year) {
       rows.push([t("cmp_since"), `${o.service.first_senate_year} (${congressName(o.service.first_senate_congress)})`]);
       rows.push([t("cmp_terms"), `${o.service.senate_terms} · ${congressRanges(o.service.senate_congresses)}`]);
     }
     const d = o.details || {};
     if (d.address) rows.push([t("office"), d.address]);
-    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on", "published_via", "term", "term_source", "elected", "full_name"]);
+    const skip = new Set(["title", "position_raw", "address", "biography", "resume", "created_at", "updated_at", "deleted_at", "wikipedia_revision", "copied_on", "published_via", "term", "term_source", "term_years", "elected", "full_name"]);
     const extra = Object.entries(d).filter(([k, v]) => v && !skip.has(k) && !/^line\d|href|photo|image|img|^id$|_id$|slug/.test(k) && !rows.some(([, rv]) => rv === v));
     const pretty = (k) => k.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
     const cv = safeUrl(d.resume);
