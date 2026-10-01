@@ -207,6 +207,48 @@
     return res.json();
   }
 
+  // SONA highlights and court convictions of Presidents and VPs, loaded on demand.
+  const extras = {};
+  const loadExtra = (file) => (extras[file] ||= getJSON(file).catch(() => null));
+  const loc = (e, k) => (lang === "tl" && e[`${k}_tl`]) || e[k] || "";
+  async function execExtras(o) {
+    const [sona, legal] = await Promise.all([loadExtra("sona.json"), loadExtra("legal.json")]);
+    return {
+      sona: sona ? sona.speeches.filter((x) => x.president_id === o.id).reverse() : null,
+      convictions: legal ? legal.entries.filter((e) => e.person === o.name) : null,
+      legalAsOf: legal?.as_of,
+    };
+  }
+  const sonaBadge = (x) => typeBadge(x.source_type === "official" ? "official" : "unknown");
+  function sonaHtml(o, list) {
+    if (o.level !== "president" || !list) return "";
+    if (!list.length) return `<div class="section-label">${t("sona_title")}</div><p class="meta">${t("sona_none")}</p>`;
+    return `<div class="section-label">${t("sona_title")}</div>
+      <p class="notice">${t("sona_note")}</p>
+      ${list.map((x, i) => {
+        const groups = new Map();
+        x.highlights.forEach((h) => { if (!groups.has(h.sector)) groups.set(h.sector, []); groups.get(h.sector).push(h.text); });
+        return `<details class="sona"${i === 0 ? " open" : ""}><summary><b>SONA ${esc(x.date.slice(0, 4))}</b> · ${esc(fmtDate(x.date))} · ${t("sona_n", { n: x.highlights.length })}</summary>
+          <p class="meta">${sonaBadge(x)} ${safeUrl(x.source_url) ? `<a href="${esc(x.source_url)}" target="_blank" rel="noopener">${t("sona_full")} ↗</a>` : esc(x.source)}</p>
+          ${[...groups].map(([g, items]) => `<div class="ach-group">${esc(t(g === "other" ? "sona_other" : `sec_${g}`))} · ${items.length}</div>
+            <ul class="bullets quotes">${items.map((q) => `<li>“${esc(q)}”</li>`).join("")}</ul>`).join("") || `<p class="meta">${t("sona_no_hl")}</p>`}
+        </details>`;
+      }).join("")}`;
+  }
+  function legalHtml(list, asOf) {
+    if (!list?.length) return "";
+    return `<div class="section-label">${t("legal_title")}</div>
+      ${list.map((e) => `<div class="legal">
+        <b>${esc(loc(e, "offense"))}</b>
+        <table class="kv"><tr><th>${t("legal_court")}</th><td>${esc(e.court)}</td></tr>
+          <tr><th>${t("legal_date")}</th><td>${esc(fmtDate(e.date))}</td></tr>
+          <tr><th>${t("legal_sentence")}</th><td>${esc(loc(e, "sentence"))}</td></tr>
+          <tr><th>${t("legal_when")}</th><td>${esc(loc(e, "when"))}</td></tr>
+          ${e.later ? `<tr><th>${t("legal_later")}</th><td>${esc(loc(e, "later"))}</td></tr>` : ""}</table>
+        <p class="meta">${typeBadge(e.source_type)} <a href="${esc(safeUrl(e.source_url))}" target="_blank" rel="noopener">${esc(e.source)} ↗</a></p></div>`).join("")}
+      <p class="meta">${t("legal_note", { d: fmtDate(asOf) })}</p>`;
+  }
+
   // ------------------------------------------------------------ location
   // Island group, region, province and city come from geo.js, since most
   // sources only give a province (or a city in its place).
@@ -621,6 +663,7 @@
         </div>
         <p class="meta">${isPast(o) ? t("laws_note_past", { a: fmtDate(o.laws_from), b: fmtDate(o.laws_to) }) : t("laws_note", { d: fmtDate(o.laws_as_of) })}${o.laws_note === "partial" ? ` ${t("laws_partial")}` : ""}${o.laws_est ? ` ${t("laws_coverage", { p: o.laws_coverage, n: fmtNum(o.laws_signed + o.laws_lapsed) })}` : ""}</p>
         <p><a class="btn block" href="#/laws/${encodeURIComponent(o.id)}">${t("see_laws", { n: fmtNum(o.laws_signed + o.laws_lapsed) })}</a></p>` : ""}
+      ${EXEC_LEVELS.has(o.level) ? '<div id="exec-extra"></div>' : ""}
       ${nAch ? `<div class="section-label">${t("achievements_n", { n: nAch })}</div>${groupAchievements(o.achievements).map(([g, items]) => `<div class="ach-group">${esc(t(g))} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
       ${(o.bills || []).length ? `<div class="section-label">${t("bills_n", { n: fmtNum(o.bills_count || o.bills.length) })}</div>
         <p class="meta bill-split">${t("bill_split", { main: fmtNum(billStats(o).main), co: fmtNum(billStats(o).co) })} · <a href="#/" data-rank-link>${t("see_ranking")}</a></p>
@@ -638,6 +681,12 @@
         <br><a href="#/report/${encodeURIComponent(o.dataset)}/${encodeURIComponent(o.id)}">⚑ ${t("report_this")}</a>
       </div></div></div>`;
 
+    if (EXEC_LEVELS.has(o.level)) {
+      execExtras(o).then(({ sona, convictions, legalAsOf }) => {
+        const el = $("#exec-extra");
+        if (el) el.innerHTML = legalHtml(convictions, legalAsOf) + sonaHtml(o, sona);
+      });
+    }
     view.querySelector("[data-rank-link]")?.addEventListener("click", (e) => {
       e.preventDefault();
       Object.assign(state, { sort: "filed", scope: "term", sector: "", filter: "senate", island: "", q: "", shown: PAGE });
@@ -948,13 +997,15 @@
     }).join("");
   }
 
-  function viewCompare() {
+  async function viewCompare() {
     if (!state.loading && !hasData()) { view.innerHTML = noData(); return; }
     const [a, b] = state.compare;
     const slot = (o, i) => o
       ? `<button class="slot" data-slot="${i}">${avatar(o)}<b>${esc(o.name)}</b><small>${esc(levelLabel(o))}</small><small>${t("change")}</small></button>`
       : `<button class="slot" data-slot="${i}"><span class="avatar">＋</span><b>${t("pick")}</b><small>${t("an_official")}</small></button>`;
     let table = "";
+    const ex = a && b && (EXEC_LEVELS.has(a.level) || EXEC_LEVELS.has(b.level))
+      ? await Promise.all([a, b].map((o) => (EXEC_LEVELS.has(o.level) ? execExtras(o) : {}))) : null;
     if (a && b) {
       const fields = [
         [t("position"), levelLabel], [t("party"), (o) => o.party], [t("district"), (o) => o.district],
@@ -969,6 +1020,12 @@
           [t("cmp_laws_signed"), (o) => (o.laws_signed != null ? fmtNum(o.laws_signed) : "")],
           [t("cmp_laws_lapsed"), (o) => (o.laws_lapsed != null ? fmtNum(o.laws_lapsed) : "")],
           [t("cmp_laws_per_year"), (o) => lawsPerYear(o)]);
+        const x = (o) => ex[o === a ? 0 : 1];
+        fields.push([t("cmp_convictions"), (o) => (x(o).convictions ? (x(o).convictions.length
+          ? x(o).convictions.map((e) => `${loc(e, "offense")} (${e.court.split(";")[0]}, ${e.date.slice(0, 4)})`).join("; ") : t("cmp_none_listed")) : "")]);
+        if (a.level === "president" || b.level === "president") {
+          fields.push([t("cmp_sona"), (o) => (o.level === "president" && x(o).sona ? String(x(o).sona.length) : "")]);
+        }
       }
       if (a.service || b.service) {
         fields.push([t("cmp_since"), (o) => (o.service?.first_senate_year ? String(o.service.first_senate_year) : "")],
@@ -986,6 +1043,15 @@
         return `<div class="cmp-row"><div class="lbl">${esc(lab)}</div><div class="vals"><div class="${same ? "same" : ""}">${esc(va)}</div><div class="${same ? "same" : ""}">${esc(vb)}</div></div></div>`;
       }).join("");
       table += compareLists(a, b);
+      const quotes = (i) => (ex?.[i]?.sona || []).flatMap((s) => s.highlights.map((h) => ({ ...h, y: s.date.slice(0, 4) })));
+      if (quotes(0).length || quotes(1).length) {
+        const col = (qs) => (qs.length ? `<ul class="cmp-list">${qs.slice(0, 40).map((h) => `<li><span class="meta">${esc(h.y)} · ${esc(t(h.sector === "other" ? "sona_other" : `sec_${h.sector}`))}</span><br>“${esc(h.text)}”</li>`).join("")}</ul>${qs.length > 40 ? `<p class="meta">${t("n_more", { n: qs.length - 40 })}</p>` : ""}` : `<p class="meta cmp-none">${t("none_recorded")}</p>`);
+        table += `<div class="cmp-row cmp-lists"><div class="lbl">${t("cmp_sona_hl")}</div>
+          <div class="vals"><div><span class="cmp-count">${quotes(0).length}</span></div><div><span class="cmp-count">${quotes(1).length}</span></div></div>
+          <details class="cmp-more"><summary>${t("see_list")}</summary><div class="vals lists"><div>${col(quotes(0))}</div><div>${col(quotes(1))}</div></div></details>
+          <p class="meta">${t("sona_note")}</p></div>`;
+      }
+      if (ex) table += `<p class="meta">${t("legal_note", { d: fmtDate(ex.find((e) => e.legalAsOf)?.legalAsOf) })}</p>`;
       if (a.summary || b.summary) {
         table += `<div class="cmp-row cmp-lists"><div class="lbl">${t("exec_summary")}</div>
           <details class="cmp-more" open><summary>${t("see_list")}</summary><div class="vals lists">${[a, b].map((o) => `<div>${o.summary ? `<p class="cmp-summary">${esc(o.summary)}</p>` : `<p class="meta cmp-none">${t("none_recorded")}</p>`}</div>`).join("")}</div></details>

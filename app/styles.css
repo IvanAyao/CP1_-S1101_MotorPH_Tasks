@@ -460,3 +460,8 @@ details.term { scroll-margin-top: 84px; }
 .hist-list .hist.picked { background: color-mix(in srgb, var(--blue) 8%, transparent); }
 .hist-sum { display: block; margin-top: 4px; font-size: 13px; color: var(--muted); line-height: 1.4; }
 .cmp-summary { font-size: 13px; line-height: 1.45; margin: 0; }
+details.sona { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 0 0 10px; background: var(--card); }
+details.sona summary { cursor: pointer; font-size: 14px; }
+.bullets.quotes li { font-size: 13.5px; line-height: 1.45; margin-bottom: 4px; }
+.legal { border: 1px solid var(--line); border-left: 4px solid var(--red, #ce1126); border-radius: 12px; padding: 10px 12px; margin: 0 0 10px; background: var(--card); }
+.badge.src-unknown { background: var(--line); color: var(--muted); }

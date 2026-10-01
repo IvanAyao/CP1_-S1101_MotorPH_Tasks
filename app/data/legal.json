@@ -1,0 +1,38 @@
+{
+  "about": "Final court convictions of Presidents and Vice Presidents, maintained by hand and reviewed before publishing. Only convictions are listed: charges, pending cases, acquittals, dismissals and allegations are not. Each entry names the court and date and links a public source; corrections go through the app's Report an error page.",
+  "as_of": "2026-10-01",
+  "entries": [
+    {
+      "person": "Joseph Estrada",
+      "offense": "Plunder",
+      "offense_tl": "Plunder (pandarambong)",
+      "court": "Sandiganbayan",
+      "date": "2007-09-12",
+      "sentence": "Reclusion perpetua and forfeiture of assets found to be ill-gotten",
+      "sentence_tl": "Reclusion perpetua at pagkumpiska ng mga ari-ariang napatunayang nakaw",
+      "when": "For acts during his presidency (1998–2001); decided after he left office",
+      "when_tl": "Para sa mga ginawa noong siya ay Pangulo (1998–2001); napagpasyahan matapos siyang umalis sa puwesto",
+      "later": "Granted executive clemency (pardon) by President Gloria Macapagal Arroyo on October 25, 2007",
+      "later_tl": "Pinatawad (executive clemency) ni Pangulong Gloria Macapagal Arroyo noong Oktubre 25, 2007",
+      "source": "Wikipedia – Joseph Estrada (public, cites the court decision and news reports)",
+      "source_url": "https://en.wikipedia.org/wiki/Joseph_Estrada",
+      "source_type": "public"
+    },
+    {
+      "person": "Bongbong Marcos",
+      "offense": "Failure to file income tax returns (1982–1985), National Internal Revenue Code",
+      "offense_tl": "Hindi paghahain ng income tax return (1982–1985), National Internal Revenue Code",
+      "court": "Quezon City Regional Trial Court; affirmed by the Court of Appeals (1997)",
+      "date": "1995-07-27",
+      "sentence": "The Court of Appeals kept the conviction for failure to file but removed the prison term and ordered fines; he was cleared of failure to pay the taxes",
+      "sentence_tl": "Pinanatili ng Court of Appeals ang hatol sa hindi paghahain pero inalis ang pagkakakulong at pinagmulta siya; napawalang-sala siya sa hindi pagbabayad ng buwis",
+      "when": "As Vice Governor and Governor of Ilocos Norte, before his presidency",
+      "when_tl": "Noong Bise Gobernador at Gobernador ng Ilocos Norte, bago naging Pangulo",
+      "later": "COMELEC ruled in 2022 that this did not bar him from running for President",
+      "later_tl": "Ipinasya ng COMELEC noong 2022 na hindi ito hadlang sa kanyang pagtakbo bilang Pangulo",
+      "source": "Wikipedia – Bongbong Marcos (public, cites the court decisions and COMELEC rulings)",
+      "source_url": "https://en.wikipedia.org/wiki/Bongbong_Marcos",
+      "source_type": "public"
+    }
+  ]
+}

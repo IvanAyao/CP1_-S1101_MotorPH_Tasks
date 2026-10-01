@@ -13,6 +13,7 @@ Put files under data-inbox/ at the repo root:
     data-inbox/barangay/  saved pages / exports of the DILG directory
                           (optionally in <Region>/<Province>/ subfolders)
     data-inbox/senate/    saved pages of the Senate list (normally not needed)
+    data-inbox/sona/      State of the Nation Address transcripts (see sona.py)
 
 Accepted formats: .html/.htm ("Save page as"), .mhtml/.mht (Chrome
 "Download page" / "Save as single file"), .xlsx, .csv, .json.
@@ -229,14 +230,22 @@ def import_barangay(today: str) -> bool:
     return True
 
 
+def import_sona(today: str) -> bool:
+    import sona
+    if not sona.INBOX.is_dir() or not any(p.suffix.lower() in sona.EXTS for p in sona.INBOX.rglob("*")):
+        return False
+    sona.run()
+    return True
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--only", nargs="*", choices=["senate", "house", "lgu", "dilg", "barangay"])
+    ap.add_argument("--only", nargs="*", choices=["senate", "house", "lgu", "dilg", "barangay", "sona"])
     args = ap.parse_args()
     today = date.today().isoformat()
-    wanted = args.only or ["senate", "house", "lgu", "dilg", "barangay"]
+    wanted = args.only or ["senate", "house", "lgu", "dilg", "barangay", "sona"]
     importers = {"senate": import_senate, "house": import_house, "lgu": import_lgu,
-                 "dilg": import_dilg, "barangay": import_barangay}
+                 "dilg": import_dilg, "barangay": import_barangay, "sona": import_sona}
     failures, done = [], []
     for key in wanted:
         try:
