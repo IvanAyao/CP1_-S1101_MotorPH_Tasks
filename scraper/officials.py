@@ -36,8 +36,14 @@ def classify(position: str) -> tuple[str, str]:
     p = position.lower()
     for rx, level, label in LEVEL_BY_POSITION:
         if re.search(rx, p):
-            if level == "sk_chair" and "kagawad" in p:
-                return "sk_kagawad", "SK Kagawad"
+            if level == "sk_chair":
+                # Only the chairperson is SK chair; members are SK kagawads and
+                # the appointed secretary/treasurer are their own posts.
+                m = re.search(r"secretary|treasurer", p)
+                if m:
+                    return "other", f"SK {m.group(0).title()}"
+                if not re.search(r"chair|president", p):
+                    return "sk_kagawad", "SK Kagawad"
             return level, label
     return "other", clean(position).title()
 
@@ -77,10 +83,13 @@ def rows_to_officials(rows: list[dict[str, str]], *, source: str, source_url: st
         if pos_val and name_val:  # long form
             level, label = classify(pos_val)
             district = pick(row, r"district")
+            # "TERM IN PRESENT POSITION: 3RD" -> consecutive term 3
+            term = re.match(r"\s*(\d+)", pick(row, r"term_in_present|term_in_position|no_of_terms|^term_no"))
             out.append(record(name=strip_honorific(name_val), position=label, level=level, source=source,
                               source_url=source_url, contact=contact, party=pick(row, r"party"),
                               district=district,
-                              details={"address": address, "position_raw": pos_val}, **ctx))
+                              details={"address": address, "position_raw": pos_val,
+                                       "term": term.group(1) if term else ""}, **ctx))
             continue
 
         for col, val in row.items():  # wide form

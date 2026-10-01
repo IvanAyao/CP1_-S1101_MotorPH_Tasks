@@ -44,13 +44,13 @@ def parse(data: bytes, region: str, url: str, sheet_id: str) -> list[dict]:
     found = dilg_lgu.parse(data, source=source_label(region), source_url=url, defaults={"region": region})
     out = []
     for o in found:
-        if o["level"] not in BARANGAY_LEVELS or not o["barangay"]:
+        if not o["barangay"] or (o["level"] not in BARANGAY_LEVELS and not o["position"].startswith("SK ")):
             continue
         o["dataset"] = "barangay"
         o["region"] = region  # the sheets say "Region 10"; use the app's name
         o["contact"] = ""  # personal numbers and emails aren't needed to compare officials
         o["details"]["published_via"] = f"https://drive.google.com/open?id={sheet_id}"
-        o["details"]["term"] = "2023–2028"
+        o["details"]["term_years"] = "2023–2028"
         out.append(o)
     return out
 
