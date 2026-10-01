@@ -1,7 +1,7 @@
 {
  "dataset": "barangay",
  "source_url": "https://www.dilg.gov.ph/barangay-officials-directory",
- "scraped_at": "2026-10-01T04:54:35+00:00",
+ "scraped_at": "2026-10-01T05:03:31+00:00",
  "region": "Region X (Northern Mindanao)",
  "province": "",
  "count": 79,
@@ -24,7 +24,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -47,7 +47,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -70,7 +70,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -93,7 +93,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -116,7 +116,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -139,7 +139,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -162,7 +162,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -185,7 +185,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -208,7 +208,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -231,7 +231,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -254,7 +254,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -277,7 +277,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -300,7 +300,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -323,7 +323,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -346,7 +346,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -369,7 +369,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -392,7 +392,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -415,7 +415,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -438,7 +438,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -461,7 +461,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -484,7 +484,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -507,7 +507,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -530,7 +530,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -553,7 +553,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -576,7 +576,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -599,7 +599,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -622,7 +622,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -645,7 +645,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -668,7 +668,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -691,7 +691,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -714,7 +714,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -737,7 +737,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -760,7 +760,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -783,7 +783,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -806,7 +806,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -829,7 +829,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -852,7 +852,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -875,7 +875,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -898,7 +898,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -921,7 +921,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -944,7 +944,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -967,7 +967,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -990,7 +990,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1013,7 +1013,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1036,7 +1036,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1059,7 +1059,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1082,7 +1082,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1105,7 +1105,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1128,7 +1128,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1151,7 +1151,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1174,7 +1174,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1197,7 +1197,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1220,7 +1220,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1243,7 +1243,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1266,7 +1266,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1289,7 +1289,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1312,7 +1312,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1335,7 +1335,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1358,7 +1358,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1381,7 +1381,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1404,7 +1404,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1427,7 +1427,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1450,7 +1450,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1473,7 +1473,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1496,7 +1496,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1519,7 +1519,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1542,7 +1542,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1565,7 +1565,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1588,7 +1588,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1611,7 +1611,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1634,7 +1634,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1657,7 +1657,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1680,7 +1680,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1703,7 +1703,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1726,7 +1726,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1749,7 +1749,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1772,7 +1772,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1795,7 +1795,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
@@ -1818,7 +1818,7 @@
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
     "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
-    "term": "2023–2028"
+    "term_years": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"

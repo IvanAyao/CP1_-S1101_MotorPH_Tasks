@@ -1,14 +1,14 @@
 {
  "dataset": "barangay",
  "source_url": "https://www.dilg.gov.ph/barangay-officials-directory",
- "scraped_at": "2026-10-01T04:54:42+00:00",
- "count": 4930,
+ "scraped_at": "2026-10-01T05:03:44+00:00",
+ "count": 4932,
  "files": [
   {
    "file": "barangay/region-iii-central-luzon--aurora.json",
    "region": "Region III (Central Luzon)",
    "province": "Aurora",
-   "count": 2911,
+   "count": 2913,
    "barangays": 151,
    "lgus": [
     "Baler",
@@ -20,7 +20,7 @@
     "Maria Aurora",
     "San Luis"
    ],
-   "scraped_at": "2026-10-01T04:54:42+00:00"
+   "scraped_at": "2026-10-01T05:03:44+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--bukidnon.json",
@@ -52,7 +52,7 @@
     "Talakag",
     "Valencia City"
    ],
-   "scraped_at": "2026-10-01T04:54:35+00:00"
+   "scraped_at": "2026-10-01T05:03:31+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--cagayan-de-oro-city.json",
@@ -63,7 +63,7 @@
    "lgus": [
     "Cagayan de Oro City"
    ],
-   "scraped_at": "2026-10-01T04:54:35+00:00"
+   "scraped_at": "2026-10-01T05:03:31+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--camiguin.json",
@@ -78,7 +78,7 @@
     "Mambajao",
     "Sagay"
    ],
-   "scraped_at": "2026-10-01T04:54:35+00:00"
+   "scraped_at": "2026-10-01T05:03:31+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--iligan-city.json",
@@ -89,7 +89,7 @@
    "lgus": [
     "Iligan City"
    ],
-   "scraped_at": "2026-10-01T04:54:35+00:00"
+   "scraped_at": "2026-10-01T05:03:31+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--lanao-del-norte.json",
@@ -121,7 +121,7 @@
     "Tangcal",
     "Tubod"
    ],
-   "scraped_at": "2026-10-01T04:54:35+00:00"
+   "scraped_at": "2026-10-01T05:03:31+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--misamis-occidental.json",
@@ -148,7 +148,7 @@
     "Tangub City",
     "Tudela"
    ],
-   "scraped_at": "2026-10-01T04:54:35+00:00"
+   "scraped_at": "2026-10-01T05:03:31+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--misamis-oriental.json",
@@ -183,7 +183,7 @@
     "Talisayan",
     "Villanueva"
    ],
-   "scraped_at": "2026-10-01T04:54:35+00:00"
+   "scraped_at": "2026-10-01T05:03:31+00:00"
   }
  ]
 }
