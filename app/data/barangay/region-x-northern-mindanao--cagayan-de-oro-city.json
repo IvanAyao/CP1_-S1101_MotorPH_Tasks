@@ -1,13 +1,13 @@
 {
  "dataset": "barangay",
  "source_url": "https://www.dilg.gov.ph/barangay-officials-directory",
- "scraped_at": "2026-09-30T23:21:46+00:00",
+ "scraped_at": "2026-10-01T04:54:35+00:00",
  "region": "Region X (Northern Mindanao)",
  "province": "",
  "count": 79,
  "records": [
   {
-   "id": "punong-barangay-cagayan-de-oro-city-agusan-andrew-emano-melliza",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-agusan-andrew-emano-melliza",
    "name": "Andrew Emano Melliza",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -23,14 +23,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-baikingon-ronello-songcalit-gumapac",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-baikingon-ronello-songcalit-gumapac",
    "name": "Ronello Songcalit Gumapac",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -46,14 +46,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-bulua-al-pagaran-legaspi-jr",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-bulua-al-pagaran-legaspi-jr",
    "name": "Al Pagaran Legaspi Jr.",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -69,14 +69,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-balubal-pablo-malingin-bactong",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-balubal-pablo-malingin-bactong",
    "name": "Pablo Malingin Bactong",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -92,14 +92,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-balulang-edwin-estomo-micabani",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-balulang-edwin-estomo-micabani",
    "name": "Edwin Estomo Micabani",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -115,14 +115,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-10-christopher-yabo-calunod",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-10-christopher-yabo-calunod",
    "name": "Christopher Yabo Calunod",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -138,14 +138,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-11-melvin-dadulo-oliveros",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-11-melvin-dadulo-oliveros",
    "name": "Melvin Dadulo Oliveros",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -161,14 +161,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-12-felipe-vayoma-amparo",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-12-felipe-vayoma-amparo",
    "name": "Felipe Vayoma Amparo",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -184,14 +184,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-13-serafin-paasa-labrada-iii",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-13-serafin-paasa-labrada-iii",
    "name": "Serafin Paasa Labrada III",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -207,14 +207,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-14-francisco-manrique-laihee",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-14-francisco-manrique-laihee",
    "name": "Francisco Manrique Laihee",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -230,14 +230,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-15-maryfel-oclida-revano",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-15-maryfel-oclida-revano",
    "name": "Maryfel Oclida Revaño",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -253,14 +253,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-16-danilo-rabanes-guevara",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-16-danilo-rabanes-guevara",
    "name": "Danilo Rabanes Guevara",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -276,14 +276,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-17-anthony-alumbro-atterviry-iii",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-17-anthony-alumbro-atterviry-iii",
    "name": "Anthony Alumbro Atterviry III",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -299,14 +299,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-18-rey-federico-bucog-rivera",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-18-rey-federico-bucog-rivera",
    "name": "Rey Federico Bucog Rivera",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -322,14 +322,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-19-christopher-bacsarpa-young",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-19-christopher-bacsarpa-young",
    "name": "Christopher Bacsarpa Young",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -345,14 +345,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-2-mercedario-baguinat-lagudas",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-2-mercedario-baguinat-lagudas",
    "name": "Mercedario Baguinat Lagudas",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -368,14 +368,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-21-fernando-encarguez-abapo",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-21-fernando-encarguez-abapo",
    "name": "Fernando Encarguez Abapo",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -391,14 +391,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-22-eldo-galdo-casino",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-22-eldo-galdo-casino",
    "name": "Eldo Galdo Casiño",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -414,14 +414,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-23-jaime-joshua-adarico-frias-ii",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-23-jaime-joshua-adarico-frias-ii",
    "name": "Jaime Joshua Adarico Frias II",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -437,14 +437,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-24-milagros-puyo-floirendo",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-24-milagros-puyo-floirendo",
    "name": "Milagros Puyo Floirendo",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -460,14 +460,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-26-alberto-erfe-adecer",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-26-alberto-erfe-adecer",
    "name": "Alberto Erfe Adecer",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -483,14 +483,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-27-ricardo-francis-rosete-mabulay",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-27-ricardo-francis-rosete-mabulay",
    "name": "Ricardo Francis Rosete Mabulay",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -506,14 +506,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-28-hilarion-nagar",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-28-hilarion-nagar",
    "name": "Hilarion Nagar",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -529,14 +529,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-3-ely-timan-adoraflor-sr",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-3-ely-timan-adoraflor-sr",
    "name": "Ely Timan Adoraflor Sr.",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -552,14 +552,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-30-cecille-zaballero-dap-og",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-30-cecille-zaballero-dap-og",
    "name": "Cecille Zaballero Dap-Og",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -575,14 +575,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-32-ronald-marucot-seno",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-32-ronald-marucot-seno",
    "name": "Ronald Marucot Seno",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -598,14 +598,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-33-pelagio-salise-nambatac",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-33-pelagio-salise-nambatac",
    "name": "Pelagio Salise Nambatac",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -621,14 +621,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-34-ralph-paraguya-suello",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-34-ralph-paraguya-suello",
    "name": "Ralph Paraguya Suello",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -644,14 +644,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-38-sonia-redondo-estoque",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-38-sonia-redondo-estoque",
    "name": "Sonia Redondo Estoque",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -667,14 +667,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-39-marcelo-cagampang-gomez",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-39-marcelo-cagampang-gomez",
    "name": "Marcelo Cagampang Gomez",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -690,14 +690,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-4-richard-yap-sia",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-4-richard-yap-sia",
    "name": "Richard Yap Sia",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -713,14 +713,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-40-burgos-suarez-macasero",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-40-burgos-suarez-macasero",
    "name": "Burgos Suarez Macasero",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -736,14 +736,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-6-ian-glenn-lim-chui",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-6-ian-glenn-lim-chui",
    "name": "Ian Glenn Lim Chui",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -759,14 +759,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-8-chris-boquiren-fernandez",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-8-chris-boquiren-fernandez",
    "name": "Chris Boquiren Fernandez",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -782,14 +782,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-9-erlquin-cadiz-lim",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-9-erlquin-cadiz-lim",
    "name": "Erlquin Cadiz Lim",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -805,14 +805,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-5-raymart-ramos-englis",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-5-raymart-ramos-englis",
    "name": "Raymart Ramos Englis",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -828,14 +828,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-bayabas-rudy-olape-lago",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-bayabas-rudy-olape-lago",
    "name": "Rudy Olape Lago",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -851,14 +851,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-bayanga-felipe-pacunio-baang",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-bayanga-felipe-pacunio-baang",
    "name": "Felipe Pacunio Baang",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -874,14 +874,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-besigan-samuel-cubaynon-minister",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-besigan-samuel-cubaynon-minister",
    "name": "Samuel Cubaynon Minister",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -897,14 +897,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-bonbon-lelit-baal-molina",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-bonbon-lelit-baal-molina",
    "name": "Lelit Baal Molina",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -920,14 +920,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-bugo-spencer-la-victoria-cailing",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-bugo-spencer-la-victoria-cailing",
    "name": "Spencer La Victoria Cailing",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -943,14 +943,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-camaman-an-carl-harrison-dignadile-galarrita",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-camaman-an-carl-harrison-dignadile-galarrita",
    "name": "Carl Harrison Dignadile Galarrita",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -966,14 +966,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-canito-an-lancelot-borja-padla-none",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-canito-an-lancelot-borja-padla-none",
    "name": "Lancelot Borja Padla None",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -989,14 +989,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-carmen-raineir-joaquin-velez-uy",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-carmen-raineir-joaquin-velez-uy",
    "name": "Raineir Joaquin Velez Uy",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1012,14 +1012,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-consolacion-derby-taborda-pacudan",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-consolacion-derby-taborda-pacudan",
    "name": "Derby Taborda Pacudan",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1035,14 +1035,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-cugman-maria-luisa-mercado-aldeguer",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-cugman-maria-luisa-mercado-aldeguer",
    "name": "Maria Luisa Mercado Aldeguer",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1058,14 +1058,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-dansolihon-josemaria-juan-lacandola-roa",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-dansolihon-josemaria-juan-lacandola-roa",
    "name": "Josemaria Juan Lacandola Roa",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1081,14 +1081,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-f-s-catanico-elpedio-mabal-neri",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-f-s-catanico-elpedio-mabal-neri",
    "name": "Elpedio Mabal Neri",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1104,14 +1104,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-gusa-marlo-lumbay-tabac",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-gusa-marlo-lumbay-tabac",
    "name": "Marlo Lumbay Tabac",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1127,14 +1127,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-indahag-marlon-fidel-duterte-bongay-jr",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-indahag-marlon-fidel-duterte-bongay-jr",
    "name": "Marlon Fidel Duterte Bongay Jr.",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1150,14 +1150,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-iponan-vengie-la-victoria-reyes",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-iponan-vengie-la-victoria-reyes",
    "name": "Vengie La Victoria Reyes",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1173,14 +1173,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-kauswagan-leonard-jan-uy-lim",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-kauswagan-leonard-jan-uy-lim",
    "name": "Leonard Jan Uy Lim",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1196,14 +1196,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-lapasan-julito-demiar-ogsimer",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-lapasan-julito-demiar-ogsimer",
    "name": "Julito Demiar Ogsimer",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1219,14 +1219,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-lumbia-alexander-villanueva-torralba",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-lumbia-alexander-villanueva-torralba",
    "name": "Alexander Villanueva Torralba",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1242,14 +1242,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-macabalan-saniel-lumandong-raypon",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-macabalan-saniel-lumandong-raypon",
    "name": "Saniel Lumandong Raypon",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1265,14 +1265,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-macasandig-mario-bacarro-bolanio-sr",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-macasandig-mario-bacarro-bolanio-sr",
    "name": "Mario Bacarro Bolanio Sr",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1288,14 +1288,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-mambuaya-philip-somera-porras",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-mambuaya-philip-somera-porras",
    "name": "Philip Somera Porras",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1311,14 +1311,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-nazareth-regine-beatrice-tiukinhoy-rodriguez",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-nazareth-regine-beatrice-tiukinhoy-rodriguez",
    "name": "Regine Beatrice Tiukinhoy Rodriguez",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1334,14 +1334,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-pagatpat-achilles-udasco-babaran",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-pagatpat-achilles-udasco-babaran",
    "name": "Achilles Udasco Babaran",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1357,14 +1357,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-patag-eric-de-la-cruz-abaday",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-patag-eric-de-la-cruz-abaday",
    "name": "Eric De La Cruz Abaday",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1380,14 +1380,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-pigsag-an-sonny-agsimon-rondahan",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-pigsag-an-sonny-agsimon-rondahan",
    "name": "Sonny Agsimon Rondahan",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1403,14 +1403,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-puerto-lolita-lunio-wahing-n-a",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-puerto-lolita-lunio-wahing-n-a",
    "name": "Lolita Lunio Wahing N/A",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1426,14 +1426,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-puntod-alexis-jabla-dacer",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-puntod-alexis-jabla-dacer",
    "name": "Alexis Jabla Dacer",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1449,14 +1449,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-san-simon-fernando-cabulay-edrolin",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-san-simon-fernando-cabulay-edrolin",
    "name": "Fernando Cabulay Edrolin",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1472,14 +1472,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-tablon-romeo-roxas-bacarro",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-tablon-romeo-roxas-bacarro",
    "name": "Romeo Roxas Bacarro",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1495,14 +1495,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-taglimao-ruben-paduga-obsioma",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-taglimao-ruben-paduga-obsioma",
    "name": "Ruben Paduga Obsioma",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1518,14 +1518,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-tagpangi-chenet-baal-marianas",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-tagpangi-chenet-baal-marianas",
    "name": "Chenet Baal Marianas",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1541,14 +1541,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-tignapoloan-nancy-loloy-aban",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-tignapoloan-nancy-loloy-aban",
    "name": "Nancy Loloy Aban",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1564,14 +1564,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-tuburan-roy-obsioma-yanez",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-tuburan-roy-obsioma-yanez",
    "name": "Roy Obsioma Yañez",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1587,14 +1587,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-tumpagon-cecilio-masandaan-dagsaan",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-tumpagon-cecilio-masandaan-dagsaan",
    "name": "Cecilio Masandaan Dagsaan",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1610,14 +1610,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-1-joanna-marie-abejuela-laurie",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-1-joanna-marie-abejuela-laurie",
    "name": "Joanna Marie Abejuela Laurie",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1633,14 +1633,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-7-ronald-v-serina",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-7-ronald-v-serina",
    "name": "Ronald V. Seriña",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1656,14 +1656,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-20-segundo-allegado-pabelic",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-20-segundo-allegado-pabelic",
    "name": "Segundo Allegado Pabelic",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1679,14 +1679,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-25-noel-salvacion-ilogon",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-25-noel-salvacion-ilogon",
    "name": "Noel Salvacion Ilogon",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1702,14 +1702,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-29-bernado-taylaran-autentico",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-29-bernado-taylaran-autentico",
    "name": "Bernado Taylaran Autentico",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1725,14 +1725,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-31-delia-tacbobo-wabe",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-31-delia-tacbobo-wabe",
    "name": "Delia Tacbobo Wabe",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1748,14 +1748,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-35-jose-calain-ligtas",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-35-jose-calain-ligtas",
    "name": "Jose Calain Ligtas",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1771,14 +1771,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-36-reynante-laputan-roa",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-36-reynante-laputan-roa",
    "name": "Reynante Laputan Roa",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1794,14 +1794,14 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
    "dataset": "barangay"
   },
   {
-   "id": "punong-barangay-cagayan-de-oro-city-barangay-37-salahuddin-marcom-said",
+   "id": "punong-barangay-city-of-cagayan-de-oro-capital-barangay-37-salahuddin-marcom-said",
    "name": "Salahuddin Marcom Said",
    "position": "Punong Barangay",
    "level": "punong_barangay",
@@ -1817,7 +1817,7 @@
    "source": "DILG Region X (Northern Mindanao) – Barangay Officials (2023 term)",
    "source_url": "https://region10.dilg.gov.ph/punong-barangay-directories/",
    "details": {
-    "published_via": "https://docs.google.com/spreadsheets/d/1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
+    "published_via": "https://drive.google.com/open?id=1Yicu6NamJxnQizg31dsyNptQRcjfp8CAt_gzkDNp8ac",
     "term": "2023–2028"
    },
    "source_type": "official",
