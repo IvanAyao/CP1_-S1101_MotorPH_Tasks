@@ -671,6 +671,7 @@ def test_executive_from_wikidata(isolated_output):
     assert p["details"]["term"] == "2022–2028" and p["source_type"] == "public"
     assert p["details"]["prior_experience"] == "Senator of the Philippines (2010–2016)"
     assert (p["laws_signed"], p["laws_lapsed"]) == (1, 1)
+    assert (p["ra_first"], p["ra_last"], p["laws_est"], p["laws_coverage"]) == (11900, 11934, 35, 6)
     assert vp["successive_terms"] == 1 and "laws_signed" not in vp
     assert [i["title"] for i in p["career"]] == ["Senator of the Philippines", "President of the Philippines"]
     two = executive.career([{"posLabel": "Vice President of the Philippines", "start": "2016-06-30", "end": "2022-06-30"},

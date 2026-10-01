@@ -8,9 +8,11 @@ the lead summary of their English Wikipedia article (CC BY-SA), labelled
 and linked, describing their career and time in office. Both are public,
 non-government sources and are labelled as such.
 
-For the President, the laws of the term come from app/data/laws.json (built
-by bills.py from Senate and House bill histories): Republic Acts dated from
-the day the term began, signed or lapsed into law without signature.
+For Presidents, the laws of each term come from app/data/laws.json (built
+by bills.py from Senate and House bill histories, 2004 onwards): Republic
+Acts dated within the term, signed or lapsed into law without signature.
+Older histories miss many laws, so the RA number range of the term is kept
+as an estimate of the total, with the share the list covers.
 
 Eligibility in 2028 follows the Constitution (Art. VII, Sec. 4): the
 President may not be re-elected; the Vice President may serve at most two
@@ -149,6 +151,14 @@ def laws_between(laws: list[dict], start: str, end: str, as_of: str) -> dict:
     inside = [l for l in laws if l.get("date") and l["date"] >= start[:10] and (not end or l["date"] < end[:10])]
     out = {"laws_signed": sum(not l["lapsed"] for l in inside), "laws_lapsed": sum(l["lapsed"] for l in inside),
            "laws_from": max(start[:10], first), "laws_to": (end or "")[:10], "laws_as_of": as_of}
+    # Older bill histories are incomplete, but Republic Acts are numbered in
+    # order, so the first and last numbers of the term give how many were
+    # enacted in it, and the share the list covers.
+    ras = sorted(int(l["ra"]) for l in inside if str(l.get("ra", "")).isdigit())
+    if ras:
+        est = ras[-1] - ras[0] + 1
+        out.update({"ra_first": ras[0], "ra_last": ras[-1], "laws_est": est,
+                    "laws_coverage": round(100 * len(inside) / est)})
     if start[:10] < first:
         out["laws_note"] = "partial"
     return out

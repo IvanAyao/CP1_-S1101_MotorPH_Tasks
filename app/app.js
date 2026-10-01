@@ -615,10 +615,11 @@
         <ol class="career">${[...o.career].reverse().map((c) => `<li><b>${esc(c.title)}</b>${c.place ? ` · ${esc(c.place)}` : ""}<span class="meta">${esc(careerSpan(c))}</span></li>`).join("")}</ol>` : ""}
       ${o.laws_signed != null ? `<div class="section-label">${isPast(o) ? t("laws_title_past") : t("laws_title", { y: (o.laws_from || "").slice(0, 4) })}</div>
         <div class="service">
+          ${o.laws_est ? `<div class="service-item"><b>≈${fmtNum(o.laws_est)}</b><span>${t("laws_est", { a: o.ra_first, b: o.ra_last })}</span></div>` : ""}
           <div class="service-item"><b>${fmtNum(o.laws_signed)}</b><span>${t("laws_signed")}</span></div>
           <div class="service-item"><b>${fmtNum(o.laws_lapsed)}</b><span>${t("laws_lapsed")}</span></div>
         </div>
-        <p class="meta">${isPast(o) ? t("laws_note_past", { a: fmtDate(o.laws_from), b: fmtDate(o.laws_to) }) : t("laws_note", { d: fmtDate(o.laws_as_of) })}${o.laws_note === "partial" ? ` ${t("laws_partial")}` : ""}</p>
+        <p class="meta">${isPast(o) ? t("laws_note_past", { a: fmtDate(o.laws_from), b: fmtDate(o.laws_to) }) : t("laws_note", { d: fmtDate(o.laws_as_of) })}${o.laws_note === "partial" ? ` ${t("laws_partial")}` : ""}${o.laws_est ? ` ${t("laws_coverage", { p: o.laws_coverage, n: fmtNum(o.laws_signed + o.laws_lapsed) })}` : ""}</p>
         <p><a class="btn block" href="#/laws/${encodeURIComponent(o.id)}">${t("see_laws", { n: fmtNum(o.laws_signed + o.laws_lapsed) })}</a></p>` : ""}
       ${nAch ? `<div class="section-label">${t("achievements_n", { n: nAch })}</div>${groupAchievements(o.achievements).map(([g, items]) => `<div class="ach-group">${esc(t(g))} · ${items.length}</div><ul class="bullets">${items.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`).join("")}` : ""}
       ${(o.bills || []).length ? `<div class="section-label">${t("bills_n", { n: fmtNum(o.bills_count || o.bills.length) })}</div>
@@ -836,7 +837,7 @@
   function lawsPerYear(o) {
     if (o.laws_signed == null || !o.laws_from) return "";
     const days = ((o.laws_to ? Date.parse(o.laws_to) : Date.parse(o.laws_as_of || Date.now())) - Date.parse(o.laws_from)) / 86400000;
-    return days > 180 ? `${((o.laws_signed + o.laws_lapsed) / (days / 365.25)).toFixed(0)}${o.laws_note === "partial" ? " *" : ""}` : "";
+    return days > 180 ? `${((o.laws_est || o.laws_signed + o.laws_lapsed) / (days / 365.25)).toFixed(0)}${o.laws_note === "partial" ? " *" : ""}` : "";
   }
 
   // Every President and Vice President, newest first; pick two to compare.
@@ -848,7 +849,7 @@
       .sort((a, b) => (b.details?.took_office || "").localeCompare(a.details?.took_office || ""));
     const card = (o) => {
       const k = key(o), on = histView.pick.includes(k);
-      const laws = o.laws_signed != null ? t("hist_laws", { n: fmtNum(o.laws_signed + o.laws_lapsed) }) + (o.laws_note === "partial" ? " *" : "")
+      const laws = o.laws_signed != null ? t("hist_laws", { n: `≈${fmtNum(o.laws_est || o.laws_signed + o.laws_lapsed)}` }) + (o.laws_note === "partial" ? " *" : "")
         : o.laws_note === "before_data" || o.level === "president" ? t("hist_no_laws") : "";
       return `<li class="hist${on ? " picked" : ""}">
         <a class="row" href="#/o/executive/${encodeURIComponent(o.id)}">${avatar(o)}
@@ -920,8 +921,10 @@
     const achGroup = (g) => (o) => (groupAchievements(o.achievements).find(([k]) => k === g) || [, []])[1];
     const groupKeys = [...ACH_GROUPS.map(([g]) => g), "ach_other"];
     const anyAch = achievementsOf(a).length || achievementsOf(b).length;
+    // Award lists come from Senate and House biographies; executives have none.
+    const bothExec = EXEC_LEVELS.has(a.level) && EXEC_LEVELS.has(b.level);
     const sections = [
-      { label: t("cmp_ach_total"), of: achievementsOf, always: true, countOnly: anyAch, none: t("cmp_no_ach") },
+      { label: t("cmp_ach_total"), of: achievementsOf, always: !bothExec, countOnly: anyAch, none: t("cmp_no_ach") },
       ...groupKeys.map((g) => ({ label: t("cmp_ach_group", { g: t(g) }), of: achGroup(g), none: t("none") })),
       { label: t("cmp_prior"), of: priorRolesOf, none: t("none_recorded") },
       { label: t("cmp_bills"), of: billsOf, none: t("none_recorded"), bills: true },
@@ -961,6 +964,8 @@
         fields.push([t("exec_order"), (o) => (o.ordinal ? t("exec_nth", { n: o.ordinal, nth: ordinal(+o.ordinal || 0) }) : "")],
           [t("term_label"), (o) => o.details?.term || ""],
           [t("exec_in_office"), (o) => yearsIn(o)],
+          [t("cmp_laws_est"), (o) => (o.laws_est ? `≈${fmtNum(o.laws_est)}${o.laws_note === "partial" ? " *" : ""} (RA ${o.ra_first}–${o.ra_last})` : o.laws_note === "before_data" ? t("hist_no_laws") : "")],
+          [t("cmp_laws_coverage"), (o) => (o.laws_est ? `${o.laws_coverage}% (${fmtNum(o.laws_signed + o.laws_lapsed)})` : "")],
           [t("cmp_laws_signed"), (o) => (o.laws_signed != null ? fmtNum(o.laws_signed) : "")],
           [t("cmp_laws_lapsed"), (o) => (o.laws_lapsed != null ? fmtNum(o.laws_lapsed) : "")],
           [t("cmp_laws_per_year"), (o) => lawsPerYear(o)]);
