@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-01T06:40:51+00:00",
+ "generated_at": "2026-10-01T06:42:22+00:00",
  "datasets": [
   {
    "key": "senate",
@@ -52,8 +52,8 @@
    "file": "executive.json",
    "source": "Wikidata (public, CC0)",
    "source_url": "https://www.wikidata.org/",
-   "count": 33,
-   "scraped_at": "2026-10-01T06:40:50+00:00",
+   "count": 32,
+   "scraped_at": "2026-10-01T06:42:22+00:00",
    "source_type": "public"
   }
  ]

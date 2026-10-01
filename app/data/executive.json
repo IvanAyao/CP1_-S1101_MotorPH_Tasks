@@ -1,11 +1,11 @@
 {
  "dataset": "executive",
  "source_url": "https://www.wikidata.org/",
- "scraped_at": "2026-10-01T06:40:50+00:00",
- "count": 33,
+ "scraped_at": "2026-10-01T06:42:22+00:00",
+ "count": 32,
  "method": "public",
  "source_label": "Wikidata (public, CC0)",
- "fetched_at": "2026-10-01T06:40:50+00:00",
+ "fetched_at": "2026-10-01T06:42:22+00:00",
  "records": [
   {
    "id": "president-nationwide-bongbong-marcos",
@@ -1374,49 +1374,6 @@
    "successive_terms": 1,
    "summary": "Sara Zimmerman Duterte-Carpio, commonly known as Inday Sara, is a Filipino lawyer and politician who is the 15th and current vice president of the Philippines. She is the third female vice president, the third vice president to come from Mindanao, and the youngest ever Philippine vice president. A daughter of the 16th president Rodrigo Duterte, she is the leading figure of Dutertismo, the political ideology associated with her father. Duterte previously served as the mayor of Davao City from 2010 to 2013, and from 2016 to 2022. Duterte was also Davao City's vice mayor from 2007 to 2010.",
    "summary_source": "https://en.wikipedia.org/wiki/Sara_Duterte"
-  },
-  {
-   "id": "vice-president-nationwide-q247632",
-   "name": "Q247632",
-   "position": "Vice President of the Philippines",
-   "level": "vice_president",
-   "party": "Katipunan",
-   "district": "Nationwide",
-   "region": "",
-   "province": "",
-   "lgu": "",
-   "barangay": "",
-   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Mariano%20Trias%20portrait.jpg?width=300",
-   "profile_url": "https://en.wikipedia.org/wiki/Mariano_Tr%C3%ADas",
-   "contact": "",
-   "source": "Wikidata (public, CC0)",
-   "source_url": "https://www.wikidata.org/wiki/Q247632",
-   "details": {
-    "took_office": "1897-03-22",
-    "term": "1897–1897",
-    "born": "1868-10-12"
-   },
-   "source_type": "public",
-   "current": false,
-   "terms": [
-    {
-     "start": "1897-03-22",
-     "end": "1897-11-02",
-     "ordinal": ""
-    }
-   ],
-   "ordinal": "",
-   "career": [
-    {
-     "title": "Vice President of the Philippines",
-     "place": "",
-     "start": "1897-03-22",
-     "end": "1897-11-02"
-    }
-   ],
-   "successive_terms": 1,
-   "summary": "Mariano Trías y Closas is considered to be the first de facto Philippine Vice President of that revolutionary government established at the Tejeros Convention - an assembly of Philippine revolutionary leaders that elected officials of the revolutionary movement against the colonial government of Spain. When that assembly broke into factions, a truce known as the Pact of Biak-na-Bato was signed by the group and also recognized the elected officials and Trias as the vice president of Emilio Aguinaldo, who is also considered to be the first President of the Philippines. With the promulgation of the Malolos Constitution by the Malolos Convention, the First Philippine Republic was born. Under the Aguinaldo administration, Trias served in the cabinet initially as Secretary of Finance and, later, as Secretary of War.",
-   "summary_source": "https://en.wikipedia.org/wiki/Mariano_Tr%C3%ADas"
   },
   {
    "id": "vice-president-nationwide-sergio-osmena",
