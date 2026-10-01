@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-01T05:38:35+00:00",
+ "generated_at": "2026-10-01T06:34:31+00:00",
  "datasets": [
   {
    "key": "senate",
@@ -7,7 +7,7 @@
    "source": "Senate of the Philippines",
    "source_url": "https://senate.gov.ph/senators/20-congress-senators",
    "count": 24,
-   "scraped_at": "2026-09-30T13:24:23+00:00",
+   "scraped_at": "2026-10-01T06:33:36+00:00",
    "source_type": "official"
   },
   {
@@ -17,7 +17,7 @@
    "source_url": "https://github.com/bettergovph/open-congress-data",
    "source_type": "public",
    "count": 1330,
-   "scraped_at": "2026-09-30T22:33:59+00:00",
+   "scraped_at": "2026-10-01T06:34:06+00:00",
    "as_of": "2025-10-16"
   },
   {
@@ -46,6 +46,15 @@
    "count": 3370,
    "scraped_at": "2026-10-01T05:34:39+00:00",
    "source_type": "official"
+  },
+  {
+   "key": "executive",
+   "file": "executive.json",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/",
+   "count": 2,
+   "scraped_at": "2026-10-01T06:34:31+00:00",
+   "source_type": "public"
   }
  ]
 }

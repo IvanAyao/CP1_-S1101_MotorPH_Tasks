@@ -1,7 +1,7 @@
 {
  "dataset": "senate",
  "source_url": "https://senate.gov.ph/senators/20-congress-senators",
- "scraped_at": "2026-09-30T13:24:23+00:00",
+ "scraped_at": "2026-10-01T06:33:36+00:00",
  "count": 24,
  "records": [
   {
@@ -847,9 +847,6 @@
      "law": 34
     }
    ],
-   "bills_all": 712,
-   "law_all": 113,
-   "bills_file": "bills/senate-nationwide-win-gatchalian.json",
    "bill_sectors": {
     "term": {
      "governance": [
@@ -1002,7 +999,10 @@
       1
      ]
     }
-   }
+   },
+   "bills_all": 712,
+   "law_all": 113,
+   "bills_file": "bills/senate-nationwide-win-gatchalian.json"
   },
   {
    "id": "senate-nationwide-vicente-c-sotto-iii",
@@ -1211,9 +1211,6 @@
      "law": 5
     }
    ],
-   "bills_all": 291,
-   "law_all": 55,
-   "bills_file": "bills/senate-nationwide-vicente-c-sotto-iii.json",
    "bill_sectors": {
     "term": {
      "justice": [
@@ -1338,7 +1335,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 291,
+   "law_all": 55,
+   "bills_file": "bills/senate-nationwide-vicente-c-sotto-iii.json"
   },
   {
    "id": "senate-nationwide-juan-miguel-f-zubiri",
@@ -1753,9 +1753,6 @@
      "law": 37
     }
    ],
-   "bills_all": 708,
-   "law_all": 151,
-   "bills_file": "bills/senate-nationwide-juan-miguel-f-zubiri.json",
    "bill_sectors": {
     "term": {
      "governance": [
@@ -1912,7 +1909,10 @@
       2
      ]
     }
-   }
+   },
+   "bills_all": 708,
+   "law_all": 151,
+   "bills_file": "bills/senate-nationwide-juan-miguel-f-zubiri.json"
   },
   {
    "id": "senate-nationwide-alan-peter-s-cayetano",
@@ -2224,9 +2224,6 @@
      "law": 6
     }
    ],
-   "bills_all": 157,
-   "law_all": 22,
-   "bills_file": "bills/senate-nationwide-alan-peter-s-cayetano.json",
    "bill_sectors": {
     "term": {
      "economy": [
@@ -2353,7 +2350,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 157,
+   "law_all": 22,
+   "bills_file": "bills/senate-nationwide-alan-peter-s-cayetano.json"
   },
   {
    "id": "senate-nationwide-paolo-benigno-bam-aquino-iv",
@@ -2722,9 +2722,6 @@
      "law": 18
     }
    ],
-   "bills_all": 329,
-   "law_all": 42,
-   "bills_file": "bills/senate-nationwide-paolo-benigno-bam-aquino-iv.json",
    "bill_sectors": {
     "term": {
      "science": [
@@ -2860,7 +2857,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 329,
+   "law_all": 42,
+   "bills_file": "bills/senate-nationwide-paolo-benigno-bam-aquino-iv.json"
   },
   {
    "id": "senate-nationwide-pia-s-cayetano",
@@ -3236,9 +3236,6 @@
      "law": 4
     }
    ],
-   "bills_all": 509,
-   "law_all": 88,
-   "bills_file": "bills/senate-nationwide-pia-s-cayetano.json",
    "bill_sectors": {
     "term": {
      "science": [
@@ -3374,7 +3371,10 @@
       2
      ]
     }
-   }
+   },
+   "bills_all": 509,
+   "law_all": 88,
+   "bills_file": "bills/senate-nationwide-pia-s-cayetano.json"
   },
   {
    "id": "senate-nationwide-ronald-bato-m-dela-rosa",
@@ -3662,9 +3662,6 @@
      "law": 26
     }
    ],
-   "bills_all": 248,
-   "law_all": 57,
-   "bills_file": "bills/senate-nationwide-ronald-bato-m-dela-rosa.json",
    "bill_sectors": {
     "term": {
      "governance": [
@@ -3792,7 +3789,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 248,
+   "law_all": 57,
+   "bills_file": "bills/senate-nationwide-ronald-bato-m-dela-rosa.json"
   },
   {
    "id": "senate-nationwide-joseph-victor-jv-g-ejercito",
@@ -4261,9 +4261,6 @@
      "law": 16
     }
    ],
-   "bills_all": 604,
-   "law_all": 70,
-   "bills_file": "bills/senate-nationwide-joseph-victor-jv-g-ejercito.json",
    "bill_sectors": {
     "term": {
      "environment": [
@@ -4420,7 +4417,10 @@
       2
      ]
     }
-   }
+   },
+   "bills_all": 604,
+   "law_all": 70,
+   "bills_file": "bills/senate-nationwide-joseph-victor-jv-g-ejercito.json"
   },
   {
    "id": "senate-nationwide-francis-chiz-g-escudero",
@@ -4961,9 +4961,6 @@
      "law": 23
     }
    ],
-   "bills_all": 1037,
-   "law_all": 117,
-   "bills_file": "bills/senate-nationwide-francis-chiz-g-escudero.json",
    "bill_sectors": {
     "term": {
      "energy": [
@@ -5116,7 +5113,10 @@
       1
      ]
     }
-   }
+   },
+   "bills_all": 1037,
+   "law_all": 117,
+   "bills_file": "bills/senate-nationwide-francis-chiz-g-escudero.json"
   },
   {
    "id": "senate-nationwide-jinggoy-ejercito-estrada",
@@ -7876,9 +7876,6 @@
      "law": 6
     }
    ],
-   "bills_all": 2685,
-   "law_all": 99,
-   "bills_file": "bills/senate-nationwide-jinggoy-ejercito-estrada.json",
    "bill_sectors": {
     "term": {
      "justice": [
@@ -8051,7 +8048,10 @@
       1
      ]
     }
-   }
+   },
+   "bills_all": 2685,
+   "law_all": 99,
+   "bills_file": "bills/senate-nationwide-jinggoy-ejercito-estrada.json"
   },
   {
    "id": "senate-nationwide-christopher-lawrence-t-go",
@@ -8608,9 +8608,6 @@
      "law": 31
     }
    ],
-   "bills_all": 310,
-   "law_all": 60,
-   "bills_file": "bills/senate-nationwide-christopher-lawrence-t-go.json",
    "bill_sectors": {
     "term": {
      "justice": [
@@ -8758,7 +8755,10 @@
       7
      ]
     }
-   }
+   },
+   "bills_all": 310,
+   "law_all": 60,
+   "bills_file": "bills/senate-nationwide-christopher-lawrence-t-go.json"
   },
   {
    "id": "senate-nationwide-risa-hontiveros",
@@ -9273,9 +9273,6 @@
      "law": 18
     }
    ],
-   "bills_all": 417,
-   "law_all": 59,
-   "bills_file": "bills/senate-nationwide-risa-hontiveros.json",
    "bill_sectors": {
     "term": {
      "health": [
@@ -9432,7 +9429,10 @@
       1
      ]
     }
-   }
+   },
+   "bills_all": 417,
+   "law_all": 59,
+   "bills_file": "bills/senate-nationwide-risa-hontiveros.json"
   },
   {
    "id": "senate-nationwide-panfilo-ping-m-lacson",
@@ -9741,9 +9741,6 @@
      "law": 4
     }
    ],
-   "bills_all": 332,
-   "law_all": 50,
-   "bills_file": "bills/senate-nationwide-panfilo-ping-m-lacson.json",
    "bill_sectors": {
     "term": {
      "local_gov": [
@@ -9888,7 +9885,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 332,
+   "law_all": 50,
+   "bills_file": "bills/senate-nationwide-panfilo-ping-m-lacson.json"
   },
   {
    "id": "senate-nationwide-manuel-lito-m-lapid",
@@ -10532,9 +10532,6 @@
      "law": 1
     }
    ],
-   "bills_all": 977,
-   "law_all": 91,
-   "bills_file": "bills/senate-nationwide-manuel-lito-m-lapid.json",
    "bill_sectors": {
     "term": {
      "environment": [
@@ -10695,7 +10692,10 @@
       2
      ]
     }
-   }
+   },
+   "bills_all": 977,
+   "law_all": 91,
+   "bills_file": "bills/senate-nationwide-manuel-lito-m-lapid.json"
   },
   {
    "id": "senate-nationwide-loren-legarda",
@@ -11785,9 +11785,6 @@
      "law": 31
     }
    ],
-   "bills_all": 1193,
-   "law_all": 137,
-   "bills_file": "bills/senate-nationwide-loren-legarda.json",
    "bill_sectors": {
     "term": {
      "agriculture": [
@@ -11956,7 +11953,10 @@
       2
      ]
     }
-   }
+   },
+   "bills_all": 1193,
+   "law_all": 137,
+   "bills_file": "bills/senate-nationwide-loren-legarda.json"
   },
   {
    "id": "senate-nationwide-rodante-d-marcoleta",
@@ -12189,9 +12189,6 @@
      "law": 0
     }
    ],
-   "bills_all": 20,
-   "law_all": 0,
-   "bills_file": "bills/senate-nationwide-rodante-d-marcoleta.json",
    "bill_sectors": {
     "term": {
      "energy": [
@@ -12296,7 +12293,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 20,
+   "law_all": 0,
+   "bills_file": "bills/senate-nationwide-rodante-d-marcoleta.json"
   },
   {
    "id": "senate-nationwide-imee-r-marcos",
@@ -12992,9 +12992,6 @@
      "law": 30
     }
    ],
-   "bills_all": 867,
-   "law_all": 56,
-   "bills_file": "bills/senate-nationwide-imee-r-marcos.json",
    "bill_sectors": {
     "term": {
      "health": [
@@ -13155,7 +13152,10 @@
       1
      ]
     }
-   }
+   },
+   "bills_all": 867,
+   "law_all": 56,
+   "bills_file": "bills/senate-nationwide-imee-r-marcos.json"
   },
   {
    "id": "senate-nationwide-robinhood-c-padilla",
@@ -13624,9 +13624,6 @@
      "law": 21
     }
    ],
-   "bills_all": 170,
-   "law_all": 21,
-   "bills_file": "bills/senate-nationwide-robinhood-c-padilla.json",
    "bill_sectors": {
     "term": {
      "education": [
@@ -13752,7 +13749,10 @@
       1
      ]
     }
-   }
+   },
+   "bills_all": 170,
+   "law_all": 21,
+   "bills_file": "bills/senate-nationwide-robinhood-c-padilla.json"
   },
   {
    "id": "senate-nationwide-francis-kiko-pangilinan",
@@ -14227,9 +14227,6 @@
      "law": 6
     }
    ],
-   "bills_all": 337,
-   "law_all": 53,
-   "bills_file": "bills/senate-nationwide-francis-kiko-pangilinan.json",
    "bill_sectors": {
     "term": {
      "agriculture": [
@@ -14377,7 +14374,10 @@
       1
      ]
     }
-   }
+   },
+   "bills_all": 337,
+   "law_all": 53,
+   "bills_file": "bills/senate-nationwide-francis-kiko-pangilinan.json"
   },
   {
    "id": "senate-nationwide-erwin-t-tulfo",
@@ -14740,9 +14740,6 @@
      "law": 0
     }
    ],
-   "bills_all": 35,
-   "law_all": 0,
-   "bills_file": "bills/senate-nationwide-erwin-t-tulfo.json",
    "bill_sectors": {
     "term": {
      "labor": [
@@ -14847,7 +14844,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 35,
+   "law_all": 0,
+   "bills_file": "bills/senate-nationwide-erwin-t-tulfo.json"
   },
   {
    "id": "senate-nationwide-raffy-t-tulfo",
@@ -15306,9 +15306,6 @@
      "law": 23
     }
    ],
-   "bills_all": 239,
-   "law_all": 23,
-   "bills_file": "bills/senate-nationwide-raffy-t-tulfo.json",
    "bill_sectors": {
     "term": {
      "health": [
@@ -15469,7 +15466,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 239,
+   "law_all": 23,
+   "bills_file": "bills/senate-nationwide-raffy-t-tulfo.json"
   },
   {
    "id": "senate-nationwide-joel-villanueva",
@@ -16164,9 +16164,6 @@
      "law": 35
     }
    ],
-   "bills_all": 823,
-   "law_all": 149,
-   "bills_file": "bills/senate-nationwide-joel-villanueva.json",
    "bill_sectors": {
     "term": {
      "culture_sports": [
@@ -16327,7 +16324,10 @@
       3
      ]
     }
-   }
+   },
+   "bills_all": 823,
+   "law_all": 149,
+   "bills_file": "bills/senate-nationwide-joel-villanueva.json"
   },
   {
    "id": "senate-nationwide-camille-a-villar",
@@ -16700,9 +16700,6 @@
      "law": 0
     }
    ],
-   "bills_all": 36,
-   "law_all": 0,
-   "bills_file": "bills/senate-nationwide-camille-a-villar.json",
    "bill_sectors": {
     "term": {
      "environment": [
@@ -16825,7 +16822,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 36,
+   "law_all": 0,
+   "bills_file": "bills/senate-nationwide-camille-a-villar.json"
   },
   {
    "id": "senate-nationwide-mark-a-villar",
@@ -17460,9 +17460,6 @@
      "law": 24
     }
    ],
-   "bills_all": 274,
-   "law_all": 24,
-   "bills_file": "bills/senate-nationwide-mark-a-villar.json",
    "bill_sectors": {
     "term": {
      "health": [
@@ -17627,7 +17624,10 @@
       0
      ]
     }
-   }
+   },
+   "bills_all": 274,
+   "law_all": 24,
+   "bills_file": "bills/senate-nationwide-mark-a-villar.json"
   }
  ],
  "bills_source": {
@@ -17696,6 +17696,6 @@
   "as_of": "2025-10-16",
   "bill_count": 1330,
   "bill_count_all": 22006,
-  "imported_at": "2026-09-30T22:33:59+00:00"
+  "imported_at": "2026-10-01T06:34:06+00:00"
  }
 }

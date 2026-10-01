@@ -1,0 +1,135 @@
+{
+ "dataset": "executive",
+ "source_url": "https://www.wikidata.org/",
+ "scraped_at": "2026-10-01T06:34:31+00:00",
+ "count": 2,
+ "method": "public",
+ "source_label": "Wikidata (public, CC0)",
+ "fetched_at": "2026-10-01T06:34:31+00:00",
+ "records": [
+  {
+   "id": "vice-president-nationwide-sara-duterte",
+   "name": "Sara Duterte",
+   "position": "Vice President of the Philippines",
+   "level": "vice_president",
+   "party": "Hugpong sa Tawong Lungsod",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/VPSD%20Official%20Photo%20%28cropped%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Sara_Duterte",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q1491004",
+   "details": {
+    "took_office": "2022-06-30",
+    "term": "2022–2028",
+    "born": "1978-05-31",
+    "prior_experience": "deputy mayor (2007–2010); Mayor of Davao City (2010–2013); Mayor of Davao City (2016–2022); Secretary of Education (2022–2024)"
+   },
+   "source_type": "public",
+   "career": [
+    {
+     "title": "deputy mayor",
+     "place": "",
+     "start": "2007-01-01",
+     "end": "2010-01-01"
+    },
+    {
+     "title": "Mayor of Davao City",
+     "place": "",
+     "start": "2010-06-30",
+     "end": "2013-06-30"
+    },
+    {
+     "title": "Mayor of Davao City",
+     "place": "",
+     "start": "2016-06-30",
+     "end": "2022-06-30"
+    },
+    {
+     "title": "Secretary of Education",
+     "place": "",
+     "start": "2022-06-30",
+     "end": "2024-06-19"
+    },
+    {
+     "title": "Vice President of the Philippines",
+     "place": "",
+     "start": "2022-06-30",
+     "end": ""
+    }
+   ],
+   "successive_terms": 1
+  },
+  {
+   "id": "president-nationwide-bongbong-marcos",
+   "name": "Bongbong Marcos",
+   "position": "President of the Philippines",
+   "level": "president",
+   "party": "Partido Federal ng Pilipinas",
+   "district": "Nationwide",
+   "region": "",
+   "province": "",
+   "lgu": "",
+   "barangay": "",
+   "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20President%20Ferdinand%20R.%20Marcos%2C%20Jr%20%28cropped%29.jpg?width=300",
+   "profile_url": "https://en.wikipedia.org/wiki/Bongbong_Marcos",
+   "contact": "",
+   "source": "Wikidata (public, CC0)",
+   "source_url": "https://www.wikidata.org/wiki/Q983324",
+   "details": {
+    "took_office": "2022-06-30",
+    "term": "2022–2028",
+    "born": "1957-09-13",
+    "prior_experience": "member of the House of Representatives, Ilocos Norte's 2nd congressional district (1992–1995); Governor of Ilocos Norte (1998–2007); member of the House of Representatives, Ilocos Norte's 2nd congressional district (2007–2010); Member of the Senate of the Philippines (2010–2016); Secretary of Agriculture (2022–2023)"
+   },
+   "source_type": "public",
+   "career": [
+    {
+     "title": "member of the House of Representatives",
+     "place": "Ilocos Norte's 2nd congressional district",
+     "start": "1992-06-30",
+     "end": "1995-06-30"
+    },
+    {
+     "title": "Governor of Ilocos Norte",
+     "place": "",
+     "start": "1998-06-30",
+     "end": "2007-06-30"
+    },
+    {
+     "title": "member of the House of Representatives",
+     "place": "Ilocos Norte's 2nd congressional district",
+     "start": "2007-06-30",
+     "end": "2010-06-30"
+    },
+    {
+     "title": "Member of the Senate of the Philippines",
+     "place": "",
+     "start": "2010-06-30",
+     "end": "2016-06-30"
+    },
+    {
+     "title": "President of the Philippines",
+     "place": "",
+     "start": "2022-06-30",
+     "end": ""
+    },
+    {
+     "title": "Secretary of Agriculture",
+     "place": "",
+     "start": "2022-06-30",
+     "end": "2023-11-03"
+    }
+   ],
+   "successive_terms": 1,
+   "laws_signed": 316,
+   "laws_lapsed": 73,
+   "laws_from": "2022-06-30",
+   "laws_as_of": "2025-10-16"
+  }
+ ]
+}
