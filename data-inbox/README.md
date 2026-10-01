@@ -10,7 +10,7 @@ app's data and redeploys the site.
 |---|---|
 | `house/` | https://www.congress.gov.ph/house-members (every page of the list) |
 | `lgu/` | https://rssoncr.psa.gov.ph/lgu-directory |
-| `barangay/` | https://www.dilg.gov.ph/barangay-officials-directory |
+| `barangay/` | DILG's barangay officials spreadsheet (`.xlsx`) — the public master list at https://www.dilg.gov.ph/barangay-officials-directory/masterlist (opens from a Philippine connection) — or saved pages of https://www.dilg.gov.ph/barangay-officials-directory. Spreadsheets keep the barangay council: punong barangay, kagawads and SK chairperson. |
 | `dilg/` | DILG *Directory of LGU Elective Officials for Term 2025–2028* spreadsheet (`.xlsx`), from the [FOI release](https://www.foi.gov.ph/agencies/dilg/list-of-elected-government-official-for-the-term-2025-2028-by-province/) or requested from DILG. Its Drive file doesn't allow automated download, so a copy has to be obtained properly and uploaded here. |
 | `senate/` | Not needed: the Senate site is scraped automatically |
 

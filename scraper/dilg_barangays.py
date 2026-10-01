@@ -32,7 +32,36 @@ PAGES = {
     "https://www.riseaurora.region3.dilg.gov.ph/lgus/lgus": "Region III (Central Luzon)",
 }
 DRIVE_FILE = re.compile(r"drive\.google\.com/(?:file/d/|open\?id=)([A-Za-z0-9_-]{25,})")
-BARANGAY_LEVELS = {"punong_barangay", "kagawad", "sk_chair", "sk_kagawad", "barangay_secretary", "barangay_treasurer"}
+# The barangay council (Sangguniang Barangay): the punong barangay, seven
+# kagawads and the SK chairperson. SK members and the appointed secretary
+# and treasurer are left out to keep ~42,000 barangays manageable.
+BARANGAY_LEVELS = {"punong_barangay", "kagawad", "sk_chair"}
+ROMAN = {"1": "I", "2": "II", "3": "III", "4": "IV", "5": "V", "6": "VI", "7": "VII", "8": "VIII",
+         "9": "IX", "10": "X", "11": "XI", "12": "XII", "13": "XIII"}
+REGION_NAMES = {
+    "NCR": "NCR (Metro Manila)", "CAR": "CAR (Cordillera)", "I": "Region I (Ilocos Region)",
+    "II": "Region II (Cagayan Valley)", "III": "Region III (Central Luzon)", "IVA": "Region IV-A (CALABARZON)",
+    "IVB": "MIMAROPA Region", "V": "Region V (Bicol Region)", "VI": "Region VI (Western Visayas)",
+    "NIR": "Negros Island Region (NIR)", "VII": "Region VII (Central Visayas)", "VIII": "Region VIII (Eastern Visayas)",
+    "IX": "Region IX (Zamboanga Peninsula)", "X": "Region X (Northern Mindanao)", "XI": "Region XI (Davao Region)",
+    "XII": "Region XII (SOCCSKSARGEN)", "XIII": "Region XIII (Caraga)", "BARMM": "BARMM (Bangsamoro)",
+}
+
+
+def region_name(text: str) -> str:
+    """'REGION 3', 'Region III', 'REGION IV-A', 'MIMAROPA' -> the app's region names."""
+    t = re.sub(r"[\s-]+", "", (text or "").upper()).replace("REGION", "")
+    t = re.sub(r"\(.*", "", t)
+    if t in {"MIMAROPA", "IVB"}:
+        t = "IVB"
+    elif t in {"CALABARZON", "IVA", "4A"}:
+        t = "IVA"
+    elif t in {"ARMM", "BARMM", "BANGSAMORO"}:
+        t = "BARMM"
+    elif t in {"CARAGA"}:
+        t = "XIII"
+    t = ROMAN.get(t, t)
+    return REGION_NAMES.get(t, text)
 MIN_PER_PAGE = 100  # a region has hundreds of barangays
 
 
@@ -40,16 +69,20 @@ def source_label(region: str) -> str:
     return f"DILG {region} – Barangay Officials (2023 term)"
 
 
-def parse(data: bytes, region: str, url: str, sheet_id: str) -> list[dict]:
-    found = dilg_lgu.parse(data, source=source_label(region), source_url=url, defaults={"region": region})
+def parse(data: bytes, region: str | None, url: str, sheet_id: str = "", *, source: str | None = None) -> list[dict]:
+    """Barangay council members from a DILG sheet. With no `region`, each
+    row's own region column is used (e.g. DILG's national file)."""
+    found = dilg_lgu.parse(data, source=source or source_label(region or "national"), source_url=url,
+                           defaults={"region": region or ""})
     out = []
     for o in found:
-        if not o["barangay"] or (o["level"] not in BARANGAY_LEVELS and not o["position"].startswith("SK ")):
+        if not o["barangay"] or o["level"] not in BARANGAY_LEVELS:
             continue
         o["dataset"] = "barangay"
-        o["region"] = region  # the sheets say "Region 10"; use the app's name
+        o["region"] = region or region_name(o["region"])  # sheets say e.g. "Region 10"
         o["contact"] = ""  # personal numbers and emails aren't needed to compare officials
-        o["details"]["published_via"] = f"https://drive.google.com/open?id={sheet_id}"
+        if sheet_id:
+            o["details"]["published_via"] = f"https://drive.google.com/open?id={sheet_id}"
         o["details"]["term_years"] = "2023–2028"
         out.append(o)
     return out
