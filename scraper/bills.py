@@ -79,8 +79,9 @@ def fetch(dest: Path) -> tuple[Path, str]:
     """Sparse, shallow clone of the Senate bills, people and Congress years."""
     subprocess.run(["git", "clone", "--quiet", "--depth", "1", "--filter=blob:none", "--sparse", REPO, str(dest)],
                    check=True, timeout=600)
+    house = [f"data/document/hb/{c}" for c in range(FIRST_CONGRESS, CONGRESS + 1)]
     subprocess.run(["git", "-C", str(dest), "sparse-checkout", "set",
-                    "data/document/sb", "data/person", "data/congress"], check=True, timeout=900)
+                    "data/document/sb", *house, "data/person", "data/congress"], check=True, timeout=1500)
     as_of = subprocess.run(["git", "-C", str(dest), "log", "-1", "--format=%cs"],
                            check=True, capture_output=True, text=True).stdout.strip()
     return dest / "data", as_of
@@ -177,6 +178,65 @@ def match_codes(senator: dict, names: dict[str, tuple[str, str]]) -> list[str]:
     hits = [code for code, (last, first) in names.items()
             if norm(last) <= words and (norm(first) & words)]
     return hits[:1] if len(hits) == 1 else []
+
+
+# Only "... became Republic Act No. N" — histories also cite laws being amended.
+RA_NO = re.compile(r"\bbecame\s+REPUBLIC\s+ACT\s+NO\.?\s*(\d{4,5})", re.I)
+ON_DATE = re.compile(r"(?:\bon\s+([A-Z]+\s+\d{1,2},\s+\d{4})\s+and\s+became\s+REPUBLIC|"
+                     r"REPUBLIC\s+ACT\s+NO\.?\s*\d{4,5}\s+ON\s+([A-Z]+\s+\d{1,2},\s+\d{4}))", re.I)
+LAPSED = re.compile(r"lapsed into law|without executive approval", re.I)
+MONTHS = {m: i for i, m in enumerate(["january", "february", "march", "april", "may", "june", "july", "august",
+                                      "september", "october", "november", "december"], 1)}
+
+
+def iso_date(text: str) -> str:
+    m = re.match(r"([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})", text or "")
+    if not m or m.group(1).lower() not in MONTHS:
+        return ""
+    return f"{m.group(3)}-{MONTHS[m.group(1).lower()]:02d}-{int(m.group(2)):02d}"
+
+
+def load_laws(root: Path) -> list[dict]:
+    """Every Republic Act the Senate and House bill histories record since the
+    13th Congress: number, title, date, and whether the President signed it
+    or it lapsed into law (Art. VI Sec. 27(1)). The bill that itself became
+    the law is preferred for the title and date."""
+    laws: dict[str, dict] = {}
+    for chamber in ("sb", "hb"):
+        for folder in sorted((root / "document" / chamber).glob("*")):
+            for path in folder.glob("*.toml"):
+                doc = tomllib.loads(path.read_text(encoding="utf-8"))
+                acts = [clean(h.get("action")) for h in doc.get("history") or []]
+                text = " ".join(acts)
+                numbers = RA_NO.findall(text)
+                if not numbers:
+                    continue
+                meta = doc.get("meta", {})
+                status = (doc.get("status") or [{}])[-1]
+                direct = bool(re.search(r"approved by the president|lapsed into law", status.get("status", ""), re.I))
+                ra = numbers[-1]
+                m = ON_DATE.search(text)
+                date = (clean(status.get("date")) if direct else "") or (iso_date(m.group(1) or m.group(2)) if m else "")
+                entry = {
+                    "ra": ra, "date": date, "lapsed": bool(LAPSED.search(text)),
+                    "title": clean(meta.get("title") or meta.get("long_title")),
+                    "bill": clean(doc.get("name")), "congress": int(meta.get("congress") or 0),
+                    "url": clean(meta.get("senate_website_permalink") or meta.get("congress_website_permalink")),
+                    "direct": direct,
+                }
+                old = laws.get(ra)
+                if not old or (direct and not old["direct"]) or (not old["date"] and entry["date"]):
+                    laws[ra] = entry
+    return sorted(laws.values(), key=lambda l: (l["date"], int(l["ra"])))
+
+
+def write_laws(laws: list[dict], as_of: str) -> None:
+    (common.DATA_DIR / "laws.json").write_text(json.dumps({
+        "source": SOURCE, "source_url": REPO, "source_type": "public", "as_of": as_of,
+        "note": "Republic Acts recorded in Senate and House bill histories since the 13th Congress.",
+        "count": len(laws), "laws": [{k: v for k, v in l.items() if k != "direct"} for l in laws],
+    }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    log(f"laws: {len(laws)} Republic Acts (as of {as_of})")
 
 
 def ordinal(n: int) -> str:
@@ -304,6 +364,7 @@ def run_from(root: Path, as_of: str) -> None:
     if sum(b["congress"] == CONGRESS for b in bills) < 100:
         raise SystemExit(f"bills: only {len(bills)} bills found; keeping previous data")
     attach(bills, as_of, load_people(root / "person"), load_congresses(root / "congress"))
+    write_laws(load_laws(root), as_of)
 
 
 def main() -> None:
