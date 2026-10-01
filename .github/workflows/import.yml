@@ -42,7 +42,12 @@ jobs:
             echo "No data changes."
           else
             git commit -m "data: import saved copies ($(date -u +%F))"
-            git pull --rebase origin "${GITHUB_REF_NAME}"
+            # Another data job may have pushed meanwhile: on conflicts keep
+            # this run's fresh data, then rebuild the manifest from all files.
+            git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+            (cd scraper && python -c "import run_all; run_all.build_manifest()")
+            git add app/data/manifest.json
+            git diff --cached --quiet || git commit -m "data: rebuild manifest"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
 
