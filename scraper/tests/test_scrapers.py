@@ -679,3 +679,44 @@ def test_executive_from_wikidata(isolated_output):
     two = executive.career([{"posLabel": "Vice President of the Philippines", "start": "2016-06-30", "end": "2022-06-30"},
                             {"posLabel": "Vice President of the Philippines", "start": "2022-06-30"}])
     assert executive.successive_terms(two, "Vice President of the Philippines") == 2
+
+
+def test_sona_transcripts(isolated_output):
+    import sona
+
+    data = isolated_output / "data"
+    data.mkdir(parents=True, exist_ok=True)
+    (data / "executive.json").write_text(json.dumps({"records": [
+        {"id": "president-nationwide-juan-cruz", "name": "Juan Cruz", "level": "president",
+         "terms": [{"start": "2022-06-30", "end": ""}]},
+        {"id": "president-nationwide-old", "name": "Old", "level": "president",
+         "terms": [{"start": "2016-06-30", "end": "2022-06-30"}]}]}))
+    filler = "<p>" + "Our nation stands united in purpose and in hope for every Filipino family. " * 30 + "</p>"
+    speech = (filler + "<p>Since last year, we have built 5,120 new classrooms across the country. "
+              "We will build 10,000 more classrooms by 2028. "
+              "Inflation fell to 3.1 percent in June. "
+              "Naipamahagi na ang 1.2 milyong titulo ng lupa sa ating mga magsasaka. "
+              "We have 7,641 islands.</p>")
+    html = f"<html><head><title>SONA</title></head><body><nav>Home</nav><article>{speech}</article></body></html>"
+    inbox = isolated_output / "inbox"
+    inbox.mkdir()
+    mhtml = ("From: <Saved by Blink>\r\nSnapshot-Content-Location: https://www.officialgazette.gov.ph/2024/07/22/sona/\r\n"
+             "MIME-Version: 1.0\r\nContent-Type: multipart/related; boundary=\"B\"\r\n\r\n--B\r\n"
+             "Content-Type: text/html; charset=utf-8\r\n\r\n" + html + "\r\n--B--\r\n")
+    (inbox / "2024-07-22.mhtml").write_text(mhtml)
+    (inbox / "sona-2018.html").write_text(html.replace("<title>SONA</title>", "<title>July 23, 2018</title>")
+                                          .replace("<article>", "<article><p>Delivered on July 23, 2018 at Batasang Pambansa.</p>"))
+    (inbox / "1999-07-26.txt").write_text(speech)  # no President on record for this date: skipped
+    doc = sona.run(inbox)
+    assert [(s["date"], s["president"], s["source_type"]) for s in doc["speeches"]] == [
+        ("2018-07-23", "Old", "unknown"), ("2024-07-22", "Juan Cruz", "official")]
+    new = doc["speeches"][1]
+    assert new["source_url"].startswith("https://www.officialgazette.gov.ph/")
+    got = {h["text"]: h["sector"] for h in new["highlights"]}
+    assert got == {
+        "Since last year, we have built 5,120 new classrooms across the country.": "education",
+        "Inflation fell to 3.1 percent in June.": "economy",
+        "Naipamahagi na ang 1.2 milyong titulo ng lupa sa ating mga magsasaka.": "agriculture",
+    }
+    assert len(doc["speeches"][0]["highlights"]) == 3
+    assert json.loads((data / "sona.json").read_text())["count"] == 2

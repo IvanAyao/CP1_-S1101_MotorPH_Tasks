@@ -13,6 +13,7 @@ app's data and redeploys the site.
 | `barangay/` | DILG's barangay officials spreadsheet (`.xlsx`) — the public master list at https://www.dilg.gov.ph/barangay-officials-directory/masterlist (opens from a Philippine connection) — or saved pages of https://www.dilg.gov.ph/barangay-officials-directory. Spreadsheets keep the barangay council: punong barangay, kagawads and SK chairperson. |
 | `dilg/` | DILG *Directory of LGU Elective Officials for Term 2025–2028* spreadsheet (`.xlsx`), from the [FOI release](https://www.foi.gov.ph/agencies/dilg/list-of-elected-government-official-for-the-term-2025-2028-by-province/) or requested from DILG. Its Drive file doesn't allow automated download, so a copy has to be obtained properly and uploaded here. |
 | `senate/` | Not needed: the Senate site is scraped automatically |
+| `sona/` | Official State of the Nation Address transcripts from the [Official Gazette](https://www.officialgazette.gov.ph/past-sona-speeches/) or the [PCO](https://pco.gov.ph/). Save the speech page (`.mhtml` keeps its address) or the official PDF, named by the date it was delivered, e.g. `2024-07-22.mhtml` or `2024-07-22.pdf`. For a PDF, add `2024-07-22.url` containing the page address so the app can link it and mark it official. |
 
 ## How to save a page
 
