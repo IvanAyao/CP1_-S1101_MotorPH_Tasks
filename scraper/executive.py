@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import urllib.parse
 import urllib.request
 
@@ -178,7 +179,8 @@ def build(holders: list[dict], positions: dict[str, list[dict]], people: dict[st
         level, label = OFFICES[office]
         terms = sorted({((r.get("start") or "")[:10], (r.get("end") or "")[:10], clean(r.get("ordinal"))) for r in rows})
         terms = [{"start": a, "end": b, "ordinal": o} for a, b, o in terms if a]
-        if not terms:
+        name = clean(rows[0].get("personLabel"))
+        if not terms or re.fullmatch(r"Q\d+", name):  # no start date, or no English label
             continue
         current = not terms[-1]["end"] and not rows[0].get("died")
         items = career(positions.get(q, []))
@@ -187,7 +189,7 @@ def build(holders: list[dict], positions: dict[str, list[dict]], people: dict[st
         span = f"{year(first['start'])}–{year(last['end']) if last['end'] else (int(year(last['start'])) + 6 if current else '')}"
         prior = [i for i in items if i["title"] != office]
         rec = record(
-            name=clean(rows[0].get("personLabel")), position=label, level=level,
+            name=name, position=label, level=level,
             source=SOURCE, source_url=f"https://www.wikidata.org/wiki/{q}",
             party=clean(info.get("partyLabel")), district="Nationwide",
             photo=f"{info['image']}?width=300" if info.get("image") else "",
