@@ -18,6 +18,7 @@ import bills
 import dilg_lgu
 import dilg_barangays
 import dilg_regions
+import executive
 import openhalalan
 import house
 import lgu
@@ -29,6 +30,7 @@ DATASETS = {
     "house": ("house.json", house.URL, "House of Representatives"),
     "lgu": ("lgu.json", lgu.URL, lgu.SOURCE),
     "barangay": ("barangay/index.json", barangay.URL, barangay.SOURCE),
+    "executive": ("executive.json", executive.URL, executive.SOURCE),
 }
 
 
@@ -121,6 +123,14 @@ def main() -> None:
                 log(f"bills FAILED: {err}")
                 traceback.print_exc()
                 failures.append("bills")
+        # President and Vice President (public Wikidata), after the laws file.
+        if "executive" in wanted:
+            try:
+                executive.run()
+            except (Exception, SystemExit) as err:  # noqa: BLE001
+                log(f"executive FAILED: {err}")
+                traceback.print_exc()
+                failures.append("executive")
         # Where official sites block us, fill gaps from Wikipedia (labelled
         # unofficial). Official records are never replaced.
         fallback = [k for k, want in (("house", "house"), ("governors", "lgu"), ("mayors", "lgu")) if want in wanted]

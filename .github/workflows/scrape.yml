@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: "Datasets to scrape (space separated: senate house lgu barangay). Empty = all."
+        description: "Datasets to scrape (space separated: senate house lgu barangay executive). Empty = all."
         required: false
         default: ""
 
@@ -44,7 +44,7 @@ jobs:
           elif [ "${{ github.event.schedule }}" = "43 16 * * *" ]; then
             echo "only=barangay" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event.schedule }}" = "17 18 * * 0" ]; then
-            echo "only=senate house lgu" >> "$GITHUB_OUTPUT"
+            echo "only=senate house lgu executive" >> "$GITHUB_OUTPUT"
           else
             echo "only=" >> "$GITHUB_OUTPUT"
           fi

@@ -624,3 +624,41 @@ def test_dilg_barangay_sheet(isolated_output):
     barangay.flush(recs)
     index = json.loads((common.DATA_DIR / "barangay" / "index.json").read_text())
     assert index["count"] == 5 and {f["province"] for f in index["files"]} == {"Bukidnon", "Aurora", ""}
+
+
+def test_executive_from_wikidata(isolated_output):
+    import common
+    import executive
+
+    data = isolated_output / "data"
+    data.mkdir(parents=True, exist_ok=True)
+    (data / "laws.json").write_text(json.dumps({"as_of": "2025-10-16", "laws": [
+        {"ra": "11900", "date": "2022-07-25", "lapsed": True},
+        {"ra": "11934", "date": "2022-10-10", "lapsed": False},
+        {"ra": "11800", "date": "2022-05-01", "lapsed": False},  # previous President
+    ]}))
+    holders = [
+        {"officeLabel": "President of the Philippines", "person": "http://www.wikidata.org/entity/Q1",
+         "personLabel": "Juan Cruz", "start": "2022-06-30T00:00:00Z"},
+        {"officeLabel": "Vice President of the Philippines", "person": "http://www.wikidata.org/entity/Q2",
+         "personLabel": "Maria Santos", "start": "2022-06-30T00:00:00Z"},
+    ]
+    positions = {
+        "Q1": [{"posLabel": "Senator of the Philippines", "start": "2010-06-30T00:00:00Z", "end": "2016-06-30T00:00:00Z"},
+               {"posLabel": "President of the Philippines", "start": "2022-06-30T00:00:00Z"},
+               {"posLabel": "Q123456"}],  # unlabelled item: skipped
+        "Q2": [{"posLabel": "Mayor of Davao City", "start": "2016-06-30T00:00:00Z", "end": "2022-06-30T00:00:00Z"},
+               {"posLabel": "Vice President of the Philippines", "start": "2022-06-30T00:00:00Z"}],
+    }
+    people = {"Q1": {"partyLabel": "PFP", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/X.jpg"}, "Q2": {}}
+    recs = {r["level"]: r for r in executive.build(holders, positions, people)}
+    p, vp = recs["president"], recs["vice_president"]
+    assert p["name"] == "Juan Cruz" and p["party"] == "PFP" and p["photo"].endswith("?width=300")
+    assert p["details"]["term"] == "2022–2028" and p["source_type"] == "public"
+    assert p["details"]["prior_experience"] == "Senator of the Philippines (2010–2016)"
+    assert (p["laws_signed"], p["laws_lapsed"]) == (1, 1)
+    assert vp["successive_terms"] == 1 and "laws_signed" not in vp
+    assert [i["title"] for i in p["career"]] == ["Senator of the Philippines", "President of the Philippines"]
+    two = executive.career([{"posLabel": "Vice President of the Philippines", "start": "2016-06-30", "end": "2022-06-30"},
+                            {"posLabel": "Vice President of the Philippines", "start": "2022-06-30"}])
+    assert executive.successive_terms(two, "Vice President of the Philippines") == 2
