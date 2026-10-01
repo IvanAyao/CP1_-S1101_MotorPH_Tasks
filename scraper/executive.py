@@ -1,9 +1,12 @@
-"""The sitting President and Vice President, from Wikidata (public, CC0).
+"""Every President and Vice President of the Philippines, from Wikidata.
 
-Wikidata's "position held" statements give who holds each office now (no
-end date) and every office each of them has held, with start and end
-dates, plus party and photo. It is a public, non-government source and is
-labelled as such; every record links to its Wikidata item.
+Wikidata's "position held" statements (public, CC0) give everyone who has
+held each office, with start and end dates and their order (e.g. 17th
+President), every other office they held, party and photo. The sitting
+holders are those with a term that has no end date. Each person also gets
+the lead summary of their English Wikipedia article (CC BY-SA), labelled
+and linked, describing their career and time in office. Both are public,
+non-government sources and are labelled as such.
 
 For the President, the laws of the term come from app/data/laws.json (built
 by bills.py from Senate and House bill histories): Republic Acts dated from
@@ -34,14 +37,15 @@ OFFICES = {
 USER_AGENT = "pili-ph-data/1.0 (https://github.com/IvanAyao/Pili_App_PH)"
 
 HOLDERS = """
-SELECT ?officeLabel ?person ?personLabel ?start WHERE {
+SELECT ?officeLabel ?person ?personLabel ?start ?end ?ordinal ?died WHERE {
   VALUES ?label { "President of the Philippines"@en "Vice President of the Philippines"@en }
   ?office rdfs:label ?label .
-  ?person p:P39 ?st . ?st ps:P39 ?office ; pq:P580 ?start .
-  FILTER NOT EXISTS { ?st pq:P582 ?end }
-  FILTER NOT EXISTS { ?person wdt:P570 ?died }
+  ?person p:P39 ?st . ?st ps:P39 ?office .
+  OPTIONAL { ?st pq:P580 ?start } OPTIONAL { ?st pq:P582 ?end } OPTIONAL { ?st pq:P1545 ?ordinal }
+  OPTIONAL { ?person wdt:P570 ?died }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }"""
+SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary/"
 
 POSITIONS = """
 SELECT ?posLabel ?start ?end ?districtLabel ?ofLabel WHERE {
@@ -67,6 +71,20 @@ def query(sparql: str) -> list[dict]:
     with urllib.request.urlopen(req, timeout=120) as res:
         data = json.load(res)
     return [{k: v.get("value", "") for k, v in row.items()} for row in data["results"]["bindings"]]
+
+
+def summary(article_url: str) -> str:
+    """Lead summary of the English Wikipedia article (plain text)."""
+    if not article_url:
+        return ""
+    title = article_url.rsplit("/wiki/", 1)[-1]
+    req = urllib.request.Request(SUMMARY + title, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as res:
+            return clean(json.load(res).get("extract", ""))
+    except Exception as err:  # noqa: BLE001 - a missing summary must not stop the rest
+        log(f"executive: no Wikipedia summary for {title}: {err}")
+        return ""
 
 
 def year(iso: str) -> str:
@@ -112,57 +130,91 @@ def successive_terms(items: list[dict], title: str) -> int:
     return n
 
 
-def laws_in_term(start: str) -> dict:
+def load_laws() -> tuple[list[dict], str]:
     path = common.DATA_DIR / "laws.json"
     if not path.exists():
-        return {}
+        return [], ""
     doc = json.loads(path.read_text(encoding="utf-8"))
-    laws = [l for l in doc["laws"] if l.get("date") and l["date"] >= start[:10]]
-    return {"laws_signed": sum(not l["lapsed"] for l in laws), "laws_lapsed": sum(l["lapsed"] for l in laws),
-            "laws_from": start[:10], "laws_as_of": doc.get("as_of", "")}
+    return doc["laws"], doc.get("as_of", "")
 
 
-def build(holders: list[dict], positions: dict[str, list[dict]], people: dict[str, dict]) -> list[dict]:
-    out = []
+def laws_between(laws: list[dict], start: str, end: str, as_of: str) -> dict:
+    """Laws dated within a presidency. Law data starts in 2004 (13th
+    Congress), so earlier terms have none and partly covered terms say so."""
+    if not laws or not start:
+        return {}
+    first = min(l["date"] for l in laws if l.get("date"))
+    if end and end[:10] < first:
+        return {"laws_note": "before_data"}
+    inside = [l for l in laws if l.get("date") and l["date"] >= start[:10] and (not end or l["date"] < end[:10])]
+    out = {"laws_signed": sum(not l["lapsed"] for l in inside), "laws_lapsed": sum(l["lapsed"] for l in inside),
+           "laws_from": max(start[:10], first), "laws_to": (end or "")[:10], "laws_as_of": as_of}
+    if start[:10] < first:
+        out["laws_note"] = "partial"
+    return out
+
+
+def build(holders: list[dict], positions: dict[str, list[dict]], people: dict[str, dict],
+          summaries: dict[str, str] | None = None, laws: list[dict] | None = None, as_of: str = "") -> list[dict]:
+    """One record per person and office, with all their terms in it."""
+    summaries, laws = summaries or {}, laws or []
+    grouped: dict[tuple, list[dict]] = {}
     for h in holders:
         office = clean(h.get("officeLabel"))
-        if office not in OFFICES:
-            continue
+        if office in OFFICES:
+            grouped.setdefault((h["person"].rsplit("/", 1)[-1], office), []).append(h)
+    out = []
+    for (q, office), rows in grouped.items():
         level, label = OFFICES[office]
-        q = h["person"].rsplit("/", 1)[-1]
+        terms = sorted({((r.get("start") or "")[:10], (r.get("end") or "")[:10], clean(r.get("ordinal"))) for r in rows})
+        terms = [{"start": a, "end": b, "ordinal": o} for a, b, o in terms if a]
+        if not terms:
+            continue
+        current = not terms[-1]["end"] and not rows[0].get("died")
         items = career(positions.get(q, []))
         info = people.get(q, {})
-        start = (h.get("start") or "")[:10]
+        first, last = terms[0], terms[-1]
+        span = f"{year(first['start'])}–{year(last['end']) if last['end'] else (int(year(last['start'])) + 6 if current else '')}"
         prior = [i for i in items if i["title"] != office]
         rec = record(
-            name=clean(h.get("personLabel")), position=label, level=level,
+            name=clean(rows[0].get("personLabel")), position=label, level=level,
             source=SOURCE, source_url=f"https://www.wikidata.org/wiki/{q}",
             party=clean(info.get("partyLabel")), district="Nationwide",
             photo=f"{info['image']}?width=300" if info.get("image") else "",
             profile_url=info.get("article", ""),
-            details={"took_office": start, "term": f"{year(start)}–{int(year(start)) + 6}" if year(start) else "",
-                     "born": (info.get("birth") or "")[:10],
+            details={"took_office": first["start"], "term": span, "born": (info.get("birth") or "")[:10],
                      "prior_experience": career_text(prior)},
         )
         rec["source_type"] = "public"
+        rec["current"] = current
+        rec["terms"] = terms
+        rec["ordinal"] = next((t["ordinal"] for t in reversed(terms) if t["ordinal"]), "")
         rec["career"] = items
-        rec["successive_terms"] = successive_terms(items, office)
+        rec["successive_terms"] = successive_terms(items, office) if items else len(terms)
+        if summaries.get(q):
+            rec["summary"] = summaries[q]
+            rec["summary_source"] = info.get("article", "")
         if level == "president":
-            rec.update(laws_in_term(start))
+            rec.update(laws_between(laws, first["start"], last["end"], as_of))
         out.append(rec)
-    return out
+    order = {"president": 0, "vice_president": 1}
+    return sorted(out, key=lambda r: (order[r["level"]], not r["current"], r["details"]["took_office"]), reverse=False)
 
 
 def run() -> list[dict]:
     holders = query(HOLDERS)
-    log(f"executive: holders {[(h.get('officeLabel'), h.get('personLabel'), h.get('start', '')[:10]) for h in holders]}")
-    qs = {h["person"].rsplit("/", 1)[-1] for h in holders}
+    qs = sorted({h["person"].rsplit("/", 1)[-1] for h in holders})
+    log(f"executive: {len(holders)} terms, {len(qs)} people")
     positions = {q: query(POSITIONS % {"q": q}) for q in qs}
     people = {q: (query(PERSON % {"q": q}) or [{}])[0] for q in qs}
-    records = build(holders, positions, people)
-    if {r["level"] for r in records} != {"president", "vice_president"}:
-        raise SystemExit(f"executive: expected a President and a Vice President, got {[r['position'] for r in records]}")
-    write_dataset("executive", records, URL, min_count=2, max_count=2,
+    summaries = {q: summary(people[q].get("article", "")) for q in qs}
+    laws, as_of = load_laws()
+    records = build(holders, positions, people, summaries, laws, as_of)
+    current = [(r["position"], r["name"]) for r in records if r["current"]]
+    log(f"executive: {len(records)} records; current: {current}")
+    if sorted(l for l, _ in current) != sorted(OFFICES[o][1] for o in OFFICES):
+        raise SystemExit(f"executive: expected one sitting President and Vice President, got {current}")
+    write_dataset("executive", records, URL, min_count=20, max_count=80,
                   extra_meta={"method": "public", "source_label": SOURCE, "fetched_at": now_iso()})
     return records
 

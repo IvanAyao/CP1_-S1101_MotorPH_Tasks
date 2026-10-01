@@ -642,6 +642,11 @@ def test_executive_from_wikidata(isolated_output):
          "personLabel": "Juan Cruz", "start": "2022-06-30T00:00:00Z"},
         {"officeLabel": "Vice President of the Philippines", "person": "http://www.wikidata.org/entity/Q2",
          "personLabel": "Maria Santos", "start": "2022-06-30T00:00:00Z"},
+        {"officeLabel": "President of the Philippines", "person": "http://www.wikidata.org/entity/Q3",
+         "personLabel": "Pedro Reyes", "start": "2016-06-30T00:00:00Z", "end": "2022-06-30T00:00:00Z", "ordinal": "16"},
+        {"officeLabel": "President of the Philippines", "person": "http://www.wikidata.org/entity/Q4",
+         "personLabel": "Old Leader", "start": "1961-12-30T00:00:00Z", "end": "1965-12-30T00:00:00Z",
+         "died": "1990-01-01T00:00:00Z"},
     ]
     positions = {
         "Q1": [{"posLabel": "Senator of the Philippines", "start": "2010-06-30T00:00:00Z", "end": "2016-06-30T00:00:00Z"},
@@ -651,7 +656,16 @@ def test_executive_from_wikidata(isolated_output):
                {"posLabel": "Vice President of the Philippines", "start": "2022-06-30T00:00:00Z"}],
     }
     people = {"Q1": {"partyLabel": "PFP", "image": "http://commons.wikimedia.org/wiki/Special:FilePath/X.jpg"}, "Q2": {}}
-    recs = {r["level"]: r for r in executive.build(holders, positions, people)}
+    laws, as_of = executive.load_laws()
+    summaries = {"Q1": "Juan Cruz is a Filipino politician."}
+    built = executive.build(holders, positions, people, summaries, laws, as_of)
+    assert [r["name"] for r in built] == ["Juan Cruz", "Old Leader", "Pedro Reyes", "Maria Santos"]
+    past = {r["name"]: r for r in built if not r["current"]}
+    assert past["Pedro Reyes"]["ordinal"] == "16" and past["Pedro Reyes"]["details"]["term"] == "2016–2022"
+    assert past["Pedro Reyes"]["laws_signed"] == 1 and past["Pedro Reyes"]["laws_note"] == "partial"
+    assert past["Old Leader"]["laws_note"] == "before_data" and "laws_signed" not in past["Old Leader"]
+    recs = {r["level"]: r for r in built if r["current"]}
+    assert recs["president"]["summary"].startswith("Juan Cruz") and "summary" not in recs["vice_president"]
     p, vp = recs["president"], recs["vice_president"]
     assert p["name"] == "Juan Cruz" and p["party"] == "PFP" and p["photo"].endswith("?width=300")
     assert p["details"]["term"] == "2022–2028" and p["source_type"] == "public"

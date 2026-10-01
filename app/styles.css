@@ -450,3 +450,13 @@ details.term { scroll-margin-top: 84px; }
 .career li { position: relative; padding: 6px 0 6px 14px; font-size: 14px; }
 .career li::before { content: ""; position: absolute; left: -6px; top: 12px; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); }
 .career li .meta { display: block; }
+
+/* Presidents and Vice Presidents history */
+.hist-bar { position: sticky; top: 56px; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 10px 0; padding: 8px 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; font-size: 14px; }
+.hist-bar .btn[disabled] { opacity: .5; cursor: not-allowed; }
+.hist-list .hist { display: flex; flex-direction: column; gap: 6px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.hist-list .hist .row { border-bottom: 0; align-items: flex-start; }
+.hist-list .hist .chip { align-self: flex-end; margin-right: 8px; }
+.hist-list .hist.picked { background: color-mix(in srgb, var(--blue) 8%, transparent); }
+.hist-sum { display: block; margin-top: 4px; font-size: 13px; color: var(--muted); line-height: 1.4; }
+.cmp-summary { font-size: 13px; line-height: 1.45; margin: 0; }
