@@ -647,6 +647,8 @@ def test_executive_from_wikidata(isolated_output):
         {"officeLabel": "President of the Philippines", "person": "http://www.wikidata.org/entity/Q4",
          "personLabel": "Old Leader", "start": "1961-12-30T00:00:00Z", "end": "1965-12-30T00:00:00Z",
          "died": "1990-01-01T00:00:00Z"},
+        {"officeLabel": "Vice President of the Philippines", "person": "http://www.wikidata.org/entity/Q9",
+         "personLabel": "Q9", "start": "1897-03-22T00:00:00Z", "end": "1897-11-01T00:00:00Z"},  # unlabelled: skipped
     ]
     positions = {
         "Q1": [{"posLabel": "Senator of the Philippines", "start": "2010-06-30T00:00:00Z", "end": "2016-06-30T00:00:00Z"},
