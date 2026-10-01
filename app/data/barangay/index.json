@@ -1,20 +1,18 @@
 {
  "dataset": "barangay",
  "source_url": "https://www.dilg.gov.ph/barangay-officials-directory",
- "scraped_at": "2026-09-30T23:14:53+00:00",
+ "scraped_at": "2026-09-30T23:21:47+00:00",
  "count": 2019,
  "files": [
   {
-   "file": "barangay/region-10--bukidnon.json",
-   "region": "Region 10",
+   "file": "barangay/region-x-northern-mindanao--bukidnon.json",
+   "region": "Region X (Northern Mindanao)",
    "province": "Bukidnon",
    "count": 464,
    "barangays": 464,
    "lgus": [
     "Baungon",
-    "CITY OF MALAYBALAY (Capital)",
     "Cabanglasan",
-    "City Of Valencia",
     "Damulog",
     "Dangcagan",
     "Don Carlos",
@@ -25,6 +23,7 @@
     "Kitaotao",
     "Lantapan",
     "Libona",
+    "Malaybalay City",
     "Malitbog",
     "Manolo Fortich",
     "Maramag",
@@ -32,28 +31,51 @@
     "Quezon",
     "San Fernando",
     "Sumilao",
-    "Talakag"
+    "Talakag",
+    "Valencia City"
    ],
-   "scraped_at": "2026-09-30T23:14:53+00:00"
+   "scraped_at": "2026-09-30T23:21:46+00:00"
   },
   {
-   "file": "barangay/region-10--camiguin.json",
-   "region": "Region 10",
+   "file": "barangay/region-x-northern-mindanao--cagayan-de-oro-city.json",
+   "region": "Region X (Northern Mindanao)",
+   "province": "",
+   "count": 79,
+   "barangays": 79,
+   "lgus": [
+    "Cagayan de Oro City"
+   ],
+   "scraped_at": "2026-09-30T23:21:46+00:00"
+  },
+  {
+   "file": "barangay/region-x-northern-mindanao--camiguin.json",
+   "region": "Region X (Northern Mindanao)",
    "province": "Camiguin",
    "count": 58,
    "barangays": 58,
    "lgus": [
     "Catarman",
     "Guinsiliban",
-    "MAMBAJAO (Capital)",
     "Mahinog",
+    "Mambajao",
     "Sagay"
    ],
-   "scraped_at": "2026-09-30T23:14:53+00:00"
+   "scraped_at": "2026-09-30T23:21:46+00:00"
   },
   {
-   "file": "barangay/region-10--lanao-del-norte.json",
-   "region": "Region 10",
+   "file": "barangay/region-x-northern-mindanao--iligan-city.json",
+   "region": "Region X (Northern Mindanao)",
+   "province": "",
+   "count": 44,
+   "barangays": 44,
+   "lgus": [
+    "Iligan City"
+   ],
+   "scraped_at": "2026-09-30T23:21:46+00:00"
+  },
+  {
+   "file": "barangay/region-x-northern-mindanao--lanao-del-norte.json",
+   "region": "Region X (Northern Mindanao)",
    "province": "Lanao del Norte",
    "count": 461,
    "barangays": 461,
@@ -77,15 +99,15 @@
     "Salvador",
     "Sapad",
     "Sultan Naga Dimaporo (Karomatan)",
-    "TUBOD (Capital)",
     "Tagoloan",
-    "Tangcal"
+    "Tangcal",
+    "Tubod"
    ],
-   "scraped_at": "2026-09-30T23:14:53+00:00"
+   "scraped_at": "2026-09-30T23:21:46+00:00"
   },
   {
-   "file": "barangay/region-10--misamis-occidental.json",
-   "region": "Region 10",
+   "file": "barangay/region-x-northern-mindanao--misamis-occidental.json",
+   "region": "Region X (Northern Mindanao)",
    "province": "Misamis Occidental",
    "count": 489,
    "barangays": 489,
@@ -93,26 +115,26 @@
     "Aloran",
     "Baliangao",
     "Bonifacio",
-    "CITY OF OROQUIETA (Capital)",
     "Calamba",
-    "City Of Ozamiz",
-    "City Of Tangub",
     "Clarin",
     "Concepcion",
     "Don Victoriano Chiongbian (Don Mariano Marcos)",
     "Jimenez",
     "Lopez Jaena",
+    "Oroquieta City",
+    "Ozamiz City",
     "Panaon",
     "Plaridel",
     "Sapang Dalaga",
     "Sinacaban",
+    "Tangub City",
     "Tudela"
    ],
-   "scraped_at": "2026-09-30T23:14:53+00:00"
+   "scraped_at": "2026-09-30T23:21:46+00:00"
   },
   {
-   "file": "barangay/region-10--misamis-oriental.json",
-   "region": "Region 10",
+   "file": "barangay/region-x-northern-mindanao--misamis-oriental.json",
+   "region": "Region X (Northern Mindanao)",
    "province": "Misamis Oriental",
    "count": 424,
    "barangays": 424,
@@ -121,9 +143,9 @@
     "Balingasag",
     "Balingoan",
     "Binuangan",
-    "City Of El Salvador",
-    "City Of Gingoog",
     "Claveria",
+    "El Salvador City",
+    "Gingoog City",
     "Gitagum",
     "Initao",
     "Jasaan",
@@ -143,19 +165,7 @@
     "Talisayan",
     "Villanueva"
    ],
-   "scraped_at": "2026-09-30T23:14:53+00:00"
-  },
-  {
-   "file": "barangay/region-10--sheet1.json",
-   "region": "Region 10",
-   "province": "Sheet1",
-   "count": 123,
-   "barangays": 123,
-   "lgus": [
-    "CITY OF CAGAYAN DE ORO (Capital)",
-    "City Of Iligan"
-   ],
-   "scraped_at": "2026-09-30T23:14:53+00:00"
+   "scraped_at": "2026-09-30T23:21:46+00:00"
   }
  ]
 }

@@ -446,7 +446,7 @@
     if (state.loading) { view.innerHTML = '<div class="skeleton"></div>'.repeat(4); return; }
     if (!hasData()) { view.innerHTML = noData(); return; }
     const h = hanap;
-    const brgyFiles = (state.brgyIndex?.files || []).map((f) => ({ ...f, _loc: GEO.locate({ province: f.province, region: f.region }) }));
+    const brgyFiles = (state.brgyIndex?.files || []).map((f) => ({ ...f, _loc: GEO.locate({ province: f.province, region: f.region, lgu: f.province ? "" : (f.lgus || [])[0] }) }));
 
     // Each step narrows the pool the next dropdown is built from.
     const steps = {
@@ -561,6 +561,7 @@
       rows.push([t("in_2028"), term >= 3 ? t("term_limited") : t("can_run_again")]);
     }
     if (o.details?.full_name) rows.push([t("full_name"), tidyName(o.details.full_name)]);
+    if (o.dataset === "barangay") rows.push([t("term_label"), t("brgy_term")]);
     if (o.service?.first_senate_year) {
       rows.push([t("cmp_since"), `${o.service.first_senate_year} (${congressName(o.service.first_senate_congress)})`]);
       rows.push([t("cmp_terms"), `${o.service.senate_terms} · ${congressRanges(o.service.senate_congresses)}`]);
