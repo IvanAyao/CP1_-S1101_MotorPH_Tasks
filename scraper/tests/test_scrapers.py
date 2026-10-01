@@ -594,9 +594,9 @@ def test_dilg_barangay_sheet(isolated_output):
     ws.append(["BUKIDNON", "BAUNGON", "BALINTAD", "JUAN DELA CRUZ", "0917"])
     ws.append(["", "", "IMBATUG", "MARIA SANTOS", ""])
     ws.append(["", "MALAYBALAY CITY", "CASISANG", "PEDRO REYES", ""])
-    ws2 = wb.create_sheet("HUC")
-    ws2.append(["PROVINCE", "CITY/MUNICIPALITY", "BARANGAY", "PUNONG BARANGAY"])
-    ws2.append(["HUC", "CAGAYAN DE ORO CITY", "CARMEN", "ANA LIM"])
+    ws2 = wb.create_sheet("Sheet1")
+    ws2.append(["CITY/MUNICIPALITY", "BARANGAY", "PUNONG BARANGAY"])
+    ws2.append(["CITY OF CAGAYAN DE ORO (Capital)", "CARMEN", "ana lim"])
     buf = _io.BytesIO()
     wb.save(buf)
     recs = dilg_barangays.parse(buf.getvalue(), "Region X (Northern Mindanao)", "https://region10.dilg.gov.ph/x", "SID")
@@ -608,6 +608,7 @@ def test_dilg_barangay_sheet(isolated_output):
         ("Ana Lim", "punong_barangay", "Carmen", "Cagayan de Oro City", ""),
     }
     assert all(r["source_type"] == "official" and r["dataset"] == "barangay" for r in recs)
+    assert all(r["region"] == "Region X (Northern Mindanao)" and r["contact"] == "" for r in recs)
     barangay.flush(recs)
     index = json.loads((common.DATA_DIR / "barangay" / "index.json").read_text())
     assert index["count"] == 4 and {f["province"] for f in index["files"]} == {"Bukidnon", ""}

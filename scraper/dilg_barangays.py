@@ -17,16 +17,21 @@ Add a region by adding its page to PAGES.
 from __future__ import annotations
 
 import argparse
+import re
 
 import barangay
 import dilg_lgu
 from common import Browser, log
-from dilg_regions import sheet_ids
+from dilg_regions import SHEET_ID
 
 PAGES = {
-    # region name: page publishing its barangay officials
-    "Region X (Northern Mindanao)": "https://region10.dilg.gov.ph/punong-barangay-directories/",
+    # page publishing barangay officials: region it covers
+    "https://region10.dilg.gov.ph/punong-barangay-directories/": "Region X (Northern Mindanao)",
+    # DILG Aurora's directory: a filtered copy of DILG Central Office's
+    # public barangay officials file (Aurora province).
+    "https://www.riseaurora.region3.dilg.gov.ph/lgus/lgus": "Region III (Central Luzon)",
 }
+DRIVE_FILE = re.compile(r"drive\.google\.com/(?:file/d/|open\?id=)([A-Za-z0-9_-]{25,})")
 BARANGAY_LEVELS = {"punong_barangay", "kagawad", "sk_chair", "sk_kagawad", "barangay_secretary", "barangay_treasurer"}
 MIN_PER_PAGE = 100  # a region has hundreds of barangays
 
@@ -42,14 +47,32 @@ def parse(data: bytes, region: str, url: str, sheet_id: str) -> list[dict]:
         if o["level"] not in BARANGAY_LEVELS or not o["barangay"]:
             continue
         o["dataset"] = "barangay"
-        o["details"]["published_via"] = f"https://docs.google.com/spreadsheets/d/{sheet_id}"
+        o["region"] = region  # the sheets say "Region 10"; use the app's name
+        o["contact"] = ""  # personal numbers and emails aren't needed to compare officials
+        o["details"]["published_via"] = f"https://drive.google.com/open?id={sheet_id}"
         o["details"]["term"] = "2023–2028"
         out.append(o)
     return out
 
 
+def file_ids(browser: Browser, url: str) -> list[str]:
+    """Google Sheets and Drive files a page embeds or links to."""
+    cap = browser.open(url)
+    urls = browser.page.evaluate("""() => [
+        ...[...document.querySelectorAll('iframe[src]')].map(f => f.src),
+        ...[...document.querySelectorAll('a[href]')].map(a => a.href),
+    ]""")
+    ids = []
+    for u in urls + [cap.html]:
+        for rx in (SHEET_ID, DRIVE_FILE):
+            for m in rx.finditer(u):
+                if m.group(1) not in ids:
+                    ids.append(m.group(1))
+    return ids
+
+
 def import_page(browser: Browser, region: str, url: str) -> list[dict]:
-    ids = sheet_ids(browser, url)
+    ids = file_ids(browser, url)
     log(f"dilg-barangay: {region}: {len(ids)} sheet(s) on {url}")
     records = []
     for sid in ids:
@@ -69,13 +92,13 @@ def run(browser: Browser | None = None) -> dict[str, int]:
     browser = browser or Browser()
     counts = {}
     try:
-        for region, url in PAGES.items():
+        for url, region in PAGES.items():
             try:
                 records = import_page(browser, region, url)
             except Exception as err:  # noqa: BLE001 - one region must not stop the rest
                 log(f"dilg-barangay: {region} FAILED: {err}")
                 continue
-            counts[region] = len(records)
+            counts[url] = len(records)
             if len(records) >= MIN_PER_PAGE:
                 barangay.flush(records)
             else:

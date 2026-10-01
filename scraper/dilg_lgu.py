@@ -140,8 +140,8 @@ PLACE_PARTICLE = re.compile(r"(?<=\s)(De|Del|Dela|De La|Ng|Y)(?=\s)")
 
 
 def tidy_case(text: str) -> str:
-    """'ARIS C. AUMENTADO III' -> 'Aris C. Aumentado III' (only if all caps)."""
-    if not text or text != text.upper():
+    """'ARIS C. AUMENTADO III' -> 'Aris C. Aumentado III' (only if all caps or all lower case)."""
+    if not text or (text != text.upper() and text != text.lower()):
         return text
     out = text.title()
     out = ROMAN.sub(lambda m: m.group(1).upper(), out)
@@ -159,12 +159,18 @@ def parse(data: bytes, *, source: str = SOURCE, source_url: str = FOI_URL,
                          r"^(position|designation|elective_position)"))
         # A tab named after a province (and no province column) gives context.
         tab_defaults = dict(defaults or {})
-        if rows and not any("province" in k for k in rows[0]):
+        # (Default tab names such as "Sheet1" say nothing.)
+        if rows and not any("province" in k for k in rows[0]) and not re.fullmatch(r"(?i)sheet\s*\d*", tab.strip()):
             tab_defaults["province"] = clean(re.sub(r"(?i)province of", "", tab))
         found = rows_to_officials(rows, source=source, source_url=source_url, defaults=tab_defaults)
         log(f"dilg: tab {tab!r} -> {len(found)} officials")
         officials += found
     for o in officials:
+        # "CITY OF CAGAYAN DE ORO (Capital)" -> "Cagayan de Oro City"
+        o["lgu"] = re.sub(r"(?i)\s*\((capital|huc|icc|cc)\)\s*$", "", o["lgu"])
+        m = re.fullmatch(r"(?i)city of (.+)", o["lgu"])
+        if m:
+            o["lgu"] = f"{m.group(1).upper()} CITY"
         for key in ("name", "province", "lgu", "region", "district", "barangay"):
             o[key] = tidy_case(o.get(key, ""))
         for key in ("province", "lgu", "barangay"):
