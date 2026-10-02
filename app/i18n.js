@@ -180,10 +180,10 @@ window.PILI_I18N = {
 
     not_found: "Hindi nahanap ang opisyal na ito.", back_to_list: "Bumalik sa listahan",
     position: "Posisyon", party: "Partido", district: "Distrito", contact: "Contact", office: "Opisina",
-    info: "Impormasyon", compare_btn: "⚖️ Ihambing", in_ballot: "✓ Nasa Pili Ko", add_ballot: "＋ Pili Ko 2028",
+    info: "Impormasyon", compare_btn: "Ihambing", in_ballot: "Nasa Pili Ko", add_ballot: "Pili Ko 2028",
     achievements_n: "Mga Nagawa at Parangal ({n})", bills_n: "Mga Panukalang Batas ({n})",
     see_bills: "Tingnan ang {n} panukala", coauthor: "co-author", filed: "inihain {d}",
-    biography: "Talambuhay", official_cv: "📄 Opisyal na CV (PDF) ↗",
+    biography: "Talambuhay", official_cv: "Opisyal na CV (PDF) ↗",
     source: "Pinagkunan", wikipedia_article: "Wikipedia article", official_profile: "Opisyal na profile",
     last_updated: "Huling na-update", copied_on: "Kinopya noong {d}", added_to: "Idinagdag sa {slot}",
     bills_note: "Pinagkunan: {src}, isinalin mula sa opisyal na Senate Legislative Information System. Datos hanggang {d}, kaya maaaring luma na ang status. Bawat panukala ay naka-link sa opisyal na pahina ng Senado.",
@@ -198,7 +198,7 @@ window.PILI_I18N = {
 
     save_failed: "Hindi ma-save sa device na ito", already_listed: "Nasa listahan na", slot_full: "Puno na ang {slot} ({n})",
     election: "Halalan 2028 · {d}", days: "{n} araw", days_left: "na natitira · ★ Gamitin ang iyong boto nang matalino",
-    not_found_short: "(hindi na makita)", remove: "Alisin", add: "＋ Dagdag", share: "Ibahagi", clear: "I-clear",
+    not_found_short: "(hindi na makita)", remove: "Alisin", add: "Dagdag", share: "Ibahagi", clear: "I-clear",
     ballot_note: "Ang listahang ito ay naka-save lamang sa device mo — hindi ito ipinapadala kahit saan. Ang opisyal na listahan ng mga kandidato para sa 2028 ay ilalabas ng COMELEC pagkatapos ng filing ng COC.",
     add_to: "Idagdag sa {slot}", none_yet: "(wala pa)", copied: "Nakopya sa clipboard", confirm_clear: "Burahin ang buong listahan?",
 
@@ -393,10 +393,10 @@ window.PILI_I18N = {
 
     not_found: "We couldn't find this official.", back_to_list: "Back to the list",
     position: "Position", party: "Party", district: "District", contact: "Contact", office: "Office",
-    info: "Information", compare_btn: "⚖️ Compare", in_ballot: "✓ In My Picks", add_ballot: "＋ My Picks 2028",
+    info: "Information", compare_btn: "Compare", in_ballot: "In My Picks", add_ballot: "My Picks 2028",
     achievements_n: "Achievements & Awards ({n})", bills_n: "Bills Filed ({n})",
     see_bills: "See {n} bills", coauthor: "co-author", filed: "filed {d}",
-    biography: "Biography", official_cv: "📄 Official CV (PDF) ↗",
+    biography: "Biography", official_cv: "Official CV (PDF) ↗",
     source: "Source", wikipedia_article: "Wikipedia article", official_profile: "Official profile",
     last_updated: "Last updated", copied_on: "Copied on {d}", added_to: "Added to {slot}",
     bills_note: "Source: {src}, transcribed from the official Senate Legislative Information System. Data as of {d}, so statuses may be out of date. Every bill links to its official Senate page.",
@@ -411,7 +411,7 @@ window.PILI_I18N = {
 
     save_failed: "Couldn't save on this device", already_listed: "Already on your list", slot_full: "{slot} is full ({n})",
     election: "2028 Elections · {d}", days: "{n} days", days_left: "to go · ★ Vote wisely",
-    not_found_short: "(no longer found)", remove: "Remove", add: "＋ Add", share: "Share", clear: "Clear",
+    not_found_short: "(no longer found)", remove: "Remove", add: "Add", share: "Share", clear: "Clear",
     ballot_note: "This list is saved only on your device — it isn't sent anywhere. COMELEC publishes the official list of 2028 candidates after the filing of certificates of candidacy.",
     add_to: "Add to {slot}", none_yet: "(none yet)", copied: "Copied to clipboard", confirm_clear: "Clear the whole list?",
 

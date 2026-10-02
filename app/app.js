@@ -113,7 +113,7 @@
   const typeOf = (x) => x?.source_type
     || (/\.gov\.ph(\/|$)/i.test((() => { try { return new URL(x?.source_url || "").hostname + "/"; } catch { return ""; } })()) ? "official" : "public");
   const typeLabel = (tp) => t(`type_${tp}`);
-  const typeBadge = (tp, extra = "") => `<span class="badge src-${String(tp).replace("+", "-")}">${tp === "official" ? "✓ " : ""}${typeLabel(tp)}${extra}</span>`;
+  const typeBadge = (tp, extra = "") => `<span class="badge src-${String(tp).replace("+", "-")}">${tp === "official" ? ic("check", 12) : ""}${typeLabel(tp)}${extra}</span>`;
 
   function avatar(o, cls = "") {
     const img = safeUrl(o.photo);
@@ -341,12 +341,32 @@
   const hasData = () => state.officials.length > 0 || (state.brgyIndex?.files?.length ?? 0) > 0;
 
   function noData() {
-    return `<div class="empty"><span class="ei">🗂️</span>
+    return `<div class="empty"><span class="ei">${ic("folder", 40)}</span>
       <b>${t("no_data_title")}</b><br>${t("no_data_body")}
       <p class="meta">${t("no_data_sources")} <a href="#/ako">${t("tab_ako")}</a>.</p></div>`;
   }
 
   // --------------------------------------------------------------- views
+  // Outline icons (24×24, stroke = text colour), in the style of Lucide.
+  const ICONS = {
+    landmark: '<path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10M2 10l10-6 10 6z"/>',
+    pin: '<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>',
+    scale: '<path d="M12 3v18M7 21h10M5 7h14M12 5l-7 2M12 5l7 2"/><path d="M2 15l3-8 3 8a3 3 0 0 1-6 0zM16 15l3-8 3 8a3 3 0 0 1-6 0z"/>',
+    ballot: '<rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v7"/><path d="M9.5 7l2 2 3.5-3.5"/>',
+    chart: '<path d="M3 3v18h18"/><path d="M8 17v-5M13 17V8M18 17v-9"/>',
+    folder: '<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',
+    houses: '<path d="M3 21V11l6-5 6 5v10"/><path d="M15 21v-8l3-2.5 3 2.5v8M2 21h20M7 21v-4h4v4"/>',
+    search_x: '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M8.5 8.5l5 5M13.5 8.5l-5 5"/>',
+    lock: '<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+    flag: '<path d="M4 22V4M4 4h13l-2 4 2 4H4"/>',
+    plus: '<path d="M12 5v14M5 12h14"/>',
+    x: '<path d="M6 6l12 12M18 6L6 18"/>',
+    check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+    file: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>',
+    back: '<path d="M19 12H5M11 18l-6-6 6-6"/>',
+  };
+  const ic = (k, size = 18) => `<svg class="ic" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[k]}</svg>`;
+
   // Search box with a Filter button; the filters live in a panel that opens
   // below it, and the ones in use show as removable tags.
   const FILTER_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>';
@@ -359,7 +379,7 @@
     </div>`;
   }
   const filterTags = (tags) => (tags.length
-    ? `<div class="filter-tags">${tags.map(([k, text]) => `<button type="button" class="ftag" data-rm="${esc(k)}" aria-label="${esc(t("remove_filter", { f: text }))}">${esc(text)} <span aria-hidden="true">✕</span></button>`).join("")}<button type="button" class="link-btn" data-rm="*">${t("clear_filters")}</button></div>`
+    ? `<div class="filter-tags">${tags.map(([k, text]) => `<button type="button" class="ftag" data-rm="${esc(k)}" aria-label="${esc(t("remove_filter", { f: text }))}">${esc(text)} ${ic("x", 14)}</button>`).join("")}<button type="button" class="link-btn" data-rm="*">${t("clear_filters")}</button></div>`
     : "");
   const panelFoot = (panelId) => `<div class="fp-foot"><button type="button" class="link-btn" data-fp-reset>${t("clear_filters")}</button><button type="button" class="btn primary" data-fp-done="${panelId}">${t("show_results")}</button></div>`;
   function wireSearch(id, { get, set, rerender, toggle }) {
@@ -404,7 +424,7 @@
         <div class="chips wrap" role="group" aria-label="${esc(t("position"))}">${FILTERS.map(([k]) => `<button class="chip" data-f="${k}" aria-pressed="${k === state.filter}">${t(`f_${k}`)}</button>`).join("")}</div>
         <div class="fp-label">${t("island")}</div>
         <div class="chips wrap" role="group" aria-label="${esc(t("island"))}">${["", ...GEO.islands].map((k) => `<button class="chip" data-island="${k}" aria-pressed="${k === state.island}">${t(k ? `island_${k}` : "island_all")}</button>`).join("")}</div>
-        <a class="fp-more" href="#/hanap">📍 ${t("more_place")}</a>
+        <a class="fp-more" href="#/hanap">${ic("pin", 16)} ${t("more_place")}</a>
         <div class="fp-label">${t("sort_by")}</div>
         <div class="chips wrap" role="group" aria-label="${esc(t("sort_by"))}">${SORTS.filter((k) => k !== "law" || state.scope === "career").map((k) => `<button class="chip" data-sort="${k}" aria-pressed="${k === state.sort}">${t(`sort_${k}`)}</button>`).join("")}</div>
         <div class="fp-label">${t("period")}</div>
@@ -416,9 +436,9 @@
       </div>
       ${state.filtersOpen ? "" : filterTags(tags)}
       <div class="quick">
-        <a href="#/ihambing"><span class="qi">⚖️</span><b>${t("quick_compare")}</b><small>${t("quick_compare_sub")}</small></a>
-        <a href="#/pili"><span class="qi">🗳️</span><b>${t("quick_list")}</b><small>${t("quick_list_sub")}</small></a>
-        <a href="#/ako"><span class="qi">📊</span><b>${t("quick_stats")}</b><small>${t("quick_stats_sub")}</small></a>
+        <a href="#/ihambing"><span class="qi">${ic("scale", 24)}</span><b>${t("quick_compare")}</b><small>${t("quick_compare_sub")}</small></a>
+        <a href="#/pili"><span class="qi">${ic("ballot", 24)}</span><b>${t("quick_list")}</b><small>${t("quick_list_sub")}</small></a>
+        <a href="#/ako"><span class="qi">${ic("chart", 24)}</span><b>${t("quick_stats")}</b><small>${t("quick_stats_sub")}</small></a>
       </div>
       <div id="results"></div>`;
 
@@ -428,7 +448,7 @@
     } else if (!hasData()) {
       results.innerHTML = noData();
     } else if (brgyNote) {
-      results.innerHTML = `<div class="empty"><span class="ei">🏘️</span>${t("brgy_note", { n: fmtNum(state.brgyIndex?.count) })}<br>${t("brgy_note2", { link: `<a href="#/hanap">${t("tab_hanap")}</a>` })}</div>`;
+      results.innerHTML = `<div class="empty"><span class="ei">${ic("houses", 40)}</span>${t("brgy_note", { n: fmtNum(state.brgyIndex?.count) })}<br>${t("brgy_note2", { link: `<a href="#/hanap">${t("tab_hanap")}</a>` })}</div>`;
     } else {
       // Ranked rows: the name opens the profile, the number opens the bills by term.
       const rankRow = (o, i) => {
@@ -552,7 +572,7 @@
       ${h.open ? "" : filterTags(placeTags)}
       ${anyFilter ? `<div class="place-head"><div class="section-label">${t("n_officials", { n: fmtNum(list.length) })}</div></div>
         <div class="list">${list.slice(0, 400).map((o) => row(o)).join("") || `<div class="empty">${t("none_here")}</div>`}</div>${list.length > 400 ? `<p class="meta">${t("first_400")}</p>` : ""}`
-        : `<div class="empty"><span class="ei">📍</span>${t("hanap_hint")}<br><br>${t("hanap_senators", { link: `<a href="#/">${t("tab_home")}</a>` })}</div>`}`;
+        : `<div class="empty"><span class="ei">${ic("pin", 40)}</span>${t("hanap_hint")}<br><br>${t("hanap_senators", { link: `<a href="#/">${t("tab_home")}</a>` })}</div>`}`;
 
     view.querySelectorAll("select[data-k]").forEach((sel) => sel.addEventListener("change", () => {
       const k = sel.dataset.k;
@@ -590,7 +610,7 @@
     view.innerHTML = '<div class="skeleton" style="height:180px"></div>';
     const o = await findOfficial(dataset, id);
     if (!o) {
-      view.innerHTML = `<div class="empty"><span class="ei">🤷</span>${t("not_found")}<br><a href="#/">${t("back_to_list")}</a></div>`;
+      view.innerHTML = `<div class="empty"><span class="ei">${ic("search_x", 40)}</span>${t("not_found")}<br><a href="#/">${t("back_to_list")}</a></div>`;
       return;
     }
     setTitle(o.name);
@@ -644,8 +664,8 @@
         </div>
       </div>
       <div class="btn-row">
-        <button class="btn" id="cmp">${t("compare_btn")}</button>
-        <button class="btn primary" id="pick">${inBallot ? t("in_ballot") : t("add_ballot")}</button>
+        <button class="btn" id="cmp">${ic("scale")}${t("compare_btn")}</button>
+        <button class="btn primary" id="pick">${ic(inBallot ? "check" : "plus")}${inBallot ? t("in_ballot") : t("add_ballot")}</button>
       </div></div><div class="profile-main">
       <div class="section-label">${t("info")}</div>
       <table class="kv">${rows.filter(([, v]) => v).map(([k, v]) => `<tr><th>${k}</th><td>${esc(v)}</td></tr>`).join("")}
@@ -672,13 +692,13 @@
         <details class="bills-more"${o.bills.length <= 10 ? " open" : ""}><summary>${t("see_bills", { n: fmtNum(o.bills.length) })}</summary>
         <ul class="bills">${o.bills.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number || "")}</b> ${esc(b.title || "")}${safeUrl(b.url) ? "</a>" : ""}${b.coauthored ? `<span class="meta"> · ${t("coauthor")}</span>` : ""}${b.status ? `<span class="meta"> · ${esc(b.status)}</span>` : ""}${b.date ? `<span class="meta"> · ${t("filed", { d: esc(b.date) })}</span>` : ""}</li>`).join("")}</ul></details>` : ""}
       ${d.biography ? `<div class="section-label">${t("biography")}</div><p class="bio">${esc(d.biography)}</p>` : ""}
-      ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">${t("official_cv")}</a></p>` : ""}
+      ${cv ? `<p><a class="btn block" href="${esc(cv)}" target="_blank" rel="noopener">${ic("file")}${t("official_cv")}</a></p>` : ""}
       <div class="notice">
         ${t("source")}: <a href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener">${esc(o.source)}</a> (${typeLabel(typeOf(o))})
         ${safeUrl(o.profile_url) ? ` · <a href="${esc(o.profile_url)}" target="_blank" rel="noopener">${/wikipedia\.org/.test(o.profile_url) ? t("wikipedia_article") : t("official_profile")} ↗</a>` : ""}
         ${/openhalalan/i.test(o.source) ? `<br>${t("oh_note")}` : ""}
         <br>${t("last_updated")}: ${fmtDate(datasetDate(o.dataset, o._file))}${d.copied_on ? ` · ${t("copied_on", { d: fmtDate(d.copied_on) })}` : ""}
-        <br><a href="#/report/${encodeURIComponent(o.dataset)}/${encodeURIComponent(o.id)}">⚑ ${t("report_this")}</a>
+        <br><a href="#/report/${encodeURIComponent(o.dataset)}/${encodeURIComponent(o.id)}">${ic("flag", 16)} ${t("report_this")}</a>
       </div></div></div>`;
 
     if (EXEC_LEVELS.has(o.level)) {
@@ -712,7 +732,7 @@
     view.innerHTML = '<div class="skeleton" style="height:160px"></div>'.repeat(2);
     const o = await findOfficial("senate", id);
     if (!o || !o.bills_file) {
-      view.innerHTML = `<div class="empty"><span class="ei">🤷</span>${t("not_found")}<br><a href="#/">${t("back_to_list")}</a></div>`;
+      view.innerHTML = `<div class="empty"><span class="ei">${ic("search_x", 40)}</span>${t("not_found")}<br><a href="#/">${t("back_to_list")}</a></div>`;
       return;
     }
     if (billsView.id !== id) Object.assign(billsView, { id, q: "", show: "all" });
@@ -801,7 +821,7 @@
           <summary><b>${congressName(x.congress)}</b> <span class="meta">${esc(x.years || congressYears(x.congress))}</span><span class="term-count">${t(bills.length === 1 ? "n_bill_one" : "n_bills_short", { n: fmtNum(bills.length) })}</span></summary>
           ${[...years].map(([y, list]) => `<div class="year-head">${esc(y)} · ${t(list.length === 1 ? "n_bill_one" : "n_bills_short", { n: fmtNum(list.length) })}</div>
             <ul class="bills">${list.map((b) => `<li>${safeUrl(b.url) ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">` : ""}<b>${esc(b.number)}</b> ${esc(b.title)}${safeUrl(b.url) ? "</a>" : ""}
-              <span class="bill-meta">${b.law ? `<span class="badge src-official">✓ ${t("law_badge")}</span> ` : ""}${b.role === "co" ? `<span class="meta">${t("role_co")} · </span>` : ""}<span class="meta">${t("filed", { d: esc(b.date || "—") })}${b.status && !b.law ? ` · ${esc(b.status)}` : ""}</span>${b.committee ? `<span class="meta bill-committee">${t("committee_x", { c: esc(b.committee) })}</span>` : ""}</span></li>`).join("")}</ul>`).join("")}
+              <span class="bill-meta">${b.law ? `<span class="badge src-official">${ic("check", 12)}${t("law_badge")}</span> ` : ""}${b.role === "co" ? `<span class="meta">${t("role_co")} · </span>` : ""}<span class="meta">${t("filed", { d: esc(b.date || "—") })}${b.status && !b.law ? ` · ${esc(b.status)}` : ""}</span>${b.committee ? `<span class="meta bill-committee">${t("committee_x", { c: esc(b.committee) })}</span>` : ""}</span></li>`).join("")}</ul>`).join("")}
         </details>`;
       }).join("") || `<div class="empty">${career || now.filed ? t("no_match_short") : t("no_term_bills")}</div>`;
     };
@@ -905,7 +925,7 @@
           <span class="who"><b>${o.ordinal ? `${esc(t("exec_nth", { n: o.ordinal, nth: ordinal(+o.ordinal || 0) }))} · ` : ""}${esc(o.name)}</b>
           <span>${esc(o.details?.term || "")}${o.current === false ? "" : ` · ${t("hist_current")}`}${o.party ? ` · ${esc(o.party)}` : ""}${yearsIn(o) ? ` · ${esc(yearsIn(o))}` : ""}${laws ? ` · ${esc(laws)}` : ""}</span>
           ${o.summary ? `<span class="hist-sum">${esc(o.summary.length > 220 ? o.summary.slice(0, 220).replace(/\s+\S*$/, "") + "…" : o.summary)}</span>` : ""}</span></a>
-        <button class="chip" data-hpick="${esc(k)}" aria-pressed="${on}">${on ? "✓ " : "＋ "}${t("hist_pick")}</button></li>`;
+        <button class="chip" data-hpick="${esc(k)}" aria-pressed="${on}">${ic(on ? "check" : "plus", 16)}${t("hist_pick")}</button></li>`;
     };
     view.innerHTML = `
       <div class="section-label">${t("exec_history_title")}</div>
@@ -1002,7 +1022,7 @@
     const [a, b] = state.compare;
     const slot = (o, i) => o
       ? `<button class="slot" data-slot="${i}">${avatar(o)}<b>${esc(o.name)}</b><small>${esc(levelLabel(o))}</small><small>${t("change")}</small></button>`
-      : `<button class="slot" data-slot="${i}"><span class="avatar">＋</span><b>${t("pick")}</b><small>${t("an_official")}</small></button>`;
+      : `<button class="slot" data-slot="${i}"><span class="avatar">${ic("plus", 24)}</span><b>${t("pick")}</b><small>${t("an_official")}</small></button>`;
     let table = "";
     const ex = a && b && (EXEC_LEVELS.has(a.level) || EXEC_LEVELS.has(b.level))
       ? await Promise.all([a, b].map((o) => (EXEC_LEVELS.has(o.level) ? execExtras(o) : {}))) : null;
@@ -1116,8 +1136,8 @@
         picks.forEach((o) => lines.push(`${slotLabel(s)}: ${o.name}`));
         return `<div class="card">
           <div class="slot-head"><b>${slotLabel(s)}</b><span class="meta">${picks.length} / ${s.max}</span></div>
-          ${picks.map((o, i) => `<div class="pick-row">${o.id ? avatar(o) : ""}<div class="who"><b>${esc(o.name)}</b><span>${esc(levelLabel(o))}</span></div><button class="x" data-rm="${s.key}:${i}" aria-label="${esc(t("remove"))}">✕</button></div>`).join("")}
-          ${picks.length < s.max ? `<button class="add" data-add="${s.key}">${t("add")}</button>` : ""}
+          ${picks.map((o, i) => `<div class="pick-row">${o.id ? avatar(o) : ""}<div class="who"><b>${esc(o.name)}</b><span>${esc(levelLabel(o))}</span></div><button class="x" data-rm="${s.key}:${i}" aria-label="${esc(t("remove"))}">${ic("x", 16)}</button></div>`).join("")}
+          ${picks.length < s.max ? `<button class="add" data-add="${s.key}">${ic("plus", 16)}${t("add")}</button>` : ""}
         </div>`;
       }).join("")}</div>
       <div class="btn-row"><button class="btn" id="share">${t("share")}</button><button class="btn" id="reset">${t("clear")}</button></div>
@@ -1185,8 +1205,8 @@
         <p class="meta" style="margin-bottom:0">${t("about_note")}</p>
       </div>
       <div class="card legal-links">
-        <a href="#/privacy">🔒 ${t("privacy_title")}</a>
-        <a href="#/report">⚑ ${t("report_title")}</a>
+        <a href="#/privacy">${ic("lock", 16)} ${t("privacy_title")}</a>
+        <a href="#/report">${ic("flag", 16)} ${t("report_title")}</a>
       </div></div></div>`;
   }
 
@@ -1198,7 +1218,7 @@
       <nav class="legal-toc"><button type="button" class="link-btn" data-go="privacy">${t("privacy_h")}</button> · <button type="button" class="link-btn" data-go="terms">${t("terms_h")}</button></nav>
       <section id="privacy"><h2>${t("privacy_h")}</h2>${t("privacy_html", { gh: "https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" })}</section>
       <section id="terms"><h2>${t("terms_h")}</h2>${t("terms_html")}</section>
-      <p><a class="btn block" href="#/report">⚑ ${t("report_title")}</a></p>
+      <p><a class="btn block" href="#/report">${ic("flag", 16)} ${t("report_title")}</a></p>
     </article>`;
     view.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => $("#" + b.dataset.go).scrollIntoView({ behavior: "smooth" })));
   }
