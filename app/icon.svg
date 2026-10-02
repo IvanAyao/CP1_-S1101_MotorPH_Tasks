@@ -69,12 +69,12 @@
 </g>
 <text
 x="596" y="560"
-font-family="Georgia, 'Times New Roman', serif"
-font-size="296" font-weight="700" font-style="italic"
+font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+font-size="290" font-weight="800"
 fill="#FFFFFF" text-anchor="middle"
 filter="url(#textShadow)" letter-spacing="-8"
 >Pili</text>
-<circle cx="772" cy="490" r="28" fill="#FCD116"/>
+<circle cx="800" cy="535" r="26" fill="#FCD116"/>
 <text
 x="596" y="650"
 font-family="'Arial', sans-serif"

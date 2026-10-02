@@ -33,7 +33,7 @@
 
   <div id="app" class="shell">
     <header class="topbar" id="topbar">
-      <button class="back" id="back" data-i18n-aria="back" aria-label="Bumalik" hidden>←</button>
+      <button class="back" id="back" data-i18n-aria="back" aria-label="Bumalik" hidden><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
       <a class="brand" href="#/" data-i18n-aria="go_home" aria-label="Pili.PH — Home"><img class="brand-logo" src="icon.svg" alt="" width="28" height="28"><span class="brand-word">Pili</span><span class="brand-dot">.</span><span class="brand-ph">PH</span></a>
       <span class="topbar-sub" id="topbar-sub"></span>
       <button type="button" id="lang" class="lang-toggle" data-i18n-aria="lang_toggle" aria-label="Change language">EN</button>
@@ -42,18 +42,18 @@
     <main id="view" tabindex="-1" aria-live="polite"></main>
 
     <nav class="tabbar" data-i18n-aria="nav_label" aria-label="Pangunahing navigation">
-      <a href="#/" data-tab="home"><span class="ti" aria-hidden="true">🏛️</span><span data-i18n="tab_home">Opisyal</span></a>
-      <a href="#/hanap" data-tab="hanap"><span class="ti" aria-hidden="true">📍</span><span data-i18n="tab_hanap">Lugar</span></a>
-      <a href="#/ihambing" data-tab="ihambing"><span class="ti" aria-hidden="true">⚖️</span><span data-i18n="tab_ihambing">Ihambing</span></a>
-      <a href="#/pili" data-tab="pili"><span class="ti" aria-hidden="true">🗳️</span><span data-i18n="tab_pili">Pili Ko</span></a>
-      <a href="#/ako" data-tab="ako"><span class="ti" aria-hidden="true">📊</span><span data-i18n="tab_ako">Datos</span></a>
+      <a href="#/" data-tab="home"><span class="ti"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10M2 10l10-6 10 6z"/></svg></span><span data-i18n="tab_home">Opisyal</span></a>
+      <a href="#/hanap" data-tab="hanap"><span class="ti"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span data-i18n="tab_hanap">Lugar</span></a>
+      <a href="#/ihambing" data-tab="ihambing"><span class="ti"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14M12 5l-7 2M12 5l7 2"/><path d="M2 15l3-8 3 8a3 3 0 0 1-6 0zM16 15l3-8 3 8a3 3 0 0 1-6 0z"/></svg></span><span data-i18n="tab_ihambing">Ihambing</span></a>
+      <a href="#/pili" data-tab="pili"><span class="ti"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v7"/><path d="M9.5 7l2 2 3.5-3.5"/></svg></span><span data-i18n="tab_pili">Pili Ko</span></a>
+      <a href="#/ako" data-tab="ako"><span class="ti"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V8M18 17v-9"/></svg></span><span data-i18n="tab_ako">Datos</span></a>
     </nav>
   </div>
 
   <dialog id="picker" class="picker">
     <form method="dialog" class="picker-head">
       <strong id="picker-title" data-i18n="picker_title">Pumili ng opisyal</strong>
-      <button value="cancel" data-i18n-aria="close" aria-label="Isara">✕</button>
+      <button value="cancel" data-i18n-aria="close" aria-label="Isara"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </form>
     <input id="picker-q" type="search" data-i18n-placeholder="picker_ph" placeholder="Hanapin ang pangalan…" autocomplete="off">
     <ul id="picker-list" class="list"></ul>
