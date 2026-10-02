@@ -214,7 +214,7 @@ main { flex: 1; padding: 14px 16px calc(96px + env(safe-area-inset-bottom)); out
 .brand-logo { width: 28px; height: 28px; border-radius: 7px; flex: none; }
 .topbar-sub { flex: 1; min-width: 0; }
 .lang-toggle {
-  flex: none; margin-left: auto; min-width: 40px; min-height: 32px; padding: 0 10px;
+  flex: none; margin-left: auto; width: 36px; height: 36px; padding: 3px; display: inline-flex; align-items: center; justify-content: center;
   border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
   color: var(--blue); font: 700 12px system-ui, sans-serif; letter-spacing: .5px; cursor: pointer;
 }
@@ -475,3 +475,5 @@ details.sona summary { cursor: pointer; font-size: 14px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; }
 .x .ic, .slot .avatar .ic { margin: 0; }
 .add { display: flex; align-items: center; justify-content: center; }
+.lang-toggle .flag { display: block; border-radius: 50%; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+.lang-toggle:hover { border-color: var(--blue); }

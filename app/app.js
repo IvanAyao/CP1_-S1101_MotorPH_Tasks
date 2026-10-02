@@ -29,13 +29,19 @@
     return s.replace(/\{(\w+)\}/g, (_, v) => (v in vars ? vars[v] : `{${v}}`));
   };
 
+  // Round flags for the language switch: Philippines = Tagalog, United States = English.
+  const FLAG_PH = "<svg class='flag' width='28' height='28' viewBox='0 0 32 32' aria-hidden='true'><clipPath id='fph'><circle cx='16' cy='16' r='16'/></clipPath><g clip-path='url(#fph)'><rect width='32' height='16' fill='#0038a8'/><rect y='16' width='32' height='16' fill='#ce1126'/><polygon points='0,0 27.7,16 0,32' fill='#fff'/><circle cx='9' cy='16' r='2.8' fill='#fcd116'/><g stroke='#fcd116' stroke-width='1.1' stroke-linecap='round'><line x1='12.60' y1='16.00' x2='14.60' y2='16.00'/><line x1='11.55' y1='18.55' x2='12.96' y2='19.96'/><line x1='9.00' y1='19.60' x2='9.00' y2='21.60'/><line x1='6.45' y1='18.55' x2='5.04' y2='19.96'/><line x1='5.40' y1='16.00' x2='3.40' y2='16.00'/><line x1='6.45' y1='13.45' x2='5.04' y2='12.04'/><line x1='9.00' y1='12.40' x2='9.00' y2='10.40'/><line x1='11.55' y1='13.45' x2='12.96' y2='12.04'/></g><polygon fill='#fcd116' points='3.20,2.90 3.62,4.02 4.82,4.07 3.88,4.82 4.20,5.98 3.20,5.31 2.20,5.98 2.52,4.82 1.58,4.07 2.78,4.02'/><polygon fill='#fcd116' points='3.20,25.70 3.62,26.82 4.82,26.87 3.88,27.62 4.20,28.78 3.20,28.11 2.20,28.78 2.52,27.62 1.58,26.87 2.78,26.82'/><polygon fill='#fcd116' points='22.60,14.30 23.02,15.42 24.22,15.47 23.28,16.22 23.60,17.38 22.60,16.71 21.60,17.38 21.92,16.22 20.98,15.47 22.18,15.42'/></g></svg>";
+  const FLAG_US = "<svg class='flag' width='28' height='28' viewBox='0 0 32 32' aria-hidden='true'><clipPath id='fus'><circle cx='16' cy='16' r='16'/></clipPath><g clip-path='url(#fus)'><rect width='32' height='32' fill='#fff'/><rect y='0.00' width='32' height='2.46' fill='#b22234'/><rect y='4.92' width='32' height='2.46' fill='#b22234'/><rect y='9.85' width='32' height='2.46' fill='#b22234'/><rect y='14.77' width='32' height='2.46' fill='#b22234'/><rect y='19.69' width='32' height='2.46' fill='#b22234'/><rect y='24.62' width='32' height='2.46' fill='#b22234'/><rect y='29.54' width='32' height='2.46' fill='#b22234'/><rect width='15.5' height='17.23' fill='#3c3b6e'/><circle cx='2.5' cy='2.6' r='0.75' fill='#fff'/><circle cx='6' cy='2.6' r='0.75' fill='#fff'/><circle cx='9.5' cy='2.6' r='0.75' fill='#fff'/><circle cx='13' cy='2.6' r='0.75' fill='#fff'/><circle cx='4.2' cy='5.6' r='0.75' fill='#fff'/><circle cx='7.8' cy='5.6' r='0.75' fill='#fff'/><circle cx='11.3' cy='5.6' r='0.75' fill='#fff'/><circle cx='2.5' cy='8.6' r='0.75' fill='#fff'/><circle cx='6' cy='8.6' r='0.75' fill='#fff'/><circle cx='9.5' cy='8.6' r='0.75' fill='#fff'/><circle cx='13' cy='8.6' r='0.75' fill='#fff'/><circle cx='4.2' cy='11.6' r='0.75' fill='#fff'/><circle cx='7.8' cy='11.6' r='0.75' fill='#fff'/><circle cx='11.3' cy='11.6' r='0.75' fill='#fff'/><circle cx='2.5' cy='14.6' r='0.75' fill='#fff'/><circle cx='6' cy='14.6' r='0.75' fill='#fff'/><circle cx='9.5' cy='14.6' r='0.75' fill='#fff'/><circle cx='13' cy='14.6' r='0.75' fill='#fff'/></g></svg>";
+
   function applyStatic() {
     document.documentElement.lang = lang === "en" ? "en" : "fil";
     document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
     document.querySelectorAll("[data-i18n-aria]").forEach((el) => el.setAttribute("aria-label", t(el.dataset.i18nAria)));
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => (el.placeholder = t(el.dataset.i18nPlaceholder)));
     document.querySelectorAll("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-    $("#lang").textContent = lang === "en" ? "TL" : "EN"; // shows the language you can switch to
+    // Shows the flag of the language you can switch to.
+    $("#lang").innerHTML = lang === "en" ? FLAG_PH : FLAG_US;
+    $("#lang").title = t("lang_toggle");
   }
 
   function setLang(next) {
