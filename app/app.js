@@ -370,6 +370,7 @@
     check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
     file: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>',
     back: '<path d="M19 12H5M11 18l-6-6 6-6"/>',
+    help: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7M12 17h.01"/>',
   };
   const ic = (k, size = 18) => `<svg class="ic" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[k]}</svg>`;
 
@@ -1173,6 +1174,12 @@
 
   // Stats + sources
   function viewAko() {
+    setTimeout(() => $("#replay-tour")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (location.hash && location.hash !== "#/") location.hash = "#/";
+      window.scrollTo(0, 0);
+      setTimeout(startTour, 200);
+    }));
     const ds = state.manifest?.datasets || [];
     const counts = {};
     state.officials.forEach((o) => (counts[o.level] = (counts[o.level] || 0) + 1));
@@ -1213,6 +1220,7 @@
       <div class="card legal-links">
         <a href="#/privacy">${ic("lock", 16)} ${t("privacy_title")}</a>
         <a href="#/report">${ic("flag", 16)} ${t("report_title")}</a>
+        <a href="#/" id="replay-tour">${ic("help", 16)} ${t("tour_replay")}</a>
       </div></div></div>`;
   }
 
@@ -1332,7 +1340,86 @@
     const cover = $("#cover");
     cover.classList.add("leaving");
     document.body.classList.remove("covered");
-    setTimeout(() => { cover.hidden = true; cover.classList.remove("leaving"); $("#view").focus({ preventScroll: true }); }, 250);
+    setTimeout(() => {
+      cover.hidden = true;
+      cover.classList.remove("leaving");
+      $("#view").focus({ preventScroll: true });
+      // First visit: the guide starts on the home page, where search and filters are.
+      if (!tourSeen) {
+        if (location.hash && location.hash !== "#/") location.hash = "#/";
+        window.scrollTo(0, 0);
+        setTimeout(startTour, 150);
+      }
+    }, 250);
+  }
+
+  // ------------------------------------------------------------ guide
+  // A short step-by-step guide shown once, the first time someone enters
+  // the app. Each step dims the screen except the part it explains.
+  const TOUR_KEY = "pili.tour.v1";
+  const TOUR = [
+    { key: "search", targets: [".searchbar"] },
+    { key: "location", targets: ['.tabbar a[data-tab="hanap"]'] },
+    { key: "compare", targets: ['.tabbar a[data-tab="ihambing"]'] },
+    { key: "picks", targets: ['.tabbar a[data-tab="pili"]'] },
+    { key: "data", targets: ['.tabbar a[data-tab="ako"]', "#lang"] },
+  ];
+  let tourSeen = (() => { try { return localStorage.getItem(TOUR_KEY) === "done"; } catch { return false; } })();
+  function startTour() {
+    if ($("#tour")) return;
+    let i = 0;
+    const el = document.createElement("div");
+    el.id = "tour";
+    el.className = "tour";
+    el.setAttribute("role", "dialog");
+    el.setAttribute("aria-modal", "true");
+    el.setAttribute("aria-labelledby", "tour-title");
+    document.body.appendChild(el);
+    const end = () => {
+      tourSeen = true;
+      try { localStorage.setItem(TOUR_KEY, "done"); } catch {}
+      window.removeEventListener("resize", draw);
+      document.removeEventListener("keydown", onKey);
+      el.remove();
+      $("#view").focus({ preventScroll: true });
+    };
+    const onKey = (e) => {
+      if (e.key === "Escape") end();
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft" && i > 0) { i--; draw(); }
+    };
+    const next = () => { if (i < TOUR.length - 1) { i++; draw(); } else end(); };
+    function draw() {
+      const step = TOUR[i], vw = innerWidth, vh = innerHeight, pad = 6;
+      const rects = step.targets.map((sel) => $(sel)).filter((x) => x && x.offsetParent !== null)
+        .map((x) => x.getBoundingClientRect()).filter((r) => r.width && r.bottom > 0 && r.top < vh);
+      const holes = rects.map((r) => `<rect x="${r.left - pad}" y="${r.top - pad}" width="${r.width + pad * 2}" height="${r.height + pad * 2}" rx="14" fill="#000"/>`).join("");
+      const rings = rects.map((r) => `<div class="tour-ring" style="left:${r.left - pad}px;top:${r.top - pad}px;width:${r.width + pad * 2}px;height:${r.height + pad * 2}px"></div>`).join("");
+      // The card goes on the side of the screen away from what it points at.
+      const up = rects.some((r) => r.top + r.height / 2 > vh / 2), down = rects.some((r) => r.top + r.height / 2 <= vh / 2);
+      const where = up && down || !rects.length ? "middle" : up ? "top" : "bottom";
+      const last = i === TOUR.length - 1;
+      el.innerHTML = `<svg class="tour-dim" width="${vw}" height="${vh}" aria-hidden="true"><defs><mask id="tour-mask"><rect width="100%" height="100%" fill="#fff"/>${holes}</mask></defs><rect width="100%" height="100%" fill="rgba(8,14,30,.66)" mask="url(#tour-mask)"/></svg>
+        ${rings}
+        <div class="tour-card tour-${where}">
+          <div class="tour-step">${t("tour_step", { n: i + 1, total: TOUR.length })}</div>
+          <h2 id="tour-title">${esc(t(`tour_${step.key}_title`))}</h2>
+          <p>${esc(t(`tour_${step.key}_body`))}</p>
+          <div class="tour-dots" aria-hidden="true">${TOUR.map((_, k) => `<span class="${k === i ? "on" : ""}"></span>`).join("")}</div>
+          <div class="tour-actions">
+            ${last ? "<span></span>" : `<button type="button" class="link-btn" id="tour-skip">${t("tour_skip")}</button>`}
+            <span class="tour-nav">${i > 0 ? `<button type="button" class="btn" id="tour-back">${t("tour_back")}</button>` : ""}
+            <button type="button" class="btn primary" id="tour-next">${last ? t("tour_done") : t("tour_next")}</button></span>
+          </div>
+        </div>`;
+      $("#tour-skip")?.addEventListener("click", end);
+      $("#tour-back")?.addEventListener("click", () => { i--; draw(); });
+      $("#tour-next").addEventListener("click", next);
+      $("#tour-next").focus({ preventScroll: true });
+    }
+    window.addEventListener("resize", draw);
+    document.addEventListener("keydown", onKey);
+    draw();
   }
 
   // ------------------------------------------------------------ router
