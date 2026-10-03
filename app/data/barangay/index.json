@@ -1,7 +1,7 @@
 {
  "dataset": "barangay",
  "source_url": "https://www.dilg.gov.ph/barangay-officials-directory",
- "scraped_at": "2026-10-02T20:59:02+00:00",
+ "scraped_at": "2026-10-03T19:25:17+00:00",
  "count": 3370,
  "files": [
   {
@@ -20,7 +20,7 @@
     "Maria Aurora",
     "San Luis"
    ],
-   "scraped_at": "2026-10-02T20:59:02+00:00"
+   "scraped_at": "2026-10-03T19:25:17+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--bukidnon.json",
@@ -52,7 +52,7 @@
     "Talakag",
     "Valencia City"
    ],
-   "scraped_at": "2026-10-02T20:58:54+00:00"
+   "scraped_at": "2026-10-03T19:25:09+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--cagayan-de-oro-city.json",
@@ -63,7 +63,7 @@
    "lgus": [
     "Cagayan de Oro City"
    ],
-   "scraped_at": "2026-10-02T20:58:54+00:00"
+   "scraped_at": "2026-10-03T19:25:09+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--camiguin.json",
@@ -78,7 +78,7 @@
     "Mambajao",
     "Sagay"
    ],
-   "scraped_at": "2026-10-02T20:58:54+00:00"
+   "scraped_at": "2026-10-03T19:25:09+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--iligan-city.json",
@@ -89,7 +89,7 @@
    "lgus": [
     "Iligan City"
    ],
-   "scraped_at": "2026-10-02T20:58:54+00:00"
+   "scraped_at": "2026-10-03T19:25:09+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--lanao-del-norte.json",
@@ -121,7 +121,7 @@
     "Tangcal",
     "Tubod"
    ],
-   "scraped_at": "2026-10-02T20:58:54+00:00"
+   "scraped_at": "2026-10-03T19:25:09+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--misamis-occidental.json",
@@ -148,7 +148,7 @@
     "Tangub City",
     "Tudela"
    ],
-   "scraped_at": "2026-10-02T20:58:54+00:00"
+   "scraped_at": "2026-10-03T19:25:09+00:00"
   },
   {
    "file": "barangay/region-x-northern-mindanao--misamis-oriental.json",
@@ -183,7 +183,7 @@
     "Talisayan",
     "Villanueva"
    ],
-   "scraped_at": "2026-10-02T20:58:54+00:00"
+   "scraped_at": "2026-10-03T19:25:09+00:00"
   }
  ]
 }
